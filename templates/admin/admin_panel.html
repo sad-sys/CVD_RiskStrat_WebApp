@@ -1,0 +1,194 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  body, html {
+    background: #18191a !important;
+  }
+  .container {
+    background: transparent !important;
+  }
+  .role-badge {
+    display: inline-block;
+    padding: 0.35em 1em;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 1em;
+    color: #fff;
+    background: #6c757d;
+    letter-spacing: 0.02em;
+    margin-right: 0.2em;
+  }
+  .role-badge.clinician {
+    background: #198754;
+  }
+  .role-badge.patient {
+    background: #0056b3;
+    color: #fff;
+  }
+  .role-badge.admin {
+    background: #6f42c1;
+  }
+  .role-badge.pending {
+    background: #ffc107;
+    color: #222;
+  }
+</style>
+<section id="doctors" class="doctors">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <h1 class="text-primary">Admin Panel</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Pending Access Requests</h5>
+                        
+                        {% if all_access_requests %}
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Affiliation</th>
+                                            <th>Date</th>
+                                            <th>Reason</th>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for request in all_access_requests %}
+                                            <tr>
+                                                <td>{{ request.first_name }} {{ request.last_name }}</td>
+                                                <td>{{ request.email }}</td>
+                                                <td>{{ request.affiliation }}</td>
+                                                <td>{{ request.date_requested|date:"M d, Y H:i" }}</td>
+                                                <td>{{ request.reason }}</td>
+                                                <td><span class="badge bg-warning text-dark">{{ request.status|capfirst }}</span></td>
+                                                <td>
+                                                    <form method="post" action="{% url 'approve_request' request.id %}" style="display: inline;">
+                                                        {% csrf_token %}
+                                                        <button type="submit" class="btn btn-success btn-sm">Approve</button>
+                                                    </form>
+                                                    <form method="post" action="{% url 'reject_request' request.id %}" style="display: inline;">
+                                                        {% csrf_token %}
+                                                        <button type="submit" class="btn btn-danger btn-sm">Reject</button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        {% else %}
+                            <div class="alert alert-info">
+                                No access requests found.
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">All Users</h5>
+                        <div class="mb-3 d-flex align-items-center gap-2">
+                            <label for="userRoleFilter" class="form-label mb-0 me-2">Filter by:</label>
+                            <select id="userRoleFilter" class="form-select w-auto">
+                                <option value="all">All</option>
+                                <option value="clinician_approved">Clinician</option>
+                                <option value="patient">Patient</option>
+                            </select>
+                        </div>
+                        
+                        {% if all_users %}
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Affiliation/Requesting Dr</th>
+                                            <th>Registration Date/Time</th>
+                                            <th>Status/Role</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="userTableBody">
+                                        {% for user_obj in all_users %}
+                                            <tr data-role="{{ user_obj.role }}">
+                                                <td>{{ user_obj.first_name }} {{ user_obj.last_name }}</td>
+                                                <td>{{ user_obj.email }}</td>
+                                                <td>
+                                                    {% if user_obj.role == 'clinician_approved' %}
+                                                        {% with clinician=user_obj.clinicians %}
+                                                            {{ clinician.specialty }}
+                                                        {% endwith %}
+                                                    {% elif user_obj.role == 'patient' %}
+                                                        {% with patient=user_obj.patients %}
+                                                            {% if patient.clinician %}
+                                                                Dr. {{ patient.clinician.user.first_name }} {{ patient.clinician.user.last_name }}
+                                                            {% else %}
+                                                                N/A
+                                                            {% endif %}
+                                                        {% endwith %}
+                                                    {% endif %}
+                                                </td>
+                                                <td>{{ user_obj.date_joined|date:"Y-m-d H:i" }}</td>
+                                                <td>
+                                                    {% if user_obj.role == 'clinician_approved' %}
+                                                        <span class="role-badge clinician">Clinician (Approved)</span>
+                                                    {% elif user_obj.role == 'patient' %}
+                                                        <span class="role-badge patient">Patient</span>
+                                                    {% elif user_obj.role == 'admin' %}
+                                                        <span class="role-badge admin">Admin</span>
+                                                    {% elif user_obj.role == 'clinician_pending' %}
+                                                        <span class="role-badge pending">Pending</span>
+                                                    {% else %}
+                                                        <span class="role-badge">Unknown</span>
+                                                    {% endif %}
+                                                </td>
+                                                <td>
+                                                    {# Delete user button removed as requested #}
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        {% else %}
+                            <div class="alert alert-info">
+                                No users found.
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const filter = document.getElementById('userRoleFilter');
+  const rows = document.querySelectorAll('#userTableBody tr');
+  filter.addEventListener('change', function() {
+    const value = this.value;
+    rows.forEach(row => {
+      if (value === 'all' || row.getAttribute('data-role') === value) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
+{% endblock %} 

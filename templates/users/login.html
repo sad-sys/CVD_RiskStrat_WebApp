@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+    <section id="login-section" class="login-container">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-5 col-md-8">
+            <div class="card shadow">
+              <div class="card-body p-5">
+                <h2 class="text-center mb-4">Login to Your Account</h2>
+                <p class="text-center mb-4">Don't have an account? <a href="{% url 'signup' %}" class="text-primary">Sign up here</a>.</p>
+                <form method="POST" class="login-form">
+                  {% csrf_token %}
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="text" class="form-control" id="email" name="email" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                  </div>
+                  <div class="d-grid gap-2 mt-4">
+                    <button type="submit" class="btn btn-primary btn-lg">Login</button>
+                  </div>
+                </form>
+                {% if messages %}
+                  <div class="alert alert-danger mt-4">
+                    {% for message in messages %}
+                      <p class="mb-0">{{ message }}</p>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+<style>
+body.dark-mode #login-section,
+body[data-theme="dark"] #login-section,
+body.dark-mode .login-container,
+body[data-theme="dark"] .login-container {
+    background: #232323 !important;
+    background-color: #232323 !important;
+}
+</style>
+{% endblock %}

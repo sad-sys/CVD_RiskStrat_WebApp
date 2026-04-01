@@ -1,0 +1,265 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Assessment Results - CVD Risk Predictor{% endblock %}
+
+{% block content %}
+<style>
+  .results-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+  }
+  
+  .results-header {
+    background: linear-gradient(135deg, #1977cc 0%, #166ab9 100%);
+    color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .submission-id {
+    font-family: 'Courier New', monospace;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-top: 0.5rem;
+  }
+  
+  .model-result-card {
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .model-result-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #1977cc;
+  }
+  
+  .model-result-card .card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+  }
+  
+  .model-result-card .card-body {
+    padding: 1.5rem;
+  }
+  
+  .risk-score {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1977cc;
+  }
+  
+  .recommendation-badge {
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    display: inline-block;
+  }
+  
+  .rec-low-risk {
+    background-color: #d1e7dd;
+    color: #0f5132;
+  }
+  
+  .rec-high-risk {
+    background-color: #f8d7da;
+    color: #842029;
+  }
+  
+  .rec-inconclusive {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  
+  .rec-default {
+    background-color: #e9ecef;
+    color: #495057;
+  }
+  
+  .empty-state {
+    text-align: center;
+    padding: 3rem 0;
+  }
+  
+  .empty-state .icon {
+    font-size: 4rem;
+    color: #dee2e6;
+    margin-bottom: 1rem;
+  }
+  
+  .results-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+  }
+  
+  .results-table td, .results-table th {
+    vertical-align: middle;
+  }
+</style>
+
+<section class="results-section py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        
+        <!-- Results Header -->
+        <div class="results-header" data-aos="fade-up">
+          <h1><i class="bi bi-clipboard-data me-2"></i>Assessment Results</h1>
+          <p class="mb-2">Detailed model-wise results for your cardiovascular risk assessment</p>
+          <div class="submission-id">Submission ID: {{ submission_id }}</div>
+        </div>
+        
+        <!-- Navigation -->
+        <div class="mb-4" data-aos="fade-up" data-aos-delay="100">
+          <a href="{% url 'assessment_history' %}" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-left me-2"></i>Back to Assessment History
+          </a>
+          <button class="btn btn-outline-primary ms-2" onclick="window.print()">
+            <i class="bi bi-printer me-2"></i>Print Results
+          </button>
+        </div>
+        
+        <!-- Results Container -->
+        <div class="results-container" data-aos="fade-up" data-aos-delay="200">
+          
+          {% if results %}
+            <!-- Desktop Table View -->
+            <div class="table-responsive d-none d-lg-block">
+              <table class="table table-hover results-table">
+                <thead>
+                  <tr>
+                    <th><i class="bi bi-cpu me-1"></i>Model</th>
+                    <th><i class="bi bi-speedometer2 me-1"></i>Risk Score</th>
+                    <th><i class="bi bi-chat-square-text me-1"></i>Recommendation</th>
+                    <th><i class="bi bi-calendar3 me-1"></i>Assessed On</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for result in results %}
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <i class="bi bi-diagram-3 text-primary me-2"></i>
+                          <strong>{{ result.model.model_name }}</strong>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="risk-score">{{ result.risk_score|floatformat:1 }}%</span>
+                      </td>
+                      <td>
+                        {% if result.recommendation %}
+                          {% if "Low Risk" in result.recommendation %}
+                            <span class="recommendation-badge rec-low-risk">
+                              <i class="bi bi-check-circle me-1"></i>{{ result.recommendation }}
+                            </span>
+                          {% elif "High Risk" in result.recommendation %}
+                            <span class="recommendation-badge rec-high-risk">
+                              <i class="bi bi-exclamation-triangle me-1"></i>{{ result.recommendation }}
+                            </span>
+                          {% elif "Inconclusive" in result.recommendation %}
+                            <span class="recommendation-badge rec-inconclusive">
+                              <i class="bi bi-question-circle me-1"></i>{{ result.recommendation }}
+                            </span>
+                          {% else %}
+                            <span class="recommendation-badge rec-default">
+                              {{ result.recommendation }}
+                            </span>
+                          {% endif %}
+                        {% else %}
+                          <span class="text-muted">No recommendation available</span>
+                        {% endif %}
+                      </td>
+                      <td>
+                        <div>
+                          <div class="fw-medium">{{ result.assessed_at|date:"M d, Y" }}</div>
+                          <small class="text-muted">{{ result.assessed_at|date:"g:i A" }}</small>
+                        </div>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Mobile/Tablet Card View -->
+            <div class="d-lg-none">
+              {% for result in results %}
+                <div class="model-result-card">
+                  <div class="card-header d-flex justify-content-between align-items-center">
+                    <div>
+                      <i class="bi bi-diagram-3 text-primary me-2"></i>
+                      <strong>{{ result.model.model_name }}</strong>
+                    </div>
+                    <small class="text-muted">{{ result.assessed_at|date:"M d, Y g:i A" }}</small>
+                  </div>
+                  <div class="card-body">
+                    <div class="row mb-3">
+                      <div class="col-6">
+                        <label class="text-muted small">Risk Score:</label>
+                        <div class="risk-score">{{ result.risk_score|floatformat:1 }}%</div>
+                      </div>
+                      <div class="col-6">
+                        <label class="text-muted small">Recommendation:</label>
+                        <div class="mt-1">
+                          {% if result.recommendation %}
+                            {% if "Low Risk" in result.recommendation %}
+                              <span class="recommendation-badge rec-low-risk">
+                                <i class="bi bi-check-circle me-1"></i>{{ result.recommendation }}
+                              </span>
+                            {% elif "High Risk" in result.recommendation %}
+                              <span class="recommendation-badge rec-high-risk">
+                                <i class="bi bi-exclamation-triangle me-1"></i>{{ result.recommendation }}
+                              </span>
+                            {% elif "Inconclusive" in result.recommendation %}
+                              <span class="recommendation-badge rec-inconclusive">
+                                <i class="bi bi-question-circle me-1"></i>{{ result.recommendation }}
+                              </span>
+                            {% else %}
+                              <span class="recommendation-badge rec-default">
+                                {{ result.recommendation }}
+                              </span>
+                            {% endif %}
+                          {% else %}
+                            <span class="text-muted">No recommendation available</span>
+                          {% endif %}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+
+          {% else %}
+            <!-- Empty State -->
+            <div class="empty-state">
+              <div class="icon">
+                <i class="bi bi-exclamation-triangle"></i>
+              </div>
+              <h4>No Results Found</h4>
+              <p class="text-muted">No results found for this submission ID. The assessment may have been incomplete or there was an error processing the results.</p>
+              <a href="{% url 'assessment_history' %}" class="btn btn-primary mt-3">
+                <i class="bi bi-arrow-left me-2"></i>Back to Assessment History
+              </a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

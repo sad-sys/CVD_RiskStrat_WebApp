@@ -1,0 +1,882 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% if user.is_authenticated and user.is_superuser %}
+    <!-- Admin Dashboard -->
+    <div class="container mt-5 mb-5">
+        <div class="row mb-4">
+            <div class="col-12">
+                <h1 class="text-primary">Welcome, {{ user.first_name|default:user.username }}!</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Left Column: Pending Tasks -->
+            <div class="col-md-8">
+                <div class="card shadow p-4 mb-4">
+                    <h2 class="mb-3">Pending Tasks</h2>
+                    <div class="alert alert-warning d-flex align-items-center" role="alert">
+                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" style="font-size: 1.5rem;"></i>
+                        <div>
+                            You have <strong>{{ pending_access_requests_count }}</strong> pending access request{{ pending_access_requests_count|pluralize }}.
+                        </div>
+                    </div>
+                    <a href="{% url 'admin_panel' %}" class="btn btn-primary mt-3">
+                        {% if pending_access_requests_count > 0 %}
+                            Review Pending Requests
+                        {% else %}
+                            Go to Admin Panel
+                        {% endif %}
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Column: Statistics -->
+            <div class="col-md-4">
+                <div class="card shadow p-3 mb-3">
+                    <h5 class="card-title">Pending Access Requests</h5>
+                    <p class="card-text display-4">{{ pending_access_requests_count }}</p>
+                </div>
+                <div class="card shadow p-3 mb-3">
+                    <h5 class="card-title">Total Approved Users</h5>
+                    <p class="card-text display-4">{{ total_approved_users }}</p>
+                </div>
+                <div class="card shadow p-3 mb-3">
+                    <h5 class="card-title">Users by Role</h5>
+                    <p class="card-text"><strong>Clinicians:</strong> {{ total_clinicians }}</p>
+                    <p class="card-text"><strong>Patients:</strong> {{ total_patients }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% elif user.is_authenticated and user.role == 'patient' %}
+    <!-- Patient Dashboard - Starter Page Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 hero-content">
+                        <h1>Welcome back, {{ user.first_name|default:user.username }}!</h1>
+                        <p>Get personalized insights into your heart health using cutting-edge machine learning models and evidence-based medical research.</p>
+                        <div class="hero-buttons">
+                            <a href="{% url 'start_assessment' %}" class="btn btn-light">
+                                <i class="bi bi-heart-pulse me-2"></i>Start Assessment
+                            </a>
+                            <a href="{% url 'patient_dashboard' %}" class="btn btn-outline-light">
+                                <i class="bi bi-speedometer2 me-2"></i>My Dashboard
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="text-center">
+                            <i class="bi bi-heart-pulse" style="font-size: 8rem; opacity: 0.3;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="features">
+            <div class="container">
+                <div class="row text-center mb-5">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="section-title">Why Choose Our CVD Risk Predictor?</h2>
+                        <p class="section-subtitle">Advanced technology meets medical expertise to provide accurate, personalized cardiovascular risk assessments.</p>
+                    </div>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="bi bi-cpu"></i>
+                            </div>
+                            <h4>AI-Powered Analysis</h4>
+                            <p>Our advanced machine learning models analyze multiple risk factors to provide highly accurate cardiovascular risk predictions tailored to your individual profile.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+                            <h4>Evidence-Based</h4>
+                            <p>Built on extensive clinical research and validated against large-scale cardiovascular datasets to ensure medical accuracy and reliability.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="bi bi-graph-up"></i>
+                            </div>
+                            <h4>Comprehensive Reporting</h4>
+                            <p>Receive detailed risk assessments with clear insights, helping you understand the factors that are most important for improving your heart health.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="bi bi-lock"></i>
+                            </div>
+                            <h4>Secure & Private</h4>
+                            <p>Your health data is protected with enterprise-grade security measures and strict privacy protocols. Your information remains confidential and secure.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="bi bi-clock"></i>
+                            </div>
+                            <h4>Quick & Easy</h4>
+                            <p>Complete your comprehensive cardiovascular risk assessment in just minutes with our user-friendly, step-by-step questionnaire interface.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="bi bi-people"></i>
+                            </div>
+                            <h4>Professional Support</h4>
+                            <p>Developed in collaboration with research and healthcare professionals; designed to complement your existing medical care and consultations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-item">
+                            <span class="stat-number">95%</span>
+                            <div class="stat-label">Prediction Accuracy</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-item">
+                            <span class="stat-number">10K+</span>
+                            <div class="stat-label">Assessments Completed</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-item">
+                            <span class="stat-number">5</span>
+                            <div class="stat-label">ML Models</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-item">
+                            <span class="stat-number">24/7</span>
+                            <div class="stat-label">Available Access</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works" id="how-it-works">
+            <div class="container">
+                <div class="row text-center mb-5">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="section-title">How It Works</h2>
+                        <p class="section-subtitle">Simple steps to get your comprehensive cardiovascular risk assessment</p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="step-card">
+                            <div class="step-number">1</div>
+                            <h5>Register Account</h5>
+                            <p>Create your secure account to access the assessment platform and save your results for future reference.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="step-card">
+                            <div class="step-number">2</div>
+                            <h5>Complete Assessment</h5>
+                            <p>Answer questions about your health history, lifestyle, and current medical status through our guided questionnaire.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="step-card">
+                            <div class="step-number">3</div>
+                            <h5>AI Analysis</h5>
+                            <p>Our advanced algorithms analyze your data using COX PH-based machine learning models to calculate your risk score.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="step-card">
+                            <div class="step-number">4</div>
+                            <h5>Get Results</h5>
+                            <p>Receive your detailed risk assessment to help your healthcare team determine the best next steps for your heart health.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section light-background">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-6">
+                        <h3>About CVD Risk Predictor</h3>
+                        <img src="/placeholder.svg?height=400&width=600" class="img-fluid rounded-4 mb-4" alt="About CVD Risk Predictor">
+                        <p>Our cardiovascular disease risk prediction platform represents the cutting edge of medical technology machine learning. Developed through extensive research and training 
+on the UK Biobank dataset, we aim to provide healthcare professionals and patients with accurate, reliable risk assessments.</p>
+                        <p>By combining multiple machine learning models with evidence-based medical guidelines, we leverage self-reported data to deliver personalized insights that help individuals 
+understand their cardiovascular health and take proactive steps toward prevention.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="content ps-0 ps-lg-5">
+                            <p class="fst-italic">
+                                Our mission is to democratize access to advanced cardiovascular risk assessment tools while maintaining the highest standards of medical accuracy and data security.
+                            </p>
+                            <ul>
+                                <li><i class="bi bi-check-circle-fill"></i> <span>Clinically validated prediction models</span></li>
+                                <li><i class="bi bi-check-circle-fill"></i> <span>Real-time risk assessment and reporting</span></li>
+                                <li><i class="bi bi-check-circle-fill"></i> <span>Integration with healthcare workflows</span></li>
+                                <li><i class="bi bi-check-circle-fill"></i> <span>Continuous model improvement and updates</span></li>
+                            </ul>
+                            <p>
+                                Whether you're a healthcare professional seeking advanced tools for risk stratification or an individual interested in understanding your cardiovascular health, our 
+platform provides the insights you need to make informed decisions about heart health.
+                            </p>
+                            <div class="position-relative mt-4">
+                                <img src="/placeholder.svg?height=300&width=400" class="img-fluid rounded-4" alt="Medical Technology">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h2>Ready to Assess Your Cardiovascular Risk?</h2>
+                        <p>Take control of your heart health with our advanced risk assessment platform.</p>
+                        <a href="{% url 'start_assessment' %}" class="btn btn-light btn-lg">
+                            <i class="bi bi-heart-pulse me-2"></i>Start Your Assessment Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container section-title">
+                <h2>Contact</h2>
+                <p>Get in touch with our team for support, questions, or collaboration opportunities</p>
+            </div>
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-6">
+                        <div class="row gy-4">
+                            <div class="col-md-6">
+                                <div class="info-item">
+                                    <i class="bi bi-geo-alt"></i>
+                                    <h3>Address</h3>
+                                    <p>King's College London<br>Denmark Hill Campus</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-item">
+                                    <i class="bi bi-envelope"></i>
+                                    <h3>Email Us</h3>
+                                    <p>konstantinos.theofilatos@kcl.ac.uk</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <form action="{% url 'contact' %}" method="post" class="php-email-form">
+                            {% csrf_token %}
+                            <div class="row gy-4">
+                                <div class="col-md-6">
+                                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+{% elif user.is_authenticated and user.role == 'clinician_approved' %}
+    <!-- Clinician Dashboard -->
+    <div class="min-vh-100">
+        <section class="hero-section bg-gradient position-relative overflow-hidden">
+            <div class="container position-relative">
+                <div class="row min-vh-75 align-items-center py-5">
+                    <div class="col-lg-8">
+                        <div class="hero-content">
+                            <div class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-4">
+                                <i class="bi bi-briefcase me-2"></i>Welcome back, Dr. {{ user.first_name|default:user.username }}
+                            </div>
+                            <h1 class="display-4 fw-bold text-dark mb-4 lh-1">
+                                Clinical CVD Risk Assessment Platform
+                            </h1>
+                            <p class="lead text-muted mb-5 fs-4">
+                                Access advanced machine learning tools for cardiovascular risk assessment, patient monitoring, and batch processing to enhance your clinical practice.
+                            </p>
+                            <div class="d-flex flex-column flex-sm-row gap-3 mb-5">
+                                <a href="{% url 'clinician_dashboard' %}" class="btn btn-primary btn-lg px-4 py-3 fw-medium shadow-sm">
+                                    <i class="bi bi-speedometer2 me-2"></i>Clinical Dashboard
+                                </a>
+                                <a href="{% url 'batch_prediction' %}" class="btn btn-success btn-lg px-4 py-3 fw-medium shadow-sm">
+                                    <i class="bi bi-layers me-2"></i>Batch Processing
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+{% else %}
+    <!-- Public Landing Page -->
+    <div class="min-vh-100">
+        <!-- Hero Section -->
+        <section class="hero-section bg-gradient position-relative overflow-hidden">
+            <div class="hero-bg position-absolute top-0 start-0 w-100 h-100 opacity-10"></div>
+            <div class="container position-relative">
+                <div class="row min-vh-100 align-items-center py-5">
+                    <div class="col-lg-6">
+                        <div class="hero-content">
+                            <div class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-4">
+                                <i class="bi bi-heart-pulse me-2"></i>Advanced CVD Risk Assessment
+                            </div>
+                            <h1 class="display-3 fw-bold text-dark mb-4 lh-1">
+                                Predict Cardiovascular Risk with 
+                                <span class="text-primary">AI Precision</span>
+                            </h1>
+                            <p class="lead text-muted mb-5 fs-4">
+                                Empowering patients and clinicians with state-of-the-art machine learning algorithms for accurate cardiovascular disease risk assessment and prevention.
+                            </p>
+                            <div class="d-flex flex-column flex-sm-row gap-3 mb-5">
+                                <a href="{% url 'signup' %}" class="btn btn-success btn-lg px-4 py-3 fw-medium shadow-sm">
+                                    <i class="bi bi-person-plus me-2"></i>Create Patient Account
+                                </a>
+                                <a href="{% url 'request_access' %}" class="btn btn-primary btn-lg px-4 py-3 fw-medium shadow-sm">
+                                    <i class="bi bi-shield-check me-2"></i>Clinician Access Request
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-image text-center">
+                            <div class="position-relative d-inline-block">
+                                <div class="bg-primary bg-opacity-10 rounded-circle p-5 shadow-lg">
+                                    <i class="bi bi-heart-pulse-fill text-primary" style="font-size: 8rem;"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-5 bg-light">
+            <div class="container py-5">
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="feature-card card border-0 shadow-sm h-100 hover-lift">
+                            <div class="card-body p-4 text-center">
+                                <div class="feature-icon bg-primary bg-opacity-10 rounded-circle p-4 d-inline-flex mb-4">
+                                    <i class="bi bi-bullseye text-primary fs-1"></i>
+                                </div>
+                                <h4 class="fw-bold mb-3">Accurate Predictions</h4>
+                                <p class="text-muted mb-0">
+                                    Leverage advanced machine learning algorithms trained on comprehensive datasets to deliver precise cardiovascular disease risk assessments.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="feature-card card border-0 shadow-sm h-100 hover-lift">
+                            <div class="card-body p-4 text-center">
+                                <div class="feature-icon bg-success bg-opacity-10 rounded-circle p-4 d-inline-flex mb-4">
+                                    <i class="bi bi-layers text-success fs-1"></i>
+                                </div>
+                                <h4 class="fw-bold mb-3">Batch & Personal Processing</h4>
+                                <p class="text-muted mb-0">
+                                    Process multiple patient records efficiently for clinical workflows or get personalized risk insights for individual health management.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="feature-card card border-0 shadow-sm h-100 hover-lift">
+                            <div class="card-body p-4 text-center">
+                                <div class="feature-icon bg-info bg-opacity-10 rounded-circle p-4 d-inline-flex mb-4">
+                                    <i class="bi bi-shield-lock text-info fs-1"></i>
+                                </div>
+                                <h4 class="fw-bold mb-3">Secure & Compliant</h4>
+                                <p class="text-muted mb-0">
+                                    GDPR-compliant infrastructure with enterprise-grade security measures ensuring complete patient data protection.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section bg-primary text-white py-5">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <div class="cta-content">
+                            <h2 class="display-5 fw-bold mb-4">Ready to Transform Cardiovascular Care?</h2>
+                            <p class="lead mb-0 opacity-90">
+                                Join thousands of patients and healthcare professionals who trust our platform for accurate cardiovascular risk assessment.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                        <div class="d-flex flex-column gap-3">
+                            <a href="{% url 'signup' %}" class="btn btn-light btn-lg px-4 py-3 fw-medium">
+                                <i class="bi bi-person-plus me-2"></i>Get Started as Patient
+                            </a>
+                            <a href="{% url 'request_access' %}" class="btn btn-outline-light btn-lg px-4 py-3 fw-medium">
+                                <i class="bi bi-briefcase me-2"></i>Request Clinician Access
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endif %}
+
+<!-- Custom Styles from Starter Page -->
+<style>
+    /* Hero Section */
+    .hero {
+        background: linear-gradient(135deg, #1977cc 0%, #166ab9 100%);
+        color: white;
+        padding: 100px 0;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.1)"><polygon points="1000,100 1000,0 0,100"/></svg>');
+        background-size: cover;
+        background-position: bottom;
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .hero h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+    }
+    
+    .hero p {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+    }
+    
+    .hero .btn {
+        padding: 15px 40px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin: 0 10px 10px 0;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+    }
+    
+    .hero .btn-light {
+        background: white;
+        color: #1977cc;
+        border: 2px solid white;
+    }
+    
+    .hero .btn-light:hover {
+        background: transparent;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+    
+    .hero .btn-outline-light {
+        border: 2px solid white;
+        color: white;
+    }
+    
+    .hero .btn-outline-light:hover {
+        background: white;
+        color: #1977cc;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+    
+    /* Features Section */
+    .features {
+        padding: 80px 0;
+        background: #f8f9fa;
+    }
+    
+    .feature-card {
+        background: white;
+        border-radius: 15px;
+        padding: 40px 30px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        height: 100%;
+        border: 1px solid #e9ecef;
+    }
+    
+    .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        border-color: #1977cc;
+    }
+    
+    .feature-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #1977cc, #166ab9);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 25px;
+        font-size: 2rem;
+        color: white;
+    }
+    
+    .feature-card h4 {
+        color: #2c4964;
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+    
+    .feature-card p {
+        color: #6c757d;
+        line-height: 1.6;
+    }
+    
+    /* Vibrant icon backgrounds for light mode */
+    .feature-icon.bg-primary {
+        background: #1977cc !important;
+        color: #fff !important;
+    }
+    .feature-icon.bg-success {
+        background: #00b96b !important;
+        color: #fff !important;
+    }
+    .feature-icon.bg-info {
+        background: #00bcd4 !important;
+        color: #fff !important;
+    }
+    
+    /* Stats Section */
+    .stats {
+        background: linear-gradient(135deg, #2c4964 0%, #1e3a5f 100%);
+        color: white;
+        padding: 60px 0;
+    }
+    
+    .stat-item {
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .stat-number {
+        font-size: 3rem;
+        font-weight: 700;
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    .stat-label {
+        font-size: 1.1rem;
+        opacity: 0.9;
+    }
+    
+    /* How It Works Section */
+    .how-it-works {
+        padding: 80px 0;
+    }
+    
+    .step-card {
+        text-align: center;
+        padding: 30px 20px;
+        position: relative;
+    }
+    
+    .step-number {
+        width: 60px;
+        height: 60px;
+        background: #1977cc;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 auto 25px;
+    }
+    
+    .step-card h5 {
+        color: #2c4964;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+    
+    .step-card p {
+        color: #6c757d;
+        line-height: 1.6;
+    }
+    
+    /* CTA Section */
+    .cta {
+        background: linear-gradient(135deg, #1977cc 0%, #166ab9 100%);
+        color: white;
+        padding: 80px 0;
+        text-align: center;
+    }
+    
+    .cta h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+    
+    .cta p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        opacity: 0.9;
+    }
+    
+    /* General Styles */
+    .hero-section {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+    
+    .hover-lift {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .hover-lift:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+    }
+    
+    .btn {
+        transition: all 0.3s ease;
+    }
+    
+    .btn:hover {
+        transform: translateY(-2px);
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+        }
+        
+        .hero .btn {
+            display: block;
+            margin: 10px 0;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+        }
+    }
+
+    /* Remove hover-lift effect from all images in the contact section */
+    #contact img:hover, #contact .hover-lift:hover {
+        transform: none !important;
+        box-shadow: none !important;
+    }
+
+    /* --- DARK MODE OVERRIDES --- */
+    body.dark-mode .hero-section,
+    body[data-theme="dark"] .hero-section {
+        background: linear-gradient(135deg, #23272b 0%, #232323 100%) !important;
+    }
+    body.dark-mode .bg-light,
+    body[data-theme="dark"] .bg-light,
+    body.dark-mode .features,
+    body[data-theme="dark"] .features {
+        background: #232323 !important;
+    }
+    body.dark-mode .feature-card,
+    body[data-theme="dark"] .feature-card {
+        background: #181a1b !important;
+        color: #fff !important;
+        border-color: #232323 !important;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    }
+    body.dark-mode .feature-card h4,
+    body[data-theme="dark"] .feature-card h4 {
+        color: #fff !important;
+    }
+    body.dark-mode .feature-card p,
+    body[data-theme="dark"] .feature-card p {
+        color: #bbb !important;
+    }
+    body.dark-mode .stats,
+    body[data-theme="dark"] .stats {
+        background: linear-gradient(135deg, #23272b 0%, #232323 100%) !important;
+        color: #fff !important;
+    }
+    body.dark-mode .step-card h5,
+    body[data-theme="dark"] .step-card h5 {
+        color: #fff !important;
+    }
+    body.dark-mode .step-card p,
+    body[data-theme="dark"] .step-card p {
+        color: #bbb !important;
+    }
+    body.dark-mode .cta,
+    body[data-theme="dark"] .cta {
+        background: linear-gradient(135deg, #23272b 0%, #232323 100%) !important;
+        color: #fff !important;
+    }
+    body.dark-mode .cta h2,
+    body[data-theme="dark"] .cta h2 {
+        color: #fff !important;
+    }
+    body.dark-mode .cta p,
+    body[data-theme="dark"] .cta p {
+        color: #bbb !important;
+    }
+    body.dark-mode .text-primary,
+    body[data-theme="dark"] .text-primary {
+        color: #1977cc !important;
+    }
+    body.dark-mode .btn-primary,
+    body[data-theme="dark"] .btn-primary {
+        background: #1977cc !important;
+        border-color: #1977cc !important;
+        color: #fff !important;
+    }
+    body.dark-mode .bg-primary,
+    body[data-theme="dark"] .bg-primary {
+        background: #1977cc !important;
+        color: #fff !important;
+    }
+    body.dark-mode .feature-icon.bg-primary,
+    body[data-theme="dark"] .feature-icon.bg-primary {
+        background: #2196f3 !important;
+        color: #fff !important;
+    }
+    body.dark-mode .feature-icon.bg-success,
+    body[data-theme="dark"] .feature-icon.bg-success {
+        background: #00e676 !important;
+        color: #fff !important;
+    }
+    body.dark-mode .feature-icon.bg-info,
+    body[data-theme="dark"] .feature-icon.bg-info {
+        background: #1de9b6 !important;
+        color: #fff !important;
+    }
+    body.dark-mode .hero-section h1.display-3,
+    body[data-theme="dark"] .hero-section h1.display-3 {
+        color: #fff !important;
+    }
+    body.dark-mode .hero-section .bi-heart-pulse-fill,
+    body[data-theme="dark"] .hero-section .bi-heart-pulse-fill {
+        color: #fff !important;
+    }
+    body.dark-mode .btn-success,
+    body[data-theme="dark"] .btn-success {
+        color: #fff !important;
+    }
+    body.dark-mode .btn-success .bi,
+    body[data-theme="dark"] .btn-success .bi {
+        color: #fff !important;
+    }
+    .btn-light {
+        color: #111 !important;
+    }
+    .btn-light .bi {
+        color: #111 !important;
+    }
+    .btn-outline-light {
+        color: #fff !important;
+        border-color: #fff !important;
+    }
+    .btn-outline-light .bi {
+        color: #fff !important;
+    }
+    body.dark-mode #about.about.section,
+    body[data-theme="dark"] #about.about.section {
+        background: #181a1b !important;
+        color: #f1f1f1 !important;
+    }
+    body.dark-mode #about.about.section h3,
+    body[data-theme="dark"] #about.about.section h3 {
+        color: #1977cc !important;
+    }
+    body.dark-mode #about.about.section p,
+    body[data-theme="dark"] #about.about.section ul,
+    body[data-theme="dark"] #about.about.section li {
+        color: #f1f1f1 !important;
+    }
+    body.dark-mode #about.about.section .bi-check-circle-fill,
+    body[data-theme="dark"] #about.about.section .bi-check-circle-fill {
+        color: #1977cc !important;
+    }
+</style>
+{% endblock %}

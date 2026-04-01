@@ -1,0 +1,462 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Assessment Complete - CVD Risk Predictor{% endblock %}
+
+{% block content %}
+<style>
+  .final-message-container {
+    min-height: calc(100vh - 200px);
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  }
+  
+  .result-card {
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .result-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #1977cc 0%, #28a745 50%, #1977cc 100%);
+  }
+  
+  .completion-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    position: relative;
+  }
+  
+  .completion-icon.low-risk {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    color: #28a745;
+    box-shadow: 0 8px 32px rgba(40, 167, 69, 0.25);
+  }
+  
+  .completion-icon.high-risk {
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    color: #dc3545;
+    box-shadow: 0 8px 32px rgba(220, 53, 69, 0.25);
+  }
+  
+  .completion-icon.default {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    color: #1977cc;
+    box-shadow: 0 8px 32px rgba(25, 119, 204, 0.25);
+  }
+  
+  .completion-icon::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    border: 2px solid currentColor;
+    opacity: 0.2;
+    animation: pulse-ring 2s infinite;
+  }
+  
+  @keyframes pulse-ring {
+    0% { transform: scale(1); opacity: 0.2; }
+    50% { transform: scale(1.1); opacity: 0.1; }
+    100% { transform: scale(1); opacity: 0.2; }
+  }
+  
+  .result-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #2c4964 0%, #1977cc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .risk-score-display {
+    background: linear-gradient(135deg, #1977cc 0%, #0056b3 100%);
+    color: white;
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .risk-score-display::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    transform: rotate(45deg);
+    animation: shimmer 3s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+  }
+  
+  .risk-score-value {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .risk-score-label {
+    font-size: 1.2rem;
+    opacity: 0.95;
+    position: relative;
+    z-index: 2;
+    font-weight: 600;
+  }
+  
+  .recommendation-badge {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .recommendation-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+  }
+  
+  .recommendation-badge:hover::before {
+    left: 100%;
+  }
+  
+  .recommendation-low {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    box-shadow: 0 8px 32px rgba(40, 167, 69, 0.25);
+  }
+  
+  .recommendation-high {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    color: white;
+    box-shadow: 0 8px 32px rgba(220, 53, 69, 0.25);
+  }
+  
+  .recommendation-default {
+    background: linear-gradient(135deg, #1977cc 0%, #0056b3 100%);
+    color: white;
+    box-shadow: 0 8px 32px rgba(25, 119, 204, 0.25);
+  }
+  
+  .message-text {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #2c4964;
+    margin: 2rem 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .action-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #e9ecef;
+  }
+  
+  .primary-action {
+    background: linear-gradient(135deg, #1977cc 0%, #0056b3 100%);
+    color: white;
+    padding: 1.25rem 3rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 32px rgba(25, 119, 204, 0.25);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .primary-action:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(25, 119, 204, 0.35);
+    color: white;
+  }
+  
+  .secondary-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+  
+  .secondary-btn {
+    padding: 0.875rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 2px solid;
+  }
+  
+  .btn-outline-secondary {
+    border-color: #6c757d;
+    color: #6c757d;
+  }
+  
+  .btn-outline-secondary:hover {
+    background: #6c757d;
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  .btn-outline-info {
+    border-color: #17a2b8;
+    color: #17a2b8;
+  }
+  
+  .btn-outline-info:hover {
+    background: #17a2b8;
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  .btn-outline-success {
+    border-color: #28a745;
+    color: #28a745;
+  }
+  
+  .btn-outline-success:hover {
+    background: #28a745;
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  .info-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 16px;
+    border: 1px solid #dee2e6;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .info-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .info-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1977cc 0%, #0056b3 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.1rem;
+  }
+  
+  .info-content {
+    flex: 1;
+  }
+  
+  .info-title {
+    font-weight: 700;
+    color: #2c4964;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .info-text {
+    color: #6c757d;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .result-card {
+      padding: 2rem 1.5rem;
+      margin: 0 1rem;
+    }
+    
+    .result-title {
+      font-size: 2rem;
+    }
+    
+    .risk-score-value {
+      font-size: 3rem;
+    }
+    
+    .secondary-actions {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .secondary-btn {
+      width: 100%;
+      max-width: 300px;
+      justify-content: center;
+    }
+    
+    .info-item {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>
+
+<section class="final-message-container">
+  <div class="container">
+    <div class="result-card">
+      
+      <!-- Completion Icon -->
+      <div class="completion-icon {% if recommendation == 'Low Risk' %}low-risk{% elif recommendation == 'High Risk' %}high-risk{% else %}default{% endif %}">
+        {% if recommendation == "Low Risk" %}
+          <i class="bi bi-check-circle-fill"></i>
+        {% elif recommendation == "High Risk" %}
+          <i class="bi bi-exclamation-triangle-fill"></i>
+        {% else %}
+          <i class="bi bi-heart-pulse-fill"></i>
+        {% endif %}
+      </div>
+
+      <!-- Main Title -->
+      <h1 class="result-title">Assessment Complete</h1>
+      
+      <!-- Risk Score Display -->
+      <div class="risk-score-display">
+        <div class="risk-score-value">{{ risk_score|floatformat:2 }}%</div>
+        <div class="risk-score-label">Your CVD Risk Score</div>
+      </div>
+
+      <!-- Recommendation Badge -->
+      {% if recommendation %}
+        <div class="recommendation-badge {% if recommendation == 'Low Risk' %}recommendation-low{% elif recommendation == 'High Risk' %}recommendation-high{% else %}recommendation-default{% endif %}">
+          {% if recommendation == "Low Risk" %}
+            <i class="bi bi-shield-check me-2"></i>{{ recommendation }}
+          {% elif recommendation == "High Risk" %}
+            <i class="bi bi-exclamation-circle me-2"></i>{{ recommendation }}
+          {% else %}
+            <i class="bi bi-info-circle me-2"></i>{{ recommendation }}
+          {% endif %}
+        </div>
+      {% endif %}
+
+      <!-- Message Text -->
+      <div class="message-text">
+        {{ message }}
+      </div>
+
+      <!-- Action Section -->
+      <div class="action-section">
+        <!-- Primary Action -->
+        <div>
+          <a href="{% url 'patient_self_results' %}" class="primary-action">
+            <i class="bi bi-file-text"></i>
+            View Detailed Results
+          </a>
+        </div>
+        
+        <!-- Secondary Actions -->
+        <div class="secondary-actions">
+          <a href="{% url 'patient_dashboard' %}" class="secondary-btn btn-outline-secondary">
+            <i class="bi bi-house"></i>Dashboard
+          </a>
+          <a href="{% url 'assessment_history' %}" class="secondary-btn btn-outline-info">
+            <i class="bi bi-clock-history"></i>History
+          </a>
+          <a href="{% url 'learn_cvd' %}" class="secondary-btn btn-outline-success">
+            <i class="bi bi-book"></i>Learn More
+          </a>
+        </div>
+      </div>
+
+      <!-- Information Section -->
+      <div class="info-section">
+        <div class="info-item">
+          <div class="info-icon">
+            <i class="bi bi-info-circle"></i>
+          </div>
+          <div class="info-content">
+            <div class="info-title">Medical Disclaimer</div>
+            <p class="info-text">
+              This assessment is based on the information you provided and is for educational purposes only. 
+              For personalized medical advice, please consult with your healthcare provider.
+            </p>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <div class="info-icon">
+            <i class="bi bi-lightbulb"></i>
+          </div>
+          <div class="info-content">
+            <div class="info-title">Next Steps</div>
+            <p class="info-text">
+              Review your detailed results, save or print your report, and discuss these findings 
+              with your healthcare team for personalized recommendations.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+{% endblock %}
