@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-qlpex**)z!zh*qya#mp+_93^w+!s-$9^pyr&+b67^nj55yyt)(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1"]
 AUTH_USER_MODEL = 'accounts.Users'
 
 AUTHENTICATION_BACKENDS = [
@@ -83,7 +83,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "CVD_Risk",
         "USER": "root",
-        "PASSWORD": "",
+        "PASSWORD": "andy0813",
         "OPTIONS": {
             "unix_socket": "/tmp/mysql.sock",
         },

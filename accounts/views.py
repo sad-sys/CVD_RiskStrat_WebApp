@@ -881,17 +881,37 @@ def batch_prediction(request):
     context = {}
     if request.method == 'POST' and request.FILES.get('csv_file'):
         csv_file = request.FILES['csv_file']
+
+        # Andy
+        model_choice = request.POST.get('model_choice')
+        print("Selected model:", model_choice)
+
+        MODEL_CONFIG = {
+            'model1': {
+                'imputer': 'biggestModel_rf (1).pkl',
+                'scaler': 'biggestModelscaler.pkl',
+                'model': 'MRMR_COX_FULL_MODEL_+QRISKSociodemographics_Health_and_medical_history_Sex-specific_factors_Early_life_factors_Family_history_Lifestyle_and_environment_Psychosocial_factors_oneDrop_qrisk.pkl'
+            },
+            'model2':{
+                'imputer': 'SSFnoDrop_rf.pkl',
+                'scaler': 'SSFnoDropscaler.pkl',
+                'model': 'MRMR_COX_Sociodemographics_Health_and_medical_history_Sex-specific_factors.pkl'
+            }
+        }
+
         try:
             df = pd.read_csv(csv_file)
         except Exception as e:
             context['error'] = f"Error reading CSV: {e}"
             return render(request, 'admin/batch_prediction.html', context)
 
-        # Load model files
+        # Load model files (Andy)
         model_dir = os.path.join(settings.BASE_DIR, 'model_files', 'batch_models')
-        imputer = joblib.load(os.path.join(model_dir, 'biggestModel_rf (1).pkl'))
-        scaler = joblib.load(os.path.join(model_dir, 'biggestModelscaler.pkl'))
-        model = joblib.load(os.path.join(model_dir, 'MRMR_COX_FULL_MODEL_+QRISKSociodemographics_Health_and_medical_history_Sex-specific_factors_Early_life_factors_Family_history_Lifestyle_and_environment_Psychosocial_factors_oneDrop_qrisk.pkl'))
+        config = MODEL_CONFIG[model_choice]
+        imputer = joblib.load(os.path.join(model_dir, config['imputer']))
+        scaler = joblib.load(os.path.join(model_dir, config['scaler']))
+        model = joblib.load(os.path.join(model_dir, config['model']))
+        # Andy
 
         # Ensure all required columns are present
         required_features = model.feature_names_in_ if hasattr(model, 'feature_names_in_') else df.columns

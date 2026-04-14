@@ -10,6 +10,7 @@
     </div>
   </div>
   <!-- Upload Form Card -->
+   <!-- Andy -->
   <div class="row justify-content-center mb-4">
     <div class="col-md-7">
       <div class="card shadow p-4 w-100">
@@ -39,16 +40,31 @@
                   </ul>
                 </div>
               </div>
+
+              
               <div class="mt-2">
                 Please refer to the feature documentation for detailed answer options.<br>
                 For questions requiring a Yes/No response (this applies to questions with a logical data type), enter <strong>1</strong> for "Yes" and <strong>0</strong> for "No".
               </div>
+
             </small>
           </div>
           <p class="text-center">
             <a href="{% url 'download_data_entry_template' %}" class="btn btn-primary mb-2">Download Data Entry Template (CSV)</a><br>
             <a href="{% url 'download_feature_documentation' %}" class="btn btn-secondary">Download Feature Documentation (CSV)</a>
           </p>
+
+          <!-- Andy -->
+          <div class="mt-3">
+            <label for="model_choice" class="form-label">Choose Model</strong></label>
+            <select name="model_choice" id="model_choice" class="form-select">
+              <option value="model1">Full model</option>
+              <option value="model2">Sociodemographics + HMH + Sex</option>
+              <option value="model3">Model 3</option>
+            </select>
+          </div>
+          <!-- Andy -->
+
           <div class="form-check mt-3">
             <input class="form-check-input" type="checkbox" value="1" id="confirmDataCheckbox" name="confirm_data" required>
             <label class="form-check-label" for="confirmDataCheckbox">
