@@ -21,7 +21,32 @@ def calculate_features(patient_id, submission_id):
     if 'clinicalrisk_Age.at.recruitment' in df.columns:
         df.rename(columns={'clinicalrisk_Age.at.recruitment': 'Age.at.recruitment'}, inplace=True)
 
-    
+    prefix = df.columns[0].split("...")[0]
+    print("The first prefix is", prefix)
+
+    for col in df.columns:
+        newPrefix = col.split("...")[0]
+        print("Current prefix is", newPrefix)
+
+        if newPrefix != prefix:
+            prefix = newPrefix
+            dfWithPrefix = df[[c for c in df.columns if c.startswith(prefix)]]
+
+            print("Columns with that prefix", dfWithPrefix.columns)
+
+            # If any value exists in this prefix group, fill NaNs in this group only
+            if dfWithPrefix.notna().any().any():
+                df.loc[:, dfWithPrefix.columns] = dfWithPrefix.fillna(0)
+
+            for c in dfWithPrefix.columns:
+                non_na = dfWithPrefix[c].dropna()
+
+                if not non_na.empty:
+                    print(f"Column: {c}")
+                    print(non_na.values)
+
+            print("All columns, df With Prefix", dfWithPrefix.columns)
+
     # Step 3: Load imputer and align input
     with open('model_files/imputers/model1_sociodemographics_rf (1).pkl', 'rb') as f:
         imputer = pickle.load(f)
@@ -40,20 +65,23 @@ def calculate_features(patient_id, submission_id):
     
     # Step 4: Apply imputer
     print(type(imputer))
-    print(hasattr(imputer, "n_iter_"))      
+    print(hasattr(imputer, "n_iter_"))
+    print("COUNT ZEROS:", (df == 0).sum().sum())
+    print("COUNT NaNs:", df.isna().sum().sum())      
     df_imputed = pd.DataFrame(imputer.transform(df), columns=expected_features)
     
     
 
     # Step 5: Load and apply scaler (if applicable)
     try:
-        with open('model_files/scalers/sociodemogrphic_scaler.pkl', 'rb') as f:
+        with open('model_files/scalers/scaler.pkl', 'rb') as f:
             scaler = pickle.load(f)
         if hasattr(scaler, 'feature_names_in_'):
-            df_imputed = df_imputed.reindex(columns=scaler.feature_names_in_, fill_value=0)
+            df_imputed = df_imputed.reindex(columns=scaler.feature_names_in_)
 
         df_scaled = pd.DataFrame(scaler.transform(df_imputed.values), columns=df_imputed.columns)
     except FileNotFoundError:
+        print("Scaler,",scaler,", NOT found")
         df_scaled = df_imputed  # Use imputed if no scaler is defined
 
     # After imputation + optional scaling

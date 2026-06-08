@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import os
 import re
 from django.db import connections
@@ -42,7 +43,8 @@ def calculate_model_features(patient_id, submission_id, model_name, template_pat
             print(k)
     
     # 4. Initialize feature values to 0
-    feature_values = {fname: 0 for fname in feature_order}
+    #feature_values = {fname: 0 for fname in feature_order}
+    feature_values = {fname: np.nan for fname in feature_order}
 
     # 5. Tertile grouping
     tertile_groups = {}

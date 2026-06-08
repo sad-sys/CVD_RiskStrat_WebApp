@@ -334,7 +334,6 @@ def assessment_view(request):
                 model_module = CATEGORY_MODEL_MAPPING[category]
                 try:
                     df_scaled = model_module.calculate_features(patient.patient_id, submission_id)
-                    
                     model_path = MODEL_FILE_MAPPING[category]
                     print(f"🧠 Looking for model: {model_path}")
 
@@ -343,6 +342,8 @@ def assessment_view(request):
 
                     model = joblib.load(model_path)
                     print("🧾 Final columns before prediction:", df_scaled.columns.tolist())
+                    print("🧾 Final values before prediction:", df_scaled.iloc[0].tolist())
+
 
                     # Predict risk 
                     print(df_scaled)
@@ -896,8 +897,6 @@ def batch_prediction(request):
         # Ensure all required columns are present
         required_features = model.feature_names_in_ if hasattr(model, 'feature_names_in_') else df.columns
         missing_cols = [col for col in required_features if col not in df.columns]
-        for col in missing_cols:
-            df[col] = 0  # Default for missing one-hot/numerical columns
         df = df[required_features]  # Reorder columns
         #Sadiq change
         print(df[["clinicalrisk_Age.at.recruitment"]])

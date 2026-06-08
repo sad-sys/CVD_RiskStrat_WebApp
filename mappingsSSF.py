@@ -703,7 +703,7 @@ mapping_table = [
 
 
 
- ("clinicalrisk_Age.at.recruitment",
+ ("Age.at.recruitment",
  "What is your age in years at the time of this test? "),
 
 ]

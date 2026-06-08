@@ -15,12 +15,38 @@ def calculate_features(patient_id, submission_id):
     # Step 2: Convert to DataFrame
     df = pd.DataFrame([raw_features])
 
+    prefix = df.columns[0].split("...")[0]
+    print("The first prefix is", prefix)
+
+    for col in df.columns:
+        newPrefix = col.split("...")[0]
+        print("Current prefix is", newPrefix)
+
+        if newPrefix != prefix:
+            prefix = newPrefix
+            dfWithPrefix = df[[c for c in df.columns if c.startswith(prefix)]]
+
+            print("Columns with that prefix", dfWithPrefix.columns)
+
+            # If any value exists in this prefix group, fill NaNs in this group only
+            if dfWithPrefix.notna().any().any():
+                df.loc[:, dfWithPrefix.columns] = dfWithPrefix.fillna(0)
+
+            for c in dfWithPrefix.columns:
+                non_na = dfWithPrefix[c].dropna()
+
+                if not non_na.empty:
+                    print(f"Column: {c}")
+                    print(non_na.values)
+
+            print("All columns, df With Prefix", dfWithPrefix.columns)
+
     # Step 3: Load imputer and align input
     with open('model_files/imputers/SSFnoDrop_rf.pkl', 'rb') as f:
         imputer = pickle.load(f)
 
     expected_imputer_features = imputer.feature_names_in_
-    df = df.reindex(columns=expected_imputer_features, fill_value=0)
+    df = df.reindex(columns=expected_imputer_features)
 
     # Step 4: Apply imputer
     df_imputed = pd.DataFrame(imputer.transform(df), columns=expected_imputer_features)

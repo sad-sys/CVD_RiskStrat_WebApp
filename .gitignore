@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+
+db.sqlite3
+.DS_Store
+
+model_files/
+model_outputs/
+
+~.xlsx
+.ipynb_checkpoints/
