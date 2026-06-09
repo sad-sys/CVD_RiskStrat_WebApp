@@ -61,10 +61,11 @@ CATEGORY_THRESHOLDS = {
     "Lifestyle and environment": (thresholds["Min_Threshold6"], thresholds["Max_Threshold6"]),
     "Psychosocial factors": (thresholds["Min_Threshold7"], thresholds["Max_Threshold7"])
 }
-CATEGORY_ORDER = ["Sociodemographics", "Health and medical history", "Sex-specific factors",
-                  "Early life factors", "Family history", "Lifestyle and environment",
-                  "Psychosocial factors"]
-
+CATEGORY_ORDER = [
+    "Sociodemographics",
+    "Health and medical history",
+    "Sex-specific factors"
+]
 def get_risk_category(score, category):
     """
     Determines patient's risk category based on the score and thresholds.
@@ -213,24 +214,26 @@ def assessment_view(request):
         "Sociodemographics": model1_sociodemographic,
         "Health and medical history": model2_healthandmed,
         "Sex-specific factors": model3_SSF,
-        "Early life factors": model4_early_life,
-        "Family history": model5_family_history,
-        "Lifestyle and environment": model6_lifestyle,
-        "Psychosocial factors": model7_biggestmodel
     }
 
     MODEL_FILE_MAPPING = {
-        "Sociodemographics": "model_files/ML_models/MRMR_COX_Sociodemographics.pkl",
-        "Health and medical history": "model_files/ML_models/MRMR_COX_Sociodemographics_Health_and_medical_history.pkl",
-        "Sex-specific factors": "model_files/ML_models/MRMR_COX_Sociodemographics_Health_and_medical_history_Sex-specific_factors.pkl",
-        "Early life factors": "model_files/ML_models/MRMR_COX_Sociodemographics_Health_and_medical_history_Sex-specific_factors_Early_life_factors.pkl",
-        "Family history": "model_files/ML_models/MRMR_COX_Sociodemographics_Health_and_medical_history_Sex-specific_factors_Early_life_factors_Family_history.pkl",
-        "Lifestyle and environment": "model_files/ML_models/MRMR_COX_Sociodemographics_Health_and_medical_history_Sex-specific_factors_Early_life_factors_Family_history_Lifestyle_and_environment.pkl",
-        "Psychosocial factors": "model_files/ML_models/MRMR_COX_Sociodemographics_Health_and_medical_history_Sex-specific_factors_Early_life_factors_Family_history_Lifestyle_and_environment_Psychosocial_factors.pkl",
+        "Sociodemographics":
+            "model_files/ML_models/MRMR_COX_Sociodemographics.pkl",
+
+        "Health and medical history":
+            "model_files/ML_models/MRMR_COX_Sociodemographics_Health_and_medical_history.pkl",
+
+        "Sex-specific factors":
+            "model_files/ML_models/MRMR_COX_Sociodemographics_Health_and_medical_history_Sex-specific_factors.pkl",
     }
 
-    raw_categories = CVD_risk_Questionnaire.objects.values_list('category', flat=True).distinct()
-    all_categories = sorted(set(raw_categories), key=lambda x: CATEGORY_ORDER.index(x) if x in CATEGORY_ORDER else 999)
+    #raw_categories = CVD_risk_Questionnaire.objects.values_list('category', flat=True).distinct()
+    #all_categories = sorted(set(raw_categories), key=lambda x: CATEGORY_ORDER.index(x) if x in CATEGORY_ORDER else 999)
+    all_categories = [
+    "Sociodemographics",
+    "Health and medical history",
+    "Sex-specific factors"
+    ]
 
     # Redirect to first unanswered category
     if not category and all_categories:
