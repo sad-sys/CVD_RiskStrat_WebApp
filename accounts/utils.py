@@ -28,25 +28,36 @@ def should_display_question(question, saved_responses):
         match_found = False
         for val in required_vals:
             val = val.strip()
+            print("DEBUG", trigger_val, repr(trigger_val), val)
             try:
-                if val.startswith('>'):
-                    if float(trigger_val) > float(val[1:]):
-                        match_found = True
-                elif val.startswith('<'):
-                    if float(trigger_val) < float(val[1:]):
-                        match_found = True
-                elif val.startswith('>='):
+                if val.startswith(">="):
                     if float(trigger_val) >= float(val[2:]):
                         match_found = True
-                elif val.startswith('<='):
+
+                elif val.startswith("<="):
                     if float(trigger_val) <= float(val[2:]):
                         match_found = True
-                else:
-                    # Exact match
-                    if str(trigger_val) == val:
+
+                elif val.startswith(">"):
+                    if float(trigger_val) > float(val[1:]):
                         match_found = True
-            except Exception as e:
-                continue  # Ignore invalid expressions
+
+                elif val.startswith("<"):
+                    if float(trigger_val) < float(val[1:]):
+                        match_found = True
+
+                else:
+                    try:
+                        if float(trigger_val) == float(val):
+                            print("MATCH FOUND")
+                            match_found = True
+                    except ValueError:
+                        if str(trigger_val) == str(val):
+                            print("STRING MATCH FOUND")
+                            match_found = True
+
+            except Exception:
+                continue
 
         if not match_found:
             return False  # One dependency not satisfied

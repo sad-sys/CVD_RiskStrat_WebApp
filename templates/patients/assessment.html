@@ -385,17 +385,17 @@
                     {% with q=item.question %}
                       <!-- Enhanced question block with conditional logic data attributes -->
                       <div class="question-block"
-                           id="question_{{ q.question_id }}"
-                           {% if q.trigger_questions.all %}
-                             data-conditional="true"
-                             {% for dep in q.trigger_questions.all %}
-                               data-trigger-id="{{ dep.triggering_question.question_id }}"
-                               data-trigger-values="{{ dep.trigger_values }}"
-                             {% endfor %}
-                           {% else %}
-                             data-conditional="false"
-                           {% endif %}
-                           style="{% if q.trigger_questions.all %}display: none;{% endif %}">
+                          id="question_{{ q.question_id }}"
+                          {% if q.trigger_questions.all %}
+                            data-conditional="true"
+                            {% for dep in q.trigger_questions.all %}
+                              data-trigger-id="{{ dep.triggering_question.question_id }}"
+                              data-trigger-values="{{ dep.trigger_values }}"
+                            {% endfor %}
+                          {% else %}
+                            data-conditional="false"
+                          {% endif %}
+                          style="{% if q.trigger_questions.all %}display: none;{% endif %}">
 
                         <div class="question-stem required-field">
                           {{ q.question_text }}
@@ -406,7 +406,7 @@
                             <!-- Numeric input with conditional logic class -->
                             <input type="number"
                                    class="form-control numeric-input question-input"
-                                   id="question_{{ q.question_id }}"
+                                   id="input_question_{{ q.question_id }}"
                                    name="question_{{ q.question_id }}"
                                    data-question-id="{{ q.question_id }}"
                                    value="{{ item.response|default:'' }}"
@@ -426,6 +426,7 @@
                                          name="question_{{ q.question_id }}"
                                          id="q{{ q.question_id }}_opt{{ forloop.counter }}"
                                          data-question-id="{{ q.question_id }}"
+                                         data-encoded-value="{{ option.encoded_value }}"
                                          value="{{ option.id }}"
                                          {% if option.id|stringformat:"s" == item.response_id|stringformat:"s" %}checked{% endif %}
                                          {% if item.required %}required{% endif %}>
@@ -450,12 +451,13 @@
                                 {% for option in item.options %}
                                   <div class="form-check">
                                     <input type="checkbox"
-                                           class="form-check-input question-input"
-                                           name="question_{{ q.question_id }}_option"
-                                           id="q{{ q.question_id }}_opt{{ forloop.counter }}"
-                                           data-question-id="{{ q.question_id }}"
-                                           value="{{ option.id }}"
-                                           {% if option.id|stringformat:"s" in item.multi_response_ids %}checked{% endif %}>
+                                          class="form-check-input question-input"
+                                          name="question_{{ q.question_id }}_option"
+                                          id="q{{ q.question_id }}_opt{{ forloop.counter }}"
+                                          data-question-id="{{ q.question_id }}"
+                                          data-encoded-value="{{ option.encoded_value }}"
+                                          value="{{ option.id }}"
+                                          {% if option.id|stringformat:"s" in item.multi_response_ids %}checked{% endif %}>
                                     <label class="form-check-label"
                                            for="q{{ q.question_id }}_opt{{ forloop.counter }}">
                                       {{ option.option_text }}
@@ -472,7 +474,7 @@
                             <!-- Fallback text input with conditional logic -->
                             <input type="text"
                                    class="form-control text-input question-input"
-                                   id="question_{{ q.question_id }}"
+                                   id="input_question_{{ q.question_id }}"
                                    name="question_{{ q.question_id }}"
                                    data-question-id="{{ q.question_id }}"
                                    value="{{ item.response|default:'' }}"
@@ -533,12 +535,20 @@
         if (val.startsWith('<=')) return parseFloat(response) <= parseFloat(val.slice(2));
         if (val.startsWith('>')) return parseFloat(response) > parseFloat(val.slice(1));
         if (val.startsWith('<')) return parseFloat(response) < parseFloat(val.slice(1));
-        return response == val;
+        const r = parseFloat(response);
+        const v = parseFloat(val);
+
+        if (!isNaN(r) && !isNaN(v)) {
+            return r === v;
+        }
+
+        return String(response) === String(val);
       });
     }
 
     // Hide or show all dependent questions based on current responses
     function updateQuestionVisibility() {
+      console.log("VISIBILITY UPDATE RUNNING");
       const inputs = document.querySelectorAll('.question-input');
       const responses = {};
 
@@ -548,14 +558,14 @@
         if (input.tagName === 'SELECT') {
           responses[qid] = input.value;
         } else if (input.type === 'radio') {
-          if (input.checked) {
-            responses[qid] = input.value;
-          }
+            if (input.checked) {
+                responses[qid] = input.dataset.encodedValue;
+            }
         } else if (input.type === 'checkbox') {
           // For checkboxes, we need to handle multiple values
           if (!responses[qid]) responses[qid] = [];
           if (input.checked) {
-            responses[qid].push(input.value);
+            responses[qid].push(input.dataset.encodedValue);
           }
         } else if (input.type === 'number' || input.type === 'text') {
           responses[qid] = input.value;
@@ -565,10 +575,29 @@
       // Go through conditional question blocks
       const conditionalQuestions = document.querySelectorAll('.question-block[data-conditional="true"]');
       conditionalQuestions.forEach(qBlock => {
+          if (qBlock.style.display === 'none') {
+              qBlock.querySelectorAll('.question-input').forEach(input => {
+                  if (input.hasAttribute('required')) {
+                      input.dataset.wasRequired = "true";
+                      input.removeAttribute('required');
+                  }
+              });
+          }
+      });
+      conditionalQuestions.forEach(qBlock => {
         const triggerId = qBlock.dataset.triggerId;
         const triggerValues = qBlock.dataset.triggerValues.split(',');
 
         const currentAnswer = responses[triggerId];
+        console.log(
+          qBlock.id,
+          "trigger",
+          triggerId,
+          "answer",
+          currentAnswer,
+          "values",
+          triggerValues
+        );
         let shouldShow = false;
 
         if (currentAnswer !== undefined && currentAnswer !== '') {
@@ -580,27 +609,46 @@
           }
         }
 
-        // Show/hide with smooth animation
-        if (shouldShow && qBlock.style.display === 'none') {
-          qBlock.style.display = 'block';
-          qBlock.classList.add('showing');
-          // Remove the animation class after animation completes
-          setTimeout(() => qBlock.classList.remove('showing'), 300);
-        } else if (!shouldShow && qBlock.style.display !== 'none') {
-          qBlock.style.display = 'none';
-          
-          // Clear any values in hidden questions to prevent submission of hidden data
-          const hiddenInputs = qBlock.querySelectorAll('.question-input');
-          hiddenInputs.forEach(hiddenInput => {
-            if (hiddenInput.type === 'radio' || hiddenInput.type === 'checkbox') {
-              hiddenInput.checked = false;
-            } else {
-              hiddenInput.value = '';
+    // Show/hide with smooth animation
+    if (shouldShow) {
+
+        qBlock.style.display = 'block';
+
+        const visibleInputs = qBlock.querySelectorAll('.question-input');
+
+        visibleInputs.forEach(input => {
+            if (input.dataset.wasRequired === "true") {
+                input.setAttribute('required', 'required');
             }
-          });
-        }
-      });
+        });
+
+        qBlock.classList.add('showing');
+        setTimeout(() => qBlock.classList.remove('showing'), 300);
+
+    } else {
+
+        qBlock.style.display = 'none';
+
+        const hiddenInputs = qBlock.querySelectorAll('.question-input');
+
+        hiddenInputs.forEach(hiddenInput => {
+
+            if (hiddenInput.hasAttribute('required')) {
+                hiddenInput.dataset.wasRequired = "true";
+            }
+
+            hiddenInput.removeAttribute('required');
+
+            if (hiddenInput.type === 'radio' || hiddenInput.type === 'checkbox') {
+                hiddenInput.checked = false;
+            } else {
+                hiddenInput.value = '';
+            }
+        });
     }
+
+        }); // closes conditionalQuestions.forEach
+    } // closes updateQuestionVisibility
 
     // Attach change listeners to all question inputs
     const allInputs = document.querySelectorAll('.question-input');

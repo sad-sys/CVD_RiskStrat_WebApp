@@ -249,10 +249,14 @@ def assessment_view(request):
 
     patient = Patients.objects.get(user=request.user)
 
-    all_questions = CVD_risk_Questionnaire.objects.filter(category=category).order_by('question_order')
-    visible_questions = get_visible_questions_for_patient_in_category(patient, category)
+    all_questions = get_visible_questions_for_patient_in_category(
+        patient,
+        category
+    )
+    print("ALL QUESTIONS:")
+    for q in all_questions:
+        print(q.question_id)
 
-    # Load latest saved responses to prefill
     saved_responses = {
         r.question.question_id: (
             r.option_selected.encoded_value if r.option_selected else
@@ -261,7 +265,19 @@ def assessment_view(request):
         )
         for r in CVD_risk_Responses.objects.filter(patient=patient)
     }
+    for q in all_questions:
+        result = should_display_question(q, saved_responses)
+        print(
+            q.question_id,
+            result
+        )
 
+    print("ALL QUESTIONS:")
+    for q in all_questions:
+        print(q.question_id)
+
+    visible_questions = []
+    visible_questions = list(all_questions)
     # ---------- Handle POST (Form Submission) ----------
     if request.method == 'POST':
         try:
@@ -294,6 +310,12 @@ def assessment_view(request):
                     )
                     response_obj.multi_selected_options.set(selected_options)
                     response_obj.save()
+                    print(
+                        "SAVED",
+                        q.question_id,
+                        response_obj.option_selected.id if response_obj.option_selected else None,
+                        response_obj.option_selected.encoded_value if response_obj.option_selected else None
+                    )
                     continue
 
                 # Single/miscellaneous responses
@@ -307,6 +329,7 @@ def assessment_view(request):
 
                 if options.exists():
                     try:
+                        print("POST VALUE:", value)
                         selected_option = options.get(id=int(value))
                         response_obj.option_selected = selected_option
                     except:
@@ -317,6 +340,12 @@ def assessment_view(request):
                     except:
                         response_obj.boolean_response = value.lower() in ['yes', 'true', '1']
                 response_obj.save()
+                print(
+                    "SAVED",
+                    q.question_id,
+                    response_obj.option_selected.id if response_obj.option_selected else None,
+                    response_obj.option_selected.encoded_value if response_obj.option_selected else None
+                )
 
         except DatabaseError:
             connection.rollback()
@@ -434,9 +463,12 @@ def assessment_view(request):
             'response': response_value,
             'response_id': response_id,
             'multi_response_ids': multi_ids,
-            'answer_type': q.answer_type
+            'answer_type': q.answer_type,
+            'required': True
         })
-
+    print("QUESTION DATA IDS:")
+    for qd in question_data:
+        print(qd["question"].question_id)
     return render(request, 'patients/assessment.html', {
         'category': category,
         'question_data': question_data,
