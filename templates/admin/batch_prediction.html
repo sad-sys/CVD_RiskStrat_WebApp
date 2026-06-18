@@ -21,25 +21,41 @@
             <label for="csv_file" class="form-label">Choose CSV file</label>
             <input type="file" class="form-control" id="csv_file" name="csv_file" accept=".csv" required>
             <small class="form-text text-muted">
-              Please upload a CSV file containing patient data. The file should include columns for:<br>
-              <div class="row">
-                <div class="col-12 col-md-6">
-                  <ul style="margin-top: 0.5em; margin-bottom: 0.5em;">
-                    <li>Metabolomic and Polygenic Risk Score features</li>
-                    <li>QRisk factors</li>
-                    <li>Lifestyle and environmental factors</li>
-                    <li>Sociodemographics</li>
-                  </ul>
-                </div>
-                <div class="col-12 col-md-6">
-                  <ul style="margin-top: 0.5em; margin-bottom: 0.5em;">
-                    <li>Family history</li>
-                    <li>Psychosocial factors</li>
-                    <li>Health and medical history</li>
-                    <li>Sex-specific factors</li>
-                  </ul>
-                </div>
-              </div>
+
+              <!-- Andy -->
+          </div>
+          <div class="mt-3">
+            <label for="model_choice" class="form-label">Choose Model</label>
+            <select name="model_choice" id="model_choice" class="form-select">
+              <option value="model1">Full model</option>
+              <option value="model2">Sociodemographics + HMH + Sex</option>
+              <option value="model3">Model 3</option>
+            </select>
+          </div>
+          <div id="model-instruction" class="alert alert-info mt-2">
+            Please select a model to see instructions.
+          </div>
+
+          <script>
+          const instructions = {
+            model1: "Full model requires all features including metabolomics and PRS.",
+            model2: "This model only uses sociodemographics + HMH + sex variables.",
+            model3: "Simplified clinical model with minimal input features."
+          };
+
+          document.getElementById("model_choice").addEventListener("change", function () {
+            const selected = this.value;
+            const box = document.getElementById("model-instruction");
+
+            if (instructions[selected]) {
+              box.innerHTML = instructions[selected];
+              box.style.display = "block";
+            } else {
+              box.innerHTML = "";
+            }
+          });
+          </script>
+          <!-- Andy -->
 
               
               <div class="mt-2">
@@ -54,16 +70,7 @@
             <a href="{% url 'download_feature_documentation' %}" class="btn btn-secondary">Download Feature Documentation (CSV)</a>
           </p>
 
-          <!-- Andy -->
-          <div class="mt-3">
-            <label for="model_choice" class="form-label">Choose Model</strong></label>
-            <select name="model_choice" id="model_choice" class="form-select">
-              <option value="model1">Full model</option>
-              <option value="model2">Sociodemographics + HMH + Sex</option>
-              <option value="model3">Model 3</option>
-            </select>
-          </div>
-          <!-- Andy -->
+          
 
           <div class="form-check mt-3">
             <input class="form-check-input" type="checkbox" value="1" id="confirmDataCheckbox" name="confirm_data" required>
@@ -209,10 +216,115 @@
             </div>
           {% endif %}
         </div>
+        <!-- Risk Distribution Chart Andy-->
+        {% if distribution_x %}
+        <div class="card shadow p-4 mt-4">
+          <h5 class="mb-1">Population Risk Distribution</h5>
+          <p class="text-muted small mb-3">Based on N=100,000 simulated UK Biobank-like participants. Your patients are shown as vertical lines.</p>
+          <canvas id="distributionChart" height="300"></canvas>
+        </div>
+        {% endif %}
+        <!--Andy-->
       </div>
     </div>
-  {% endif %}
+    {% if distribution_x %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/2.2.1/chartjs-plugin-annotation.min.js"></script>    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const xValues = {{ distribution_x|safe }};
+    const yValues = {{ distribution_y|safe }};
+    const patientScores = {{ patient_scores|safe }};
+    const patientPercentiles = {{ patient_percentiles|safe }};
+    const p5 = {{ ukb_p5 }};
+    const p25 = {{ ukb_p25 }};
+    const p75 = {{ ukb_p75 }};
+    const p95 = {{ ukb_p95 }};
+
+    const ctx = document.getElementById('distributionChart').getContext('2d');
+
+    // Colour each point of the distribution curve
+    const backgroundColors = xValues.map(x => {
+        if (x < p5) return 'rgba(239, 68, 68, 0.4)';        
+        else if (x < p25) return 'rgba(59, 130, 246, 0.4)'; 
+        else if (x < p75) return 'rgba(156, 163, 175, 0.4)';
+        else if (x < p95) return 'rgba(249, 115, 22, 0.4)'; 
+        else return 'rgba(239, 68, 68, 0.4)';               
+    });
+
+    // Patient vertical line annotations
+    const annotations = {};
+    patientScores.forEach((score, i) => {
+    // Find closest index in xValues
+    const closestIndex = xValues.reduce((best, x, idx) => 
+        Math.abs(x - score) < Math.abs(xValues[best] - score) ? idx : best, 0);
+    annotations[`patient${i}`] = {
+        type: 'line',
+        xMin: closestIndex,
+        xMax: closestIndex,
+            borderColor: 'rgba(0, 0, 0, 0.8)',
+            borderWidth: 2,
+            borderDash: [5, 3],
+            label: {
+                display: true,
+                content: `Patient ${i+1}: ${patientPercentiles[i]}%`,
+                position: 'start',
+                backgroundColor: 'rgba(0,0,0,0.7)',
+                color: 'white',
+                font: { size: 11 },
+                padding: 4
+            }
+        };
+    });
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: xValues.map(x => x.toFixed(2)),
+            datasets: [{
+                label: 'Population Distribution',
+                data: yValues,
+                backgroundColor: backgroundColors,
+                borderColor: backgroundColors,
+                borderWidth: 0,
+                barPercentage: 1.0,
+                categoryPercentage: 1.0,
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { display: false },
+                annotation: {
+                  annotations: annotations
+                },
+                tooltip: {
+                    callbacks: {
+                        title: (items) => `Risk Score: ${items[0].label}`,
+                        label: (item) => ``
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    title: { display: true, text: 'Linear Predictor (log-HR)' },
+                    ticks: {
+                        maxTicksLimit: 10,
+                        callback: function(val, index) {
+                            return index % 20 === 0 ? this.getLabelForValue(val) : '';
+                        }
+                    }
+                },
+                y: {
+                    title: { display: true, text: 'Density' }
+                }
+            }
+        }
+    });
+  });
+</script>
+{% endif %}
 </div>
+{% endif %}
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const rowsPerPageSelect = document.getElementById('rowsPerPage');

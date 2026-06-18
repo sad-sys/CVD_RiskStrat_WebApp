@@ -1,0 +1,63 @@
+<!-- Andy TAVI model -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5 mb-5">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="text-primary">TAVI Risk Prediction</h1>
+            <p class="lead">Upload a CSV file containing patient data to predict TAVI procedural outcomes.</p>
+        </div>
+    </div>
+
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <h5 class="card-title mb-3">Upload Patient Data</h5>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="csv_file" class="form-label">Select CSV File</label>
+                    <input type="file" class="form-control" id="csv_file" name="csv_file" accept=".csv" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Run Prediction</button>
+                <a href="{% url 'download_tavi_template' %}" class="btn btn-outline-secondary ms-2">Download Template</a>
+                <a href="{% url 'clinician_dashboard' %}" class="btn btn-secondary ms-2">Back to Dashboard</a>
+            </form>
+        </div>
+    </div>
+
+    {% if error %}
+    <div class="alert alert-danger">{{ error }}</div>
+    {% endif %}
+
+    {% if show_results %}
+    <div class="card shadow">
+        <div class="card-body">
+            <h5 class="card-title mb-3">Prediction Results</h5>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover table-sm">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>#</th>
+                            {% for col in columns %}
+                            <th>{{ col }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in rows %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            {% for val in row %}
+                            <td>{{ val }}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

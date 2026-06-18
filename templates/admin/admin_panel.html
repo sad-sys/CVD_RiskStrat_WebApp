@@ -94,7 +94,8 @@
                 </div>
             </div>
         </div>
-        
+
+        <!-- Andy -->
         <div class="row mt-4">
             <div class="col-lg-12">
                 <div class="card">
@@ -108,7 +109,6 @@
                                 <option value="patient">Patient</option>
                             </select>
                         </div>
-                        
                         {% if all_users %}
                             <div class="table-responsive">
                                 <table class="table table-striped">
@@ -123,17 +123,17 @@
                                         </tr>
                                     </thead>
                                     <tbody id="userTableBody">
-                                        {% for user_obj in all_users %}
-                                            <tr data-role="{{ user_obj.role }}">
-                                                <td>{{ user_obj.first_name }} {{ user_obj.last_name }}</td>
-                                                <td>{{ user_obj.email }}</td>
+                                        {% for item in all_users %}
+                                            <tr data-role="{{ item.user.role }}">
+                                                <td>{{ item.user.first_name }} {{ item.user.last_name }}</td>
+                                                <td>{{ item.user.email }}</td>
                                                 <td>
-                                                    {% if user_obj.role == 'clinician_approved' %}
-                                                        {% with clinician=user_obj.clinicians %}
+                                                    {% if item.user.role == 'clinician_approved' %}
+                                                        {% with clinician=item.user.clinicians %}
                                                             {{ clinician.specialty }}
                                                         {% endwith %}
-                                                    {% elif user_obj.role == 'patient' %}
-                                                        {% with patient=user_obj.patients %}
+                                                    {% elif item.user.role == 'patient' %}
+                                                        {% with patient=item.user.patients %}
                                                             {% if patient.clinician %}
                                                                 Dr. {{ patient.clinician.user.first_name }} {{ patient.clinician.user.last_name }}
                                                             {% else %}
@@ -142,22 +142,37 @@
                                                         {% endwith %}
                                                     {% endif %}
                                                 </td>
-                                                <td>{{ user_obj.date_joined|date:"Y-m-d H:i" }}</td>
+                                                <td>{{ item.user.date_joined|date:"Y-m-d H:i" }}</td>
                                                 <td>
-                                                    {% if user_obj.role == 'clinician_approved' %}
+                                                    {% if item.user.role == 'clinician_approved' %}
                                                         <span class="role-badge clinician">Clinician (Approved)</span>
-                                                    {% elif user_obj.role == 'patient' %}
+                                                    {% elif item.user.role == 'patient' %}
                                                         <span class="role-badge patient">Patient</span>
-                                                    {% elif user_obj.role == 'admin' %}
+                                                    {% elif item.user.role == 'admin' %}
                                                         <span class="role-badge admin">Admin</span>
-                                                    {% elif user_obj.role == 'clinician_pending' %}
+                                                    {% elif item.user.role == 'clinician_pending' %}
                                                         <span class="role-badge pending">Pending</span>
                                                     {% else %}
                                                         <span class="role-badge">Unknown</span>
                                                     {% endif %}
                                                 </td>
                                                 <td>
-                                                    {# Delete user button removed as requested #}
+                                                    {% if item.user.role == 'clinician_approved' and item.clinician_id %}
+                                                        <form method="post" action="{% url 'toggle_clinician_permission' item.clinician_id %}" style="display:inline;">
+                                                            {% csrf_token %}
+                                                            <input type="hidden" name="feature" value="cvd">
+                                                            <button type="submit" class="btn btn-sm {% if item.perm_cvd %}btn-success{% else %}btn-outline-secondary{% endif %}">
+                                                                CVD {% if item.perm_cvd %}ON{% else %}OFF{% endif %}
+                                                            </button>
+                                                        </form>
+                                                        <form method="post" action="{% url 'toggle_clinician_permission' item.clinician_id %}" style="display:inline;">
+                                                            {% csrf_token %}
+                                                            <input type="hidden" name="feature" value="tavi">
+                                                            <button type="submit" class="btn btn-sm {% if item.perm_tavi %}btn-success{% else %}btn-outline-secondary{% endif %}">
+                                                                TAVI {% if item.perm_tavi %}ON{% else %}OFF{% endif %}
+                                                            </button>
+                                                        </form>
+                                                    {% endif %}
                                                 </td>
                                             </tr>
                                         {% endfor %}
@@ -173,6 +188,7 @@
                 </div>
             </div>
         </div>
+        <!-- Andy -->
     </div>
 </section>
 <script>

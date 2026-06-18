@@ -64,6 +64,16 @@ CATEGORY_THRESHOLDS = {
 CATEGORY_ORDER = ["Sociodemographics", "Health and medical history", "Sex-specific factors",
                   "Early life factors", "Family history", "Lifestyle and environment",
                   "Psychosocial factors"]
+# UK Biobank-like risk distribution parameters (from Full Cox PH Model simulation, N=100,000) Andy
+UKB_DISTRIBUTION = {
+    'mean': -0.67,
+    'std': 2.74,
+    'p5': -5.18,   
+    'p25': -2.52,  
+    'p75': 1.18,   
+    'p95': 3.84,   
+}
+# Andy
 
 def get_risk_category(score, category):
     """
@@ -867,17 +877,53 @@ def contact_view(request):
 
 @login_required
 @user_passes_test(is_admin)
+# Andy (add permission)
 def admin_panel(request):
     all_access_requests = ClinicianAccessRequest.objects.filter(status='pending')
-    all_users = Users.objects.all()
+    
+    all_users_raw = Users.objects.all()
+    all_users = []
+    for user_obj in all_users_raw:
+        user_data = {'user': user_obj, 'perm_cvd': None, 'perm_tavi': None, 'clinician_id': None}
+        if user_obj.role == 'clinician_approved':
+            try:
+                clinician = Clinicians.objects.get(user=user_obj)
+                perms, _ = ClinicianPermissions.objects.get_or_create(clinician=clinician)
+                user_data['perm_cvd'] = perms.can_access_cvd
+                user_data['perm_tavi'] = perms.can_access_tavi
+                user_data['clinician_id'] = clinician.clinician_id
+            except Clinicians.DoesNotExist:
+                pass
+        all_users.append(user_data)
+
     return render(request, 'admin/admin_panel.html', {
         'all_access_requests': all_access_requests,
         'all_users': all_users,
     })
 
+@require_POST
+@login_required
+@user_passes_test(is_admin)
+def toggle_clinician_permission(request, clinician_id):
+    clinician = get_object_or_404(Clinicians, clinician_id=clinician_id)
+    perms, _ = ClinicianPermissions.objects.get_or_create(clinician=clinician)
+    feature = request.POST.get('feature')
+    if feature == 'cvd':
+        perms.can_access_cvd = not perms.can_access_cvd
+    elif feature == 'tavi':
+        perms.can_access_tavi = not perms.can_access_tavi
+    perms.save()
+    return redirect('admin_panel')
+# Andy
+
 @login_required
 @user_passes_test(lambda u: u.is_superuser or u.is_staff or u.role == 'clinician_approved')
 def batch_prediction(request):
+    if request.user.role == 'clinician_approved':
+        clinician = Clinicians.objects.get(user=request.user)
+        perms, _ = ClinicianPermissions.objects.get_or_create(clinician=clinician)
+        if not perms.can_access_cvd:
+            return render(request, 'clinicians/no_permission.html', {'feature': 'CVD Batch Prediction'})
     context = {}
     if request.method == 'POST' and request.FILES.get('csv_file'):
         csv_file = request.FILES['csv_file']
@@ -885,6 +931,7 @@ def batch_prediction(request):
         # Andy
         model_choice = request.POST.get('model_choice')
         print("Selected model:", model_choice)
+
 
         MODEL_CONFIG = {
             'model1': {
@@ -898,12 +945,15 @@ def batch_prediction(request):
                 'model': 'MRMR_COX_Sociodemographics_Health_and_medical_history_Sex-specific_factors.pkl'
             }
         }
+        # Andy
+
 
         try:
             df = pd.read_csv(csv_file)
         except Exception as e:
             context['error'] = f"Error reading CSV: {e}"
             return render(request, 'admin/batch_prediction.html', context)
+# Andy
 
         # Load model files (Andy)
         model_dir = os.path.join(settings.BASE_DIR, 'model_files', 'batch_models')
@@ -943,15 +993,97 @@ def batch_prediction(request):
             else:
                 return 'Very High'
         df['Risk Category'] = df['Predicted Risk'].apply(risk_category)
+        # Calculate percentile based on UKB distribution(Andy)
+        from scipy.stats import norm
+        df['Percentile'] = df['Predicted Risk'].apply(
+            lambda score: round(norm.cdf(score, loc=UKB_DISTRIBUTION['mean'], scale=UKB_DISTRIBUTION['std']) * 100, 1)
+        )
+        # Andy
+
         if 'CVD_Risk_Prediction' in df.columns:
             df = df.drop(columns=['CVD_Risk_Prediction'])
         context['show_results'] = True
         context['columns'] = list(df.columns)
         context['paginated_data'] = df.to_dict(orient='records')
+
+        # Pass distribution data for chart (Andy)
+        import numpy as np
+        x_values = list(np.linspace(-10, 8, 200))
+        from scipy.stats import norm
+        y_values = list(norm.pdf(x_values, loc=UKB_DISTRIBUTION['mean'], scale=UKB_DISTRIBUTION['std']))
+        context['distribution_x'] = x_values
+        context['distribution_y'] = y_values
+        context['patient_scores'] = df['Predicted Risk'].tolist()
+        context['patient_percentiles'] = df['Percentile'].tolist()
+        context['ukb_p25'] = UKB_DISTRIBUTION['p25']
+        context['ukb_p75'] = UKB_DISTRIBUTION['p75']
+        context['ukb_p95'] = UKB_DISTRIBUTION['p95']
+        context['ukb_p5'] = UKB_DISTRIBUTION['p5']
+        # Andy
+
         context['rows_per_page'] = 10
         context['page_obj'] = None  # Pagination can be added if needed
         request.session['batch_results'] = df.to_json(orient='records')  # For download
     return render(request, 'admin/batch_prediction.html', context)
+
+# Andy (TAVI model)
+@login_required
+@user_passes_test(lambda u: u.is_superuser or u.is_staff or u.role == 'clinician_approved')
+def tavi_prediction(request):
+    clinician = Clinicians.objects.get(user=request.user)
+    perms, _ = ClinicianPermissions.objects.get_or_create(clinician=clinician)
+    if not perms.can_access_tavi:
+        return render(request, 'clinicians/no_permission.html', {'feature': 'TAVI Prediction'})
+    context = {}
+    if request.method == 'POST' and request.FILES.get('csv_file'):
+        csv_file = request.FILES['csv_file']
+        try:
+            csv_content = csv_file.read()
+        except Exception as e:
+            context['error'] = f"Error reading CSV: {e}"
+            return render(request, 'clinicians/tavi_prediction.html', context)
+
+        try:
+            import requests as http_requests
+            files = {'file': ('data.csv', csv_content, 'text/csv')}
+            response = http_requests.post('http://127.0.0.1:8001/predict', files=files)
+            response.raise_for_status()
+            results = response.json()
+
+            if results:
+                context['show_results'] = True
+                context['columns'] = list(results[0].keys())
+                context['rows'] = [list(row.values()) for row in results]
+                request.session['tavi_results'] = response.text
+
+        except Exception as e:
+            context['error'] = f"Prediction error: {e}"
+
+    return render(request, 'clinicians/tavi_prediction.html', context)
+
+def download_tavi_template(request):
+    import csv
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="tavi_template.csv"'
+    writer = csv.writer(response)
+    writer.writerow([
+        'Age',
+        'Diabetes mellitus',
+        'Previous smoking history',
+        'Hypertension',
+        'Creatinine',
+        'Atrial fibrillation / Preprocedural heart rhythm',
+        'Haemoglobin',
+        'Poor mobility',
+        'FEV1/FVC ratio',
+        'Predicted VC (Predicted Vital Capacity)',
+        'Katz Index of Independence',
+        'Moderate or greater Tricuspid Regurgitation (TR)',
+        'FEV1'
+    ])
+    return response
+
+# Andy
 
 def download_data_entry_template(request):
     file_path = os.path.join(settings.BASE_DIR, 'static', 'downloads', 'data_entry_template.csv')
