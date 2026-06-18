@@ -47,6 +47,7 @@ from uuid import uuid4
 import joblib
 from .utils import should_display_question
 from Questionnaire_data.utils import get_visible_questions_for_patient_in_category
+
 # --- TAVI Forest Model (JSON-based) ---
 _TAVI_FOREST_PATH = os.path.join(settings.BASE_DIR, 'TAVR_model', 'forest_export.json')
 try:
@@ -60,6 +61,7 @@ _TAVI_FEATURE_ORDER = [
     "Pre-operative_heart_rhythm", "Baseline_Hb", "Poor_mobility",
     "FEV1", "Predicted_VC", "FEV1_VC", "Katz_Index", "TR"
 ]
+
 def _tavi_predict_tree(tree, x):
     node = 0
     while tree["left"][node] != tree["right"][node]:
@@ -77,8 +79,6 @@ def _tavi_predict(x):
     return total / len(_TAVI_FOREST["trees"])
 # --- End TAVI ---
 
-from scipy.stats import norm
-
 thresholds = pd.read_csv("model_files/FinalSolFront1 (1).csv").iloc[0]
 CATEGORY_THRESHOLDS = {
     "Sociodemographics": (thresholds["Min_Threshold1"], thresholds["Max_Threshold1"]),
@@ -89,12 +89,10 @@ CATEGORY_THRESHOLDS = {
     "Lifestyle and environment": (thresholds["Min_Threshold6"], thresholds["Max_Threshold6"]),
     "Psychosocial factors": (thresholds["Min_Threshold7"], thresholds["Max_Threshold7"])
 }
-CATEGORY_ORDER = [
-    "Sociodemographics",
-    "Health and medical history",
-    "Sex-specific factors"
-]
-
+CATEGORY_ORDER = ["Sociodemographics", "Health and medical history", "Sex-specific factors",
+                  "Early life factors", "Family history", "Lifestyle and environment",
+                  "Psychosocial factors"]
+# UK Biobank-like risk distribution parameters (from Full Cox PH Model simulation, N=100,000) Andy
 UKB_DISTRIBUTION = {
     'mean': -0.67,
     'std': 2.74,
@@ -103,6 +101,7 @@ UKB_DISTRIBUTION = {
     'p75': 1.18,   
     'p95': 3.84,   
 }
+# Andy
 
 def get_risk_category(score, category):
     """
@@ -252,26 +251,24 @@ def assessment_view(request):
         "Sociodemographics": model1_sociodemographic,
         "Health and medical history": model2_healthandmed,
         "Sex-specific factors": model3_SSF,
+        "Early life factors": model4_early_life,
+        "Family history": model5_family_history,
+        "Lifestyle and environment": model6_lifestyle,
+        "Psychosocial factors": model7_biggestmodel
     }
 
     MODEL_FILE_MAPPING = {
-        "Sociodemographics":
-            "model_files/ML_models/MRMR_COX_Sociodemographics.pkl",
-
-        "Health and medical history":
-            "model_files/ML_models/MRMR_COX_Sociodemographics_Health_and_medical_history.pkl",
-
-        "Sex-specific factors":
-            "model_files/ML_models/MRMR_COX_Sociodemographics_Health_and_medical_history_Sex-specific_factors.pkl",
+        "Sociodemographics": "model_files/ML_models/MRMR_COX_Sociodemographics.pkl",
+        "Health and medical history": "model_files/ML_models/MRMR_COX_Sociodemographics_Health_and_medical_history.pkl",
+        "Sex-specific factors": "model_files/ML_models/MRMR_COX_Sociodemographics_Health_and_medical_history_Sex-specific_factors.pkl",
+        "Early life factors": "model_files/ML_models/MRMR_COX_Sociodemographics_Health_and_medical_history_Sex-specific_factors_Early_life_factors.pkl",
+        "Family history": "model_files/ML_models/MRMR_COX_Sociodemographics_Health_and_medical_history_Sex-specific_factors_Early_life_factors_Family_history.pkl",
+        "Lifestyle and environment": "model_files/ML_models/MRMR_COX_Sociodemographics_Health_and_medical_history_Sex-specific_factors_Early_life_factors_Family_history_Lifestyle_and_environment.pkl",
+        "Psychosocial factors": "model_files/ML_models/MRMR_COX_Sociodemographics_Health_and_medical_history_Sex-specific_factors_Early_life_factors_Family_history_Lifestyle_and_environment_Psychosocial_factors.pkl",
     }
 
-    #raw_categories = CVD_risk_Questionnaire.objects.values_list('category', flat=True).distinct()
-    #all_categories = sorted(set(raw_categories), key=lambda x: CATEGORY_ORDER.index(x) if x in CATEGORY_ORDER else 999)
-    all_categories = [
-    "Sociodemographics",
-    "Health and medical history",
-    "Sex-specific factors"
-    ]
+    raw_categories = CVD_risk_Questionnaire.objects.values_list('category', flat=True).distinct()
+    all_categories = sorted(set(raw_categories), key=lambda x: CATEGORY_ORDER.index(x) if x in CATEGORY_ORDER else 999)
 
     # Redirect to first unanswered category
     if not category and all_categories:
@@ -287,14 +284,10 @@ def assessment_view(request):
 
     patient = Patients.objects.get(user=request.user)
 
-    all_questions = get_visible_questions_for_patient_in_category(
-        patient,
-        category
-    )
-    print("ALL QUESTIONS:")
-    for q in all_questions:
-        print(q.question_id)
+    all_questions = CVD_risk_Questionnaire.objects.filter(category=category).order_by('question_order')
+    visible_questions = get_visible_questions_for_patient_in_category(patient, category)
 
+    # Load latest saved responses to prefill
     saved_responses = {
         r.question.question_id: (
             r.option_selected.encoded_value if r.option_selected else
@@ -303,19 +296,7 @@ def assessment_view(request):
         )
         for r in CVD_risk_Responses.objects.filter(patient=patient)
     }
-    for q in all_questions:
-        result = should_display_question(q, saved_responses)
-        print(
-            q.question_id,
-            result
-        )
 
-    print("ALL QUESTIONS:")
-    for q in all_questions:
-        print(q.question_id)
-
-    visible_questions = []
-    visible_questions = list(all_questions)
     # ---------- Handle POST (Form Submission) ----------
     if request.method == 'POST':
         try:
@@ -348,12 +329,6 @@ def assessment_view(request):
                     )
                     response_obj.multi_selected_options.set(selected_options)
                     response_obj.save()
-                    print(
-                        "SAVED",
-                        q.question_id,
-                        response_obj.option_selected.id if response_obj.option_selected else None,
-                        response_obj.option_selected.encoded_value if response_obj.option_selected else None
-                    )
                     continue
 
                 # Single/miscellaneous responses
@@ -367,7 +342,6 @@ def assessment_view(request):
 
                 if options.exists():
                     try:
-                        print("POST VALUE:", value)
                         selected_option = options.get(id=int(value))
                         response_obj.option_selected = selected_option
                     except:
@@ -378,12 +352,6 @@ def assessment_view(request):
                     except:
                         response_obj.boolean_response = value.lower() in ['yes', 'true', '1']
                 response_obj.save()
-                print(
-                    "SAVED",
-                    q.question_id,
-                    response_obj.option_selected.id if response_obj.option_selected else None,
-                    response_obj.option_selected.encoded_value if response_obj.option_selected else None
-                )
 
         except DatabaseError:
             connection.rollback()
@@ -404,6 +372,7 @@ def assessment_view(request):
                 model_module = CATEGORY_MODEL_MAPPING[category]
                 try:
                     df_scaled = model_module.calculate_features(patient.patient_id, submission_id)
+                    
                     model_path = MODEL_FILE_MAPPING[category]
                     print(f"🧠 Looking for model: {model_path}")
 
@@ -412,8 +381,6 @@ def assessment_view(request):
 
                     model = joblib.load(model_path)
                     print("🧾 Final columns before prediction:", df_scaled.columns.tolist())
-                    print("🧾 Final values before prediction:", df_scaled.iloc[0].tolist())
-
 
                     # Predict risk 
                     print(df_scaled)
@@ -501,12 +468,9 @@ def assessment_view(request):
             'response': response_value,
             'response_id': response_id,
             'multi_response_ids': multi_ids,
-            'answer_type': q.answer_type,
-            'required': True
+            'answer_type': q.answer_type
         })
-    print("QUESTION DATA IDS:")
-    for qd in question_data:
-        print(qd["question"].question_id)
+
     return render(request, 'patients/assessment.html', {
         'category': category,
         'question_data': question_data,
@@ -941,22 +905,53 @@ def contact_view(request):
 
 @login_required
 @user_passes_test(is_admin)
+# Andy (add permission)
 def admin_panel(request):
     all_access_requests = ClinicianAccessRequest.objects.filter(status='pending')
-    all_users = Users.objects.all()
+    
+    all_users_raw = Users.objects.all()
+    all_users = []
+    for user_obj in all_users_raw:
+        user_data = {'user': user_obj, 'perm_cvd': None, 'perm_tavi': None, 'clinician_id': None}
+        if user_obj.role == 'clinician_approved':
+            try:
+                clinician = Clinicians.objects.get(user=user_obj)
+                perms, _ = ClinicianPermissions.objects.get_or_create(clinician=clinician)
+                user_data['perm_cvd'] = perms.can_access_cvd
+                user_data['perm_tavi'] = perms.can_access_tavi
+                user_data['clinician_id'] = clinician.clinician_id
+            except Clinicians.DoesNotExist:
+                pass
+        all_users.append(user_data)
+
     return render(request, 'admin/admin_panel.html', {
         'all_access_requests': all_access_requests,
         'all_users': all_users,
     })
+
+@require_POST
+@login_required
+@user_passes_test(is_admin)
+def toggle_clinician_permission(request, clinician_id):
+    clinician = get_object_or_404(Clinicians, clinician_id=clinician_id)
+    perms, _ = ClinicianPermissions.objects.get_or_create(clinician=clinician)
+    feature = request.POST.get('feature')
+    if feature == 'cvd':
+        perms.can_access_cvd = not perms.can_access_cvd
+    elif feature == 'tavi':
+        perms.can_access_tavi = not perms.can_access_tavi
+    perms.save()
+    return redirect('admin_panel')
+# Andy
 
 @login_required
 @user_passes_test(lambda u: u.is_superuser or u.is_staff or u.role == 'clinician_approved')
 def batch_prediction(request):
     if request.user.role == 'clinician_approved':
         clinician = Clinicians.objects.get(user=request.user)
-        #perms, _ = ClinicianPermissions.objects.get_or_create(clinician=clinician)
-        #if not perms.can_access_cvd:
-            #return render(request, 'clinicians/no_permission.html', {'feature': 'CVD Batch Prediction'})
+        perms, _ = ClinicianPermissions.objects.get_or_create(clinician=clinician)
+        if not perms.can_access_cvd:
+            return render(request, 'clinicians/no_permission.html', {'feature': 'CVD Batch Prediction'})
     context = {}
     if request.method == 'POST' and request.FILES.get('csv_file'):
         csv_file = request.FILES['csv_file']
@@ -1058,6 +1053,80 @@ def batch_prediction(request):
         context['page_obj'] = None  # Pagination can be added if needed
         request.session['batch_results'] = df.to_json(orient='records')  # For download
     return render(request, 'admin/batch_prediction.html', context)
+
+# Andy (TAVI model - JSON-based)
+@login_required
+@user_passes_test(lambda u: u.is_superuser or u.is_staff or u.role == 'clinician_approved')
+def tavi_prediction(request):
+    clinician = Clinicians.objects.get(user=request.user)
+    perms, _ = ClinicianPermissions.objects.get_or_create(clinician=clinician)
+    if not perms.can_access_tavi:
+        return render(request, 'clinicians/no_permission.html', {'feature': 'TAVI Prediction'})
+    context = {}
+    if request.method == 'POST' and request.FILES.get('csv_file'):
+        if _TAVI_FOREST is None:
+            context['error'] = "TAVI model file not found."
+            return render(request, 'clinicians/tavi_prediction.html', context)
+        try:
+            df = pd.read_csv(request.FILES['csv_file'])
+            TAVI_COLUMN_MAP = {
+                'Diabetes mellitus': 'Diabetes',
+                'Previous smoking history': 'Ex_smoking',
+                'Atrial fibrillation / Preprocedural heart rhythm': 'Pre-operative_heart_rhythm',
+                'Haemoglobin': 'Baseline_Hb',
+                'Poor mobility': 'Poor_mobility',
+                'Predicted VC (Predicted Vital Capacity)': 'Predicted_VC',
+                'FEV1/FVC ratio': 'FEV1_VC',
+                'Katz Index of Independence': 'Katz_Index',
+                'Moderate or greater Tricuspid Regurgitation (TR)': 'TR',
+            }
+            df = df.rename(columns=TAVI_COLUMN_MAP)
+            missing = [f for f in _TAVI_FEATURE_ORDER if f not in df.columns]
+            if missing:
+                context['error'] = f"Missing columns: {', '.join(missing)}"
+                return render(request, 'clinicians/tavi_prediction.html', context)
+            results = []
+            for i, row in df.iterrows():
+                x = np.array([float(row[f]) for f in _TAVI_FEATURE_ORDER])
+                probs = _tavi_predict(x)
+                risk_score = float(probs[1])
+                if risk_score < 0.05:
+                    cat = 'Very Low'
+                elif risk_score < 0.10:
+                    cat = 'Low'
+                elif risk_score < 0.20:
+                    cat = 'Moderate'
+                elif risk_score < 0.30:
+                    cat = 'High'
+                else:
+                    cat = 'Very High'
+                results.append({
+                    'Patient': i + 1,
+                    **{f: row[f] for f in _TAVI_FEATURE_ORDER},
+                    'Risk Score': round(risk_score, 4),
+                    'Risk Category': cat,
+                })
+            context['show_results'] = True
+            context['columns'] = list(results[0].keys()) if results else []
+            context['results'] = results
+            request.session['tavi_results'] = json.dumps(results)
+        except Exception as e:
+            context['error'] = f"Prediction error: {e}"
+    return render(request, 'clinicians/tavi_prediction.html', context)
+
+# TAVI template
+def download_tavi_template(request):
+    import csv
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="tavi_template.csv"'
+    writer = csv.writer(response)
+    writer.writerow([
+        'Age', 'Diabetes', 'Ex_smoking', 'Hypertension', 'Creatinine',
+        'Pre-operative_heart_rhythm', 'Baseline_Hb', 'Poor_mobility',
+        'FEV1', 'Predicted_VC', 'FEV1_VC', 'Katz_Index', 'TR'
+    ])
+    return response
+# Andy
 
 def download_data_entry_template(request):
     file_path = os.path.join(settings.BASE_DIR, 'static', 'downloads', 'data_entry_template.csv')
@@ -1285,7 +1354,6 @@ def tavi_prediction(request):
     if request.method == 'POST' and request.FILES.get('csv_file'):
         if _TAVI_FOREST is None:
             context['error'] = "TAVI model file (forest_export.json) not found. Please check TAVR_model/ folder."
-            print("THERE IS NO TAVI JSON FILE")
             return render(request, 'clinicians/tavi_prediction.html', context)
         try:
             df = pd.read_csv(request.FILES['csv_file'])
@@ -1319,17 +1387,3 @@ def tavi_prediction(request):
         except Exception as e:
             context['error'] = f"Prediction error: {e}"
     return render(request, 'clinicians/tavi_prediction.html', context)
-
-
-# TAVI template
-def download_tavi_template(request):
-    import csv
-    response = HttpResponse(content_type='text/csv')
-    response['Content-Disposition'] = 'attachment; filename="tavi_template.csv"'
-    writer = csv.writer(response)
-    writer.writerow([
-        'Age', 'Diabetes', 'Ex_smoking', 'Hypertension', 'Creatinine',
-        'Pre-operative_heart_rhythm', 'Baseline_Hb', 'Poor_mobility',
-        'FEV1', 'Predicted_VC', 'FEV1_VC', 'Katz_Index', 'TR'
-    ])
-    return response

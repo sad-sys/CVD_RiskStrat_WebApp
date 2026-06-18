@@ -154,19 +154,7 @@ class CVD_risk_Responses(models.Model):
     class Meta:
         db_table = 'CVD_risk_Responses'
         verbose_name_plural = 'CVD Risk Responses'
-
-class ClinicianPermissions(models.Model):
-    clinician = models.OneToOneField(Clinicians, on_delete=models.CASCADE, related_name='permissions')
-    can_access_cvd = models.BooleanField(default=True)
-    can_access_tavi = models.BooleanField(default=True)
-
-    class Meta:
-        db_table = 'Clinician_Permissions'
-        verbose_name_plural = 'Clinician Permissions'
-
-    def __str__(self):
-        return f"{self.clinician.user.email} — CVD: {self.can_access_cvd}, TAVI: {self.can_access_tavi}"
-
+    
 
 class FeatureOptionMapping(models.Model):
     feature_name = models.CharField(max_length=300)
@@ -353,3 +341,14 @@ class ClinicianAccessRequest(models.Model):
         db_table = 'Clinician_Access_Request'
         verbose_name_plural = 'Clinician Access Requests'
 
+class ClinicianPermissions(models.Model):
+    clinician = models.OneToOneField(Clinicians, on_delete=models.CASCADE, related_name='permissions')
+    can_access_cvd = models.BooleanField(default=True)
+    can_access_tavi = models.BooleanField(default=True)
+
+    class Meta:
+        db_table = 'Clinician_Permissions'
+        verbose_name_plural = 'Clinician Permissions'
+
+    def __str__(self):
+        return f"{self.clinician.user.email} — CVD: {self.can_access_cvd}, TAVI: {self.can_access_tavi}"

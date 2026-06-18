@@ -4,7 +4,7 @@
 <div class="container mt-5 mb-5">
     <div class="row mb-4">
         <div class="col-12">
-            <h1 class="text-primary">Welcome, {{ user.first_name }} {{ user.last_name }}!</h1>
+            <h1 class="text-primary">Welcome, Dr. {{ user.first_name }} {{ user.last_name }}!</h1>
             <p class="lead mt-2">Manage cardiovascular risk assessments, review patient records, and perform batch predictions from your dashboard.</p>
         </div>
     </div>
@@ -32,19 +32,6 @@
                     <h5 class="card-title mb-2">Batch Prediction</h5>
                     <p class="card-text mb-3">Upload patient data in bulk to perform cardiovascular risk predictions.</p>
                     <a href="{% url 'batch_prediction' %}" class="btn btn-primary mt-auto">Start Batch Prediction</a>
-                </div>
-            </div>
-        </div>
-        <!-- TAVI Prediction Card (Andy)-->
-        <div class="col-md-6 mb-4">
-            <div class="card shadow h-100">
-                <div class="card-body d-flex flex-column align-items-start">
-                    <div class="icon mb-3">
-                        <i class="bi bi-heart-pulse" style="font-size: 2rem;"></i>
-                    </div>
-                    <h5 class="card-title mb-2">TAVI Risk Prediction</h5>
-                    <p class="card-text mb-3">Upload patient data to predict TAVI procedural outcomes.</p>
-                    <a href="{% url 'tavi_prediction' %}" class="btn btn-primary mt-auto">Start TAVI Prediction</a>
                 </div>
             </div>
         </div>
