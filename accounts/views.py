@@ -891,8 +891,6 @@ def learn_cvd(request):
     return render(request, 'medilab/learn.html')
 
 
-
-
 @login_required
 def clinician_dashboard(request):
     if request.user.role != 'clinician_approved':
