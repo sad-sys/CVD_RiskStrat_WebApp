@@ -384,6 +384,19 @@
         <div class="risk-score-value">{{ risk_score|floatformat:2 }}%</div>
         <div class="risk-score-label">Your CVD Risk Score</div>
       </div>
+      {% if risk_plot %}
+      <div class="card mt-4">
+          <div class="card-body text-center">
+              <h5>Your Risk Distribution</h5>
+
+              <img
+                  src="data:image/png;base64,{{ risk_plot }}"
+                  class="img-fluid"
+                  alt="Risk Distribution Graph">
+
+          </div>
+      </div>
+      {% endif %}
 
       <!-- Recommendation Badge -->
       {% if recommendation %}

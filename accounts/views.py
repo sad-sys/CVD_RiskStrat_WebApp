@@ -495,6 +495,12 @@ def assessment_view(request):
                         risk_score,
                         category
                     )
+                    print("RISK CATEGORY =", risk_category)
+
+                    risk_plot = generate_risk_plot(
+                        risk_score,
+                        category
+                    )
 
                     request.session["risk_score"] = risk_score
                     request.session["risk_category"] = risk_category
@@ -527,18 +533,28 @@ def assessment_view(request):
                     # Early stopping Case 1: Early stopping - Low/High → show final message
                     if risk_category in ["Low Risk", "High Risk"]:
                         request.session.pop("submission_id", None)
-                        return render(request, "patients/final_message.html", {
-                            "risk_score": risk_score,
-                            "recommendation": risk_category,
-                            "message": get_final_message_text(risk_category)
-                        })
+                        return render(
+                            request,
+                            "patients/final_message.html",
+                            {
+                                "risk_score": risk_score,
+                                "recommendation": risk_category,
+                                "message": get_final_message_text(risk_category),
+                                "risk_plot": risk_plot,
+                            }
+                        )
                     elif risk_category == "Inconclusive" and not next_category:
                         request.session.pop("submission_id", None)
-                        return render(request, "patients/final_message.html", {
-                            "risk_score": risk_score,
-                            "recommendation": risk_category,
-                            "message": get_final_message_text(risk_category)
-                            })
+                        return render(
+                            request,
+                            "patients/final_message.html",
+                            {
+                                "risk_score": risk_score,
+                                "recommendation": risk_category,
+                                "message": get_final_message_text(risk_category),
+                                "risk_plot": risk_plot,
+                            }
+                        )
 
                 except Exception as e:
                     print(f"❌ Error during model execution for {category}: {e}")
