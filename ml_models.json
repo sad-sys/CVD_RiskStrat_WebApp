@@ -1,0 +1,26 @@
+[
+{
+  "model": "accounts.ml_models",
+  "pk": 1,
+  "fields": {
+    "model_name": "MRMR_COX_Sociodemographics",
+    "model_type": ""
+  }
+},
+{
+  "model": "accounts.ml_models",
+  "pk": 2,
+  "fields": {
+    "model_name": "MRMR_COX_Sociodemographics_Health_and_medical_history",
+    "model_type": "cox"
+  }
+},
+{
+  "model": "accounts.ml_models",
+  "pk": 3,
+  "fields": {
+    "model_name": "MRMR_COX_Sociodemographics_Health_and_medical_history_Sex-specific_factors",
+    "model_type": ""
+  }
+}
+]

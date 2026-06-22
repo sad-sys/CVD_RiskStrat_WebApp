@@ -47,6 +47,10 @@ from uuid import uuid4
 import joblib
 from .utils import should_display_question
 from Questionnaire_data.utils import get_visible_questions_for_patient_in_category
+
+import io
+import base64
+
 # --- TAVI Forest Model (JSON-based) ---
 _TAVI_FOREST_PATH = os.path.join(settings.BASE_DIR, 'TAVR_model', 'forest_export.json')
 try:
@@ -103,6 +107,72 @@ UKB_DISTRIBUTION = {
     'p75': 1.18,   
     'p95': 3.84,   
 }
+
+#Generating risk score
+def generate_risk_plot(risk_score, category):
+    import io
+    import base64
+    import numpy as np
+    import matplotlib.pyplot as plt
+    from scipy.stats import norm
+
+    x = np.linspace(
+        UKB_DISTRIBUTION['mean'] - 4 * UKB_DISTRIBUTION['std'],
+        UKB_DISTRIBUTION['mean'] + 4 * UKB_DISTRIBUTION['std'],
+        500
+    )
+
+    y = norm.pdf(
+        x,
+        UKB_DISTRIBUTION['mean'],
+        UKB_DISTRIBUTION['std']
+    )
+
+    plt.figure(figsize=(8, 3))
+
+    plt.plot(x, y)
+
+    min_t, max_t = CATEGORY_THRESHOLDS[category]
+
+    plt.axvline(
+        min_t,
+        linestyle=":",
+        linewidth=2,
+        label="Low-risk threshold"
+    )
+
+    plt.axvline(
+        max_t,
+        linestyle=":",
+        linewidth=2,
+        label="High-risk threshold"
+    )
+    
+    plt.axvline(
+    risk_score,
+    linestyle="--",
+    linewidth=3,
+    label="Your score"
+    )
+
+    plt.legend()
+    plt.tight_layout()
+
+    buffer = io.BytesIO()
+
+    plt.savefig(
+        buffer,
+        format="png",
+        bbox_inches="tight"
+    )
+
+    plt.close()
+
+    buffer.seek(0)
+
+    return base64.b64encode(
+        buffer.getvalue()
+    ).decode()
 
 def get_risk_category(score, category):
     """
@@ -418,9 +488,18 @@ def assessment_view(request):
                     # Predict risk 
                     print(df_scaled)
                     risk_score = float(model.predict(df_scaled)[0])
+
                     print(f"📈 Risk score = {risk_score:.2f}")
 
-                    risk_category = get_risk_category(risk_score, category)
+                    risk_category = get_risk_category(
+                        risk_score,
+                        category
+                    )
+
+                    request.session["risk_score"] = risk_score
+                    request.session["risk_category"] = risk_category
+                    request.session["risk_score_category"] = category
+
                     print(f"🧪 Risk classification: {risk_category}")
 
                     model_name_cleaned = os.path.basename(model_path).replace(".pkl", "")
@@ -507,6 +586,15 @@ def assessment_view(request):
     print("QUESTION DATA IDS:")
     for qd in question_data:
         print(qd["question"].question_id)
+    risk_plot = None
+
+    if request.session.get("risk_score") is not None:
+        risk_plot = generate_risk_plot(
+            request.session["risk_score"],
+            request.session["risk_score_category"]
+        )
+        print("GRAPH USING:",request.session["risk_score_category"])
+
     return render(request, 'patients/assessment.html', {
         'category': category,
         'question_data': question_data,
@@ -514,9 +602,9 @@ def assessment_view(request):
         'completed_categories': request.session.get('completed_categories', []),
         'previous_category': previous_category,
         'next_category': next_category,
-        'error_message': error_message
+        'error_message': error_message,
+        'risk_plot': risk_plot,
     })
-
 
 
 

@@ -1,0 +1,1217 @@
+[
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 1,
+  "fields": {
+    "triggering_question": 670,
+    "conditional_question": 680,
+    "trigger_values": "1,2,3,-7,-3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 2,
+  "fields": {
+    "triggering_question": 670,
+    "conditional_question": 709,
+    "trigger_values": "1,2,3,-7,-3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 3,
+  "fields": {
+    "triggering_question": 709,
+    "conditional_question": 6141,
+    "trigger_values": ">1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 4,
+  "fields": {
+    "triggering_question": 670,
+    "conditional_question": 728,
+    "trigger_values": "1,2,3,-7,-3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 5,
+  "fields": {
+    "triggering_question": 670,
+    "conditional_question": 738,
+    "trigger_values": "1,2,3,-7,-3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 6,
+  "fields": {
+    "triggering_question": 6142,
+    "conditional_question": 777,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 7,
+  "fields": {
+    "triggering_question": 777,
+    "conditional_question": 796,
+    "trigger_values": ">0"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 8,
+  "fields": {
+    "triggering_question": 6142,
+    "conditional_question": 757,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 9,
+  "fields": {
+    "triggering_question": 6142,
+    "conditional_question": 767,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 10,
+  "fields": {
+    "triggering_question": 777,
+    "conditional_question": 6143,
+    "trigger_values": ">0"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 11,
+  "fields": {
+    "triggering_question": 6142,
+    "conditional_question": 806,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 12,
+  "fields": {
+    "triggering_question": 6142,
+    "conditional_question": 816,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 13,
+  "fields": {
+    "triggering_question": 6142,
+    "conditional_question": 826,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 14,
+  "fields": {
+    "triggering_question": 826,
+    "conditional_question": 3426,
+    "trigger_values": "2,3,4,-1,-3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 15,
+  "fields": {
+    "triggering_question": 6138,
+    "conditional_question": 845,
+    "trigger_values": "2,3,4,5,6,-7,-3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 16,
+  "fields": {
+    "triggering_question": 6164,
+    "conditional_question": 2634,
+    "trigger_values": "5"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 17,
+  "fields": {
+    "triggering_question": 6164,
+    "conditional_question": 1021,
+    "trigger_values": "4"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 18,
+  "fields": {
+    "triggering_question": 6164,
+    "conditional_question": 3647,
+    "trigger_values": "2"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 19,
+  "fields": {
+    "triggering_question": 6164,
+    "conditional_question": 1001,
+    "trigger_values": "3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 20,
+  "fields": {
+    "triggering_question": 904,
+    "conditional_question": 914,
+    "trigger_values": ">1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 21,
+  "fields": {
+    "triggering_question": 864,
+    "conditional_question": 874,
+    "trigger_values": ">1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 22,
+  "fields": {
+    "triggering_question": 6164,
+    "conditional_question": 981,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 23,
+  "fields": {
+    "triggering_question": 6164,
+    "conditional_question": 2624,
+    "trigger_values": "5"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 24,
+  "fields": {
+    "triggering_question": 6164,
+    "conditional_question": 1011,
+    "trigger_values": "4"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 25,
+  "fields": {
+    "triggering_question": 6164,
+    "conditional_question": 3637,
+    "trigger_values": "2"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 26,
+  "fields": {
+    "triggering_question": 864,
+    "conditional_question": 943,
+    "trigger_values": "0,1,2,3,4,5,6,7,-1,-3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 27,
+  "fields": {
+    "triggering_question": 6164,
+    "conditional_question": 991,
+    "trigger_values": "3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 28,
+  "fields": {
+    "triggering_question": 6164,
+    "conditional_question": 971,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 29,
+  "fields": {
+    "triggering_question": 864,
+    "conditional_question": 6162,
+    "trigger_values": "0,1,2,3,4,5,6,7,-1,-3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 30,
+  "fields": {
+    "triggering_question": 864,
+    "conditional_question": 924,
+    "trigger_values": "0,1,2,3,4,5,6,7,-1,-3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 31,
+  "fields": {
+    "triggering_question": 1110,
+    "conditional_question": 1120,
+    "trigger_values": "1,2,3,4,-1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 32,
+  "fields": {
+    "triggering_question": 1110,
+    "conditional_question": 1130,
+    "trigger_values": "1,2,3,4,-1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 33,
+  "fields": {
+    "triggering_question": 1110,
+    "conditional_question": 1140,
+    "trigger_values": "1,2,3,4,-1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 34,
+  "fields": {
+    "triggering_question": 1110,
+    "conditional_question": 1150,
+    "trigger_values": "1,2,3,4,-1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 35,
+  "fields": {
+    "triggering_question": 1239,
+    "conditional_question": 1249,
+    "trigger_values": "2,0,-3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 36,
+  "fields": {
+    "triggering_question": 1249,
+    "conditional_question": 2644,
+    "trigger_values": "2,3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 37,
+  "fields": {
+    "triggering_question": 1239,
+    "conditional_question": 3436,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 38,
+  "fields": {
+    "triggering_question": 1239,
+    "conditional_question": 3446,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 39,
+  "fields": {
+    "triggering_question": 3446,
+    "conditional_question": 5959,
+    "trigger_values": "3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 40,
+  "fields": {
+    "triggering_question": 3446,
+    "conditional_question": 3456,
+    "trigger_values": "1,2"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 41,
+  "fields": {
+    "triggering_question": 5959,
+    "conditional_question": 6194,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 42,
+  "fields": {
+    "triggering_question": 5959,
+    "conditional_question": 6183,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 43,
+  "fields": {
+    "triggering_question": 3446,
+    "conditional_question": 3466,
+    "trigger_values": "1,2"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 44,
+  "fields": {
+    "triggering_question": 3446,
+    "conditional_question": 3476,
+    "trigger_values": "1,2"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 45,
+  "fields": {
+    "triggering_question": 1239,
+    "conditional_question": 3486,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 46,
+  "fields": {
+    "triggering_question": 1239,
+    "conditional_question": 3496,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 47,
+  "fields": {
+    "triggering_question": 1239,
+    "conditional_question": 3506,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 48,
+  "fields": {
+    "triggering_question": 3506,
+    "conditional_question": 6158,
+    "trigger_values": "3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 49,
+  "fields": {
+    "triggering_question": 1249,
+    "conditional_question": 2867,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 50,
+  "fields": {
+    "triggering_question": 1249,
+    "conditional_question": 2877,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 51,
+  "fields": {
+    "triggering_question": 2877,
+    "conditional_question": 2887,
+    "trigger_values": "1,2"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 52,
+  "fields": {
+    "triggering_question": 1249,
+    "conditional_question": 2897,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 53,
+  "fields": {
+    "triggering_question": 1249,
+    "conditional_question": 2907,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 54,
+  "fields": {
+    "triggering_question": 2907,
+    "conditional_question": 6157,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 55,
+  "fields": {
+    "triggering_question": 2907,
+    "conditional_question": 2926,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 56,
+  "fields": {
+    "triggering_question": 2907,
+    "conditional_question": 2936,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 57,
+  "fields": {
+    "triggering_question": 1239,
+    "conditional_question": 1259,
+    "trigger_values": "2,0,-3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 58,
+  "fields": {
+    "triggering_question": 1239,
+    "conditional_question": 1269,
+    "trigger_values": "2,0,-3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 59,
+  "fields": {
+    "triggering_question": 1239,
+    "conditional_question": 1279,
+    "trigger_values": "2,0,-3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 60,
+  "fields": {
+    "triggering_question": 6144,
+    "conditional_question": 1408,
+    "trigger_values": "!=2"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 61,
+  "fields": {
+    "triggering_question": 1428,
+    "conditional_question": 2654,
+    "trigger_values": "3,-1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 62,
+  "fields": {
+    "triggering_question": 1438,
+    "conditional_question": 1448,
+    "trigger_values": ">1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 63,
+  "fields": {
+    "triggering_question": 1458,
+    "conditional_question": 1468,
+    "trigger_values": ">1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 64,
+  "fields": {
+    "triggering_question": 1498,
+    "conditional_question": 1508,
+    "trigger_values": ">1,-10"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 65,
+  "fields": {
+    "triggering_question": 1558,
+    "conditional_question": 3731,
+    "trigger_values": "6"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 66,
+  "fields": {
+    "triggering_question": 1558,
+    "conditional_question": 4429,
+    "trigger_values": "4,5"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 67,
+  "fields": {
+    "triggering_question": 1558,
+    "conditional_question": 4451,
+    "trigger_values": "4,5"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 68,
+  "fields": {
+    "triggering_question": 1558,
+    "conditional_question": 4462,
+    "trigger_values": "4,5"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 69,
+  "fields": {
+    "triggering_question": 1558,
+    "conditional_question": 1568,
+    "trigger_values": "1,2,3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 70,
+  "fields": {
+    "triggering_question": 1558,
+    "conditional_question": 1578,
+    "trigger_values": "1,2,3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 71,
+  "fields": {
+    "triggering_question": 1558,
+    "conditional_question": 1588,
+    "trigger_values": "1,2,3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 72,
+  "fields": {
+    "triggering_question": 1558,
+    "conditional_question": 1598,
+    "trigger_values": "1,2,3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 73,
+  "fields": {
+    "triggering_question": 1558,
+    "conditional_question": 1608,
+    "trigger_values": "1,2,3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 74,
+  "fields": {
+    "triggering_question": 1558,
+    "conditional_question": 1618,
+    "trigger_values": "1,2,3,4,5"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 75,
+  "fields": {
+    "triggering_question": 1558,
+    "conditional_question": 1628,
+    "trigger_values": "1,2,3,4,5"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 76,
+  "fields": {
+    "triggering_question": 1628,
+    "conditional_question": 2664,
+    "trigger_values": "3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 77,
+  "fields": {
+    "triggering_question": 3731,
+    "conditional_question": 3859,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 78,
+  "fields": {
+    "triggering_question": 2139,
+    "conditional_question": 2149,
+    "trigger_values": ">2,-3,-1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 79,
+  "fields": {
+    "triggering_question": 1797,
+    "conditional_question": 2946,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 80,
+  "fields": {
+    "triggering_question": 3912,
+    "conditional_question": 2946,
+    "trigger_values": "1.0"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 81,
+  "fields": {
+    "triggering_question": 1797,
+    "conditional_question": 1807,
+    "trigger_values": "0"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 82,
+  "fields": {
+    "triggering_question": 3912,
+    "conditional_question": 1807,
+    "trigger_values": "0.0"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 83,
+  "fields": {
+    "triggering_question": 1835,
+    "conditional_question": 1845,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 84,
+  "fields": {
+    "triggering_question": 3942,
+    "conditional_question": 1845,
+    "trigger_values": "1.0"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 85,
+  "fields": {
+    "triggering_question": 1835,
+    "conditional_question": 3526,
+    "trigger_values": "0"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 86,
+  "fields": {
+    "triggering_question": 3942,
+    "conditional_question": 3526,
+    "trigger_values": "0.0"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 87,
+  "fields": {
+    "triggering_question": 2207,
+    "conditional_question": 2217,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 88,
+  "fields": {
+    "triggering_question": 6159,
+    "conditional_question": 3799,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 89,
+  "fields": {
+    "triggering_question": 6159,
+    "conditional_question": 4067,
+    "trigger_values": "2"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 90,
+  "fields": {
+    "triggering_question": 6159,
+    "conditional_question": 3404,
+    "trigger_values": "3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 91,
+  "fields": {
+    "triggering_question": 6159,
+    "conditional_question": 3571,
+    "trigger_values": "4"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 92,
+  "fields": {
+    "triggering_question": 6159,
+    "conditional_question": 3741,
+    "trigger_values": "5"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 93,
+  "fields": {
+    "triggering_question": 6159,
+    "conditional_question": 3414,
+    "trigger_values": "6"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 94,
+  "fields": {
+    "triggering_question": 6159,
+    "conditional_question": 3773,
+    "trigger_values": "7"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 95,
+  "fields": {
+    "triggering_question": 6159,
+    "conditional_question": 2956,
+    "trigger_values": "8"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 96,
+  "fields": {
+    "triggering_question": 2335,
+    "conditional_question": 3606,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 97,
+  "fields": {
+    "triggering_question": 3606,
+    "conditional_question": 3751,
+    "trigger_values": "0"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 98,
+  "fields": {
+    "triggering_question": 3606,
+    "conditional_question": 3616,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 99,
+  "fields": {
+    "triggering_question": 3751,
+    "conditional_question": 3616,
+    "trigger_values": "1.0"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 100,
+  "fields": {
+    "triggering_question": 2345,
+    "conditional_question": 2355,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 101,
+  "fields": {
+    "triggering_question": 6150,
+    "conditional_question": 3894,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 102,
+  "fields": {
+    "triggering_question": 6150,
+    "conditional_question": 3627,
+    "trigger_values": "2"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 103,
+  "fields": {
+    "triggering_question": 6150,
+    "conditional_question": 4056,
+    "trigger_values": "3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 104,
+  "fields": {
+    "triggering_question": 6150,
+    "conditional_question": 2966,
+    "trigger_values": "4"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 105,
+  "fields": {
+    "triggering_question": 6152,
+    "conditional_question": 4012,
+    "trigger_values": "5"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 106,
+  "fields": {
+    "triggering_question": 6152,
+    "conditional_question": 4022,
+    "trigger_values": "7"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 107,
+  "fields": {
+    "triggering_question": 6152,
+    "conditional_question": 3992,
+    "trigger_values": "6"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 108,
+  "fields": {
+    "triggering_question": 6152,
+    "conditional_question": 3786,
+    "trigger_values": "8"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 109,
+  "fields": {
+    "triggering_question": 6152,
+    "conditional_question": 3761,
+    "trigger_values": "9"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 110,
+  "fields": {
+    "triggering_question": 2443,
+    "conditional_question": 4041,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 111,
+  "fields": {
+    "triggering_question": 4041,
+    "conditional_question": 2976,
+    "trigger_values": "!= 1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 112,
+  "fields": {
+    "triggering_question": 4041,
+    "conditional_question": 2986,
+    "trigger_values": "!= 1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 113,
+  "fields": {
+    "triggering_question": 2463,
+    "conditional_question": 6151,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 114,
+  "fields": {
+    "triggering_question": 2463,
+    "conditional_question": 3005,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 115,
+  "fields": {
+    "triggering_question": 2247,
+    "conditional_question": 2257,
+    "trigger_values": "1,0,-1,-3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 116,
+  "fields": {
+    "triggering_question": 2247,
+    "conditional_question": 3393,
+    "trigger_values": "1,0,-1,-3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 117,
+  "fields": {
+    "triggering_question": 2674,
+    "conditional_question": 2684,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 118,
+  "fields": {
+    "triggering_question": 2694,
+    "conditional_question": 2704,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 119,
+  "fields": {
+    "triggering_question": 2724,
+    "conditional_question": 3581,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 120,
+  "fields": {
+    "triggering_question": 2724,
+    "conditional_question": 3700,
+    "trigger_values": "0"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 121,
+  "fields": {
+    "triggering_question": 2724,
+    "conditional_question": 3710,
+    "trigger_values": "0"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 122,
+  "fields": {
+    "triggering_question": 2724,
+    "conditional_question": 3720,
+    "trigger_values": "0,3,-3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 123,
+  "fields": {
+    "triggering_question": 2734,
+    "conditional_question": 2744,
+    "trigger_values": ">0"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 124,
+  "fields": {
+    "triggering_question": 2734,
+    "conditional_question": 3872,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 125,
+  "fields": {
+    "triggering_question": 2734,
+    "conditional_question": 2754,
+    "trigger_values": ">1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 126,
+  "fields": {
+    "triggering_question": 2734,
+    "conditional_question": 2764,
+    "trigger_values": ">1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 127,
+  "fields": {
+    "triggering_question": 2774,
+    "conditional_question": 3829,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 128,
+  "fields": {
+    "triggering_question": 2774,
+    "conditional_question": 3839,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 129,
+  "fields": {
+    "triggering_question": 2774,
+    "conditional_question": 3849,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 130,
+  "fields": {
+    "triggering_question": 2784,
+    "conditional_question": 2794,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 131,
+  "fields": {
+    "triggering_question": 2784,
+    "conditional_question": 2804,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 132,
+  "fields": {
+    "triggering_question": 2814,
+    "conditional_question": 3546,
+    "trigger_values": "1"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 133,
+  "fields": {
+    "triggering_question": 2724,
+    "conditional_question": 3591,
+    "trigger_values": "1,0,3,-3"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 134,
+  "fields": {
+    "triggering_question": 2724,
+    "conditional_question": 2824,
+    "trigger_values": "2"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnairedependency",
+  "pk": 135,
+  "fields": {
+    "triggering_question": 3591,
+    "conditional_question": 2824,
+    "trigger_values": "1.0"
+  }
+}
+]

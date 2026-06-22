@@ -1,0 +1,2873 @@
+[
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 670,
+  "fields": {
+    "question_text": "What type of accommodation do you live in?",
+    "category": "Sociodemographics",
+    "subcategory": "Household",
+    "question_order": 17,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 680,
+  "fields": {
+    "question_text": "Do you own or rent the accommodation that you live in?",
+    "category": "Sociodemographics",
+    "subcategory": "Household",
+    "question_order": 18,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 699,
+  "fields": {
+    "question_text": "How many years have you lived at your current address?",
+    "category": "Sociodemographics",
+    "subcategory": "Household",
+    "question_order": 1,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 709,
+  "fields": {
+    "question_text": "Including yourself, how many people are living together in your household? (Include those who usually live in the house such as students living away from home during term, partners in the armed forces or professions such as pilots)",
+    "category": "Sociodemographics",
+    "subcategory": "Household",
+    "question_order": 20,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 728,
+  "fields": {
+    "question_text": "How many cars or vans are owned, or available for use, by you or members of your household? (Please include company vehicles if available for private use)",
+    "category": "Sociodemographics",
+    "subcategory": "Household",
+    "question_order": 22,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 738,
+  "fields": {
+    "question_text": "What is the average total income before tax received by your HOUSEHOLD?",
+    "category": "Sociodemographics",
+    "subcategory": "Household",
+    "question_order": 23,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 757,
+  "fields": {
+    "question_text": "How many years have you worked in your current job? (If you have more than one job please answer this, and the following questions on work, for your MAIN job only)",
+    "category": "Sociodemographics",
+    "subcategory": "Employment",
+    "question_order": 27,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 767,
+  "fields": {
+    "question_text": "In a typical WEEK, how many hours do you spend at work?(Do not include hours travelling to and from work)",
+    "category": "Sociodemographics",
+    "subcategory": "Employment",
+    "question_order": 28,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 777,
+  "fields": {
+    "question_text": "How many times a WEEK do you travel from home to your main work? (count outward journeys only; put 0 if you always work from home)",
+    "category": "Sociodemographics",
+    "subcategory": "Employment",
+    "question_order": 25,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 796,
+  "fields": {
+    "question_text": "About how many miles is it between your home and your work?",
+    "category": "Sociodemographics",
+    "subcategory": "Employment",
+    "question_order": 26,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 806,
+  "fields": {
+    "question_text": "Does your work involve walking or standing for most of the time?",
+    "category": "Sociodemographics",
+    "subcategory": "Employment",
+    "question_order": 30,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 816,
+  "fields": {
+    "question_text": "Does your work involve heavy manual or physical work?",
+    "category": "Sociodemographics",
+    "subcategory": "Employment",
+    "question_order": 31,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 826,
+  "fields": {
+    "question_text": "Does your work involve shift work?",
+    "category": "Sociodemographics",
+    "subcategory": "Employment",
+    "question_order": 32,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 845,
+  "fields": {
+    "question_text": "At what age did you complete your continuous full-time education? Enter age in years. If you never attended school, enter -2.",
+    "category": "Sociodemographics",
+    "subcategory": "Education",
+    "question_order": 35,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 864,
+  "fields": {
+    "question_text": "In a typical WEEK, on how many days did you walk for at least 10 minutes\nat a time?\n(Include walking that you do at work, travelling to and from\nwork, and for sport or leisure)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Physical activity",
+    "question_order": 47,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 874,
+  "fields": {
+    "question_text": "How many minutes did you usually spend walking on a typical DAY?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Physical activity",
+    "question_order": 48,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 894,
+  "fields": {
+    "question_text": "How many minutes did you usually spend doing moderate activities on a typical DAY?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Physical activity",
+    "question_order": 43,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 904,
+  "fields": {
+    "question_text": "In a typical WEEK, how many days did you do 10 minutes or more of vigorous physical activity?\n(These are activities that make you sweat\nor breathe hard such as fast cycling, aerobics, heavy lifting)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Physical activity",
+    "question_order": 2,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 914,
+  "fields": {
+    "question_text": "How many minutes did you usually spend doing vigorous activities on a typical DAY?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Physical activity",
+    "question_order": 46,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 924,
+  "fields": {
+    "question_text": "How would you describe your usual walking pace?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Physical activity",
+    "question_order": 57,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 943,
+  "fields": {
+    "question_text": "At home, during the last 4 weeks, about how many times a DAY do you climb a flight of stairs? (approx 10 steps)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Physical activity",
+    "question_order": 53,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 971,
+  "fields": {
+    "question_text": "How many times in the last 4 weeks did you go walking for pleasure?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Physical activity",
+    "question_order": 55,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 981,
+  "fields": {
+    "question_text": "Each time you went walking for pleasure, about how long did you spend doing it?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Physical activity",
+    "question_order": 49,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 991,
+  "fields": {
+    "question_text": "How many times in the last 4 weeks did you do strenuous sports?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Physical activity",
+    "question_order": 54,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1001,
+  "fields": {
+    "question_text": "Each time you did strenuous sports, about how long did you spend doing it?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Physical activity",
+    "question_order": 45,
+    "answer_type": "nan"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1011,
+  "fields": {
+    "question_text": "How many times in the last 4 weeks did you do light DIY?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Physical activity",
+    "question_order": 51,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1021,
+  "fields": {
+    "question_text": "Each time you did light DIY, about how long did you spend doing it?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Physical activity",
+    "question_order": 42,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1031,
+  "fields": {
+    "question_text": "How often do you visit friends or family or have them visit you?",
+    "category": "Psychosocial factors",
+    "subcategory": "Socal support",
+    "question_order": 159,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1050,
+  "fields": {
+    "question_text": "In a typical DAY in summer, how many hours do you spend outdoors?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Sun exposure",
+    "question_order": 14,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1060,
+  "fields": {
+    "question_text": "In a typical DAY in winter, how many hours do you spend outdoors?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Sun exposure",
+    "question_order": 15,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1070,
+  "fields": {
+    "question_text": "In a typical DAY, how many hours do you spend watching TV?\n(Put 0 if you do not spend any time doing it)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Physical activity",
+    "question_order": 4,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1090,
+  "fields": {
+    "question_text": "In a typical DAY, how many hours do you spend driving?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Physical activity",
+    "question_order": 3,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1100,
+  "fields": {
+    "question_text": "How often do you drive faster than the speed limit on the motorway?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Physical activity",
+    "question_order": 39,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1110,
+  "fields": {
+    "question_text": "For approximately how many years have you been using a mobile phone at least once per week to make or receive calls?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Electronic device use",
+    "question_order": 62,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1120,
+  "fields": {
+    "question_text": "Over the last 3 months, on average how much time per week did you spend making or receiving calls on a mobile phone?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Electronic device use",
+    "question_order": 58,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1130,
+  "fields": {
+    "question_text": "Over the last 3 months, how often have you used a hands-free device/speakerphone when making or receiving calls on your mobile?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Electronic device use",
+    "question_order": 59,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1140,
+  "fields": {
+    "question_text": "Is there any difference between your mobile phone use now compared to two years ago?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Electronic device use",
+    "question_order": 60,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1150,
+  "fields": {
+    "question_text": "On what side of the head do you usually use a mobile phone?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Electronic device use",
+    "question_order": 61,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1170,
+  "fields": {
+    "question_text": "On an average day, how easy do you find getting up in the morning?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Sleep",
+    "question_order": 64,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1180,
+  "fields": {
+    "question_text": "Do you consider yourself to be?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Sleep",
+    "question_order": 65,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1190,
+  "fields": {
+    "question_text": "Do you have a nap during the day?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Sleep",
+    "question_order": 66,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1200,
+  "fields": {
+    "question_text": "Do you have trouble falling asleep at night or do you wake up in the middle of the night?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Sleep",
+    "question_order": 67,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1210,
+  "fields": {
+    "question_text": "Does your partner or a close relative or friend complain about your snoring?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Sleep",
+    "question_order": 68,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1220,
+  "fields": {
+    "question_text": "How likely are you to doze off or fall asleep during the daytime when you don't mean to? (e.g. when working, reading or driving)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Sleep",
+    "question_order": 69,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1239,
+  "fields": {
+    "question_text": "Do you smoke tobacco now?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Smoking",
+    "question_order": 71,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1249,
+  "fields": {
+    "question_text": "In the past, how often have you smoked tobacco?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Smoking",
+    "question_order": 72,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1259,
+  "fields": {
+    "question_text": "Does anyone in your household smoke?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Smoking",
+    "question_order": 94,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1269,
+  "fields": {
+    "question_text": "At home, about how many hours per WEEK are you exposed to other people's tobacco smoke?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Smoking",
+    "question_order": 95,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1279,
+  "fields": {
+    "question_text": "Outside of your home, about how many hours per WEEK are you exposed to other people's tobacco smoke?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Smoking",
+    "question_order": 96,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1289,
+  "fields": {
+    "question_text": "On average how many heaped tablespoons of COOKED vegetables would you eat per DAY?\n(Do not include potatoes; put '0' if you do not eat any)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 5,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1299,
+  "fields": {
+    "question_text": "On average how many heaped tablespoons of SALAD or RAW vegetables would you eat per DAY?(Include lettuce, tomato in sandwiches; put '0' if you do not eat any)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 6,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1309,
+  "fields": {
+    "question_text": "About how many pieces of FRESH fruit would you eat per DAY?\n(Count one apple, one banana, 10 grapes etc as one piece; put '0' if you do not eat any)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 7,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1319,
+  "fields": {
+    "question_text": "About how many pieces of DRIED fruit would you eat per DAY?\n(Count one prune, one dried apricot, 10 raisins as one piece; put '0' if you do not eat any)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 8,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1329,
+  "fields": {
+    "question_text": "How often do you eat oily fish?\n(e.g. sardines, salmon, mackerel, herring)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 97,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1339,
+  "fields": {
+    "question_text": "How often do you eat other types of fish? (e.g. cod, tinned tuna, haddock)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 98,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1349,
+  "fields": {
+    "question_text": "How often do you eat processed meats (such as bacon, ham, sausages, meat pies, kebabs, burgers, chicken nuggets)?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 99,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1359,
+  "fields": {
+    "question_text": "How often do you eat chicken, turkey or other poultry?\n(Do not count processed meats)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 100,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1369,
+  "fields": {
+    "question_text": "How often do you eat beef? (Do not count processed meats)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 101,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1379,
+  "fields": {
+    "question_text": "How often do you eat lamb/mutton? (Do not count processed meats)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 102,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1389,
+  "fields": {
+    "question_text": "How often do you eat pork?\n(Do not count processed meats such as bacon or ham)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 103,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1408,
+  "fields": {
+    "question_text": "How often do you eat cheese?\n(Include cheese in pizzas, quiches, cheese sauce etc)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 105,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1418,
+  "fields": {
+    "question_text": "What type of milk do you mainly use?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 106,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1428,
+  "fields": {
+    "question_text": "What type of spread do you mainly use?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 107,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1438,
+  "fields": {
+    "question_text": "How many slices of bread do you eat each WEEK?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 9,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1448,
+  "fields": {
+    "question_text": "What type of bread do you mainly eat?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 109,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1458,
+  "fields": {
+    "question_text": "How many bowls of cereal do you eat a WEEK?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 10,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1468,
+  "fields": {
+    "question_text": "What type of cereal do you mainly eat?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 110,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1478,
+  "fields": {
+    "question_text": "Do you add salt to your food?\n(Do not include salt used in cooking)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 111,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1488,
+  "fields": {
+    "question_text": "How many cups of tea do you drink each DAY?(Include black and green tea)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 11,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1498,
+  "fields": {
+    "question_text": "How many cups of coffee do you drink each DAY?\n(Include decaffeinated coffee)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 12,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1508,
+  "fields": {
+    "question_text": "What type of coffee do you usually drink?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 112,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1518,
+  "fields": {
+    "question_text": "How do you like your hot drinks? (Such as coffee or tea)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 113,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1528,
+  "fields": {
+    "question_text": "How many glasses of water do you drink each DAY?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 13,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1538,
+  "fields": {
+    "question_text": "Have you made any major changes to your diet in the last 5 years?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 114,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1548,
+  "fields": {
+    "question_text": "Does your diet vary much from week to week?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 115,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1558,
+  "fields": {
+    "question_text": "About how often do you drink alcohol?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Alcohol",
+    "question_order": 117,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1568,
+  "fields": {
+    "question_text": "In an average WEEK, how many glasses of RED wine would you drink?(There are six glasses in an average bottle)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Alcohol",
+    "question_order": 122,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1578,
+  "fields": {
+    "question_text": "In an average WEEK, how many glasses of WHITE wine or champagne would you drink?\n(There are six glasses in an average bottle)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Alcohol",
+    "question_order": 123,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1588,
+  "fields": {
+    "question_text": "In an average WEEK, how many pints of beer or cider would you drink?\n(Include bitter, lager, stout, ale, Guinness)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Alcohol",
+    "question_order": 124,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1598,
+  "fields": {
+    "question_text": "In an average WEEK, how many measures of spirits or liqueurs\nwould you drink?\n(there are 25 standard measures in a normal sized bottle; spirits include drinks such as whisky, gin, rum, vodka, brandy)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Alcohol",
+    "question_order": 125,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1608,
+  "fields": {
+    "question_text": "In an average WEEK, how many glasses of fortified wine would you drink?\n(There are 12 glasses in an average bottle; Fortified wines include drinks such as\nsherry, port, vermouth)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Alcohol",
+    "question_order": 126,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1618,
+  "fields": {
+    "question_text": "When you drink alcohol is it usually with meals?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Alcohol",
+    "question_order": 127,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1628,
+  "fields": {
+    "question_text": "Compared to 10 years ago, do you drink?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Alcohol",
+    "question_order": 128,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1687,
+  "fields": {
+    "question_text": "When you were 10 years old, compared to average would you describe yourself as:",
+    "category": "Early life factors",
+    "subcategory": "Early life factors",
+    "question_order": 139,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1697,
+  "fields": {
+    "question_text": "When you were 10 years old, compared to average would you describe yourself as:",
+    "category": "Early life factors",
+    "subcategory": "Early life factors",
+    "question_order": 140,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1707,
+  "fields": {
+    "question_text": "Are you right or left handed?",
+    "category": "Early life factors",
+    "subcategory": "Early life factors",
+    "question_order": 141,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1717,
+  "fields": {
+    "question_text": "What best describes the colour of your skin without tanning?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Sun exposure",
+    "question_order": 131,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1727,
+  "fields": {
+    "question_text": "What would happen to your skin if it was repeatedly exposed to bright sunlight without any protection?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Sun exposure",
+    "question_order": 132,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1747,
+  "fields": {
+    "question_text": "What best describes your natural hair colour?\n(If your hair colour is grey, the colour before you went grey)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Sun exposure",
+    "question_order": 133,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1757,
+  "fields": {
+    "question_text": "Do people say that you look:",
+    "category": "Lifestyle and environment",
+    "subcategory": "Sun exposure",
+    "question_order": 134,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1777,
+  "fields": {
+    "question_text": "Are you a twin, triplet or other multiple birth?",
+    "category": "Early life factors",
+    "subcategory": "Early life factors",
+    "question_order": 142,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1787,
+  "fields": {
+    "question_text": "Did your mother smoke regularly around the time when you were born?",
+    "category": "Early life factors",
+    "subcategory": "Early life factors",
+    "question_order": 143,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1797,
+  "fields": {
+    "question_text": "Is your father still alive?",
+    "category": "Family history",
+    "subcategory": "Family history",
+    "question_order": 144,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1807,
+  "fields": {
+    "question_text": "What was his age when he died?",
+    "category": "Family history",
+    "subcategory": "Family history",
+    "question_order": 147,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1835,
+  "fields": {
+    "question_text": "Is your mother still alive?",
+    "category": "Family history",
+    "subcategory": "Family history",
+    "question_order": 148,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1845,
+  "fields": {
+    "question_text": "What is her age now?",
+    "category": "Family history",
+    "subcategory": "Family history",
+    "question_order": 150,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1873,
+  "fields": {
+    "question_text": "How many brothers do you have? (Please include those who have died, and twin brothers. Do not include half- brothers, step-brothers or\nadopted brothers)",
+    "category": "Family history",
+    "subcategory": "Family history",
+    "question_order": 152,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1883,
+  "fields": {
+    "question_text": "How many sisters do you have?\n(Please include those who have died, and twin sisters. Do not include half-sisters, step-sisters or adopted sisters)",
+    "category": "Family history",
+    "subcategory": "Family history",
+    "question_order": 153,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1920,
+  "fields": {
+    "question_text": "Does your mood often go up and down?",
+    "category": "Psychosocial factors",
+    "subcategory": "Mental health",
+    "question_order": 162,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1940,
+  "fields": {
+    "question_text": "Are you an irritable person?",
+    "category": "Psychosocial factors",
+    "subcategory": "Mental health",
+    "question_order": 163,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1960,
+  "fields": {
+    "question_text": "Do you often feel 'fed-up'?",
+    "category": "Psychosocial factors",
+    "subcategory": "Mental health",
+    "question_order": 164,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 1990,
+  "fields": {
+    "question_text": "Would you call yourself tense or 'highly strung'?",
+    "category": "Psychosocial factors",
+    "subcategory": "Mental health",
+    "question_order": 165,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2000,
+  "fields": {
+    "question_text": "Do you worry too long after an embarrassing experience?",
+    "category": "Psychosocial factors",
+    "subcategory": "Mental health",
+    "question_order": 166,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2010,
+  "fields": {
+    "question_text": "Do you suffer from 'nerves'?",
+    "category": "Psychosocial factors",
+    "subcategory": "Mental health",
+    "question_order": 167,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2020,
+  "fields": {
+    "question_text": "Do you often feel lonely?",
+    "category": "Psychosocial factors",
+    "subcategory": "Mental health",
+    "question_order": 168,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2040,
+  "fields": {
+    "question_text": "Would you describe yourself as someone who takes risks?",
+    "category": "Psychosocial factors",
+    "subcategory": "Mental health",
+    "question_order": 169,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2050,
+  "fields": {
+    "question_text": "Over the past two weeks, how often have you felt down, depressed or hopeless?",
+    "category": "Psychosocial factors",
+    "subcategory": "Mental health",
+    "question_order": 170,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2060,
+  "fields": {
+    "question_text": "Over the past two weeks, how often have you had little interest or pleasure in doing things?",
+    "category": "Psychosocial factors",
+    "subcategory": "Mental health",
+    "question_order": 171,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2070,
+  "fields": {
+    "question_text": "Over the past two weeks, how often have you felt tense, fidgety or restless?",
+    "category": "Psychosocial factors",
+    "subcategory": "Mental health",
+    "question_order": 172,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2080,
+  "fields": {
+    "question_text": "Over the past two weeks, how often have you felt tired or had little energy?",
+    "category": "Psychosocial factors",
+    "subcategory": "Mental health",
+    "question_order": 173,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2090,
+  "fields": {
+    "question_text": "Have you ever seen a general practitioner (GP) for nerves, anxiety, tension or depression?",
+    "category": "Psychosocial factors",
+    "subcategory": "Mental health",
+    "question_order": 174,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2100,
+  "fields": {
+    "question_text": "Have you ever seen a psychiatrist for nerves, anxiety, tension or depression?",
+    "category": "Psychosocial factors",
+    "subcategory": "Mental health",
+    "question_order": 175,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2110,
+  "fields": {
+    "question_text": "How often are you able to confide in someone close to you?",
+    "category": "Psychosocial factors",
+    "subcategory": "Socal support",
+    "question_order": 161,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2129,
+  "fields": {
+    "question_text": "The next section contains questions about your sexual history.\nIf you feel that a question is too sensitive,\nyou can skip the question or skip the entire section if you prefer.",
+    "category": "Lifestyle and environment",
+    "subcategory": "Sexual factors",
+    "question_order": 136,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2139,
+  "fields": {
+    "question_text": "What was your age when you first had sexual intercourse?\n(Sexual intercourse includes vaginal, oral or anal intercourse)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Sexual factors",
+    "question_order": 137,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2149,
+  "fields": {
+    "question_text": "About how many sexual partners have you had in your lifetime?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Sexual factors",
+    "question_order": 138,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2178,
+  "fields": {
+    "question_text": "In general how would you rate your overall health?",
+    "category": "Health and medical history",
+    "subcategory": "General health",
+    "question_order": 180,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2188,
+  "fields": {
+    "question_text": "Do you have any long-standing illness, disability or\ninfirmity?",
+    "category": "Health and medical history",
+    "subcategory": "General health",
+    "question_order": 181,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2207,
+  "fields": {
+    "question_text": "Do you wear glasses or contact lenses to correct your vision?",
+    "category": "Health and medical history",
+    "subcategory": "Eyesight",
+    "question_order": 177,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2217,
+  "fields": {
+    "question_text": "What age did you first start to wear glasses or contact lenses?",
+    "category": "Health and medical history",
+    "subcategory": "Eyesight",
+    "question_order": 178,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2237,
+  "fields": {
+    "question_text": "Do you play computer games?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Electronic device use",
+    "question_order": 63,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2247,
+  "fields": {
+    "question_text": "Do you have any difficulty with your hearing?",
+    "category": "Health and medical history",
+    "subcategory": "Hearing",
+    "question_order": 227,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2257,
+  "fields": {
+    "question_text": "Do you find it difficult to follow a conversation if there is background noise (such as TV, radio, children playing)?",
+    "category": "Health and medical history",
+    "subcategory": "Hearing",
+    "question_order": 228,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2267,
+  "fields": {
+    "question_text": "Do you wear sun protection (e.g. sunscreen lotion, hat) when you spend time outdoors in the summer?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Sun exposure",
+    "question_order": 135,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2277,
+  "fields": {
+    "question_text": "How many times a year would you use a solarium or sunlamp?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Sun exposure",
+    "question_order": 16,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2296,
+  "fields": {
+    "question_text": "In the last year have you had any falls?",
+    "category": "Health and medical history",
+    "subcategory": "General health",
+    "question_order": 182,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2306,
+  "fields": {
+    "question_text": "Compared with one year ago, has your weight changed?",
+    "category": "Health and medical history",
+    "subcategory": "General health",
+    "question_order": 183,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2316,
+  "fields": {
+    "question_text": "In the last year have you ever had wheeze or whistling in the chest?",
+    "category": "Health and medical history",
+    "subcategory": "Breathing",
+    "question_order": 184,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2335,
+  "fields": {
+    "question_text": "Do you ever have any pain or discomfort in your chest?",
+    "category": "Health and medical history",
+    "subcategory": "Chest pain",
+    "question_order": 194,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2345,
+  "fields": {
+    "question_text": "Have you ever had a screening test for bowel (colorectal) cancer?\n(Please include tests for blood in the stool/faeces or a colonoscopy or a sigmoidoscopy)",
+    "category": "Health and medical history",
+    "subcategory": "Cancer screening",
+    "question_order": 198,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2355,
+  "fields": {
+    "question_text": "How many years ago was the most recent one of these tests?",
+    "category": "Health and medical history",
+    "subcategory": "Cancer screening",
+    "question_order": 199,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2375,
+  "fields": {
+    "question_text": "When did you start to grow facial hair?",
+    "category": "Sex-specific factors",
+    "subcategory": "Male-specific factors",
+    "question_order": 230,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2385,
+  "fields": {
+    "question_text": "When did your voice break?",
+    "category": "Sex-specific factors",
+    "subcategory": "Male-specific factors",
+    "question_order": 231,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2395,
+  "fields": {
+    "question_text": "Which of the following best describes your hair/balding pattern?",
+    "category": "Sex-specific factors",
+    "subcategory": "Male-specific factors",
+    "question_order": 232,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2405,
+  "fields": {
+    "question_text": "How many children have you fathered?",
+    "category": "Sex-specific factors",
+    "subcategory": "Male-specific factors",
+    "question_order": 233,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2415,
+  "fields": {
+    "question_text": "Have you had any major operations? (For example, operations that required an overnight stay in hospital)",
+    "category": "Health and medical history",
+    "subcategory": "Operations",
+    "question_order": 201,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2443,
+  "fields": {
+    "question_text": "Has a doctor ever told you that you have diabetes?",
+    "category": "Health and medical history",
+    "subcategory": "Medical conditions",
+    "question_order": 213,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2453,
+  "fields": {
+    "question_text": "Has a doctor ever told you that you have had cancer?",
+    "category": "Health and medical history",
+    "subcategory": "Medical conditions",
+    "question_order": 217,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2463,
+  "fields": {
+    "question_text": "Have you fractured/broken any bones in the last 5 years?",
+    "category": "Health and medical history",
+    "subcategory": "Medical conditions",
+    "question_order": 218,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2473,
+  "fields": {
+    "question_text": "Has a doctor ever told you that you have had any other serious medical conditions or disabilities?",
+    "category": "Health and medical history",
+    "subcategory": "Medical conditions",
+    "question_order": 221,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2492,
+  "fields": {
+    "question_text": "Do you regularly take any other PRESCRIPTION medications?\n(Do not forget medications such as puffers or patches)",
+    "category": "Health and medical history",
+    "subcategory": "Medication",
+    "question_order": 223,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2624,
+  "fields": {
+    "question_text": "How many times in the last 4 weeks did you do heavy DIY?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Physical activity",
+    "question_order": 50,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2634,
+  "fields": {
+    "question_text": "Each time you did heavy DIY, about how long did you spend doing it?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Physical activity",
+    "question_order": 41,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2644,
+  "fields": {
+    "question_text": "In your lifetime, have you smoked a total of at least 100 times?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Smoking",
+    "question_order": 73,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2654,
+  "fields": {
+    "question_text": "What type of spread do you mainly use?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 108,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2664,
+  "fields": {
+    "question_text": "Why did you reduce the amount you drank?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Alcohol",
+    "question_order": 129,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2674,
+  "fields": {
+    "question_text": "Have you ever been for breast cancer screening (a mammogram)?",
+    "category": "Sex-specific factors",
+    "subcategory": "Female-specific factors",
+    "question_order": 234,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2684,
+  "fields": {
+    "question_text": "How many years ago was your last screen?",
+    "category": "Sex-specific factors",
+    "subcategory": "Female-specific factors",
+    "question_order": 235,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2694,
+  "fields": {
+    "question_text": "Have you ever had a cervical smear test?",
+    "category": "Sex-specific factors",
+    "subcategory": "Female-specific factors",
+    "question_order": 236,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2704,
+  "fields": {
+    "question_text": "How many years ago was your last cervical smear test?",
+    "category": "Sex-specific factors",
+    "subcategory": "Female-specific factors",
+    "question_order": 237,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2714,
+  "fields": {
+    "question_text": "How old were you when your periods started?",
+    "category": "Sex-specific factors",
+    "subcategory": "Female-specific factors",
+    "question_order": 238,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2724,
+  "fields": {
+    "question_text": "Have you had your menopause (periods stopped)?",
+    "category": "Sex-specific factors",
+    "subcategory": "Female-specific factors",
+    "question_order": 239,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2734,
+  "fields": {
+    "question_text": "How many children have you given birth to?\n(Please include live births only)",
+    "category": "Sex-specific factors",
+    "subcategory": "Female-specific factors",
+    "question_order": 244,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2744,
+  "fields": {
+    "question_text": "What was the birth weight of your first child in pounds?(do not include twins)",
+    "category": "Sex-specific factors",
+    "subcategory": "Female-specific factors",
+    "question_order": 245,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2754,
+  "fields": {
+    "question_text": "How old were you when you had your FIRST child?",
+    "category": "Sex-specific factors",
+    "subcategory": "Female-specific factors",
+    "question_order": 247,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2764,
+  "fields": {
+    "question_text": "How old were you when you had your LAST child?",
+    "category": "Sex-specific factors",
+    "subcategory": "Female-specific factors",
+    "question_order": 248,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2774,
+  "fields": {
+    "question_text": "Have you ever had any stillbirths, spontaneous miscarriages or terminations?",
+    "category": "Sex-specific factors",
+    "subcategory": "Female-specific factors",
+    "question_order": 249,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2784,
+  "fields": {
+    "question_text": "Have you ever taken the contraceptive pill? (include the 'mini-pill')",
+    "category": "Sex-specific factors",
+    "subcategory": "Female-specific factors",
+    "question_order": 253,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2794,
+  "fields": {
+    "question_text": "About how old were you when you first went on the contraceptive pill?",
+    "category": "Sex-specific factors",
+    "subcategory": "Female-specific factors",
+    "question_order": 254,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2804,
+  "fields": {
+    "question_text": "How old were you when you last used the contraceptive pill?",
+    "category": "Sex-specific factors",
+    "subcategory": "Female-specific factors",
+    "question_order": 255,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2814,
+  "fields": {
+    "question_text": "Have you ever used hormone replacement therapy (HRT)?",
+    "category": "Sex-specific factors",
+    "subcategory": "Female-specific factors",
+    "question_order": 256,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2824,
+  "fields": {
+    "question_text": "How old were you when you had your hysterectomy?",
+    "category": "Sex-specific factors",
+    "subcategory": "Female-specific factors",
+    "question_order": 259,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2834,
+  "fields": {
+    "question_text": "Have you had BOTH ovaries removed?",
+    "category": "Sex-specific factors",
+    "subcategory": "Female-specific factors",
+    "question_order": 260,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2867,
+  "fields": {
+    "question_text": "How old were you when you first started smoking on most days?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Smoking",
+    "question_order": 86,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2877,
+  "fields": {
+    "question_text": "What type of tobacco did you usually smoke?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Smoking",
+    "question_order": 87,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2887,
+  "fields": {
+    "question_text": "About how many cigarettes did you smoke on average each day?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Smoking",
+    "question_order": 88,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2897,
+  "fields": {
+    "question_text": "How old were you when you last smoked on most days?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Smoking",
+    "question_order": 89,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2907,
+  "fields": {
+    "question_text": "In the time that you smoked, did you ever stop for more than 6 months?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Smoking",
+    "question_order": 90,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2926,
+  "fields": {
+    "question_text": "How many times did you try to give up smoking before you were successful?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Smoking",
+    "question_order": 92,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2936,
+  "fields": {
+    "question_text": "Do you think you may start smoking again?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Smoking",
+    "question_order": 93,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2946,
+  "fields": {
+    "question_text": "What is his age now?",
+    "category": "Family history",
+    "subcategory": "Family history",
+    "question_order": 146,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2956,
+  "fields": {
+    "question_text": "Have you had pains all over the body for more than 3 months?",
+    "category": "Health and medical history",
+    "subcategory": "Pain",
+    "question_order": 193,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2966,
+  "fields": {
+    "question_text": "What was your age when the high blood pressure was first diagnosed?",
+    "category": "Health and medical history",
+    "subcategory": "Medical conditions",
+    "question_order": 206,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2976,
+  "fields": {
+    "question_text": "What was your age when the diabetes was first diagnosed?",
+    "category": "Health and medical history",
+    "subcategory": "Medical conditions",
+    "question_order": 215,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 2986,
+  "fields": {
+    "question_text": "Did you start insulin within one year of your diagnosis of diabetes?",
+    "category": "Health and medical history",
+    "subcategory": "Medical conditions",
+    "question_order": 216,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3005,
+  "fields": {
+    "question_text": "Did the fracture result from a simple fall (i.e. from standing height)?",
+    "category": "Health and medical history",
+    "subcategory": "Medical conditions",
+    "question_order": 220,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3393,
+  "fields": {
+    "question_text": "Do you use a hearing aid most of the time?",
+    "category": "Health and medical history",
+    "subcategory": "Hearing",
+    "question_order": 229,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3404,
+  "fields": {
+    "question_text": "Have you had neck or shoulder pains for more than 3 months?",
+    "category": "Health and medical history",
+    "subcategory": "Pain",
+    "question_order": 188,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3414,
+  "fields": {
+    "question_text": "Have you had hip pains for more than 3 months?",
+    "category": "Health and medical history",
+    "subcategory": "Pain",
+    "question_order": 191,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3426,
+  "fields": {
+    "question_text": "Does your work involve night shifts?",
+    "category": "Sociodemographics",
+    "subcategory": "Employment",
+    "question_order": 33,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3436,
+  "fields": {
+    "question_text": "How old were you when you first started smoking on most days?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Smoking",
+    "question_order": 74,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3446,
+  "fields": {
+    "question_text": "What type of tobacco do you mainly smoke?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Smoking",
+    "question_order": 75,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3456,
+  "fields": {
+    "question_text": "About how many cigarettes did you smoke on average each day?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Smoking",
+    "question_order": 77,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3466,
+  "fields": {
+    "question_text": "How soon after waking do you smoke your first cigarette of the day?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Smoking",
+    "question_order": 80,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3476,
+  "fields": {
+    "question_text": "How easy or difficult would you find it to go without smoking for a whole day?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Smoking",
+    "question_order": 81,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3486,
+  "fields": {
+    "question_text": "Have you tried to give up smoking?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Smoking",
+    "question_order": 82,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3496,
+  "fields": {
+    "question_text": "Do you want to stop smoking?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Smoking",
+    "question_order": 83,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3506,
+  "fields": {
+    "question_text": "Compared to 10 years ago do you smoke...",
+    "category": "Lifestyle and environment",
+    "subcategory": "Smoking",
+    "question_order": 84,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3526,
+  "fields": {
+    "question_text": "What was her age when she died?",
+    "category": "Family history",
+    "subcategory": "Family history",
+    "question_order": 151,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3546,
+  "fields": {
+    "question_text": "How old were you when you last used HRT?",
+    "category": "Sex-specific factors",
+    "subcategory": "Female-specific factors",
+    "question_order": 257,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3571,
+  "fields": {
+    "question_text": "Have you had back pains for more than 3 months?",
+    "category": "Health and medical history",
+    "subcategory": "Pain",
+    "question_order": 189,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3581,
+  "fields": {
+    "question_text": "How old were you when your periods stopped?",
+    "category": "Sex-specific factors",
+    "subcategory": "Female-specific factors",
+    "question_order": 240,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3591,
+  "fields": {
+    "question_text": "Have you had a hysterectomy (womb removed)?",
+    "category": "Sex-specific factors",
+    "subcategory": "Female-specific factors",
+    "question_order": 258,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3606,
+  "fields": {
+    "question_text": "Do you get this pain or discomfort when you walk at an ordinary pace on the level?",
+    "category": "Health and medical history",
+    "subcategory": "Chest pain",
+    "question_order": 195,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3616,
+  "fields": {
+    "question_text": "Does this chest pain go away when you stand still?",
+    "category": "Health and medical history",
+    "subcategory": "Chest pain",
+    "question_order": 197,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3627,
+  "fields": {
+    "question_text": "What was your age when the angina was first diagnosed?",
+    "category": "Health and medical history",
+    "subcategory": "Medical conditions",
+    "question_order": 204,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3637,
+  "fields": {
+    "question_text": "How many times in the last 4 weeks did you do other exercises such as swimming, cycling, keep fit?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Physical activity",
+    "question_order": 52,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3647,
+  "fields": {
+    "question_text": "Each time you did other exercises such as swimming, cycling, keep fit, about how long did you spend doing them?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Physical activity",
+    "question_order": 44,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3659,
+  "fields": {
+    "question_text": "What year did you first come to live in the United Kingdom?",
+    "category": "Sociodemographics",
+    "subcategory": "Ethnicity",
+    "question_order": 36,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3700,
+  "fields": {
+    "question_text": "How many days since your last menstrual period?",
+    "category": "Sex-specific factors",
+    "subcategory": "Female-specific factors",
+    "question_order": 241,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3710,
+  "fields": {
+    "question_text": "How many days is your usual menstrual cycle?(The number of days between each menstrual period)",
+    "category": "Sex-specific factors",
+    "subcategory": "Female-specific factors",
+    "question_order": 242,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3720,
+  "fields": {
+    "question_text": "Are you menstruating today?\n(We are asking this as it may affect the urine sample that you have been asked to provide)",
+    "category": "Sex-specific factors",
+    "subcategory": "Female-specific factors",
+    "question_order": 243,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3731,
+  "fields": {
+    "question_text": "Did you previously drink alcohol?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Alcohol",
+    "question_order": 118,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3741,
+  "fields": {
+    "question_text": "Have you had stomach or abdominal pains for more than 3 months?",
+    "category": "Health and medical history",
+    "subcategory": "Pain",
+    "question_order": 190,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3751,
+  "fields": {
+    "question_text": "Do you get this pain or discomfort when you walk uphill or hurry?",
+    "category": "Health and medical history",
+    "subcategory": "Chest pain",
+    "question_order": 196,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3761,
+  "fields": {
+    "question_text": "What was your age when the hayfever, rhinitis or eczema was first diagnosed?",
+    "category": "Health and medical history",
+    "subcategory": "Medical conditions",
+    "question_order": 212,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3773,
+  "fields": {
+    "question_text": "Have you had knee pains for more than 3 months?",
+    "category": "Health and medical history",
+    "subcategory": "Pain",
+    "question_order": 192,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3786,
+  "fields": {
+    "question_text": "What was your age when the asthma was first diagnosed?",
+    "category": "Health and medical history",
+    "subcategory": "Medical conditions",
+    "question_order": 211,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3799,
+  "fields": {
+    "question_text": "Have you had headaches for more than 3 months?",
+    "category": "Health and medical history",
+    "subcategory": "Pain",
+    "question_order": 186,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3809,
+  "fields": {
+    "question_text": "How many years ago was your last test?",
+    "category": "Health and medical history",
+    "subcategory": "Cancer screening",
+    "question_order": 200,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3829,
+  "fields": {
+    "question_text": "How many stillbirths? (enter 0 if none)",
+    "category": "Sex-specific factors",
+    "subcategory": "Female-specific factors",
+    "question_order": 250,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3839,
+  "fields": {
+    "question_text": "How many spontaneous miscarriages? (enter 0 if none)",
+    "category": "Sex-specific factors",
+    "subcategory": "Female-specific factors",
+    "question_order": 251,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3849,
+  "fields": {
+    "question_text": "How many terminations? (enter 0 if none)",
+    "category": "Sex-specific factors",
+    "subcategory": "Female-specific factors",
+    "question_order": 252,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3859,
+  "fields": {
+    "question_text": "Why did you stop drinking alcohol?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Alcohol",
+    "question_order": 130,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3872,
+  "fields": {
+    "question_text": "How old were you when you had your child?",
+    "category": "Sex-specific factors",
+    "subcategory": "Female-specific factors",
+    "question_order": 246,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3894,
+  "fields": {
+    "question_text": "What was your age when the heart attack was first diagnosed?",
+    "category": "Health and medical history",
+    "subcategory": "Medical conditions",
+    "question_order": 203,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3912,
+  "fields": {
+    "question_text": "Is your ADOPTED father still alive?",
+    "category": "Family history",
+    "subcategory": "Family history",
+    "question_order": 145,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3942,
+  "fields": {
+    "question_text": "Is your ADOPTED mother still alive?",
+    "category": "Family history",
+    "subcategory": "Family history",
+    "question_order": 149,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 3992,
+  "fields": {
+    "question_text": "What was your age when the emphysema/chronic bronchitis was first diagnosed?",
+    "category": "Health and medical history",
+    "subcategory": "Medical conditions",
+    "question_order": 210,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 4012,
+  "fields": {
+    "question_text": "What was your age when the blood clot in the leg (DVT) was first diagnosed?",
+    "category": "Health and medical history",
+    "subcategory": "Medical conditions",
+    "question_order": 208,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 4022,
+  "fields": {
+    "question_text": "What was your age when the blood clot in the lung was first diagnosed?",
+    "category": "Health and medical history",
+    "subcategory": "Medical conditions",
+    "question_order": 209,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 4041,
+  "fields": {
+    "question_text": "Did you only have diabetes during pregnancy?",
+    "category": "Health and medical history",
+    "subcategory": "Medical conditions",
+    "question_order": 214,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 4056,
+  "fields": {
+    "question_text": "What was your age when the stroke was first diagnosed?",
+    "category": "Health and medical history",
+    "subcategory": "Medical conditions",
+    "question_order": 205,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 4067,
+  "fields": {
+    "question_text": "Have you had facial pains for more than 3 months?",
+    "category": "Health and medical history",
+    "subcategory": "Pain",
+    "question_order": 187,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 4429,
+  "fields": {
+    "question_text": "In an average MONTH, how many pints of beer or cider would you drink?(Include bitter, lager, stout, ale, Guinness)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Alcohol",
+    "question_order": 119,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 4451,
+  "fields": {
+    "question_text": "In an average MONTH, how many glasses of fortified wine would you drink?(There are 12 glasses in an average bottle)(Fortified wines include drinks such as sherry, port, vermouth)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Alcohol",
+    "question_order": 120,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 4462,
+  "fields": {
+    "question_text": "In an average MONTH, how many glasses of other alcoholic drinks (such as alcopops) would you drink?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Alcohol",
+    "question_order": 121,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 5959,
+  "fields": {
+    "question_text": "Did you previously smoke cigarettes on most or all days?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Smoking",
+    "question_order": 76,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 6138,
+  "fields": {
+    "question_text": "Which of the following qualifications do you have?\n(You can select more than one)",
+    "category": "Sociodemographics",
+    "subcategory": "Education",
+    "question_order": 34,
+    "answer_type": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 6139,
+  "fields": {
+    "question_text": "Do you have any of the following in your home? (You can select more than one answer)",
+    "category": "Sociodemographics",
+    "subcategory": "Household",
+    "question_order": 19,
+    "answer_type": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 6141,
+  "fields": {
+    "question_text": "How are the other people who live with you related to you? (You can select more than one answer)",
+    "category": "Sociodemographics",
+    "subcategory": "Household",
+    "question_order": 21,
+    "answer_type": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 6142,
+  "fields": {
+    "question_text": "Which of the following describes your current situation? (You can select more than one answer)",
+    "category": "Sociodemographics",
+    "subcategory": "Employment",
+    "question_order": 24,
+    "answer_type": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 6143,
+  "fields": {
+    "question_text": "What types of transport do you use to get to and from work? (You can select more than one answer)",
+    "category": "Sociodemographics",
+    "subcategory": "Employment",
+    "question_order": 29,
+    "answer_type": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 6144,
+  "fields": {
+    "question_text": "Which of the following do you NEVER eat?(You can select more than one answer)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Diet",
+    "question_order": 104,
+    "answer_type": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 6145,
+  "fields": {
+    "question_text": "In the last 2 years have you experienced any of the following?\n(You can select more than one answer)",
+    "category": "Psychosocial factors",
+    "subcategory": "Mental health",
+    "question_order": 176,
+    "answer_type": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 6146,
+  "fields": {
+    "question_text": "Do you receive any of the following? (You can select more than one answer)",
+    "category": "Sociodemographics",
+    "subcategory": "Other sociodemographic factors",
+    "question_order": 38,
+    "answer_type": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 6149,
+  "fields": {
+    "question_text": "Do you have any of the following? (You can select more than one answer)",
+    "category": "Health and medical history",
+    "subcategory": "Mouth",
+    "question_order": 179,
+    "answer_type": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 6150,
+  "fields": {
+    "question_text": "Has a doctor ever told you that you have had any of the following conditions? (You can select more than one answer)",
+    "category": "Health and medical history",
+    "subcategory": "Medical conditions",
+    "question_order": 202,
+    "answer_type": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 6151,
+  "fields": {
+    "question_text": "Which bones did you fracture/break? (You can select more than one answer)",
+    "category": "Health and medical history",
+    "subcategory": "Medical conditions",
+    "question_order": 219,
+    "answer_type": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 6152,
+  "fields": {
+    "question_text": "Has a doctor ever told you that you have had any of the following conditions? (You can select more than one answer)",
+    "category": "Health and medical history",
+    "subcategory": "Medical conditions",
+    "question_order": 207,
+    "answer_type": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 6154,
+  "fields": {
+    "question_text": "Do you regularly take any of the following? (You can select more than one answer)",
+    "category": "Health and medical history",
+    "subcategory": "Medication",
+    "question_order": 224,
+    "answer_type": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 6155,
+  "fields": {
+    "question_text": "Do you regularly take any of the following? (You can select more than one answer)",
+    "category": "Health and medical history",
+    "subcategory": "Medication",
+    "question_order": 225,
+    "answer_type": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 6157,
+  "fields": {
+    "question_text": "Why did you stop smoking?\n(You can select more than one answer)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Smoking",
+    "question_order": 91,
+    "answer_type": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 6158,
+  "fields": {
+    "question_text": "Why did you reduce your smoking? (You can select more than one answer)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Smoking",
+    "question_order": 85,
+    "answer_type": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 6159,
+  "fields": {
+    "question_text": "In the last month have you experienced any of the following that interfered with your usual activities?\n(You can select more than one answer)",
+    "category": "Health and medical history",
+    "subcategory": "Pain",
+    "question_order": 185,
+    "answer_type": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 6160,
+  "fields": {
+    "question_text": "Which of the following do you attend once a week or more often?\n(You can select more than one)",
+    "category": "Psychosocial factors",
+    "subcategory": "Socal support",
+    "question_order": 160,
+    "answer_type": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 6162,
+  "fields": {
+    "question_text": "In the last 4 weeks, which forms of transport have you used most often to get about?\n(Not including any journeys to and from work; you can select more than one answer)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Physical activity",
+    "question_order": 56,
+    "answer_type": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 6164,
+  "fields": {
+    "question_text": "In the last 4 weeks did you spend any time doing the following?\n(You can select more than one answer)",
+    "category": "Lifestyle and environment",
+    "subcategory": "Physical activity",
+    "question_order": 40,
+    "answer_type": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 6177,
+  "fields": {
+    "question_text": "Do you regularly take any of the following medications? (you can select more than one answer)",
+    "category": "Health and medical history",
+    "subcategory": "Medication",
+    "question_order": 222,
+    "answer_type": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 6179,
+  "fields": {
+    "question_text": "Do you regularly take any of the following? (You can select more than one answer)",
+    "category": "Health and medical history",
+    "subcategory": "Medication",
+    "question_order": 226,
+    "answer_type": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 6183,
+  "fields": {
+    "question_text": "About how many cigarettes do you smoke on average each day?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Smoking",
+    "question_order": 79,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 6194,
+  "fields": {
+    "question_text": "How old were you when you last smoked cigarettes on most days?",
+    "category": "Lifestyle and environment",
+    "subcategory": "Smoking",
+    "question_order": 78,
+    "answer_type": "Enter integer answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 20107,
+  "fields": {
+    "question_text": "Has/did your father ever suffer from? (You can select more than one answer)",
+    "category": "Family history",
+    "subcategory": "Family history",
+    "question_order": 156,
+    "answer_type": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 20110,
+  "fields": {
+    "question_text": "Has/did your mother ever suffer from? (You can select more than one answer)",
+    "category": "Family history",
+    "subcategory": "Family history",
+    "question_order": 157,
+    "answer_type": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 20111,
+  "fields": {
+    "question_text": "Have any of your brothers or sisters suffered from any of the following illnesses?\n(You can select more than one answer)",
+    "category": "Family history",
+    "subcategory": "Family history",
+    "question_order": 158,
+    "answer_type": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 20113,
+  "fields": {
+    "question_text": "Has/did your ADOPTED mother ever suffer from?\n(You can select more than one answer)",
+    "category": "Family history",
+    "subcategory": "Family history",
+    "question_order": 154,
+    "answer_type": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 20114,
+  "fields": {
+    "question_text": "Have any of your ADOPTED brothers or sisters suffered from any of the following illnesses?\n(You can select more than one answer)",
+    "category": "Family history",
+    "subcategory": "Family history",
+    "question_order": 155,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 20116,
+  "fields": {
+    "question_text": "Current Field is partly derived from S1 & S2",
+    "category": "Lifestyle and environment",
+    "subcategory": "Smoking",
+    "question_order": 70,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 20117,
+  "fields": {
+    "question_text": "Current Field is partly derived from A1 & A1A",
+    "category": "Lifestyle and environment",
+    "subcategory": "Alcohol",
+    "question_order": 116,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 21000,
+  "fields": {
+    "question_text": "What is your ethnic group?",
+    "category": "Sociodemographics",
+    "subcategory": "Ethnicity",
+    "question_order": 37,
+    "answer_type": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionnaire",
+  "pk": 21001,
+  "fields": {
+    "question_text": "What is your age in years at the time of this test?",
+    "category": "Sociodemographics",
+    "subcategory": "Other sociodemographic factors",
+    "question_order": 261,
+    "answer_type": "Enter integer answer"
+  }
+}
+]

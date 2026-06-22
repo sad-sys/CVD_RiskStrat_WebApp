@@ -1,0 +1,65 @@
+[
+{
+  "model": "accounts.featureoptionmapping",
+  "pk": 1,
+  "fields": {
+    "feature_name": "category_Health and medical history_ts_Mouth.teeth.dental.problems...Instance.0_neg7",
+    "question": 6149,
+    "option": 1305
+  }
+},
+{
+  "model": "accounts.featureoptionmapping",
+  "pk": 2,
+  "fields": {
+    "feature_name": "category_Health and medical history_ts_Mouth.teeth.dental.problems...Instance.0_1",
+    "question": 6149,
+    "option": 1299
+  }
+},
+{
+  "model": "accounts.featureoptionmapping",
+  "pk": 3,
+  "fields": {
+    "feature_name": "category_Health and medical history_ts_Mouth.teeth.dental.problems...Instance.0_2",
+    "question": 6149,
+    "option": 1300
+  }
+},
+{
+  "model": "accounts.featureoptionmapping",
+  "pk": 4,
+  "fields": {
+    "feature_name": "category_Health and medical history_ts_Mouth.teeth.dental.problems...Instance.0_3",
+    "question": 6149,
+    "option": 1301
+  }
+},
+{
+  "model": "accounts.featureoptionmapping",
+  "pk": 5,
+  "fields": {
+    "feature_name": "category_Health and medical history_ts_Mouth.teeth.dental.problems...Instance.0_4",
+    "question": 6149,
+    "option": 1302
+  }
+},
+{
+  "model": "accounts.featureoptionmapping",
+  "pk": 6,
+  "fields": {
+    "feature_name": "category_Health and medical history_ts_Mouth.teeth.dental.problems...Instance.0_5",
+    "question": 6149,
+    "option": 1303
+  }
+},
+{
+  "model": "accounts.featureoptionmapping",
+  "pk": 7,
+  "fields": {
+    "feature_name": "category_Health and medical history_ts_Mouth.teeth.dental.problems...Instance.0_6",
+    "question": 6149,
+    "option": 1304
+  }
+}
+]

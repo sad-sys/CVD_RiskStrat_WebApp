@@ -1,0 +1,2594 @@
+[
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 133,
+  "fields": {
+    "question": 699,
+    "feature_name": "category_Sociodemographics_ts_Length.of.time.at.current.address...Instance.0",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 134,
+  "fields": {
+    "question": 670,
+    "feature_name": "category_Sociodemographics_ts_Type.of.accommodation.lived.in...Instance.0_2",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 135,
+  "fields": {
+    "question": 670,
+    "feature_name": "category_Sociodemographics_ts_Type.of.accommodation.lived.in...Instance.0_1",
+    "encoded_option": 730
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 136,
+  "fields": {
+    "question": 670,
+    "feature_name": "category_Sociodemographics_ts_Type.of.accommodation.lived.in...Instance.0_4",
+    "encoded_option": 733
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 137,
+  "fields": {
+    "question": 670,
+    "feature_name": "category_Sociodemographics_ts_Type.of.accommodation.lived.in...Instance.0_neg7",
+    "encoded_option": 735
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 138,
+  "fields": {
+    "question": 670,
+    "feature_name": "category_Sociodemographics_ts_Type.of.accommodation.lived.in...Instance.0_3",
+    "encoded_option": 732
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 139,
+  "fields": {
+    "question": 670,
+    "feature_name": "category_Sociodemographics_ts_Type.of.accommodation.lived.in...Instance.0_5",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 140,
+  "fields": {
+    "question": 680,
+    "feature_name": "category_Sociodemographics_ts_Own.or.rent.accommodation.lived.in...Instance.0_2",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 141,
+  "fields": {
+    "question": 680,
+    "feature_name": "category_Sociodemographics_ts_Own.or.rent.accommodation.lived.in...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 142,
+  "fields": {
+    "question": 680,
+    "feature_name": "category_Sociodemographics_ts_Own.or.rent.accommodation.lived.in...Instance.0_3",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 143,
+  "fields": {
+    "question": 680,
+    "feature_name": "category_Sociodemographics_ts_Own.or.rent.accommodation.lived.in...Instance.0_5",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 144,
+  "fields": {
+    "question": 6139,
+    "feature_name": "category_Sociodemographics_ts_Gas.or.solid.fuel.cooking.heating...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 145,
+  "fields": {
+    "question": 6139,
+    "feature_name": "category_Sociodemographics_ts_Gas.or.solid.fuel.cooking.heating...Instance.0_2",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 146,
+  "fields": {
+    "question": 6139,
+    "feature_name": "category_Sociodemographics_ts_Gas.or.solid.fuel.cooking.heating...Instance.0_neg7",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 147,
+  "fields": {
+    "question": 6139,
+    "feature_name": "category_Sociodemographics_ts_Gas.or.solid.fuel.cooking.heating...Instance.0_3",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 148,
+  "fields": {
+    "question": 709,
+    "feature_name": "category_Sociodemographics_ts_Number.in.household...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 149,
+  "fields": {
+    "question": 709,
+    "feature_name": "category_Sociodemographics_ts_Number.in.household...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 150,
+  "fields": {
+    "question": 709,
+    "feature_name": "category_Sociodemographics_ts_Number.in.household...Instance.0_Middle.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 151,
+  "fields": {
+    "question": 6141,
+    "feature_name": "category_Sociodemographics_ts_How.are.people.in.household.related.to.participant...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 152,
+  "fields": {
+    "question": 6141,
+    "feature_name": "category_Sociodemographics_ts_How.are.people.in.household.related.to.participant...Instance.0_2",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 153,
+  "fields": {
+    "question": 6141,
+    "feature_name": "category_Sociodemographics_ts_How.are.people.in.household.related.to.participant...Instance.0_6",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 154,
+  "fields": {
+    "question": 6141,
+    "feature_name": "category_Sociodemographics_ts_How.are.people.in.household.related.to.participant...Instance.0_8",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 155,
+  "fields": {
+    "question": 6141,
+    "feature_name": "category_Sociodemographics_ts_How.are.people.in.household.related.to.participant...Instance.0_4",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 156,
+  "fields": {
+    "question": 6141,
+    "feature_name": "category_Sociodemographics_ts_How.are.people.in.household.related.to.participant...Instance.0_5",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 157,
+  "fields": {
+    "question": 728,
+    "feature_name": "category_Sociodemographics_ts_Number.of.vehicles.in.household...Instance.0_1",
+    "encoded_option": 755
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 158,
+  "fields": {
+    "question": 728,
+    "feature_name": "category_Sociodemographics_ts_Number.of.vehicles.in.household...Instance.0_2",
+    "encoded_option": 756
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 159,
+  "fields": {
+    "question": 728,
+    "feature_name": "category_Sociodemographics_ts_Number.of.vehicles.in.household...Instance.0_3",
+    "encoded_option": 757
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 160,
+  "fields": {
+    "question": 728,
+    "feature_name": "category_Sociodemographics_ts_Number.of.vehicles.in.household...Instance.0_5",
+    "encoded_option": 759
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 161,
+  "fields": {
+    "question": 728,
+    "feature_name": "category_Sociodemographics_ts_Number.of.vehicles.in.household...Instance.0_4",
+    "encoded_option": 758
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 162,
+  "fields": {
+    "question": 738,
+    "feature_name": "category_Sociodemographics_ts_Average.total.household.income.before.tax...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 163,
+  "fields": {
+    "question": 738,
+    "feature_name": "category_Sociodemographics_ts_Average.total.household.income.before.tax...Instance.0_4",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 164,
+  "fields": {
+    "question": 738,
+    "feature_name": "category_Sociodemographics_ts_Average.total.household.income.before.tax...Instance.0_3",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 165,
+  "fields": {
+    "question": 738,
+    "feature_name": "category_Sociodemographics_ts_Average.total.household.income.before.tax...Instance.0_2",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 166,
+  "fields": {
+    "question": 738,
+    "feature_name": "category_Sociodemographics_ts_Average.total.household.income.before.tax...Instance.0_5",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 167,
+  "fields": {
+    "question": 6142,
+    "feature_name": "category_Sociodemographics_ts_Current.employment.status...Instance.0_1",
+    "encoded_option": 765
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 168,
+  "fields": {
+    "question": 6142,
+    "feature_name": "category_Sociodemographics_ts_Current.employment.status...Instance.0_3",
+    "encoded_option": 767
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 169,
+  "fields": {
+    "question": 6142,
+    "feature_name": "category_Sociodemographics_ts_Current.employment.status...Instance.0_2",
+    "encoded_option": 766
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 170,
+  "fields": {
+    "question": 6142,
+    "feature_name": "category_Sociodemographics_ts_Current.employment.status...Instance.0_4",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 171,
+  "fields": {
+    "question": 6142,
+    "feature_name": "category_Sociodemographics_ts_Current.employment.status...Instance.0_7",
+    "encoded_option": 771
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 172,
+  "fields": {
+    "question": 6142,
+    "feature_name": "category_Sociodemographics_ts_Current.employment.status...Instance.0_neg7",
+    "encoded_option": 772
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 173,
+  "fields": {
+    "question": 777,
+    "feature_name": "category_Sociodemographics_ts_Frequency.of.travelling.from.home.to.job.workplace...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 174,
+  "fields": {
+    "question": 777,
+    "feature_name": "category_Sociodemographics_ts_Frequency.of.travelling.from.home.to.job.workplace...Instance.0_Middle.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 175,
+  "fields": {
+    "question": 796,
+    "feature_name": "category_Sociodemographics_ts_Distance.between.home.and.job.workplace...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 176,
+  "fields": {
+    "question": 796,
+    "feature_name": "category_Sociodemographics_ts_Distance.between.home.and.job.workplace...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 177,
+  "fields": {
+    "question": 796,
+    "feature_name": "category_Sociodemographics_ts_Distance.between.home.and.job.workplace...Instance.0_Middle.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 178,
+  "fields": {
+    "question": 757,
+    "feature_name": "category_Sociodemographics_ts_Time.employed.in.main.current.job...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 179,
+  "fields": {
+    "question": 757,
+    "feature_name": "category_Sociodemographics_ts_Time.employed.in.main.current.job...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 180,
+  "fields": {
+    "question": 757,
+    "feature_name": "category_Sociodemographics_ts_Time.employed.in.main.current.job...Instance.0_Middle.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 181,
+  "fields": {
+    "question": 767,
+    "feature_name": "category_Sociodemographics_ts_Length.of.working.week.for.main.job...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 182,
+  "fields": {
+    "question": 767,
+    "feature_name": "category_Sociodemographics_ts_Length.of.working.week.for.main.job...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 183,
+  "fields": {
+    "question": 767,
+    "feature_name": "category_Sociodemographics_ts_Length.of.working.week.for.main.job...Instance.0_Middle.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 184,
+  "fields": {
+    "question": 6143,
+    "feature_name": "category_Sociodemographics_ts_Transport.type.for.commuting.to.job.workplace...Instance.0_1",
+    "encoded_option": 773
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 185,
+  "fields": {
+    "question": 6143,
+    "feature_name": "category_Sociodemographics_ts_Transport.type.for.commuting.to.job.workplace...Instance.0_4",
+    "encoded_option": 776
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 186,
+  "fields": {
+    "question": 6143,
+    "feature_name": "category_Sociodemographics_ts_Transport.type.for.commuting.to.job.workplace...Instance.0_3",
+    "encoded_option": 775
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 187,
+  "fields": {
+    "question": 6143,
+    "feature_name": "category_Sociodemographics_ts_Transport.type.for.commuting.to.job.workplace...Instance.0_2",
+    "encoded_option": 774
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 188,
+  "fields": {
+    "question": 6143,
+    "feature_name": "category_Sociodemographics_ts_Transport.type.for.commuting.to.job.workplace...Instance.0_neg7",
+    "encoded_option": 777
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 189,
+  "fields": {
+    "question": 806,
+    "feature_name": "category_Sociodemographics_ts_Job.involves.mainly.walking.or.standing...Instance.0_1",
+    "encoded_option": 778
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 190,
+  "fields": {
+    "question": 806,
+    "feature_name": "category_Sociodemographics_ts_Job.involves.mainly.walking.or.standing...Instance.0_2",
+    "encoded_option": 779
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 191,
+  "fields": {
+    "question": 806,
+    "feature_name": "category_Sociodemographics_ts_Job.involves.mainly.walking.or.standing...Instance.0_4",
+    "encoded_option": 781
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 192,
+  "fields": {
+    "question": 816,
+    "feature_name": "category_Sociodemographics_ts_Job.involves.heavy.manual.or.physical.work...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 193,
+  "fields": {
+    "question": 816,
+    "feature_name": "category_Sociodemographics_ts_Job.involves.heavy.manual.or.physical.work...Instance.0_2",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 194,
+  "fields": {
+    "question": 826,
+    "feature_name": "category_Sociodemographics_ts_Job.involves.shift.work...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 195,
+  "fields": {
+    "question": 826,
+    "feature_name": "category_Sociodemographics_ts_Job.involves.shift.work...Instance.0_4",
+    "encoded_option": 789
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 196,
+  "fields": {
+    "question": 826,
+    "feature_name": "category_Sociodemographics_ts_Job.involves.shift.work...Instance.0_2",
+    "encoded_option": 787
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 197,
+  "fields": {
+    "question": 826,
+    "feature_name": "category_Sociodemographics_ts_Job.involves.shift.work...Instance.0_3",
+    "encoded_option": 788
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 198,
+  "fields": {
+    "question": 3426,
+    "feature_name": "category_Sociodemographics_ts_Job.involves.night.shift.work...Instance.0_2",
+    "encoded_option": 791
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 199,
+  "fields": {
+    "question": 3426,
+    "feature_name": "category_Sociodemographics_ts_Job.involves.night.shift.work...Instance.0_1",
+    "encoded_option": 790
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 200,
+  "fields": {
+    "question": 3426,
+    "feature_name": "category_Sociodemographics_ts_Job.involves.night.shift.work...Instance.0_3",
+    "encoded_option": 792
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 201,
+  "fields": {
+    "question": 6138,
+    "feature_name": "category_Sociodemographics_ts_Qualifications...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 202,
+  "fields": {
+    "question": 6138,
+    "feature_name": "category_Sociodemographics_ts_Qualifications...Instance.0_3",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 203,
+  "fields": {
+    "question": 6138,
+    "feature_name": "category_Sociodemographics_ts_Qualifications...Instance.0_4",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 204,
+  "fields": {
+    "question": 6138,
+    "feature_name": "category_Sociodemographics_ts_Qualifications...Instance.0_2",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 205,
+  "fields": {
+    "question": 6138,
+    "feature_name": "category_Sociodemographics_ts_Qualifications...Instance.0_6",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 206,
+  "fields": {
+    "question": 6138,
+    "feature_name": "category_Sociodemographics_ts_Qualifications...Instance.0_neg7",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 207,
+  "fields": {
+    "question": 845,
+    "feature_name": "category_Sociodemographics_ts_Age.completed.full.time.education...Instance.0_neg2",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 208,
+  "fields": {
+    "question": 845,
+    "feature_name": "category_Sociodemographics_ts_Age.completed.full.time.education...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 209,
+  "fields": {
+    "question": 845,
+    "feature_name": "category_Sociodemographics_ts_Age.completed.full.time.education...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 210,
+  "fields": {
+    "question": 845,
+    "feature_name": "category_Sociodemographics_ts_Age.completed.full.time.education...Instance.0_Middle.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 211,
+  "fields": {
+    "question": 3659,
+    "feature_name": "category_Sociodemographics_ts_Year.immigrated.to.UK..United.Kingdom....Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 212,
+  "fields": {
+    "question": 21000,
+    "feature_name": "category_Sociodemographics_ts_Ethnic.background...Instance.0_4002",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 213,
+  "fields": {
+    "question": 21000,
+    "feature_name": "category_Sociodemographics_ts_Ethnic.background...Instance.0_6",
+    "encoded_option": 814
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 214,
+  "fields": {
+    "question": 21000,
+    "feature_name": "category_Sociodemographics_ts_Ethnic.background...Instance.0_3001",
+    "encoded_option": 806
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 215,
+  "fields": {
+    "question": 21000,
+    "feature_name": "category_Sociodemographics_ts_Ethnic.background...Instance.0_1002",
+    "encoded_option": 802
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 216,
+  "fields": {
+    "question": 21000,
+    "feature_name": "category_Sociodemographics_ts_Ethnic.background...Instance.0_5",
+    "encoded_option": 813
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 217,
+  "fields": {
+    "question": 21000,
+    "feature_name": "category_Sociodemographics_ts_Ethnic.background...Instance.0_4001",
+    "encoded_option": 810
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 218,
+  "fields": {
+    "question": 21000,
+    "feature_name": "category_Sociodemographics_ts_Ethnic.background...Instance.0_1003",
+    "encoded_option": 803
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 219,
+  "fields": {
+    "question": 21000,
+    "feature_name": "category_Sociodemographics_ts_Ethnic.background...Instance.0_2003",
+    "encoded_option": 805
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 220,
+  "fields": {
+    "question": 21000,
+    "feature_name": "category_Sociodemographics_ts_Ethnic.background...Instance.0_3002",
+    "encoded_option": 808
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 221,
+  "fields": {
+    "question": 21000,
+    "feature_name": "category_Sociodemographics_ts_Ethnic.background...Instance.0_4003",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 222,
+  "fields": {
+    "question": 21000,
+    "feature_name": "category_Sociodemographics_ts_Ethnic.background...Instance.0_1",
+    "encoded_option": 801
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 223,
+  "fields": {
+    "question": 21000,
+    "feature_name": "category_Sociodemographics_ts_Ethnic.background...Instance.0_2002",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 224,
+  "fields": {
+    "question": 6146,
+    "feature_name": "category_Sociodemographics_ts_Attendance.disability.mobility.allowance...Instance.0_neg7",
+    "encoded_option": 818
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 225,
+  "fields": {
+    "question": 6146,
+    "feature_name": "category_Sociodemographics_ts_Attendance.disability.mobility.allowance...Instance.0_2",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 226,
+  "fields": {
+    "question": 6146,
+    "feature_name": "category_Sociodemographics_ts_Attendance.disability.mobility.allowance...Instance.0_3",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 227,
+  "fields": {
+    "question": 6146,
+    "feature_name": "category_Sociodemographics_ts_Attendance.disability.mobility.allowance...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 228,
+  "fields": {
+    "question": 21001,
+    "feature_name": "clinicalrisk_Age.at.recruitment",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 229,
+  "fields": {
+    "question": 2207,
+    "feature_name": "category_Health and medical history_ts_Wears.glasses.or.contact.lenses...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 230,
+  "fields": {
+    "question": 2207,
+    "feature_name": "category_Health and medical history_ts_Wears.glasses.or.contact.lenses...Instance.0_0",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 231,
+  "fields": {
+    "question": 2217,
+    "feature_name": "category_Health and medical history_ts_Age.started.wearing.glasses.or.contact.lenses...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 232,
+  "fields": {
+    "question": 2217,
+    "feature_name": "category_Health and medical history_ts_Age.started.wearing.glasses.or.contact.lenses...Instance.0_Middle.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 233,
+  "fields": {
+    "question": 2217,
+    "feature_name": "category_Health and medical history_ts_Age.started.wearing.glasses.or.contact.lenses...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 234,
+  "fields": {
+    "question": 6139,
+    "feature_name": "category_Health and medical history_ts_Mouth.teeth.dental.problems...Instance.0_2",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 235,
+  "fields": {
+    "question": 6139,
+    "feature_name": "category_Health and medical history_ts_Mouth.teeth.dental.problems...Instance.0_3",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 236,
+  "fields": {
+    "question": 6139,
+    "feature_name": "category_Health and medical history_ts_Mouth.teeth.dental.problems...Instance.0_4",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 237,
+  "fields": {
+    "question": 6139,
+    "feature_name": "category_Health and medical history_ts_Mouth.teeth.dental.problems...Instance.0_5",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 238,
+  "fields": {
+    "question": 6139,
+    "feature_name": "category_Health and medical history_ts_Mouth.teeth.dental.problems...Instance.0_6",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 239,
+  "fields": {
+    "question": 6139,
+    "feature_name": "category_Health and medical history_ts_Mouth.teeth.dental.problems...Instance.0_neg7",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 240,
+  "fields": {
+    "question": 2178,
+    "feature_name": "category_Health and medical history_ts_Overall.health.rating...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 241,
+  "fields": {
+    "question": 2178,
+    "feature_name": "category_Health and medical history_ts_Overall.health.rating...Instance.0_2",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 242,
+  "fields": {
+    "question": 2178,
+    "feature_name": "category_Health and medical history_ts_Overall.health.rating...Instance.0_3",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 243,
+  "fields": {
+    "question": 2178,
+    "feature_name": "category_Health and medical history_ts_Overall.health.rating...Instance.0_4",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 244,
+  "fields": {
+    "question": 2188,
+    "feature_name": "category_Health and medical history_ts_Long.standing.illness..disability.or.infirmity...Instance.0_0",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 245,
+  "fields": {
+    "question": 2188,
+    "feature_name": "category_Health and medical history_ts_Long.standing.illness..disability.or.infirmity...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 246,
+  "fields": {
+    "question": 2296,
+    "feature_name": "category_Health and medical history_ts_Falls.in.the.last.year...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 247,
+  "fields": {
+    "question": 2296,
+    "feature_name": "category_Health and medical history_ts_Falls.in.the.last.year...Instance.0_2",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 248,
+  "fields": {
+    "question": 2296,
+    "feature_name": "category_Health and medical history_ts_Falls.in.the.last.year...Instance.0_3",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 249,
+  "fields": {
+    "question": 2306,
+    "feature_name": "category_Health and medical history_ts_Weight.change.compared.with.1.year.ago...Instance.0_0",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 250,
+  "fields": {
+    "question": 2306,
+    "feature_name": "category_Health and medical history_ts_Weight.change.compared.with.1.year.ago...Instance.0_3",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 251,
+  "fields": {
+    "question": 2316,
+    "feature_name": "category_Health and medical history_ts_Wheeze.or.whistling.in.the.chest.in.last.year...Instance.0_0",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 252,
+  "fields": {
+    "question": 2316,
+    "feature_name": "category_Health and medical history_ts_Wheeze.or.whistling.in.the.chest.in.last.year...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 253,
+  "fields": {
+    "question": 2335,
+    "feature_name": "category_Health and medical history_ts_Chest.pain.or.discomfort...Instance.0_0",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 254,
+  "fields": {
+    "question": 2335,
+    "feature_name": "category_Health and medical history_ts_Chest.pain.or.discomfort...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 255,
+  "fields": {
+    "question": 3606,
+    "feature_name": "category_Health and medical history_ts_Chest.pain.or.discomfort.walking.normally...Instance.0_0",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 256,
+  "fields": {
+    "question": 3606,
+    "feature_name": "category_Health and medical history_ts_Chest.pain.or.discomfort.walking.normally...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 257,
+  "fields": {
+    "question": 3606,
+    "feature_name": "category_Health and medical history_ts_Chest.pain.or.discomfort.when.walking.uphill.or.hurrying...Instance.0_0",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 258,
+  "fields": {
+    "question": 3606,
+    "feature_name": "category_Health and medical history_ts_Chest.pain.or.discomfort.when.walking.uphill.or.hurrying...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 259,
+  "fields": {
+    "question": 3616,
+    "feature_name": "category_Health and medical history_ts_Chest.pain.due.to.walking.ceases.when.standing.still...Instance.0_0",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 260,
+  "fields": {
+    "question": 3616,
+    "feature_name": "category_Health and medical history_ts_Chest.pain.due.to.walking.ceases.when.standing.still...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 261,
+  "fields": {
+    "question": 2443,
+    "feature_name": "category_Health and medical history_ts_Diabetes.diagnosed.by.doctor...Instance.0_0",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 262,
+  "fields": {
+    "question": 2443,
+    "feature_name": "category_Health and medical history_ts_Diabetes.diagnosed.by.doctor...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 263,
+  "fields": {
+    "question": 2443,
+    "feature_name": "category_Health and medical history_ts_Cancer.diagnosed.by.doctor...Instance.0_0",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 264,
+  "fields": {
+    "question": 2443,
+    "feature_name": "category_Health and medical history_ts_Cancer.diagnosed.by.doctor...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 265,
+  "fields": {
+    "question": 2247,
+    "feature_name": "category_Health and medical history_ts_Hearing.difficulty.problems...Instance.0_0",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 266,
+  "fields": {
+    "question": 2247,
+    "feature_name": "category_Health and medical history_ts_Hearing.difficulty.problems...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 267,
+  "fields": {
+    "question": 2257,
+    "feature_name": "category_Health and medical history_ts_Hearing.difficulty.problems.with.background.noise...Instance.0_0",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 268,
+  "fields": {
+    "question": 2257,
+    "feature_name": "category_Health and medical history_ts_Hearing.difficulty.problems.with.background.noise...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 269,
+  "fields": {
+    "question": 3393,
+    "feature_name": "category_Health and medical history_ts_Hearing.aid.user...Instance.0_0",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 270,
+  "fields": {
+    "question": 3393,
+    "feature_name": "category_Health and medical history_ts_Hearing.aid.user...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 271,
+  "fields": {
+    "question": 6159,
+    "feature_name": "category_Health and medical history_ts_Pain.type.s..experienced.in.last.month...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 272,
+  "fields": {
+    "question": 6159,
+    "feature_name": "category_Health and medical history_ts_Pain.type.s..experienced.in.last.month...Instance.0_3",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 273,
+  "fields": {
+    "question": 6159,
+    "feature_name": "category_Health and medical history_ts_Pain.type.s..experienced.in.last.month...Instance.0_4",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 274,
+  "fields": {
+    "question": 6159,
+    "feature_name": "category_Health and medical history_ts_Pain.type.s..experienced.in.last.month...Instance.0_5",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 275,
+  "fields": {
+    "question": 6159,
+    "feature_name": "category_Health and medical history_ts_Pain.type.s..experienced.in.last.month...Instance.0_6",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 276,
+  "fields": {
+    "question": 6159,
+    "feature_name": "category_Health and medical history_ts_Pain.type.s..experienced.in.last.month...Instance.0_7",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 277,
+  "fields": {
+    "question": 6159,
+    "feature_name": "category_Health and medical history_ts_Pain.type.s..experienced.in.last.month...Instance.0_8",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 278,
+  "fields": {
+    "question": 6159,
+    "feature_name": "category_Health and medical history_ts_Pain.type.s..experienced.in.last.month...Instance.0_neg7",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 279,
+  "fields": {
+    "question": 3799,
+    "feature_name": "category_Health and medical history_ts_Headaches.for.3..months...Instance.0_0",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 280,
+  "fields": {
+    "question": 4067,
+    "feature_name": "category_Health and medical history_ts_Facial.pains.for.3..months...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 281,
+  "fields": {
+    "question": 3404,
+    "feature_name": "category_Health and medical history_ts_Neck.shoulder.pain.for.3..months...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 282,
+  "fields": {
+    "question": 3571,
+    "feature_name": "category_Health and medical history_ts_Back.pain.for.3..months...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 283,
+  "fields": {
+    "question": 3741,
+    "feature_name": "category_Health and medical history_ts_Stomach.abdominal.pain.for.3..months...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 284,
+  "fields": {
+    "question": 3414,
+    "feature_name": "category_Health and medical history_ts_Hip.pain.for.3..months...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 285,
+  "fields": {
+    "question": 3414,
+    "feature_name": "category_Health and medical history_ts_Hip.pain.for.3..months...Instance.0_0",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 286,
+  "fields": {
+    "question": 3773,
+    "feature_name": "category_Health and medical history_ts_Knee.pain.for.3..months...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 287,
+  "fields": {
+    "question": 2956,
+    "feature_name": "category_Health and medical history_ts_General.pain.for.3..months...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 288,
+  "fields": {
+    "question": 2956,
+    "feature_name": "category_Health and medical history_ts_General.pain.for.3..months...Instance.0_0",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 289,
+  "fields": {
+    "question": 2345,
+    "feature_name": "category_Health and medical history_ts_Ever.had.bowel.cancer.screening...Instance.0_0",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 290,
+  "fields": {
+    "question": 2345,
+    "feature_name": "category_Health and medical history_ts_Ever.had.bowel.cancer.screening...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 291,
+  "fields": {
+    "question": 2355,
+    "feature_name": "category_Health and medical history_ts_Most.recent.bowel.cancer.screening...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 292,
+  "fields": {
+    "question": 2355,
+    "feature_name": "category_Health and medical history_ts_Most.recent.bowel.cancer.screening...Instance.0_Middle.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 293,
+  "fields": {
+    "question": 2355,
+    "feature_name": "category_Health and medical history_ts_Most.recent.bowel.cancer.screening...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 294,
+  "fields": {
+    "question": 2684,
+    "feature_name": "category_Health and medical history_ts_Time.since.last.prostate.specific.antigen..PSA..test...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 295,
+  "fields": {
+    "question": 2684,
+    "feature_name": "category_Health and medical history_ts_Time.since.last.prostate.specific.antigen..PSA..test...Instance.0_Middle.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 296,
+  "fields": {
+    "question": 2684,
+    "feature_name": "category_Health and medical history_ts_Time.since.last.prostate.specific.antigen..PSA..test...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 297,
+  "fields": {
+    "question": 4041,
+    "feature_name": "category_Health and medical history_ts_Gestational.diabetes.only...Instance.0_0",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 298,
+  "fields": {
+    "question": 4041,
+    "feature_name": "category_Health and medical history_ts_Gestational.diabetes.only...Instance.0_neg2",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 299,
+  "fields": {
+    "question": 2976,
+    "feature_name": "category_Health and medical history_ts_Age.diabetes.diagnosed...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 300,
+  "fields": {
+    "question": 2976,
+    "feature_name": "category_Health and medical history_ts_Age.diabetes.diagnosed...Instance.0_Middle.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 301,
+  "fields": {
+    "question": 2976,
+    "feature_name": "category_Health and medical history_ts_Age.diabetes.diagnosed...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 302,
+  "fields": {
+    "question": 2986,
+    "feature_name": "category_Health and medical history_ts_Started.insulin.within.one.year.diagnosis.of.diabetes...Instance.0_0",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 303,
+  "fields": {
+    "question": 2986,
+    "feature_name": "category_Health and medical history_ts_Started.insulin.within.one.year.diagnosis.of.diabetes...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 304,
+  "fields": {
+    "question": 2463,
+    "feature_name": "category_Health and medical history_ts_Fractured.broken.bones.in.last.5.years...Instance.0_0",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 305,
+  "fields": {
+    "question": 2463,
+    "feature_name": "category_Health and medical history_ts_Fractured.broken.bones.in.last.5.years...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 306,
+  "fields": {
+    "question": 6151,
+    "feature_name": "category_Health and medical history_ts_Fractured.bone.site.s....Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 307,
+  "fields": {
+    "question": 3005,
+    "feature_name": "category_Health and medical history_ts_Fracture.resulting.from.simple.fall...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 308,
+  "fields": {
+    "question": 2443,
+    "feature_name": "category_Health and medical history_ts_Vascular.heart.problems.diagnosed.by.doctor...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 309,
+  "fields": {
+    "question": 2443,
+    "feature_name": "category_Health and medical history_ts_Vascular.heart.problems.diagnosed.by.doctor...Instance.0_2",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 310,
+  "fields": {
+    "question": 2443,
+    "feature_name": "category_Health and medical history_ts_Vascular.heart.problems.diagnosed.by.doctor...Instance.0_3",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 311,
+  "fields": {
+    "question": 2443,
+    "feature_name": "category_Health and medical history_ts_Vascular.heart.problems.diagnosed.by.doctor...Instance.0_4",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 312,
+  "fields": {
+    "question": 2443,
+    "feature_name": "category_Health and medical history_ts_Vascular.heart.problems.diagnosed.by.doctor...Instance.0_neg7",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 313,
+  "fields": {
+    "question": 3894,
+    "feature_name": "category_Health and medical history_ts_Age.heart.attack.diagnosed...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 314,
+  "fields": {
+    "question": 3894,
+    "feature_name": "category_Health and medical history_ts_Age.heart.attack.diagnosed...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 315,
+  "fields": {
+    "question": 3627,
+    "feature_name": "category_Health and medical history_ts_Age.angina.diagnosed...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 316,
+  "fields": {
+    "question": 3627,
+    "feature_name": "category_Health and medical history_ts_Age.angina.diagnosed...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 317,
+  "fields": {
+    "question": 4056,
+    "feature_name": "category_Health and medical history_ts_Age.stroke.diagnosed...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 318,
+  "fields": {
+    "question": 4056,
+    "feature_name": "category_Health and medical history_ts_Age.stroke.diagnosed...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 319,
+  "fields": {
+    "question": 2966,
+    "feature_name": "category_Health and medical history_ts_Age.high.blood.pressure.diagnosed...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 320,
+  "fields": {
+    "question": 2966,
+    "feature_name": "category_Health and medical history_ts_Age.high.blood.pressure.diagnosed...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 321,
+  "fields": {
+    "question": 4012,
+    "feature_name": "category_Health and medical history_ts_Age.deep.vein.thrombosis..DVT..blood.clot.in.leg..diagnosed...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 322,
+  "fields": {
+    "question": 4012,
+    "feature_name": "category_Health and medical history_ts_Age.deep.vein.thrombosis..DVT..blood.clot.in.leg..diagnosed...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 323,
+  "fields": {
+    "question": 4012,
+    "feature_name": "category_Health and medical history_ts_Age.pulmonary.embolism..blood.clot.in.lung..diagnosed...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 324,
+  "fields": {
+    "question": 4012,
+    "feature_name": "category_Health and medical history_ts_Age.pulmonary.embolism..blood.clot.in.lung..diagnosed...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 325,
+  "fields": {
+    "question": 3992,
+    "feature_name": "category_Health and medical history_ts_Age.emphysema.chronic.bronchitis.diagnosed...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 326,
+  "fields": {
+    "question": 3992,
+    "feature_name": "category_Health and medical history_ts_Age.emphysema.chronic.bronchitis.diagnosed...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 327,
+  "fields": {
+    "question": 3786,
+    "feature_name": "category_Health and medical history_ts_Age.asthma.diagnosed...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 328,
+  "fields": {
+    "question": 3786,
+    "feature_name": "category_Health and medical history_ts_Age.asthma.diagnosed...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 329,
+  "fields": {
+    "question": 3761,
+    "feature_name": "category_Health and medical history_ts_Age.hay.fever..rhinitis.or.eczema.diagnosed...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 330,
+  "fields": {
+    "question": 3761,
+    "feature_name": "category_Health and medical history_ts_Age.hay.fever..rhinitis.or.eczema.diagnosed...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 331,
+  "fields": {
+    "question": 2443,
+    "feature_name": "category_Health and medical history_ts_Other.serious.medical.condition.disability.diagnosed.by.doctor...Instance.0_0",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 332,
+  "fields": {
+    "question": 2443,
+    "feature_name": "category_Health and medical history_ts_Other.serious.medical.condition.disability.diagnosed.by.doctor...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 333,
+  "fields": {
+    "question": 6154,
+    "feature_name": "category_Health and medical history_ts_Medication.for.pain.relief..constipation..heartburn...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 334,
+  "fields": {
+    "question": 6154,
+    "feature_name": "category_Health and medical history_ts_Medication.for.pain.relief..constipation..heartburn...Instance.0_3",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 335,
+  "fields": {
+    "question": 6154,
+    "feature_name": "category_Health and medical history_ts_Medication.for.pain.relief..constipation..heartburn...Instance.0_4",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 336,
+  "fields": {
+    "question": 6154,
+    "feature_name": "category_Health and medical history_ts_Medication.for.pain.relief..constipation..heartburn...Instance.0_5",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 337,
+  "fields": {
+    "question": 6154,
+    "feature_name": "category_Health and medical history_ts_Medication.for.pain.relief..constipation..heartburn...Instance.0_6",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 338,
+  "fields": {
+    "question": 6154,
+    "feature_name": "category_Health and medical history_ts_Medication.for.pain.relief..constipation..heartburn...Instance.0_neg7",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 339,
+  "fields": {
+    "question": 6155,
+    "feature_name": "category_Health and medical history_ts_Vitamin.and.mineral.supplements...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 340,
+  "fields": {
+    "question": 6155,
+    "feature_name": "category_Health and medical history_ts_Vitamin.and.mineral.supplements...Instance.0_6",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 341,
+  "fields": {
+    "question": 6155,
+    "feature_name": "category_Health and medical history_ts_Vitamin.and.mineral.supplements...Instance.0_neg7",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 342,
+  "fields": {
+    "question": 6154,
+    "feature_name": "category_Health and medical history_ts_Combined.sex.medication_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 343,
+  "fields": {
+    "question": 6154,
+    "feature_name": "category_Health and medical history_ts_Combined.sex.medication_2",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 344,
+  "fields": {
+    "question": 6154,
+    "feature_name": "category_Health and medical history_ts_Combined.sex.medication_3",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 345,
+  "fields": {
+    "question": 6154,
+    "feature_name": "category_Health and medical history_ts_Combined.sex.medication_4",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 346,
+  "fields": {
+    "question": 6154,
+    "feature_name": "category_Health and medical history_ts_Combined.sex.medication_5",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 347,
+  "fields": {
+    "question": 6177,
+    "feature_name": "category_Health and medical history_ts_Combined.sex.medication_neg7",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 348,
+  "fields": {
+    "question": 2492,
+    "feature_name": "category_Health and medical history_ts_Taking.other.prescription.medications...Instance.0_0",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 349,
+  "fields": {
+    "question": 2492,
+    "feature_name": "category_Health and medical history_ts_Taking.other.prescription.medications...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 350,
+  "fields": {
+    "question": 6154,
+    "feature_name": "category_Health and medical history_ts_Mineral.and.other.dietary.supplements...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 351,
+  "fields": {
+    "question": 6154,
+    "feature_name": "category_Health and medical history_ts_Mineral.and.other.dietary.supplements...Instance.0_3",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 352,
+  "fields": {
+    "question": 6154,
+    "feature_name": "category_Health and medical history_ts_Mineral.and.other.dietary.supplements...Instance.0_4",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 353,
+  "fields": {
+    "question": 6154,
+    "feature_name": "category_Health and medical history_ts_Mineral.and.other.dietary.supplements...Instance.0_5",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 354,
+  "fields": {
+    "question": 6151,
+    "feature_name": "category_Health and medical history_ts_Fractured.bone.site.s....Instance.0_2",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 355,
+  "fields": {
+    "question": 6151,
+    "feature_name": "category_Health and medical history_ts_Fractured.bone.site.s....Instance.0_3",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 356,
+  "fields": {
+    "question": 6151,
+    "feature_name": "category_Health and medical history_ts_Fractured.bone.site.s....Instance.0_4",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 357,
+  "fields": {
+    "question": 6151,
+    "feature_name": "category_Health and medical history_ts_Fractured.bone.site.s....Instance.0_5",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 358,
+  "fields": {
+    "question": 6151,
+    "feature_name": "category_Health and medical history_ts_Fractured.bone.site.s....Instance.0_7",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 359,
+  "fields": {
+    "question": 2415,
+    "feature_name": "category_Health and medical history_ts_Combined.sex.major.operations_0",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 360,
+  "fields": {
+    "question": 2415,
+    "feature_name": "category_Health and medical history_ts_Combined.sex.major.operations_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 361,
+  "fields": {
+    "question": 2443,
+    "feature_name": "category_Health and medical history_ts_Blood.clot..DVT..bronchitis..emphysema..asthma..rhinitis..eczema..allergy.diagnosed.by.doctor...Instance.0_5",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 362,
+  "fields": {
+    "question": 2443,
+    "feature_name": "category_Health and medical history_ts_Blood.clot..DVT..bronchitis..emphysema..asthma..rhinitis..eczema..allergy.diagnosed.by.doctor...Instance.0_6",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 363,
+  "fields": {
+    "question": 2443,
+    "feature_name": "category_Health and medical history_ts_Blood.clot..DVT..bronchitis..emphysema..asthma..rhinitis..eczema..allergy.diagnosed.by.doctor...Instance.0_7",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 364,
+  "fields": {
+    "question": 2443,
+    "feature_name": "category_Health and medical history_ts_Blood.clot..DVT..bronchitis..emphysema..asthma..rhinitis..eczema..allergy.diagnosed.by.doctor...Instance.0_8",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 365,
+  "fields": {
+    "question": 2443,
+    "feature_name": "category_Health and medical history_ts_Blood.clot..DVT..bronchitis..emphysema..asthma..rhinitis..eczema..allergy.diagnosed.by.doctor...Instance.0_9",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 366,
+  "fields": {
+    "question": 6151,
+    "feature_name": "category_Health and medical history_ts_Fractured.bone.site.s....Instance.0_6",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 368,
+  "fields": {
+    "question": 6154,
+    "feature_name": "category_Health and medical history_ts_Mineral.and.other.dietary.supplements...Instance.0_neg7",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 369,
+  "fields": {
+    "question": 2375,
+    "feature_name": "category_Sex-specific factors_ts_Relative.age.of.first.facial.hair...Instance.0_2",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 370,
+  "fields": {
+    "question": 2375,
+    "feature_name": "category_Sex-specific factors_ts_Relative.age.of.first.facial.hair...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 371,
+  "fields": {
+    "question": 2375,
+    "feature_name": "category_Sex-specific factors_ts_Relative.age.of.first.facial.hair...Instance.0_3",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 372,
+  "fields": {
+    "question": 2385,
+    "feature_name": "category_Sex-specific factors_ts_Relative.age.voice.broke...Instance.0_2",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 373,
+  "fields": {
+    "question": 2385,
+    "feature_name": "category_Sex-specific factors_ts_Relative.age.voice.broke...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 374,
+  "fields": {
+    "question": 2395,
+    "feature_name": "category_Sex-specific factors_ts_Hair.balding.pattern...Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 375,
+  "fields": {
+    "question": 2395,
+    "feature_name": "category_Sex-specific factors_ts_Hair.balding.pattern...Instance.0_2",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 376,
+  "fields": {
+    "question": 2395,
+    "feature_name": "category_Sex-specific factors_ts_Hair.balding.pattern...Instance.0_3",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 377,
+  "fields": {
+    "question": 2395,
+    "feature_name": "category_Sex-specific factors_ts_Hair.balding.pattern...Instance.0_4",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 378,
+  "fields": {
+    "question": 2405,
+    "feature_name": "category_Sex-specific factors_ts_Number.of.children.fathered...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 379,
+  "fields": {
+    "question": 2405,
+    "feature_name": "category_Sex-specific factors_ts_Number.of.children.fathered...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 380,
+  "fields": {
+    "question": 2684,
+    "feature_name": "category_Sex-specific factors_ts_Years.since.last.breast.cancer.screening...mammogram...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 381,
+  "fields": {
+    "question": 2684,
+    "feature_name": "category_Sex-specific factors_ts_Years.since.last.breast.cancer.screening...mammogram...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 382,
+  "fields": {
+    "question": 2684,
+    "feature_name": "category_Sex-specific factors_ts_Years.since.last.cervical.smear.test...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 383,
+  "fields": {
+    "question": 2714,
+    "feature_name": "category_Sex-specific factors_ts_Age.when.periods.started..menarche....Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 384,
+  "fields": {
+    "question": 2714,
+    "feature_name": "category_Sex-specific factors_ts_Age.when.periods.started..menarche....Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 385,
+  "fields": {
+    "question": 2714,
+    "feature_name": "category_Sex-specific factors_ts_Age.at.menopause..last.menstrual.period....Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 386,
+  "fields": {
+    "question": 3700,
+    "feature_name": "category_Sex-specific factors_ts_Time.since.last.menstrual.period...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 387,
+  "fields": {
+    "question": 3700,
+    "feature_name": "category_Sex-specific factors_ts_Time.since.last.menstrual.period...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 388,
+  "fields": {
+    "question": 3710,
+    "feature_name": "category_Sex-specific factors_ts_Length.of.menstrual.cycle...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 389,
+  "fields": {
+    "question": 3720,
+    "feature_name": "category_Sex-specific factors_ts_Menstruating.today...Instance.0_0",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 390,
+  "fields": {
+    "question": 2744,
+    "feature_name": "category_Sex-specific factors_ts_Birth.weight.of.first.child...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 391,
+  "fields": {
+    "question": 2744,
+    "feature_name": "category_Sex-specific factors_ts_Birth.weight.of.first.child...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 392,
+  "fields": {
+    "question": 2754,
+    "feature_name": "category_Sex-specific factors_ts_Age.at.first.live.birth...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 393,
+  "fields": {
+    "question": 2754,
+    "feature_name": "category_Sex-specific factors_ts_Age.at.last.live.birth...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 394,
+  "fields": {
+    "question": 3829,
+    "feature_name": "category_Sex-specific factors_ts_Number.of.stillbirths...Instance.0_Middle.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 395,
+  "fields": {
+    "question": 3839,
+    "feature_name": "category_Sex-specific factors_ts_Number.of.spontaneous.miscarriages...Instance.0_Middle.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 396,
+  "fields": {
+    "question": 3839,
+    "feature_name": "category_Sex-specific factors_ts_Number.of.spontaneous.miscarriages...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 397,
+  "fields": {
+    "question": 3849,
+    "feature_name": "category_Sex-specific factors_ts_Number.of.pregnancy.terminations...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 398,
+  "fields": {
+    "question": 2794,
+    "feature_name": "category_Sex-specific factors_ts_Age.started.oral.contraceptive.pill...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 399,
+  "fields": {
+    "question": 2794,
+    "feature_name": "category_Sex-specific factors_ts_Age.started.oral.contraceptive.pill...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 400,
+  "fields": {
+    "question": 2804,
+    "feature_name": "category_Sex-specific factors_ts_Age.when.last.used.oral.contraceptive.pill...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 401,
+  "fields": {
+    "question": 2804,
+    "feature_name": "category_Sex-specific factors_ts_Age.when.last.used.oral.contraceptive.pill...Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 402,
+  "fields": {
+    "question": 2804,
+    "feature_name": "category_Sex-specific factors_ts_Age.last.used.hormone.replacement.therapy..HRT....Instance.0_Middle.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 403,
+  "fields": {
+    "question": 2804,
+    "feature_name": "category_Sex-specific factors_ts_Age.last.used.hormone.replacement.therapy..HRT....Instance.0_Upper.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 404,
+  "fields": {
+    "question": 3591,
+    "feature_name": "category_Sex-specific factors_ts_Ever.had.hysterectomy..womb.removed....Instance.0_0",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 405,
+  "fields": {
+    "question": 3591,
+    "feature_name": "category_Sex-specific factors_ts_Ever.had.hysterectomy..womb.removed....Instance.0_1",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 406,
+  "fields": {
+    "question": 2754,
+    "feature_name": "category_Sex-specific factors_ts_Age.at.hysterectomy...Instance.0_Lower.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 407,
+  "fields": {
+    "question": 2754,
+    "feature_name": "category_Sex-specific factors_ts_Age.at.hysterectomy...Instance.0_Middle.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 408,
+  "fields": {
+    "question": 2405,
+    "feature_name": "category_Sex-specific factors_ts_Number.of.children.fathered...Instance.0_Middle.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 409,
+  "fields": {
+    "question": 2684,
+    "feature_name": "category_Sex-specific factors_ts_Years.since.last.breast.cancer.screening...mammogram...Instance.0_Middle.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 410,
+  "fields": {
+    "question": 2684,
+    "feature_name": "category_Sex-specific factors_ts_Years.since.last.cervical.smear.test...Instance.0_Middle.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 411,
+  "fields": {
+    "question": 2714,
+    "feature_name": "category_Sex-specific factors_ts_Age.when.periods.started..menarche....Instance.0_Middle.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 412,
+  "fields": {
+    "question": 2714,
+    "feature_name": "category_Sex-specific factors_ts_Age.at.menopause..last.menstrual.period....Instance.0_Middle.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 413,
+  "fields": {
+    "question": 3700,
+    "feature_name": "category_Sex-specific factors_ts_Time.since.last.menstrual.period...Instance.0_Middle.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 414,
+  "fields": {
+    "question": 3710,
+    "feature_name": "category_Sex-specific factors_ts_Length.of.menstrual.cycle...Instance.0_Middle.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 415,
+  "fields": {
+    "question": 2744,
+    "feature_name": "category_Sex-specific factors_ts_Birth.weight.of.first.child...Instance.0_Middle.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 416,
+  "fields": {
+    "question": 2754,
+    "feature_name": "category_Sex-specific factors_ts_Age.at.first.live.birth...Instance.0_Middle.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 417,
+  "fields": {
+    "question": 2754,
+    "feature_name": "category_Sex-specific factors_ts_Age.at.last.live.birth...Instance.0_Middle.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 418,
+  "fields": {
+    "question": 3849,
+    "feature_name": "category_Sex-specific factors_ts_Number.of.pregnancy.terminations...Instance.0_Middle.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 419,
+  "fields": {
+    "question": 2794,
+    "feature_name": "category_Sex-specific factors_ts_Age.started.oral.contraceptive.pill...Instance.0_Middle.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 420,
+  "fields": {
+    "question": 2804,
+    "feature_name": "category_Sex-specific factors_ts_Age.when.last.used.oral.contraceptive.pill...Instance.0_Middle.third",
+    "encoded_option": null
+  }
+},
+{
+  "model": "accounts.cvd_risk_model_inputfeatures",
+  "pk": 421,
+  "fields": {
+    "question": 21001,
+    "feature_name": "Age.at.recruitment",
+    "encoded_option": null
+  }
+}
+]

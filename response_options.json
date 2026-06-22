@@ -1,0 +1,7292 @@
+[
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 730,
+  "fields": {
+    "question": 670,
+    "option_text": "A house or bungalow",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 731,
+  "fields": {
+    "question": 670,
+    "option_text": "A flat, maisonette or apartment",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 732,
+  "fields": {
+    "question": 670,
+    "option_text": "Mobile or temporary structure (i.e. caravan)",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 733,
+  "fields": {
+    "question": 670,
+    "option_text": "Sheltered accommodation",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 734,
+  "fields": {
+    "question": 670,
+    "option_text": "Care home",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 735,
+  "fields": {
+    "question": 670,
+    "option_text": "None of the above",
+    "encoded_value": -7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 736,
+  "fields": {
+    "question": 680,
+    "option_text": "Own outright (by you or someone in your household)",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 737,
+  "fields": {
+    "question": 680,
+    "option_text": "Own with a mortgage",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 738,
+  "fields": {
+    "question": 680,
+    "option_text": "Rent - from local authority, local council, housing association",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 739,
+  "fields": {
+    "question": 680,
+    "option_text": "Rent - from private landlord or letting agency",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 740,
+  "fields": {
+    "question": 680,
+    "option_text": "Pay part rent and part mortgage (shared ownership)",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 741,
+  "fields": {
+    "question": 680,
+    "option_text": "Live in accommodation rent free",
+    "encoded_value": 6.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 742,
+  "fields": {
+    "question": 680,
+    "option_text": "None of the above",
+    "encoded_value": -7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 743,
+  "fields": {
+    "question": 6139,
+    "option_text": "A gas hob or gas cooker",
+    "encoded_value": 1.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 744,
+  "fields": {
+    "question": 6139,
+    "option_text": "A gas fire that you use regularly in winter time",
+    "encoded_value": 2.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 745,
+  "fields": {
+    "question": 6139,
+    "option_text": "An open solid fuel fire that you use regularly in winter time",
+    "encoded_value": 3.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 746,
+  "fields": {
+    "question": 6139,
+    "option_text": "None of the above",
+    "encoded_value": -7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 747,
+  "fields": {
+    "question": 6141,
+    "option_text": "Husband, wife or partner",
+    "encoded_value": 1.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 748,
+  "fields": {
+    "question": 6141,
+    "option_text": "Son and/or daughter (include step-children)",
+    "encoded_value": 2.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 749,
+  "fields": {
+    "question": 6141,
+    "option_text": "Brother and/or sister",
+    "encoded_value": 3.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 750,
+  "fields": {
+    "question": 6141,
+    "option_text": "Mother and/or father",
+    "encoded_value": 4.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 751,
+  "fields": {
+    "question": 6141,
+    "option_text": "Grandparent",
+    "encoded_value": 5.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 752,
+  "fields": {
+    "question": 6141,
+    "option_text": "Grandchild",
+    "encoded_value": 6.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 753,
+  "fields": {
+    "question": 6141,
+    "option_text": "Other related",
+    "encoded_value": 7.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 754,
+  "fields": {
+    "question": 6141,
+    "option_text": "Other unrelated",
+    "encoded_value": 8.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 755,
+  "fields": {
+    "question": 728,
+    "option_text": "None",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 756,
+  "fields": {
+    "question": 728,
+    "option_text": "One",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 757,
+  "fields": {
+    "question": 728,
+    "option_text": "Two",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 758,
+  "fields": {
+    "question": 728,
+    "option_text": "Three",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 759,
+  "fields": {
+    "question": 728,
+    "option_text": "Four or more",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 760,
+  "fields": {
+    "question": 738,
+    "option_text": "Less than £18,000",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 761,
+  "fields": {
+    "question": 738,
+    "option_text": "£18,000 to £30,999",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 762,
+  "fields": {
+    "question": 738,
+    "option_text": "£31,000 to £51,999",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 763,
+  "fields": {
+    "question": 738,
+    "option_text": "£52,000 to £100,000",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 764,
+  "fields": {
+    "question": 738,
+    "option_text": "Greater than £100,000",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 765,
+  "fields": {
+    "question": 6142,
+    "option_text": "In paid employment or self-employed",
+    "encoded_value": 1.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 766,
+  "fields": {
+    "question": 6142,
+    "option_text": "Retired",
+    "encoded_value": 2.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 767,
+  "fields": {
+    "question": 6142,
+    "option_text": "Looking after home and/or family",
+    "encoded_value": 3.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 768,
+  "fields": {
+    "question": 6142,
+    "option_text": "Unable to work because of sickness or disability",
+    "encoded_value": 4.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 769,
+  "fields": {
+    "question": 6142,
+    "option_text": "Unemployed",
+    "encoded_value": 5.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 770,
+  "fields": {
+    "question": 6142,
+    "option_text": "Doing unpaid or voluntary work",
+    "encoded_value": 6.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 771,
+  "fields": {
+    "question": 6142,
+    "option_text": "Full or part-time student",
+    "encoded_value": 7.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 772,
+  "fields": {
+    "question": 6142,
+    "option_text": "None of the above",
+    "encoded_value": -7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 773,
+  "fields": {
+    "question": 6143,
+    "option_text": "Car/motor vehicle",
+    "encoded_value": 1.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 774,
+  "fields": {
+    "question": 6143,
+    "option_text": "Walk",
+    "encoded_value": 2.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 775,
+  "fields": {
+    "question": 6143,
+    "option_text": "Public transport",
+    "encoded_value": 3.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 776,
+  "fields": {
+    "question": 6143,
+    "option_text": "Cycle",
+    "encoded_value": 4.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 777,
+  "fields": {
+    "question": 6143,
+    "option_text": "None of the above",
+    "encoded_value": -7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 778,
+  "fields": {
+    "question": 806,
+    "option_text": "Never/rarely",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 779,
+  "fields": {
+    "question": 806,
+    "option_text": "Sometimes",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 780,
+  "fields": {
+    "question": 806,
+    "option_text": "Usually",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 781,
+  "fields": {
+    "question": 806,
+    "option_text": "Always",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 782,
+  "fields": {
+    "question": 816,
+    "option_text": "Never/rarely",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 783,
+  "fields": {
+    "question": 816,
+    "option_text": "Sometimes",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 784,
+  "fields": {
+    "question": 816,
+    "option_text": "Usually",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 785,
+  "fields": {
+    "question": 816,
+    "option_text": "Always",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 786,
+  "fields": {
+    "question": 826,
+    "option_text": "Never/rarely",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 787,
+  "fields": {
+    "question": 826,
+    "option_text": "Sometimes",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 788,
+  "fields": {
+    "question": 826,
+    "option_text": "Usually",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 789,
+  "fields": {
+    "question": 826,
+    "option_text": "Always",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 790,
+  "fields": {
+    "question": 3426,
+    "option_text": "Never/rarely",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 791,
+  "fields": {
+    "question": 3426,
+    "option_text": "Sometimes",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 792,
+  "fields": {
+    "question": 3426,
+    "option_text": "Usually",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 793,
+  "fields": {
+    "question": 3426,
+    "option_text": "Always",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 794,
+  "fields": {
+    "question": 6138,
+    "option_text": "College or University degree",
+    "encoded_value": 1.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 795,
+  "fields": {
+    "question": 6138,
+    "option_text": "A levels/AS levels or equivalent",
+    "encoded_value": 2.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 796,
+  "fields": {
+    "question": 6138,
+    "option_text": "O levels/GCSEs or equivalent",
+    "encoded_value": 3.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 797,
+  "fields": {
+    "question": 6138,
+    "option_text": "CSEs or equivalent",
+    "encoded_value": 4.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 798,
+  "fields": {
+    "question": 6138,
+    "option_text": "NVQ or HND or HNC or equivalent",
+    "encoded_value": 5.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 799,
+  "fields": {
+    "question": 6138,
+    "option_text": "Other professional qualifications eg: nursing, teaching",
+    "encoded_value": 6.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 800,
+  "fields": {
+    "question": 6138,
+    "option_text": "None of the above",
+    "encoded_value": -7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 801,
+  "fields": {
+    "question": 21000,
+    "option_text": "White",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 802,
+  "fields": {
+    "question": 21000,
+    "option_text": "Irish",
+    "encoded_value": 1002.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 803,
+  "fields": {
+    "question": 21000,
+    "option_text": "Any other white background",
+    "encoded_value": 1003.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 804,
+  "fields": {
+    "question": 21000,
+    "option_text": "White and Black African",
+    "encoded_value": 2002.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 805,
+  "fields": {
+    "question": 21000,
+    "option_text": "White and Asian",
+    "encoded_value": 2003.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 806,
+  "fields": {
+    "question": 21000,
+    "option_text": "Asian or Asian British",
+    "encoded_value": 3001.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 807,
+  "fields": {
+    "question": 21000,
+    "option_text": "Indian",
+    "encoded_value": 7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 808,
+  "fields": {
+    "question": 21000,
+    "option_text": "Pakistani",
+    "encoded_value": 3002.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 809,
+  "fields": {
+    "question": 21000,
+    "option_text": "Black or Black British",
+    "encoded_value": 4001.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 810,
+  "fields": {
+    "question": 21000,
+    "option_text": "Caribbean",
+    "encoded_value": 4002.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 811,
+  "fields": {
+    "question": 21000,
+    "option_text": "African",
+    "encoded_value": 11.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 812,
+  "fields": {
+    "question": 21000,
+    "option_text": "Any other Black background",
+    "encoded_value": 4003.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 813,
+  "fields": {
+    "question": 21000,
+    "option_text": "Chinese",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 814,
+  "fields": {
+    "question": 21000,
+    "option_text": "Other ethnic group",
+    "encoded_value": 6.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 815,
+  "fields": {
+    "question": 6146,
+    "option_text": "Attendance allowance",
+    "encoded_value": 1.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 816,
+  "fields": {
+    "question": 6146,
+    "option_text": "Disability living allowance",
+    "encoded_value": 2.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 817,
+  "fields": {
+    "question": 6146,
+    "option_text": "Blue badge",
+    "encoded_value": 3.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 818,
+  "fields": {
+    "question": 6146,
+    "option_text": "None of the above",
+    "encoded_value": -7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 819,
+  "fields": {
+    "question": 1100,
+    "option_text": "Never/rarely",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 820,
+  "fields": {
+    "question": 1100,
+    "option_text": "Sometimes",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 821,
+  "fields": {
+    "question": 1100,
+    "option_text": "Often",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 822,
+  "fields": {
+    "question": 1100,
+    "option_text": "Most of the time",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 823,
+  "fields": {
+    "question": 1100,
+    "option_text": "Do not drive on the motorway",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 824,
+  "fields": {
+    "question": 6164,
+    "option_text": "Walking for pleasure (not as a means of transport)",
+    "encoded_value": 1.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 825,
+  "fields": {
+    "question": 6164,
+    "option_text": "Other exercises (eg: swimming, cycling, keep fit, bowling)",
+    "encoded_value": 2.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 826,
+  "fields": {
+    "question": 6164,
+    "option_text": "Strenuous sports",
+    "encoded_value": 3.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 827,
+  "fields": {
+    "question": 6164,
+    "option_text": "Light DIY (eg: pruning, watering the lawn)",
+    "encoded_value": 4.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 828,
+  "fields": {
+    "question": 6164,
+    "option_text": "Heavy DIY (eg: weeding, lawn mowing, carpentry, digging)",
+    "encoded_value": 5.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 829,
+  "fields": {
+    "question": 6164,
+    "option_text": "None of the above",
+    "encoded_value": -7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 830,
+  "fields": {
+    "question": 2634,
+    "option_text": "Less than 15 minutes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 831,
+  "fields": {
+    "question": 2634,
+    "option_text": "Between 15 and 30 minutes",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 832,
+  "fields": {
+    "question": 2634,
+    "option_text": "Between 30 minutes and1 hour",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 833,
+  "fields": {
+    "question": 2634,
+    "option_text": "Between 1 hour and 1½ hours",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 834,
+  "fields": {
+    "question": 2634,
+    "option_text": "Between 1½ hours and 2 hours",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 835,
+  "fields": {
+    "question": 2634,
+    "option_text": "Between 2 and 3 hours",
+    "encoded_value": 6.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 836,
+  "fields": {
+    "question": 2634,
+    "option_text": "Over 3 hours",
+    "encoded_value": 7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 837,
+  "fields": {
+    "question": 1021,
+    "option_text": "Less than 15 minutes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 838,
+  "fields": {
+    "question": 1021,
+    "option_text": "Between 15 and 30 minutes",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 839,
+  "fields": {
+    "question": 1021,
+    "option_text": "Between 30 minutes and 1 hour",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 840,
+  "fields": {
+    "question": 1021,
+    "option_text": "Between 1 hour and 1½ hours",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 841,
+  "fields": {
+    "question": 1021,
+    "option_text": "Between 1½ hours and 2 hours",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 842,
+  "fields": {
+    "question": 1021,
+    "option_text": "Between 2 and 3 hours",
+    "encoded_value": 6.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 843,
+  "fields": {
+    "question": 1021,
+    "option_text": "Over 3 hours",
+    "encoded_value": 7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 844,
+  "fields": {
+    "question": 3647,
+    "option_text": "Less than 15 minutes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 845,
+  "fields": {
+    "question": 3647,
+    "option_text": "Between 15 and 30 minutes",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 846,
+  "fields": {
+    "question": 3647,
+    "option_text": "Between 30 minutes and1 hour",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 847,
+  "fields": {
+    "question": 3647,
+    "option_text": "Between 1 hour and 1½ hours",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 848,
+  "fields": {
+    "question": 3647,
+    "option_text": "Between 1½ hours and 2 hours",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 849,
+  "fields": {
+    "question": 3647,
+    "option_text": "Between 2 and 3 hours",
+    "encoded_value": 6.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 850,
+  "fields": {
+    "question": 3647,
+    "option_text": "Over 3 hours",
+    "encoded_value": 7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 851,
+  "fields": {
+    "question": 1001,
+    "option_text": "Less than 15 minutes",
+    "encoded_value": 1.0,
+    "option_label": "nan"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 852,
+  "fields": {
+    "question": 1001,
+    "option_text": "Between 15 and 30 minutes",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 853,
+  "fields": {
+    "question": 1001,
+    "option_text": "Between 30 minutes and1 hour",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 854,
+  "fields": {
+    "question": 1001,
+    "option_text": "Between 1 hour and 1½ hours",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 855,
+  "fields": {
+    "question": 1001,
+    "option_text": "Between 1½ hours and 2 hours",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 856,
+  "fields": {
+    "question": 1001,
+    "option_text": "Between 2 and 3 hours",
+    "encoded_value": 6.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 857,
+  "fields": {
+    "question": 1001,
+    "option_text": "Over 3 hours",
+    "encoded_value": 7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 858,
+  "fields": {
+    "question": 864,
+    "option_text": "Unable to walk",
+    "encoded_value": -2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 859,
+  "fields": {
+    "question": 981,
+    "option_text": "Less than 15 minutes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 860,
+  "fields": {
+    "question": 981,
+    "option_text": "Between 15 and 30 minutes",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 861,
+  "fields": {
+    "question": 981,
+    "option_text": "Between 30 minutes and1 hour",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 862,
+  "fields": {
+    "question": 981,
+    "option_text": "Between 1 hour and 1½ hours",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 863,
+  "fields": {
+    "question": 981,
+    "option_text": "Between 1½ hours and 2 hours",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 864,
+  "fields": {
+    "question": 981,
+    "option_text": "Between 2 and 3 hours",
+    "encoded_value": 6.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 865,
+  "fields": {
+    "question": 981,
+    "option_text": "Over 3 hours",
+    "encoded_value": 7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 866,
+  "fields": {
+    "question": 2624,
+    "option_text": "Once in the last 4 weeks",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 867,
+  "fields": {
+    "question": 2624,
+    "option_text": "2-3 times in the last 4 weeks",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 868,
+  "fields": {
+    "question": 2624,
+    "option_text": "Once a week",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 869,
+  "fields": {
+    "question": 2624,
+    "option_text": "2-3 times a week",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 870,
+  "fields": {
+    "question": 2624,
+    "option_text": "4-5 times a week",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 871,
+  "fields": {
+    "question": 2624,
+    "option_text": "Every day",
+    "encoded_value": 6.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 872,
+  "fields": {
+    "question": 1011,
+    "option_text": "Once in the last 4 weeks",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 873,
+  "fields": {
+    "question": 1011,
+    "option_text": "2-3 times in the last 4 weeks",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 874,
+  "fields": {
+    "question": 1011,
+    "option_text": "Once a week",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 875,
+  "fields": {
+    "question": 1011,
+    "option_text": "2-3 times a week",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 876,
+  "fields": {
+    "question": 1011,
+    "option_text": "4-5 times a week",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 877,
+  "fields": {
+    "question": 1011,
+    "option_text": "Every day",
+    "encoded_value": 6.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 878,
+  "fields": {
+    "question": 3637,
+    "option_text": "Once in the last 4 weeks",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 879,
+  "fields": {
+    "question": 3637,
+    "option_text": "2-3 times in the last 4 weeks",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 880,
+  "fields": {
+    "question": 3637,
+    "option_text": "Once a week",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 881,
+  "fields": {
+    "question": 3637,
+    "option_text": "2-3 times a week",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 882,
+  "fields": {
+    "question": 3637,
+    "option_text": "4-5 times a week",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 883,
+  "fields": {
+    "question": 3637,
+    "option_text": "Every day",
+    "encoded_value": 6.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 884,
+  "fields": {
+    "question": 943,
+    "option_text": "None",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 885,
+  "fields": {
+    "question": 943,
+    "option_text": "1-5 times a day",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 886,
+  "fields": {
+    "question": 943,
+    "option_text": "6-10 times a day",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 887,
+  "fields": {
+    "question": 943,
+    "option_text": "11-15 times a day",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 888,
+  "fields": {
+    "question": 943,
+    "option_text": "16-20 times a day",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 889,
+  "fields": {
+    "question": 943,
+    "option_text": "More than 20 times a day",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 890,
+  "fields": {
+    "question": 991,
+    "option_text": "Once in the last 4 weeks",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 891,
+  "fields": {
+    "question": 991,
+    "option_text": "2-3 times in the last 4 weeks",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 892,
+  "fields": {
+    "question": 991,
+    "option_text": "Once a week",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 893,
+  "fields": {
+    "question": 991,
+    "option_text": "2-3 times a week",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 894,
+  "fields": {
+    "question": 991,
+    "option_text": "4-5 times a week",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 895,
+  "fields": {
+    "question": 991,
+    "option_text": "Every day",
+    "encoded_value": 6.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 896,
+  "fields": {
+    "question": 971,
+    "option_text": "Once in the last 4 weeks",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 897,
+  "fields": {
+    "question": 971,
+    "option_text": "2-3 times in the last 4 weeks",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 898,
+  "fields": {
+    "question": 971,
+    "option_text": "Once a week",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 899,
+  "fields": {
+    "question": 971,
+    "option_text": "2-3 times a week",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 900,
+  "fields": {
+    "question": 971,
+    "option_text": "4-5 times a week",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 901,
+  "fields": {
+    "question": 971,
+    "option_text": "Every day",
+    "encoded_value": 6.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 902,
+  "fields": {
+    "question": 6162,
+    "option_text": "Car/motor vehicle",
+    "encoded_value": 1.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 903,
+  "fields": {
+    "question": 6162,
+    "option_text": "Walk",
+    "encoded_value": 2.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 904,
+  "fields": {
+    "question": 6162,
+    "option_text": "Public transport",
+    "encoded_value": 3.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 905,
+  "fields": {
+    "question": 6162,
+    "option_text": "Cycle",
+    "encoded_value": 4.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 906,
+  "fields": {
+    "question": 6162,
+    "option_text": "None of the above",
+    "encoded_value": -7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 907,
+  "fields": {
+    "question": 924,
+    "option_text": "Slow pace",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 908,
+  "fields": {
+    "question": 924,
+    "option_text": "Steady average pace",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 909,
+  "fields": {
+    "question": 924,
+    "option_text": "Brisk pace",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 910,
+  "fields": {
+    "question": 924,
+    "option_text": "None of the above",
+    "encoded_value": -7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 911,
+  "fields": {
+    "question": 1120,
+    "option_text": "Less than 5mins",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 912,
+  "fields": {
+    "question": 1120,
+    "option_text": "5-29 mins",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 913,
+  "fields": {
+    "question": 1120,
+    "option_text": "30-59 mins",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 914,
+  "fields": {
+    "question": 1120,
+    "option_text": "1-3 hours",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 915,
+  "fields": {
+    "question": 1120,
+    "option_text": "4-6 hours",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 916,
+  "fields": {
+    "question": 1120,
+    "option_text": "More than 6 hours",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 917,
+  "fields": {
+    "question": 1130,
+    "option_text": "Never or almost never",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 918,
+  "fields": {
+    "question": 1130,
+    "option_text": "Less than half the time",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 919,
+  "fields": {
+    "question": 1130,
+    "option_text": "About half the time",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 920,
+  "fields": {
+    "question": 1130,
+    "option_text": "More than half the time",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 921,
+  "fields": {
+    "question": 1130,
+    "option_text": "Always or almost always",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 922,
+  "fields": {
+    "question": 1140,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 923,
+  "fields": {
+    "question": 1140,
+    "option_text": "Yes, use is now less frequent",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 924,
+  "fields": {
+    "question": 1140,
+    "option_text": "Yes, use is now more frequent",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 925,
+  "fields": {
+    "question": 1140,
+    "option_text": "I didn't use a mobile phone two years ago",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 926,
+  "fields": {
+    "question": 1150,
+    "option_text": "Left",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 927,
+  "fields": {
+    "question": 1150,
+    "option_text": "Right",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 928,
+  "fields": {
+    "question": 1150,
+    "option_text": "Equally left and right",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 929,
+  "fields": {
+    "question": 1110,
+    "option_text": "Never used mobile phone at least once per week",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 930,
+  "fields": {
+    "question": 1110,
+    "option_text": "One year or less",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 931,
+  "fields": {
+    "question": 1110,
+    "option_text": "Two to four years",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 932,
+  "fields": {
+    "question": 1110,
+    "option_text": "Five to eight years",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 933,
+  "fields": {
+    "question": 1110,
+    "option_text": "More than eight years",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 934,
+  "fields": {
+    "question": 2237,
+    "option_text": "Never/rarely",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 935,
+  "fields": {
+    "question": 2237,
+    "option_text": "Sometimes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 936,
+  "fields": {
+    "question": 2237,
+    "option_text": "Often",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 937,
+  "fields": {
+    "question": 1170,
+    "option_text": "Not at all easy",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 938,
+  "fields": {
+    "question": 1170,
+    "option_text": "Not very easy",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 939,
+  "fields": {
+    "question": 1170,
+    "option_text": "Fairly easy",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 940,
+  "fields": {
+    "question": 1170,
+    "option_text": "Very easy",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 941,
+  "fields": {
+    "question": 1180,
+    "option_text": "Definitely a 'morning' person",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 942,
+  "fields": {
+    "question": 1180,
+    "option_text": "More a 'morning' than 'evening' person",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 943,
+  "fields": {
+    "question": 1180,
+    "option_text": "More an 'evening' than a 'morning' person",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 944,
+  "fields": {
+    "question": 1180,
+    "option_text": "Definitely an 'evening' person",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 945,
+  "fields": {
+    "question": 1190,
+    "option_text": "Never/rarely",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 946,
+  "fields": {
+    "question": 1190,
+    "option_text": "Sometimes",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 947,
+  "fields": {
+    "question": 1190,
+    "option_text": "Usually",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 948,
+  "fields": {
+    "question": 1200,
+    "option_text": "Never/rarely",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 949,
+  "fields": {
+    "question": 1200,
+    "option_text": "Sometimes",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 950,
+  "fields": {
+    "question": 1200,
+    "option_text": "Usually",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 951,
+  "fields": {
+    "question": 1210,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 952,
+  "fields": {
+    "question": 1210,
+    "option_text": "No",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 953,
+  "fields": {
+    "question": 1220,
+    "option_text": "Never/rarely",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 954,
+  "fields": {
+    "question": 1220,
+    "option_text": "Sometimes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 955,
+  "fields": {
+    "question": 1220,
+    "option_text": "Often",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 956,
+  "fields": {
+    "question": 20116,
+    "option_text": "Never",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 957,
+  "fields": {
+    "question": 20116,
+    "option_text": "Previous",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 958,
+  "fields": {
+    "question": 20116,
+    "option_text": "Current",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 959,
+  "fields": {
+    "question": 1239,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 960,
+  "fields": {
+    "question": 1239,
+    "option_text": "Yes, on most or all days",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 961,
+  "fields": {
+    "question": 1239,
+    "option_text": "Only occasionally",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 962,
+  "fields": {
+    "question": 1249,
+    "option_text": "Smoked on most or all days",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 963,
+  "fields": {
+    "question": 1249,
+    "option_text": "Smoked occasionally",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 964,
+  "fields": {
+    "question": 1249,
+    "option_text": "Just tried once or twice",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 965,
+  "fields": {
+    "question": 1249,
+    "option_text": "I have never smoked",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 966,
+  "fields": {
+    "question": 2644,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 967,
+  "fields": {
+    "question": 2644,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 968,
+  "fields": {
+    "question": 3446,
+    "option_text": "Manufactured cigarettes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 969,
+  "fields": {
+    "question": 3446,
+    "option_text": "Hand-rolled cigarettes",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 970,
+  "fields": {
+    "question": 3446,
+    "option_text": "Cigars or pipes",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 971,
+  "fields": {
+    "question": 5959,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 972,
+  "fields": {
+    "question": 5959,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 973,
+  "fields": {
+    "question": 3466,
+    "option_text": "Less than 5 minutes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 974,
+  "fields": {
+    "question": 3466,
+    "option_text": "Between 5-15 minutes",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 975,
+  "fields": {
+    "question": 3466,
+    "option_text": "Between 30 minutes - 1 hour",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 976,
+  "fields": {
+    "question": 3466,
+    "option_text": "Between 1 and 2 hours",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 977,
+  "fields": {
+    "question": 3466,
+    "option_text": "Longer than 2 hours",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 978,
+  "fields": {
+    "question": 3476,
+    "option_text": "Very easy",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 979,
+  "fields": {
+    "question": 3476,
+    "option_text": "Fairly easy",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 980,
+  "fields": {
+    "question": 3476,
+    "option_text": "Fairly difficult",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 981,
+  "fields": {
+    "question": 3476,
+    "option_text": "Very difficult",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 982,
+  "fields": {
+    "question": 3486,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 983,
+  "fields": {
+    "question": 3486,
+    "option_text": "Yes, tried but was not able to stop or stopped for less than 6 months",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 984,
+  "fields": {
+    "question": 3486,
+    "option_text": "Yes, tried and stopped for at least 6 months",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 985,
+  "fields": {
+    "question": 3496,
+    "option_text": "Yes, definitely",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 986,
+  "fields": {
+    "question": 3496,
+    "option_text": "Yes, probably",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 987,
+  "fields": {
+    "question": 3496,
+    "option_text": "No, probably not",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 988,
+  "fields": {
+    "question": 3496,
+    "option_text": "No, definitely not",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 989,
+  "fields": {
+    "question": 3506,
+    "option_text": "More nowadays?",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 990,
+  "fields": {
+    "question": 3506,
+    "option_text": "About the same?",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 991,
+  "fields": {
+    "question": 3506,
+    "option_text": "Less nowadays?",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 992,
+  "fields": {
+    "question": 6158,
+    "option_text": "Illness or ill health",
+    "encoded_value": 1.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 993,
+  "fields": {
+    "question": 6158,
+    "option_text": "Doctor's advice",
+    "encoded_value": 2.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 994,
+  "fields": {
+    "question": 6158,
+    "option_text": "Health precaution",
+    "encoded_value": 3.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 995,
+  "fields": {
+    "question": 6158,
+    "option_text": "Financial reasons",
+    "encoded_value": 4.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 996,
+  "fields": {
+    "question": 6158,
+    "option_text": "None of the above",
+    "encoded_value": -7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 997,
+  "fields": {
+    "question": 2877,
+    "option_text": "Manufactured cigarettes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 998,
+  "fields": {
+    "question": 2877,
+    "option_text": "Hand-rolled cigarettes",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 999,
+  "fields": {
+    "question": 2877,
+    "option_text": "Cigars or pipes",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1000,
+  "fields": {
+    "question": 2877,
+    "option_text": "None of the above",
+    "encoded_value": -7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1001,
+  "fields": {
+    "question": 2907,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1002,
+  "fields": {
+    "question": 2907,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1003,
+  "fields": {
+    "question": 6157,
+    "option_text": "Illness or ill health",
+    "encoded_value": 1.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1004,
+  "fields": {
+    "question": 6157,
+    "option_text": "Doctor's advice",
+    "encoded_value": 2.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1005,
+  "fields": {
+    "question": 6157,
+    "option_text": "Health precaution",
+    "encoded_value": 3.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1006,
+  "fields": {
+    "question": 6157,
+    "option_text": "Financial reasons",
+    "encoded_value": 4.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1007,
+  "fields": {
+    "question": 6157,
+    "option_text": "None of the above",
+    "encoded_value": -7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1008,
+  "fields": {
+    "question": 2936,
+    "option_text": "Yes, definitely",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1009,
+  "fields": {
+    "question": 2936,
+    "option_text": "Yes, probably",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1010,
+  "fields": {
+    "question": 2936,
+    "option_text": "No, probably not",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1011,
+  "fields": {
+    "question": 2936,
+    "option_text": "No, definitely not",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1012,
+  "fields": {
+    "question": 1259,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1013,
+  "fields": {
+    "question": 1259,
+    "option_text": "Yes, one household member smokes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1014,
+  "fields": {
+    "question": 1259,
+    "option_text": "Yes, more than one household member smokes",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1015,
+  "fields": {
+    "question": 1329,
+    "option_text": "Never",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1016,
+  "fields": {
+    "question": 1329,
+    "option_text": "Less than once a week",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1017,
+  "fields": {
+    "question": 1329,
+    "option_text": "Once a week",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1018,
+  "fields": {
+    "question": 1329,
+    "option_text": "2-4 times a week",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1019,
+  "fields": {
+    "question": 1329,
+    "option_text": "5-6 times a week",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1020,
+  "fields": {
+    "question": 1329,
+    "option_text": "Once or more daily",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1021,
+  "fields": {
+    "question": 1339,
+    "option_text": "Never",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1022,
+  "fields": {
+    "question": 1339,
+    "option_text": "Less than once a week",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1023,
+  "fields": {
+    "question": 1339,
+    "option_text": "Once a week",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1024,
+  "fields": {
+    "question": 1339,
+    "option_text": "2-4 times a week",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1025,
+  "fields": {
+    "question": 1339,
+    "option_text": "5-6 times a week",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1026,
+  "fields": {
+    "question": 1339,
+    "option_text": "Once or more daily",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1027,
+  "fields": {
+    "question": 1349,
+    "option_text": "Never",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1028,
+  "fields": {
+    "question": 1349,
+    "option_text": "Less than once a week",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1029,
+  "fields": {
+    "question": 1349,
+    "option_text": "Once a week",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1030,
+  "fields": {
+    "question": 1349,
+    "option_text": "2-4 times a week",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1031,
+  "fields": {
+    "question": 1349,
+    "option_text": "5-6 times a week",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1032,
+  "fields": {
+    "question": 1349,
+    "option_text": "Once or more daily",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1033,
+  "fields": {
+    "question": 1359,
+    "option_text": "Never",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1034,
+  "fields": {
+    "question": 1359,
+    "option_text": "Less than once a week",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1035,
+  "fields": {
+    "question": 1359,
+    "option_text": "Once a week",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1036,
+  "fields": {
+    "question": 1359,
+    "option_text": "2-4 times a week",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1037,
+  "fields": {
+    "question": 1359,
+    "option_text": "5-6 times a week",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1038,
+  "fields": {
+    "question": 1359,
+    "option_text": "Once or more daily",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1039,
+  "fields": {
+    "question": 1369,
+    "option_text": "Never",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1040,
+  "fields": {
+    "question": 1369,
+    "option_text": "Less than once a week",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1041,
+  "fields": {
+    "question": 1369,
+    "option_text": "Once a week",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1042,
+  "fields": {
+    "question": 1369,
+    "option_text": "2-4 times a week",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1043,
+  "fields": {
+    "question": 1369,
+    "option_text": "5-6 times a week",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1044,
+  "fields": {
+    "question": 1379,
+    "option_text": "Never",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1045,
+  "fields": {
+    "question": 1379,
+    "option_text": "Less than once a week",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1046,
+  "fields": {
+    "question": 1379,
+    "option_text": "Once a week",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1047,
+  "fields": {
+    "question": 1379,
+    "option_text": "2-4 times a week",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1048,
+  "fields": {
+    "question": 1379,
+    "option_text": "Once or more daily",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1049,
+  "fields": {
+    "question": 1389,
+    "option_text": "Never",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1050,
+  "fields": {
+    "question": 1389,
+    "option_text": "Less than once a week",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1051,
+  "fields": {
+    "question": 1389,
+    "option_text": "Once a week",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1052,
+  "fields": {
+    "question": 1389,
+    "option_text": "2-4 times a week",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1053,
+  "fields": {
+    "question": 6144,
+    "option_text": "Eggs or foods containing eggs",
+    "encoded_value": 1.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1054,
+  "fields": {
+    "question": 6144,
+    "option_text": "Dairy products",
+    "encoded_value": 2.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1055,
+  "fields": {
+    "question": 6144,
+    "option_text": "Wheat products",
+    "encoded_value": 3.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1056,
+  "fields": {
+    "question": 6144,
+    "option_text": "Sugar or foods/drinks containing sugar",
+    "encoded_value": 4.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1057,
+  "fields": {
+    "question": 6144,
+    "option_text": "I eat all of the above",
+    "encoded_value": 5.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1058,
+  "fields": {
+    "question": 1408,
+    "option_text": "Never",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1059,
+  "fields": {
+    "question": 1408,
+    "option_text": "Less than once a week",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1060,
+  "fields": {
+    "question": 1408,
+    "option_text": "Once a week",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1061,
+  "fields": {
+    "question": 1408,
+    "option_text": "2-4 times a week",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1062,
+  "fields": {
+    "question": 1408,
+    "option_text": "5-6 times a week",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1063,
+  "fields": {
+    "question": 1408,
+    "option_text": "Once or more daily",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1064,
+  "fields": {
+    "question": 1418,
+    "option_text": "Full cream",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1065,
+  "fields": {
+    "question": 1418,
+    "option_text": "Semi-skimmed",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1066,
+  "fields": {
+    "question": 1418,
+    "option_text": "Skimmed",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1067,
+  "fields": {
+    "question": 1418,
+    "option_text": "Soya",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1068,
+  "fields": {
+    "question": 1418,
+    "option_text": "Other type of milk",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1069,
+  "fields": {
+    "question": 1418,
+    "option_text": "Never/rarely have milk",
+    "encoded_value": 6.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1070,
+  "fields": {
+    "question": 1428,
+    "option_text": "Never/rarely use spread",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1071,
+  "fields": {
+    "question": 1428,
+    "option_text": "Butter/spreadable butter",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1072,
+  "fields": {
+    "question": 1428,
+    "option_text": "Flora Pro-Active or Benecol",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1073,
+  "fields": {
+    "question": 1428,
+    "option_text": "Other type of spread/margarine",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1074,
+  "fields": {
+    "question": 2654,
+    "option_text": "Flora Pro-Active or Benecol",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1075,
+  "fields": {
+    "question": 2654,
+    "option_text": "Soft (tub) margarine",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1076,
+  "fields": {
+    "question": 2654,
+    "option_text": "Hard (block) margarine",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1077,
+  "fields": {
+    "question": 2654,
+    "option_text": "Olive oil based spread (eg: Bertolli)",
+    "encoded_value": 6.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1078,
+  "fields": {
+    "question": 2654,
+    "option_text": "Polyunsaturated/sunflower oil based spread (eg: Flora)",
+    "encoded_value": 7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1079,
+  "fields": {
+    "question": 2654,
+    "option_text": "Other low or reduced fat spread",
+    "encoded_value": 8.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1080,
+  "fields": {
+    "question": 2654,
+    "option_text": "Other type of spread/margarine",
+    "encoded_value": 9.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1081,
+  "fields": {
+    "question": 1448,
+    "option_text": "White",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1082,
+  "fields": {
+    "question": 1448,
+    "option_text": "Brown",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1083,
+  "fields": {
+    "question": 1448,
+    "option_text": "Wholemeal or wholegrain",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1084,
+  "fields": {
+    "question": 1448,
+    "option_text": "Other type of bread",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1085,
+  "fields": {
+    "question": 1468,
+    "option_text": "Biscuit cereal (e.g. Weetabix)",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1086,
+  "fields": {
+    "question": 1468,
+    "option_text": "Biscuit cereal (e.g. Weetabix)",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1087,
+  "fields": {
+    "question": 1468,
+    "option_text": "Oat cereal (e.g. Ready Brek, porridge)",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1088,
+  "fields": {
+    "question": 1468,
+    "option_text": "Muesli",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1089,
+  "fields": {
+    "question": 1468,
+    "option_text": "Other (e.g. Cornflakes, Frosties)",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1090,
+  "fields": {
+    "question": 1478,
+    "option_text": "Never/rarely",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1091,
+  "fields": {
+    "question": 1478,
+    "option_text": "Sometimes",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1092,
+  "fields": {
+    "question": 1478,
+    "option_text": "Usually",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1093,
+  "fields": {
+    "question": 1478,
+    "option_text": "Always",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1094,
+  "fields": {
+    "question": 1508,
+    "option_text": "Decaffeinated coffee (any type)",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1095,
+  "fields": {
+    "question": 1508,
+    "option_text": "Instant coffee",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1096,
+  "fields": {
+    "question": 1508,
+    "option_text": "Ground coffee (include espresso, filter etc)",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1097,
+  "fields": {
+    "question": 1508,
+    "option_text": "Other type of coffee",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1098,
+  "fields": {
+    "question": 1518,
+    "option_text": "Very hot",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1099,
+  "fields": {
+    "question": 1518,
+    "option_text": "Hot",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1100,
+  "fields": {
+    "question": 1518,
+    "option_text": "Warm",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1101,
+  "fields": {
+    "question": 1518,
+    "option_text": "Do not drink hot drinks",
+    "encoded_value": -2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1102,
+  "fields": {
+    "question": 1538,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1103,
+  "fields": {
+    "question": 1538,
+    "option_text": "Yes, because of illness",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1104,
+  "fields": {
+    "question": 1538,
+    "option_text": "Yes, because of other reasons",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1105,
+  "fields": {
+    "question": 1548,
+    "option_text": "Never/rarely",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1106,
+  "fields": {
+    "question": 1548,
+    "option_text": "Sometimes",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1107,
+  "fields": {
+    "question": 1548,
+    "option_text": "Often",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1108,
+  "fields": {
+    "question": 20117,
+    "option_text": "Never",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1109,
+  "fields": {
+    "question": 20117,
+    "option_text": "Previous",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1110,
+  "fields": {
+    "question": 20117,
+    "option_text": "Current",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1111,
+  "fields": {
+    "question": 1558,
+    "option_text": "Daily or almost daily",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1112,
+  "fields": {
+    "question": 1558,
+    "option_text": "Three or four times a week",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1113,
+  "fields": {
+    "question": 1558,
+    "option_text": "Once or twice a week",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1114,
+  "fields": {
+    "question": 1558,
+    "option_text": "One to three times a month",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1115,
+  "fields": {
+    "question": 1558,
+    "option_text": "Special occasions only",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1116,
+  "fields": {
+    "question": 1558,
+    "option_text": "Never",
+    "encoded_value": 6.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1117,
+  "fields": {
+    "question": 3731,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1118,
+  "fields": {
+    "question": 3731,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1119,
+  "fields": {
+    "question": 1618,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1120,
+  "fields": {
+    "question": 1618,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1121,
+  "fields": {
+    "question": 1618,
+    "option_text": "It varies",
+    "encoded_value": -6.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1122,
+  "fields": {
+    "question": 1628,
+    "option_text": "More nowadays",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1123,
+  "fields": {
+    "question": 1628,
+    "option_text": "About the same",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1124,
+  "fields": {
+    "question": 1628,
+    "option_text": "Less nowadays",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1125,
+  "fields": {
+    "question": 2664,
+    "option_text": "Illness or ill health",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1126,
+  "fields": {
+    "question": 2664,
+    "option_text": "Doctor's advice",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1127,
+  "fields": {
+    "question": 2664,
+    "option_text": "Health precaution",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1128,
+  "fields": {
+    "question": 2664,
+    "option_text": "Financial reasons",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1129,
+  "fields": {
+    "question": 2664,
+    "option_text": "Other reason",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1130,
+  "fields": {
+    "question": 3859,
+    "option_text": "Illness or ill health",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1131,
+  "fields": {
+    "question": 3859,
+    "option_text": "Doctor's advice",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1132,
+  "fields": {
+    "question": 3859,
+    "option_text": "Health precaution",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1133,
+  "fields": {
+    "question": 3859,
+    "option_text": "Financial reasons",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1134,
+  "fields": {
+    "question": 3859,
+    "option_text": "Other reason",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1135,
+  "fields": {
+    "question": 1717,
+    "option_text": "Very fair",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1136,
+  "fields": {
+    "question": 1717,
+    "option_text": "Fair",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1137,
+  "fields": {
+    "question": 1717,
+    "option_text": "Light olive",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1138,
+  "fields": {
+    "question": 1717,
+    "option_text": "Dark olive",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1139,
+  "fields": {
+    "question": 1717,
+    "option_text": "Brown",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1140,
+  "fields": {
+    "question": 1717,
+    "option_text": "Black",
+    "encoded_value": 6.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1141,
+  "fields": {
+    "question": 1727,
+    "option_text": "Get very tanned",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1142,
+  "fields": {
+    "question": 1727,
+    "option_text": "Get moderately tanned",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1143,
+  "fields": {
+    "question": 1727,
+    "option_text": "Get mildly or occasionally tanned",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1144,
+  "fields": {
+    "question": 1727,
+    "option_text": "Never tan, only burn",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1145,
+  "fields": {
+    "question": 1747,
+    "option_text": "Blonde",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1146,
+  "fields": {
+    "question": 1747,
+    "option_text": "Red",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1147,
+  "fields": {
+    "question": 1747,
+    "option_text": "Light brown",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1148,
+  "fields": {
+    "question": 1747,
+    "option_text": "Dark brown",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1149,
+  "fields": {
+    "question": 1747,
+    "option_text": "Black",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1150,
+  "fields": {
+    "question": 1747,
+    "option_text": "Other",
+    "encoded_value": 6.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1151,
+  "fields": {
+    "question": 1757,
+    "option_text": "Younger than you are",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1152,
+  "fields": {
+    "question": 1757,
+    "option_text": "Older than you are",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1153,
+  "fields": {
+    "question": 1757,
+    "option_text": "About your age",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1154,
+  "fields": {
+    "question": 2267,
+    "option_text": "Never/rarely",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1155,
+  "fields": {
+    "question": 2267,
+    "option_text": "Sometimes",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1156,
+  "fields": {
+    "question": 2267,
+    "option_text": "Most of the time",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1157,
+  "fields": {
+    "question": 2267,
+    "option_text": "Always",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1158,
+  "fields": {
+    "question": 2267,
+    "option_text": "Do not go out in sunshine",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1159,
+  "fields": {
+    "question": 2129,
+    "option_text": "Continue",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1160,
+  "fields": {
+    "question": 2129,
+    "option_text": "Skip this section",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1161,
+  "fields": {
+    "question": 2139,
+    "option_text": "Never had sex",
+    "encoded_value": -2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1162,
+  "fields": {
+    "question": 1687,
+    "option_text": "Thinner",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1163,
+  "fields": {
+    "question": 1687,
+    "option_text": "Plumper",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1164,
+  "fields": {
+    "question": 1687,
+    "option_text": "About average",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1165,
+  "fields": {
+    "question": 1697,
+    "option_text": "Shorter",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1166,
+  "fields": {
+    "question": 1697,
+    "option_text": "Taller",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1167,
+  "fields": {
+    "question": 1697,
+    "option_text": "About average",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1168,
+  "fields": {
+    "question": 1707,
+    "option_text": "Right-handed",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1169,
+  "fields": {
+    "question": 1707,
+    "option_text": "Left-handed",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1170,
+  "fields": {
+    "question": 1707,
+    "option_text": "Use both right and left hands equally",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1171,
+  "fields": {
+    "question": 1777,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1172,
+  "fields": {
+    "question": 1777,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1173,
+  "fields": {
+    "question": 1787,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1174,
+  "fields": {
+    "question": 1787,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1175,
+  "fields": {
+    "question": 1797,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1176,
+  "fields": {
+    "question": 1797,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1177,
+  "fields": {
+    "question": 3912,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1178,
+  "fields": {
+    "question": 3912,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1179,
+  "fields": {
+    "question": 1835,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1180,
+  "fields": {
+    "question": 1835,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1181,
+  "fields": {
+    "question": 3942,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1182,
+  "fields": {
+    "question": 3942,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1183,
+  "fields": {
+    "question": 20113,
+    "option_text": "Heart disease",
+    "encoded_value": 1.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1184,
+  "fields": {
+    "question": 20113,
+    "option_text": "Stroke",
+    "encoded_value": 2.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1185,
+  "fields": {
+    "question": 20113,
+    "option_text": "Diabetes",
+    "encoded_value": 4.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1186,
+  "fields": {
+    "question": 20113,
+    "option_text": "High blood pressure",
+    "encoded_value": 8.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1187,
+  "fields": {
+    "question": 20113,
+    "option_text": "None of the above",
+    "encoded_value": -17.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1188,
+  "fields": {
+    "question": 20113,
+    "option_text": "None of the above",
+    "encoded_value": -27.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1189,
+  "fields": {
+    "question": 20114,
+    "option_text": "IDK",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1190,
+  "fields": {
+    "question": 20114,
+    "option_text": "IDK",
+    "encoded_value": 8.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1191,
+  "fields": {
+    "question": 20114,
+    "option_text": "IDK",
+    "encoded_value": 9.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1192,
+  "fields": {
+    "question": 20114,
+    "option_text": "IDK",
+    "encoded_value": 10.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1193,
+  "fields": {
+    "question": 20114,
+    "option_text": "None of the above",
+    "encoded_value": -17.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1194,
+  "fields": {
+    "question": 20114,
+    "option_text": "None of the above",
+    "encoded_value": -27.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1195,
+  "fields": {
+    "question": 20107,
+    "option_text": "Heart disease",
+    "encoded_value": 1.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1196,
+  "fields": {
+    "question": 20107,
+    "option_text": "Stroke",
+    "encoded_value": 2.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1197,
+  "fields": {
+    "question": 20107,
+    "option_text": "Lung cancer",
+    "encoded_value": 3.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1198,
+  "fields": {
+    "question": 20107,
+    "option_text": "Bowel cancer",
+    "encoded_value": 4.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1199,
+  "fields": {
+    "question": 20107,
+    "option_text": "Chronic bronchitis/emphysema",
+    "encoded_value": 6.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1200,
+  "fields": {
+    "question": 20107,
+    "option_text": "High blood pressure",
+    "encoded_value": 8.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1201,
+  "fields": {
+    "question": 20107,
+    "option_text": "Diabetes",
+    "encoded_value": 9.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1202,
+  "fields": {
+    "question": 20107,
+    "option_text": "Alzheimer's disease/dementia",
+    "encoded_value": 10.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1203,
+  "fields": {
+    "question": 20107,
+    "option_text": "Parkinson's disease",
+    "encoded_value": 11.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1204,
+  "fields": {
+    "question": 20107,
+    "option_text": "Severe depression",
+    "encoded_value": 12.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1205,
+  "fields": {
+    "question": 20107,
+    "option_text": "Prostate cancer",
+    "encoded_value": 13.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1206,
+  "fields": {
+    "question": 20107,
+    "option_text": "None of the above",
+    "encoded_value": -17.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1207,
+  "fields": {
+    "question": 20107,
+    "option_text": "None of the above",
+    "encoded_value": -27.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1208,
+  "fields": {
+    "question": 20110,
+    "option_text": "Heart disease",
+    "encoded_value": 1.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1209,
+  "fields": {
+    "question": 20110,
+    "option_text": "Stroke",
+    "encoded_value": 2.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1210,
+  "fields": {
+    "question": 20110,
+    "option_text": "Lung cancer",
+    "encoded_value": 3.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1211,
+  "fields": {
+    "question": 20110,
+    "option_text": "Bowel cancer",
+    "encoded_value": 4.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1212,
+  "fields": {
+    "question": 20110,
+    "option_text": "Breast cancer",
+    "encoded_value": 5.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1213,
+  "fields": {
+    "question": 20110,
+    "option_text": "Chronic bronchitis/emphysema",
+    "encoded_value": 6.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1214,
+  "fields": {
+    "question": 20110,
+    "option_text": "High blood pressure",
+    "encoded_value": 8.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1215,
+  "fields": {
+    "question": 20110,
+    "option_text": "Diabetes",
+    "encoded_value": 9.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1216,
+  "fields": {
+    "question": 20110,
+    "option_text": "Alzheimer's disease/dementia",
+    "encoded_value": 10.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1217,
+  "fields": {
+    "question": 20110,
+    "option_text": "Parkinson's disease",
+    "encoded_value": 11.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1218,
+  "fields": {
+    "question": 20110,
+    "option_text": "Severe depression",
+    "encoded_value": 12.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1219,
+  "fields": {
+    "question": 20110,
+    "option_text": "None of the above",
+    "encoded_value": -17.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1220,
+  "fields": {
+    "question": 20110,
+    "option_text": "None of the above",
+    "encoded_value": -27.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1221,
+  "fields": {
+    "question": 20111,
+    "option_text": "Heart disease",
+    "encoded_value": 1.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1222,
+  "fields": {
+    "question": 20111,
+    "option_text": "Stroke",
+    "encoded_value": 2.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1223,
+  "fields": {
+    "question": 20111,
+    "option_text": "Lung cancer",
+    "encoded_value": 3.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1224,
+  "fields": {
+    "question": 20111,
+    "option_text": "Bowel cancer",
+    "encoded_value": 4.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1225,
+  "fields": {
+    "question": 20111,
+    "option_text": "Breast cancer",
+    "encoded_value": 5.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1226,
+  "fields": {
+    "question": 20111,
+    "option_text": "Chronic bronchitis/emphysema",
+    "encoded_value": 6.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1227,
+  "fields": {
+    "question": 20111,
+    "option_text": "High blood pressure",
+    "encoded_value": 8.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1228,
+  "fields": {
+    "question": 20111,
+    "option_text": "Diabetes",
+    "encoded_value": 9.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1229,
+  "fields": {
+    "question": 20111,
+    "option_text": "Alzheimer's disease/dementia",
+    "encoded_value": 10.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1230,
+  "fields": {
+    "question": 20111,
+    "option_text": "Parkinson's disease",
+    "encoded_value": 11.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1231,
+  "fields": {
+    "question": 20111,
+    "option_text": "Severe depression",
+    "encoded_value": 12.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1232,
+  "fields": {
+    "question": 20111,
+    "option_text": "Prostate cancer",
+    "encoded_value": 13.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1233,
+  "fields": {
+    "question": 20111,
+    "option_text": "None of the above",
+    "encoded_value": -17.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1234,
+  "fields": {
+    "question": 20111,
+    "option_text": "None of the above",
+    "encoded_value": -27.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1235,
+  "fields": {
+    "question": 1031,
+    "option_text": "Almost daily",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1236,
+  "fields": {
+    "question": 1031,
+    "option_text": "2-4 times a week",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1237,
+  "fields": {
+    "question": 1031,
+    "option_text": "About once a week",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1238,
+  "fields": {
+    "question": 1031,
+    "option_text": "About once a month",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1239,
+  "fields": {
+    "question": 1031,
+    "option_text": "Once every few months",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1240,
+  "fields": {
+    "question": 1031,
+    "option_text": "Never or almost never",
+    "encoded_value": 6.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1241,
+  "fields": {
+    "question": 1031,
+    "option_text": "No friends/family outside household",
+    "encoded_value": 7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1242,
+  "fields": {
+    "question": 6160,
+    "option_text": "Sports club or gym",
+    "encoded_value": 1.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1243,
+  "fields": {
+    "question": 6160,
+    "option_text": "Pub or social club",
+    "encoded_value": 2.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1244,
+  "fields": {
+    "question": 6160,
+    "option_text": "Religious group",
+    "encoded_value": 3.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1245,
+  "fields": {
+    "question": 6160,
+    "option_text": "Adult education class",
+    "encoded_value": 4.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1246,
+  "fields": {
+    "question": 6160,
+    "option_text": "Other group activity",
+    "encoded_value": 5.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1247,
+  "fields": {
+    "question": 6160,
+    "option_text": "None of the above",
+    "encoded_value": -7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1248,
+  "fields": {
+    "question": 2110,
+    "option_text": "Never or almost never",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1249,
+  "fields": {
+    "question": 2110,
+    "option_text": "Once every few months",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1250,
+  "fields": {
+    "question": 2110,
+    "option_text": "About once a month",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1251,
+  "fields": {
+    "question": 2110,
+    "option_text": "About once a week",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1252,
+  "fields": {
+    "question": 2110,
+    "option_text": "2-4 times a week",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1253,
+  "fields": {
+    "question": 2110,
+    "option_text": "Almost daily",
+    "encoded_value": 5.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1254,
+  "fields": {
+    "question": 1920,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1255,
+  "fields": {
+    "question": 1920,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1256,
+  "fields": {
+    "question": 1940,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1257,
+  "fields": {
+    "question": 1940,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1258,
+  "fields": {
+    "question": 1960,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1259,
+  "fields": {
+    "question": 1960,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1260,
+  "fields": {
+    "question": 1990,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1261,
+  "fields": {
+    "question": 1990,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1262,
+  "fields": {
+    "question": 2000,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1263,
+  "fields": {
+    "question": 2000,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1264,
+  "fields": {
+    "question": 2010,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1265,
+  "fields": {
+    "question": 2010,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1266,
+  "fields": {
+    "question": 2020,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1267,
+  "fields": {
+    "question": 2020,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1268,
+  "fields": {
+    "question": 2040,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1269,
+  "fields": {
+    "question": 2040,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1270,
+  "fields": {
+    "question": 2050,
+    "option_text": "Not at all",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1271,
+  "fields": {
+    "question": 2050,
+    "option_text": "Several days",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1272,
+  "fields": {
+    "question": 2050,
+    "option_text": "More than half the days",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1273,
+  "fields": {
+    "question": 2050,
+    "option_text": "Nearly every day",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1274,
+  "fields": {
+    "question": 2060,
+    "option_text": "Not at all",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1275,
+  "fields": {
+    "question": 2060,
+    "option_text": "Several days",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1276,
+  "fields": {
+    "question": 2060,
+    "option_text": "More than half the days",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1277,
+  "fields": {
+    "question": 2060,
+    "option_text": "Nearly every day",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1278,
+  "fields": {
+    "question": 2070,
+    "option_text": "Not at all",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1279,
+  "fields": {
+    "question": 2070,
+    "option_text": "Several days",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1280,
+  "fields": {
+    "question": 2070,
+    "option_text": "More than half the days",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1281,
+  "fields": {
+    "question": 2070,
+    "option_text": "Nearly every day",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1282,
+  "fields": {
+    "question": 2080,
+    "option_text": "Not at all",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1283,
+  "fields": {
+    "question": 2080,
+    "option_text": "Several days",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1284,
+  "fields": {
+    "question": 2080,
+    "option_text": "More than half the days",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1285,
+  "fields": {
+    "question": 2080,
+    "option_text": "Nearly every day",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1286,
+  "fields": {
+    "question": 2090,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1287,
+  "fields": {
+    "question": 2090,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1288,
+  "fields": {
+    "question": 2100,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1289,
+  "fields": {
+    "question": 2100,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1290,
+  "fields": {
+    "question": 6145,
+    "option_text": "Serious illness, injury or assault to yourself",
+    "encoded_value": 1.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1291,
+  "fields": {
+    "question": 6145,
+    "option_text": "Serious illness, injury or assault of a close relative",
+    "encoded_value": 2.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1292,
+  "fields": {
+    "question": 6145,
+    "option_text": "Death of a close relative",
+    "encoded_value": 3.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1293,
+  "fields": {
+    "question": 6145,
+    "option_text": "Death of a spouse or partner",
+    "encoded_value": 4.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1294,
+  "fields": {
+    "question": 6145,
+    "option_text": "Marital separation/divorce",
+    "encoded_value": 5.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1295,
+  "fields": {
+    "question": 6145,
+    "option_text": "Financial difficulties",
+    "encoded_value": 6.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1296,
+  "fields": {
+    "question": 6145,
+    "option_text": "None of the above",
+    "encoded_value": -7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1297,
+  "fields": {
+    "question": 2207,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1298,
+  "fields": {
+    "question": 2207,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1299,
+  "fields": {
+    "question": 6149,
+    "option_text": "Mouth ulcers",
+    "encoded_value": 1.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1300,
+  "fields": {
+    "question": 6149,
+    "option_text": "Painful gums",
+    "encoded_value": 2.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1301,
+  "fields": {
+    "question": 6149,
+    "option_text": "Bleeding gums",
+    "encoded_value": 3.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1302,
+  "fields": {
+    "question": 6149,
+    "option_text": "Loose teeth",
+    "encoded_value": 4.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1303,
+  "fields": {
+    "question": 6149,
+    "option_text": "Toothache",
+    "encoded_value": 5.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1304,
+  "fields": {
+    "question": 6149,
+    "option_text": "Dentures",
+    "encoded_value": 6.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1305,
+  "fields": {
+    "question": 6149,
+    "option_text": "None of the above",
+    "encoded_value": -7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1306,
+  "fields": {
+    "question": 2178,
+    "option_text": "Excellent",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1307,
+  "fields": {
+    "question": 2178,
+    "option_text": "Good",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1308,
+  "fields": {
+    "question": 2178,
+    "option_text": "Fair",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1309,
+  "fields": {
+    "question": 2178,
+    "option_text": "Poor",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1310,
+  "fields": {
+    "question": 2188,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1311,
+  "fields": {
+    "question": 2188,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1312,
+  "fields": {
+    "question": 2296,
+    "option_text": "No falls",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1313,
+  "fields": {
+    "question": 2296,
+    "option_text": "Only one fall",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1314,
+  "fields": {
+    "question": 2296,
+    "option_text": "More than one fall",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1315,
+  "fields": {
+    "question": 2306,
+    "option_text": "No - weigh about the same",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1316,
+  "fields": {
+    "question": 2306,
+    "option_text": "Yes - gained weight",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1317,
+  "fields": {
+    "question": 2306,
+    "option_text": "Yes - lost weight",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1318,
+  "fields": {
+    "question": 2316,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1319,
+  "fields": {
+    "question": 2316,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1320,
+  "fields": {
+    "question": 6159,
+    "option_text": "Headache",
+    "encoded_value": 1.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1321,
+  "fields": {
+    "question": 6159,
+    "option_text": "Facial pain",
+    "encoded_value": 2.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1322,
+  "fields": {
+    "question": 6159,
+    "option_text": "Neck or shoulder pain",
+    "encoded_value": 3.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1323,
+  "fields": {
+    "question": 6159,
+    "option_text": "Back pain",
+    "encoded_value": 4.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1324,
+  "fields": {
+    "question": 6159,
+    "option_text": "Stomach or abdominal pain",
+    "encoded_value": 5.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1325,
+  "fields": {
+    "question": 6159,
+    "option_text": "Hip pain",
+    "encoded_value": 6.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1326,
+  "fields": {
+    "question": 6159,
+    "option_text": "Knee pain",
+    "encoded_value": 7.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1327,
+  "fields": {
+    "question": 6159,
+    "option_text": "Pain all over the body",
+    "encoded_value": 8.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1328,
+  "fields": {
+    "question": 6159,
+    "option_text": "None of the above",
+    "encoded_value": -7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1329,
+  "fields": {
+    "question": 3799,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1330,
+  "fields": {
+    "question": 3799,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1331,
+  "fields": {
+    "question": 4067,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1332,
+  "fields": {
+    "question": 4067,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1333,
+  "fields": {
+    "question": 3404,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1334,
+  "fields": {
+    "question": 3404,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1335,
+  "fields": {
+    "question": 3571,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1336,
+  "fields": {
+    "question": 3571,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1337,
+  "fields": {
+    "question": 3741,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1338,
+  "fields": {
+    "question": 3741,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1339,
+  "fields": {
+    "question": 3414,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1340,
+  "fields": {
+    "question": 3414,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1341,
+  "fields": {
+    "question": 3773,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1342,
+  "fields": {
+    "question": 3773,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1343,
+  "fields": {
+    "question": 2956,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1344,
+  "fields": {
+    "question": 2956,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1345,
+  "fields": {
+    "question": 2335,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1346,
+  "fields": {
+    "question": 2335,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1347,
+  "fields": {
+    "question": 3606,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1348,
+  "fields": {
+    "question": 3606,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1349,
+  "fields": {
+    "question": 3751,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1350,
+  "fields": {
+    "question": 3751,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1351,
+  "fields": {
+    "question": 3616,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1352,
+  "fields": {
+    "question": 3616,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1353,
+  "fields": {
+    "question": 2345,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1354,
+  "fields": {
+    "question": 2345,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1355,
+  "fields": {
+    "question": 2415,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1356,
+  "fields": {
+    "question": 2415,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1357,
+  "fields": {
+    "question": 6150,
+    "option_text": "Heart attack",
+    "encoded_value": 1.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1358,
+  "fields": {
+    "question": 6150,
+    "option_text": "Angina",
+    "encoded_value": 2.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1359,
+  "fields": {
+    "question": 6150,
+    "option_text": "Stroke",
+    "encoded_value": 3.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1360,
+  "fields": {
+    "question": 6150,
+    "option_text": "High blood pressure",
+    "encoded_value": 4.0,
+    "option_label": "nan"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1361,
+  "fields": {
+    "question": 6150,
+    "option_text": "None of the above",
+    "encoded_value": -7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1362,
+  "fields": {
+    "question": 6152,
+    "option_text": "Blood clot in the leg (DVT)",
+    "encoded_value": 5.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1363,
+  "fields": {
+    "question": 6152,
+    "option_text": "Emphysema/chronic",
+    "encoded_value": 6.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1364,
+  "fields": {
+    "question": 6152,
+    "option_text": "Blood clot in the lung bronchitis",
+    "encoded_value": 7.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1365,
+  "fields": {
+    "question": 6152,
+    "option_text": "Asthma",
+    "encoded_value": 8.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1366,
+  "fields": {
+    "question": 6152,
+    "option_text": "Hayfever, allergic rhinitis or eczema",
+    "encoded_value": 9.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1367,
+  "fields": {
+    "question": 6152,
+    "option_text": "None of the above",
+    "encoded_value": -7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1368,
+  "fields": {
+    "question": 2443,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1369,
+  "fields": {
+    "question": 2443,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1370,
+  "fields": {
+    "question": 4041,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1371,
+  "fields": {
+    "question": 4041,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1372,
+  "fields": {
+    "question": 4041,
+    "option_text": "Not applicable",
+    "encoded_value": -2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1373,
+  "fields": {
+    "question": 2986,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1374,
+  "fields": {
+    "question": 2986,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1375,
+  "fields": {
+    "question": 2453,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1376,
+  "fields": {
+    "question": 2453,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1377,
+  "fields": {
+    "question": 2463,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1378,
+  "fields": {
+    "question": 2463,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1379,
+  "fields": {
+    "question": 6151,
+    "option_text": "Ankle",
+    "encoded_value": 1.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1380,
+  "fields": {
+    "question": 6151,
+    "option_text": "Leg",
+    "encoded_value": 2.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1381,
+  "fields": {
+    "question": 6151,
+    "option_text": "Hip",
+    "encoded_value": 3.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1382,
+  "fields": {
+    "question": 6151,
+    "option_text": "Spine",
+    "encoded_value": 4.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1383,
+  "fields": {
+    "question": 6151,
+    "option_text": "Wrist",
+    "encoded_value": 5.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1384,
+  "fields": {
+    "question": 6151,
+    "option_text": "Arm",
+    "encoded_value": 6.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1385,
+  "fields": {
+    "question": 6151,
+    "option_text": "Other bones",
+    "encoded_value": 7.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1386,
+  "fields": {
+    "question": 3005,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1387,
+  "fields": {
+    "question": 3005,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1388,
+  "fields": {
+    "question": 2473,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1389,
+  "fields": {
+    "question": 2473,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1390,
+  "fields": {
+    "question": 6177,
+    "option_text": "Cholesterol lowering medication",
+    "encoded_value": 1.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1391,
+  "fields": {
+    "question": 6177,
+    "option_text": "Blood pressure medication",
+    "encoded_value": 2.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1392,
+  "fields": {
+    "question": 6177,
+    "option_text": "Insulin",
+    "encoded_value": 3.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1393,
+  "fields": {
+    "question": 6177,
+    "option_text": "Hormone replacement therapy",
+    "encoded_value": 4.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1394,
+  "fields": {
+    "question": 6177,
+    "option_text": "Oral contraceptive pill or minipill",
+    "encoded_value": 5.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1395,
+  "fields": {
+    "question": 6177,
+    "option_text": "None of the above",
+    "encoded_value": -7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1396,
+  "fields": {
+    "question": 2492,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1397,
+  "fields": {
+    "question": 2492,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1398,
+  "fields": {
+    "question": 6154,
+    "option_text": "Aspirin",
+    "encoded_value": 1.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1399,
+  "fields": {
+    "question": 6154,
+    "option_text": "Ibuprofen (e.g. Nurofen)",
+    "encoded_value": 2.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1400,
+  "fields": {
+    "question": 6154,
+    "option_text": "Paracetamol",
+    "encoded_value": 3.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1401,
+  "fields": {
+    "question": 6154,
+    "option_text": "Ranitidine (e.g. Zantac)",
+    "encoded_value": 4.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1402,
+  "fields": {
+    "question": 6154,
+    "option_text": "Omeprazole (e.g. Zanprol)",
+    "encoded_value": 5.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1403,
+  "fields": {
+    "question": 6154,
+    "option_text": "Laxatives (e.g. Dulcolax, Senokot)",
+    "encoded_value": 6.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1404,
+  "fields": {
+    "question": 6154,
+    "option_text": "None of the above",
+    "encoded_value": -7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1405,
+  "fields": {
+    "question": 6155,
+    "option_text": "Vitamin A",
+    "encoded_value": 1.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1406,
+  "fields": {
+    "question": 6155,
+    "option_text": "Vitamin B",
+    "encoded_value": 2.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1407,
+  "fields": {
+    "question": 6155,
+    "option_text": "Vitamin C",
+    "encoded_value": 3.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1408,
+  "fields": {
+    "question": 6155,
+    "option_text": "Vitamin D",
+    "encoded_value": 4.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1409,
+  "fields": {
+    "question": 6155,
+    "option_text": "Vitamin E",
+    "encoded_value": 5.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1410,
+  "fields": {
+    "question": 6155,
+    "option_text": "Folic acid or Folate (Vit B9)",
+    "encoded_value": 6.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1411,
+  "fields": {
+    "question": 6155,
+    "option_text": "Multivitamins +/- minerals",
+    "encoded_value": 7.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1412,
+  "fields": {
+    "question": 6155,
+    "option_text": "None of the above",
+    "encoded_value": -7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1413,
+  "fields": {
+    "question": 6179,
+    "option_text": "Fish oil (including cod liver oil)",
+    "encoded_value": 1.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1414,
+  "fields": {
+    "question": 6179,
+    "option_text": "Glucosamine",
+    "encoded_value": 2.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1415,
+  "fields": {
+    "question": 6179,
+    "option_text": "Calcium",
+    "encoded_value": 3.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1416,
+  "fields": {
+    "question": 6179,
+    "option_text": "Zinc",
+    "encoded_value": 4.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1417,
+  "fields": {
+    "question": 6179,
+    "option_text": "Iron",
+    "encoded_value": 5.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1418,
+  "fields": {
+    "question": 6179,
+    "option_text": "Selenium",
+    "encoded_value": 6.0,
+    "option_label": "Toggle multiple answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1419,
+  "fields": {
+    "question": 6179,
+    "option_text": "None of the above",
+    "encoded_value": -7.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1420,
+  "fields": {
+    "question": 2247,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1421,
+  "fields": {
+    "question": 2247,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1422,
+  "fields": {
+    "question": 2257,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1423,
+  "fields": {
+    "question": 2257,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1424,
+  "fields": {
+    "question": 3393,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1425,
+  "fields": {
+    "question": 3393,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1426,
+  "fields": {
+    "question": 2375,
+    "option_text": "Younger than average",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1427,
+  "fields": {
+    "question": 2375,
+    "option_text": "About average age",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1428,
+  "fields": {
+    "question": 2375,
+    "option_text": "Older than average",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1429,
+  "fields": {
+    "question": 2385,
+    "option_text": "Younger than average",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1430,
+  "fields": {
+    "question": 2385,
+    "option_text": "About average age",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1431,
+  "fields": {
+    "question": 2385,
+    "option_text": "Older than average",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1432,
+  "fields": {
+    "question": 2395,
+    "option_text": "Pattern 1",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1433,
+  "fields": {
+    "question": 2395,
+    "option_text": "Pattern 2",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1434,
+  "fields": {
+    "question": 2395,
+    "option_text": "Pattern 3",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1435,
+  "fields": {
+    "question": 2395,
+    "option_text": "Pattern 4",
+    "encoded_value": 4.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1436,
+  "fields": {
+    "question": 2674,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1437,
+  "fields": {
+    "question": 2674,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1438,
+  "fields": {
+    "question": 2694,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1439,
+  "fields": {
+    "question": 2694,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1440,
+  "fields": {
+    "question": 2724,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1441,
+  "fields": {
+    "question": 2724,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1442,
+  "fields": {
+    "question": 2724,
+    "option_text": "Not sure - had a hysterectomy",
+    "encoded_value": 2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1443,
+  "fields": {
+    "question": 2724,
+    "option_text": "Not sure - other reason",
+    "encoded_value": 3.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1444,
+  "fields": {
+    "question": 3710,
+    "option_text": "Irregular cycle",
+    "encoded_value": -6.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1445,
+  "fields": {
+    "question": 3720,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1446,
+  "fields": {
+    "question": 3720,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1447,
+  "fields": {
+    "question": 2744,
+    "option_text": "Only had twins",
+    "encoded_value": -2.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1448,
+  "fields": {
+    "question": 2774,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1449,
+  "fields": {
+    "question": 2774,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1450,
+  "fields": {
+    "question": 2784,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1451,
+  "fields": {
+    "question": 2784,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1452,
+  "fields": {
+    "question": 2814,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1453,
+  "fields": {
+    "question": 2814,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1454,
+  "fields": {
+    "question": 3546,
+    "option_text": "Still taking HRT",
+    "encoded_value": -11.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1455,
+  "fields": {
+    "question": 3591,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1456,
+  "fields": {
+    "question": 3591,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1457,
+  "fields": {
+    "question": 2834,
+    "option_text": "No",
+    "encoded_value": 0.0,
+    "option_label": "Select one answer"
+  }
+},
+{
+  "model": "accounts.cvd_risk_questionresponseoptions",
+  "pk": 1458,
+  "fields": {
+    "question": 2834,
+    "option_text": "Yes",
+    "encoded_value": 1.0,
+    "option_label": "Select one answer"
+  }
+}
+]

@@ -288,22 +288,45 @@
         
         <!-- Risk Score Display (if available) -->
         {% if request.session.risk_score %}
-          <div class="risk-score-display" data-aos="fade-up">
+        <div class="risk-score-display" data-aos="fade-up">
             <div class="d-flex justify-content-between align-items-center">
-              <div>
-                <div class="risk-score-value">{{ request.session.risk_score|floatformat:2 }}%</div>
-                <div class="risk-score-label">Current CVD Risk Score</div>
-              </div>
-              <div class="text-end">
-                <i class="bi bi-heart-pulse" style="font-size: 2rem; opacity: 0.7;"></i>
-                {% if request.session.risk_category %}
-                  <div class="mt-1">
-                    <small>Category: {{ request.session.risk_category|title }}</small>
-                  </div>
-                {% endif %}
-              </div>
+
+                <div>
+                    <div class="risk-score-value">
+                        {{ request.session.risk_score|floatformat:2 }}%
+                    </div>
+                    <div class="risk-score-label">
+                        Current CVD Risk Score
+                    </div>
+                </div>
+
+                <div class="text-end">
+                    <i class="bi bi-heart-pulse"
+                      style="font-size: 2rem; opacity: 0.7;"></i>
+
+                    {% if request.session.risk_category %}
+                    <div class="mt-1">
+                        <small>
+                            Category: {{ request.session.risk_category|title }}
+                        </small>
+                    </div>
+                    {% endif %}
+                </div>
+
             </div>
-          </div>
+        </div>
+
+        {% if risk_plot %}
+        <div class="card mb-4">
+            <div class="card-body text-center">
+                <img
+                    src="data:image/png;base64,{{ risk_plot }}"
+                    class="img-fluid"
+                    alt="Risk distribution">
+            </div>
+        </div>
+        {% endif %}
+
         {% endif %}
         
         <!-- Category Tabs -->
