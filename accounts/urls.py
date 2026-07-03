@@ -64,7 +64,8 @@ name='password_reset_complete'),
     path('download-filtered-data/', views.download_filtered_data, name='download_filtered_data'),
     path('download-single-patient-data/<int:row_index>/', views.download_single_patient_data, name='download_single_patient_data'),
 
-    path('download_patient_plots/<int:row_index>/', views.download_patient_plots, name='download_patient_plots'),
+    path('download_patient_plots/<int:row_index>/', views.download_patient_plots, name='download_patient_plots')
+
 
 ]
 

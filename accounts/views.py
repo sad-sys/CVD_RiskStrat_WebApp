@@ -48,8 +48,36 @@ import joblib
 from .utils import should_display_question
 from Questionnaire_data.utils import get_visible_questions_for_patient_in_category
 
+# --- TAVI Forest Model (JSON-based) ---
+_TAVI_FOREST_PATH = os.path.join(settings.BASE_DIR, 'TAVR_model', 'forest_export.json')
+try:
+    with open(_TAVI_FOREST_PATH) as _f:
+        _TAVI_FOREST = json.load(_f)
+except FileNotFoundError:
+    _TAVI_FOREST = None
 
+_TAVI_FEATURE_ORDER = [
+    "Age", "Diabetes", "Ex_smoking", "Hypertension", "Creatinine",
+    "Pre-operative_heart_rhythm", "Baseline_Hb", "Poor_mobility",
+    "FEV1", "Predicted_VC", "FEV1_VC", "Katz_Index", "TR"
+]
 
+def _tavi_predict_tree(tree, x):
+    node = 0
+    while tree["left"][node] != tree["right"][node]:
+        feat = tree["feature"][node]
+        thresh = tree["threshold"][node]
+        node = tree["left"][node] if x[feat] <= thresh else tree["right"][node]
+    return tree["value"][node]
+
+def _tavi_predict(x):
+    n_classes = len(_TAVI_FOREST["classes"])
+    total = np.zeros(n_classes)
+    for tree in _TAVI_FOREST["trees"]:
+        leaf = np.array(_tavi_predict_tree(tree, x), dtype=float)
+        total += leaf / leaf.sum()
+    return total / len(_TAVI_FOREST["trees"])
+# --- End TAVI ---
 
 thresholds = pd.read_csv("model_files/FinalSolFront1 (1).csv").iloc[0]
 CATEGORY_THRESHOLDS = {
@@ -66,12 +94,12 @@ CATEGORY_ORDER = ["Sociodemographics", "Health and medical history", "Sex-specif
                   "Psychosocial factors"]
 # UK Biobank-like risk distribution parameters (from Full Cox PH Model simulation, N=100,000) Andy
 UKB_DISTRIBUTION = {
-    'mean': -0.67,
+    'mean': -1.385,
     'std': 2.74,
-    'p5': -5.18,   
-    'p25': -2.52,  
-    'p75': 1.18,   
-    'p95': 3.84,   
+    'p5': -5.892,   
+    'p25': -3.248,  
+    'p75': 0.474,   
+    'p95': 3.129,   
 }
 # Andy
 
@@ -1024,65 +1052,26 @@ def batch_prediction(request):
         context['rows_per_page'] = 10
         context['page_obj'] = None  # Pagination can be added if needed
         request.session['batch_results'] = df.to_json(orient='records')  # For download
+
+        import json # (for features distribution result)
+        context['all_results'] = df.to_json(orient='records')
+        context['all_columns'] = [col for col in df.columns if col not in ['Risk Category', 'Percentile', 'Predicted Risk']]
+
     return render(request, 'admin/batch_prediction.html', context)
 
-# Andy (TAVI model)
-@login_required
-@user_passes_test(lambda u: u.is_superuser or u.is_staff or u.role == 'clinician_approved')
-def tavi_prediction(request):
-    clinician = Clinicians.objects.get(user=request.user)
-    perms, _ = ClinicianPermissions.objects.get_or_create(clinician=clinician)
-    if not perms.can_access_tavi:
-        return render(request, 'clinicians/no_permission.html', {'feature': 'TAVI Prediction'})
-    context = {}
-    if request.method == 'POST' and request.FILES.get('csv_file'):
-        csv_file = request.FILES['csv_file']
-        try:
-            csv_content = csv_file.read()
-        except Exception as e:
-            context['error'] = f"Error reading CSV: {e}"
-            return render(request, 'clinicians/tavi_prediction.html', context)
 
-        try:
-            import requests as http_requests
-            files = {'file': ('data.csv', csv_content, 'text/csv')}
-            response = http_requests.post('http://127.0.0.1:8001/predict', files=files)
-            response.raise_for_status()
-            results = response.json()
-
-            if results:
-                context['show_results'] = True
-                context['columns'] = list(results[0].keys())
-                context['rows'] = [list(row.values()) for row in results]
-                request.session['tavi_results'] = response.text
-
-        except Exception as e:
-            context['error'] = f"Prediction error: {e}"
-
-    return render(request, 'clinicians/tavi_prediction.html', context)
-
+# TAVI template
 def download_tavi_template(request):
     import csv
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="tavi_template.csv"'
     writer = csv.writer(response)
     writer.writerow([
-        'Age',
-        'Diabetes mellitus',
-        'Previous smoking history',
-        'Hypertension',
-        'Creatinine',
-        'Atrial fibrillation / Preprocedural heart rhythm',
-        'Haemoglobin',
-        'Poor mobility',
-        'FEV1/FVC ratio',
-        'Predicted VC (Predicted Vital Capacity)',
-        'Katz Index of Independence',
-        'Moderate or greater Tricuspid Regurgitation (TR)',
-        'FEV1'
+        'Age', 'Diabetes', 'Ex_smoking', 'Hypertension', 'Creatinine',
+        'Pre-operative_heart_rhythm', 'Baseline_Hb', 'Poor_mobility',
+        'FEV1', 'Predicted_VC', 'FEV1_VC', 'Katz_Index', 'TR'
     ])
     return response
-
 # Andy
 
 def download_data_entry_template(request):
@@ -1303,3 +1292,38 @@ def download_patient_plots(request, row_index):
     response = HttpResponse(zip_buffer, content_type='application/zip')
     response['Content-Disposition'] = f'attachment; filename=patient_{row_index}_plots.zip'
     return response
+
+# TAVI view Andy (json)
+@login_required
+def tavi_prediction(request):
+    context = {}
+    if request.method == 'POST' and request.FILES.get('csv_file'):
+        if _TAVI_FOREST is None:
+            context['error'] = "TAVI model file (forest_export.json) not found. Please check TAVR_model/ folder."
+            return render(request, 'clinicians/tavi_prediction.html', context)
+        try:
+            df = pd.read_csv(request.FILES['csv_file'])
+            missing = [f for f in _TAVI_FEATURE_ORDER if f not in df.columns]
+            if missing:
+                context['error'] = f"Missing columns in CSV: {', '.join(missing)}"
+                return render(request, 'clinicians/tavi_prediction.html', context)
+            results = []
+            for i, row in df.iterrows():
+                x = np.array([float(row[f]) for f in _TAVI_FEATURE_ORDER])
+                probs = _tavi_predict(x)
+                risk_score = float(probs[1])
+                if risk_score < 0.5:
+                    cat = 'Low'
+                else:
+                    cat = 'High'
+                results.append({
+                    'Patient': i + 1,
+                    **{f: row[f] for f in _TAVI_FEATURE_ORDER},
+                    'Risk Score': round(risk_score, 4),
+                    'Risk Category': cat,
+                })
+            context['results'] = results
+            context['columns'] = list(results[0].keys()) if results else []
+        except Exception as e:
+            context['error'] = f"Prediction error: {e}"
+    return render(request, 'clinicians/tavi_prediction.html', context)

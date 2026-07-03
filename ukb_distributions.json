@@ -1,0 +1,12 @@
+{
+  "Age": [
+    {"range": "40-49", "count": 12453, "percentage": 18.2},
+    {"range": "50-59", "count": 28901, "percentage": 42.3},
+    {"range": "60-69", "count": 21034, "percentage": 30.8},
+    {"range": "70+",   "count": 5912,  "percentage": 8.7}
+  ],
+  "Diabetes": [
+    {"range": "No (0)", "count": 61200, "percentage": 95.1},
+    {"range": "Yes (1)","count": 3150,  "percentage": 4.9}
+  ]
+}
