@@ -1,0 +1,120 @@
+<!-- Disclaimer Modal -->
+<div
+    class="modal fade"
+    id="noticeModal"
+    tabindex="-1"
+    aria-labelledby="noticeModalLabel"
+    aria-hidden="true"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+>
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content notice-modal">
+
+            <div class="modal-header border-0">
+                <h2 class="modal-title" id="noticeModalLabel">
+                    Before you continue
+                </h2>
+            </div>
+
+            <div class="modal-body">
+                <p>
+                    This cardiovascular risk assessment is intended for
+                    research and educational purposes only.
+                </p>
+
+                <p>
+                    It is <strong>not</strong> a medical diagnosis and should
+                    not replace advice from a qualified healthcare professional.
+                </p>
+
+                <p>
+                    By clicking <strong>Okay</strong>, you acknowledge that you
+                    have read and understood this information.
+                </p>
+            </div>
+
+            <div class="modal-footer border-0 justify-content-center">
+                <button
+                    type="button"
+                    id="acceptDisclaimer"
+                    class="btn btn-primary px-5"
+                    data-bs-dismiss="modal"
+                >
+                    Okay
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<style>
+.notice-modal {
+    min-height: 550px;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+}
+
+.notice-modal .modal-title {
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+.notice-modal .modal-body {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.notice-modal .btn {
+    min-width: 220px;
+    min-height: 50px;
+    border-radius: 30px;
+}
+
+.modal-backdrop.show {
+    opacity: 0.75;
+}
+
+@media (max-width: 767px) {
+    .notice-modal {
+        min-height: auto;
+    }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const modalElement = document.getElementById("noticeModal");
+    const acceptButton = document.getElementById("acceptDisclaimer");
+
+
+    if (
+        !modalElement ||
+        !acceptButton ||
+        typeof bootstrap === "undefined" ||
+        typeof bootstrap.Modal === "undefined"
+    ) {
+        return;
+    }
+
+    const hasAccepted =
+        localStorage.getItem("disclaimerAccepted") === "true";
+
+    if (hasAccepted) {
+        return;
+    }
+
+    const noticeModal = new bootstrap.Modal(modalElement, {
+        backdrop: "static",
+        keyboard: false
+    });
+
+    acceptButton.addEventListener("click", function () {
+        localStorage.setItem("disclaimerAccepted", "true");
+    });
+
+    noticeModal.show();
+});
+</script>
