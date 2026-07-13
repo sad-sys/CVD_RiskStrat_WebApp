@@ -1,120 +1,88 @@
-<!-- Disclaimer Modal -->
+<!-- Blocking popup -->
 <div
-    class="modal fade"
-    id="noticeModal"
-    tabindex="-1"
-    aria-labelledby="noticeModalLabel"
-    aria-hidden="true"
-    data-bs-backdrop="static"
-    data-bs-keyboard="false"
+  class="modal fade"
+  id="noticeModal"
+  tabindex="-1"
+  aria-labelledby="noticeModalLabel"
+  aria-hidden="true"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
 >
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content notice-modal">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content notice-modal-content">
 
-            <div class="modal-header border-0">
-                <h2 class="modal-title" id="noticeModalLabel">
-                    Before you continue
-                </h2>
-            </div>
+      <div class="modal-header border-0 px-4 px-md-5 pt-4 pb-2">
+        <h2 class="modal-title" id="noticeModalLabel">
+          Before you continue
+        </h2>
+      </div>
 
-            <div class="modal-body">
-                <p>
-                    This cardiovascular risk assessment is intended for
-                    research and educational purposes only.
-                </p>
+      <div class="modal-body px-4 px-md-5 py-3">
+        <p>
+          Please read the following information before using this website.
+        </p>
 
-                <p>
-                    It is <strong>not</strong> a medical diagnosis and should
-                    not replace advice from a qualified healthcare professional.
-                </p>
+        <p>
+          This tool provides an estimated cardiovascular risk based on the
+          information you enter. It is intended for informational and research
+          purposes and is not a medical diagnosis.
+        </p>
 
-                <p>
-                    By clicking <strong>Okay</strong>, you acknowledge that you
-                    have read and understood this information.
-                </p>
-            </div>
+        <p>
+          Your results should not replace advice from a qualified healthcare
+          professional. Contact a healthcare professional if you have concerns
+          about your health.
+        </p>
 
-            <div class="modal-footer border-0 justify-content-center">
-                <button
-                    type="button"
-                    id="acceptDisclaimer"
-                    class="btn btn-primary px-5"
-                    data-bs-dismiss="modal"
-                >
-                    Okay
-                </button>
-            </div>
+        <p class="mb-0">
+          By clicking <strong>Okay</strong>, you confirm that you understand
+          this information.
+        </p>
+      </div>
 
-        </div>
+      <div class="modal-footer border-0 justify-content-center px-4 px-md-5 pb-4">
+        <button
+          type="button"
+          class="btn btn-primary notice-confirm-button"
+          data-bs-dismiss="modal"
+        >
+          Okay
+        </button>
+      </div>
+
     </div>
+  </div>
 </div>
-
-<style>
-.notice-modal {
-    min-height: 550px;
-    padding: 15px;
-    border: none;
-    border-radius: 20px;
-}
-
-.notice-modal .modal-title {
-    font-size: 2.2rem;
-    font-weight: 500;
-}
-
-.notice-modal .modal-body {
-    font-size: 1.1rem;
-    line-height: 1.8;
-}
-
-.notice-modal .btn {
-    min-width: 220px;
-    min-height: 50px;
-    border-radius: 30px;
-}
-
-.modal-backdrop.show {
-    opacity: 0.75;
-}
-
-@media (max-width: 767px) {
-    .notice-modal {
-        min-height: auto;
-    }
-}
-</style>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+
     const modalElement = document.getElementById("noticeModal");
-    const acceptButton = document.getElementById("acceptDisclaimer");
 
-
-    if (
-        !modalElement ||
-        !acceptButton ||
-        typeof bootstrap === "undefined" ||
-        typeof bootstrap.Modal === "undefined"
-    ) {
+    if (!modalElement || typeof bootstrap === "undefined") {
         return;
     }
 
-    const hasAccepted =
-        localStorage.getItem("disclaimerAccepted") === "true";
+    // Only use localStorage if assessment.html has set this flag
+    if (window.isAssessmentPage) {
 
-    if (hasAccepted) {
-        return;
+        if (localStorage.getItem("assessmentDisclaimerAccepted") === "true") {
+            return;
+        }
+
     }
 
-    const noticeModal = new bootstrap.Modal(modalElement, {
-        backdrop: "static",
-        keyboard: false
+    const modal = bootstrap.Modal.getOrCreateInstance(modalElement);
+
+    modal.show();
+
+    document.querySelector(".notice-confirm-button").addEventListener("click", function () {
+
+        if (window.isAssessmentPage) {
+            localStorage.setItem("assessmentDisclaimerAccepted", "true");
+        }
+
     });
 
-    acceptButton.addEventListener("click", function () {
-        localStorage.setItem("disclaimerAccepted", "true");
-    });
-
-    noticeModal.show();
 });
 </script>

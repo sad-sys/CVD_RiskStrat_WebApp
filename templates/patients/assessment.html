@@ -4,7 +4,11 @@
 {% block title %}CVD Risk Assessment - CVD Risk Predictor{% endblock %}
 
 {% block content %}
-{% include 'users/disclaimer.html' %}
+<script>
+    window.isAssessmentPage = true;
+</script>
+
+{% include "users/disclaimer.html" %}
 
 <style>
   .assessment-container {
