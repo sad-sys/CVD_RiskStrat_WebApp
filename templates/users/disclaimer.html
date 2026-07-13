@@ -63,13 +63,16 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    // Only use localStorage if assessment.html has set this flag
     if (window.isAssessmentPage) {
 
         if (localStorage.getItem("assessmentDisclaimerAccepted") === "true") {
             return;
         }
 
+    }
+    else
+    {
+        localStorage.removeItem("assessmentDisclaimerAccepted");
     }
 
     const modal = bootstrap.Modal.getOrCreateInstance(modalElement);
