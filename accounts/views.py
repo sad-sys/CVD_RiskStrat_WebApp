@@ -890,6 +890,9 @@ def view_results_by_submission(request, submission_id):
 def learn_cvd(request):
     return render(request, 'medilab/learn.html')
 
+def acknowledgements(request):
+    return render(request, 'medilab/acknowledgements.html')
+
 
 @login_required
 def clinician_dashboard(request):

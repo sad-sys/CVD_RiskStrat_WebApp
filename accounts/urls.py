@@ -7,6 +7,7 @@ from accounts.views import assessment_view
 urlpatterns = [
     path('starter/', views.home_view, name='starter-page'),
     path('learn-cvd/', views.learn_cvd, name='learn_cvd'),
+    path('acknowledgements/', views.acknowledgements, name='acknowledgements'),
     path('request-access/', views.request_access_view, name='request_access'),
     path('login/', views.login_view, name='login'),
     path('logout/', views.logout_view, name='logout'),

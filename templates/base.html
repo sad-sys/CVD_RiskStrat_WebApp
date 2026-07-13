@@ -113,6 +113,9 @@ rel="stylesheet">
                         <li>
                             <a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}btn btn-primary text-white px-4 py-1{% else %}nav-link{% endif %}" style="border-radius: 25px;">Contact</a>
                         </li>
+                        <li>
+                            <a href="{% url 'acknowledgements' %}" class="{% if request.resolver_match.url_name == 'contact' %}btn btn-primary text-white px-4 py-1{% else %}nav-link{% endif %}" style="border-radius: 25px;">Acknowledgements</a>
+                        </li>
                         
                         <!-- Authentication-specific Links -->
                         {% if user.is_authenticated %}
