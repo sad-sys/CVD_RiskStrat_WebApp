@@ -483,6 +483,7 @@ def assessment_view(request):
                     model = joblib.load(model_path)
                     print("🧾 Final columns before prediction:", df_scaled.columns.tolist())
                     print("🧾 Final values before prediction:", df_scaled.iloc[0].tolist())
+                    # Export the fitted random forests from IterativeImputer
 
 
                     # Predict risk 
