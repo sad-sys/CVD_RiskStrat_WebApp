@@ -978,6 +978,8 @@ def batch_prediction(request):
 
         try:
             df = pd.read_csv(csv_file)
+            bool_cols = df.select_dtypes(include='bool').columns
+            df[bool_cols] = df[bool_cols].astype(int)
         except Exception as e:
             context['error'] = f"Error reading CSV: {e}"
             return render(request, 'admin/batch_prediction.html', context)
