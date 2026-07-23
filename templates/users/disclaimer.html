@@ -1,4 +1,4 @@
-<!-- Blocking popup -->
+<!-- PRECISE-CVD blocking notice -->
 <div
   class="modal fade"
   id="noticeModal"
@@ -8,84 +8,1025 @@
   data-bs-backdrop="static"
   data-bs-keyboard="false"
 >
-  <div class="modal-dialog modal-dialog-centered modal-lg">
+  <div class="modal-dialog modal-dialog-centered modal-xl notice-modal-dialog">
     <div class="modal-content notice-modal-content">
 
-      <div class="modal-header border-0 px-4 px-md-5 pt-4 pb-2">
-        <h2 class="modal-title" id="noticeModalLabel">
-          Before you continue
-        </h2>
+      <!-- Fixed header -->
+      <div class="modal-header border-0 px-4 px-md-5 pt-4 pb-3">
+        <div>
+          <p class="notice-eyebrow mb-1">PRECISE-CVD</p>
+
+          <h2 class="modal-title" id="noticeModalLabel">
+            Important notice
+          </h2>
+
+          <p class="text-muted mb-0 mt-2">
+            Please read this information before using the platform.
+          </p>
+        </div>
       </div>
 
-      <div class="modal-body px-4 px-md-5 py-3">
-        <p>
-          Please read the following information before using this website.
-        </p>
+      <!-- Scrollable content -->
+      <div class="modal-body notice-modal-body px-4 px-md-5 py-3">
 
-        <p>
-          This tool provides an estimated cardiovascular risk based on the
-          information you enter. It is intended for informational and research
-          purposes and is not a medical diagnosis.
-        </p>
-
-        <p>
-          Your results should not replace advice from a qualified healthcare
-          professional. Contact a healthcare professional if you have concerns
-          about your health.
-        </p>
-
-        <p class="mb-0">
-          By clicking <strong>Okay</strong>, you confirm that you understand
-          this information.
-        </p>
-      </div>
-
-      <div class="modal-footer border-0 justify-content-center px-4 px-md-5 pb-4">
-        <button
-          type="button"
-          class="btn btn-primary notice-confirm-button"
-          data-bs-dismiss="modal"
+        <!-- Core Warning -->
+        <section
+          class="notice-core-warning"
+          aria-labelledby="coreWarningHeading"
         >
-          Okay
-        </button>
+          <div class="d-flex align-items-start gap-3">
+            <div class="notice-warning-icon" aria-hidden="true">
+              <i class="bi bi-exclamation-triangle-fill"></i>
+            </div>
+
+            <div>
+              <h3 id="coreWarningHeading" class="h4 mb-3">
+                PRECISE-CVD — Important Notice
+              </h3>
+
+              <p>
+                <strong>PRECISE-CVD is a research platform and is for research
+                use only. It must not be used for clinical decision-making.</strong>
+              </p>
+
+              <p class="mb-2">
+                Do not use any output from this platform for:
+              </p>
+
+              <ul>
+                <li>Patient diagnosis</li>
+                <li>Treatment planning</li>
+                <li>Prescribing decisions</li>
+                <li>Any form of clinical care</li>
+              </ul>
+
+              <p>
+                The outputs of this platform do not constitute medical advice.
+                Before making any healthcare decisions, please consult a
+                qualified medical professional.
+              </p>
+
+              <p class="mb-0">
+                <strong>Data Controller:</strong> King's College London
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <p class="notice-expand-instruction">
+          Expand each section below to read the full information.
+        </p>
+
+        <!-- Accordion -->
+        <div class="accordion notice-accordion" id="noticeInformationAccordion">
+
+          <!-- Privacy Notice -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="privacyNoticeHeading">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#privacyNoticeCollapse"
+                aria-expanded="true"
+                aria-controls="privacyNoticeCollapse"
+              >
+                PRECISE-CVD Privacy Notice
+              </button>
+            </h3>
+
+            <div
+              id="privacyNoticeCollapse"
+              class="accordion-collapse collapse show"
+              aria-labelledby="privacyNoticeHeading"
+              data-bs-parent="#noticeInformationAccordion"
+            >
+              <div class="accordion-body notice-legal-content">
+
+                <h4>1. Who we are</h4>
+                <p>
+                  This research is conducted by King's College London, School
+                  of Cardiovascular and Metabolic Medicine and Sciences. The
+                  research team is led by Dr Konstantinos Theofilatos.
+                </p>
+
+                <h4>2. Contact details</h4>
+
+                <p>
+                  <strong>Research Leader:</strong><br>
+                  Dr Konstantinos Theofilatos<br>
+                  Lecturer at King's College London<br>
+                  Email:
+                  <a href="mailto:konstantinos.theofilatos@kcl.ac.uk">
+                    konstantinos.theofilatos@kcl.ac.uk
+                  </a>
+                </p>
+
+                <p>
+                  <strong>King's College London Data Protection Officer:</strong><br>
+                  <a href="mailto:info-compliance@kcl.ac.uk">
+                    info-compliance@kcl.ac.uk
+                  </a>
+                </p>
+
+                <address>
+                  <strong>Address:</strong><br>
+                  King's College London<br>
+                  School of Cardiovascular and Metabolic Medicine &amp; Sciences<br>
+                  British Heart Foundation Centre of Excellence<br>
+                  James Black Centre<br>
+                  125 Coldharbour Lane<br>
+                  London SE5 9NU
+                </address>
+
+                <h4>3. What personal data we collect</h4>
+                <p>
+                  We may collect the following categories of personal data:
+                </p>
+
+                <ul>
+                  <li>Demographic information, including age, sex and ethnicity</li>
+                  <li>
+                    Health data, including blood pressure, cholesterol,
+                    glucose, BMI, smoking status and medical history
+                  </li>
+                  <li>Genetic data, including polygenic risk scores</li>
+                  <li>Metabolomic data, including blood metabolite profiles</li>
+                  <li>
+                    Questionnaire responses, including lifestyle, family
+                    history and psychosocial factors
+                  </li>
+                </ul>
+
+                <h4>4. How we collect your data</h4>
+                <p>Data may be collected through:</p>
+
+                <ul>
+                  <li>
+                    Self-reported questionnaires completed through the platform
+                  </li>
+                  <li>
+                    Electronic health records, where appropriate permissions
+                    are in place
+                  </li>
+                  <li>Biological sample analysis, where applicable</li>
+                </ul>
+
+                <h4>5. Legal basis for processing</h4>
+
+                <p>
+                  We process personal data under the following legal bases:
+                </p>
+
+                <ul>
+                  <li>
+                    <strong>UK GDPR Article 6(1)(e) — Public Task:</strong>
+                    this research is conducted in the public interest and forms
+                    part of the University's official research functions.
+                  </li>
+
+                  <li>
+                    <strong>
+                      UK GDPR Article 9(2)(j) — Scientific Research Purposes:
+                    </strong>
+                    health and other special-category data are processed for
+                    scientific research purposes in accordance with the Data
+                    Protection Act 2018, including Schedule 1, Part 1,
+                    Paragraph 4.
+                  </li>
+                </ul>
+
+                <h4>6. How we use your data</h4>
+                <p>Your data may be used to:</p>
+
+                <ul>
+                  <li>
+                    Develop and validate cardiovascular risk-prediction models
+                  </li>
+                  <li>
+                    Conduct research on relationships between biomarkers and
+                    disease outcomes
+                  </li>
+                  <li>Improve population-scale screening programmes</li>
+                  <li>Generate generalisable scientific knowledge</li>
+                </ul>
+
+                <h4>7. Data sharing</h4>
+                <p>
+                  Your directly identifiable personal data will not be shared
+                  with third parties except where this has been appropriately
+                  authorised and protected.
+                </p>
+
+                <p>
+                  Anonymised or aggregated data may be used in academic
+                  publications. Data may also be shared with approved research
+                  collaborators under appropriate data-protection agreements.
+                </p>
+
+                <h4>8. Data retention</h4>
+                <p>
+                  Your data will be retained for the duration of the research
+                  project, which is currently expected to be five years. After
+                  the applicable retention period, the data will be anonymised,
+                  securely archived or securely deleted in accordance with
+                  King's College London policies and the study protocol.
+                </p>
+
+                <h4>9. Data security</h4>
+                <p>
+                  We use appropriate technical and organisational measures to
+                  protect personal data. These measures may include encryption,
+                  access controls, separation of identifying information,
+                  restricted research-team access and secure storage on
+                  UK-based infrastructure.
+                </p>
+
+                <h4>10. Your rights under UK GDPR</h4>
+                <p>
+                  Depending on the circumstances and the lawful basis used, you
+                  may have the following rights:
+                </p>
+
+                <ul>
+                  <li>
+                    <strong>Right of access:</strong>
+                    you may request a copy of personal data held about you.
+                  </li>
+
+                  <li>
+                    <strong>Right to rectification:</strong>
+                    you may request the correction of inaccurate or incomplete
+                    data.
+                  </li>
+
+                  <li>
+                    <strong>Right to erasure:</strong>
+                    in certain circumstances, you may request deletion of your
+                    data. This right may be limited where deletion would
+                    seriously impair the research.
+                  </li>
+
+                  <li>
+                    <strong>Right to restrict processing:</strong>
+                    you may request that processing be restricted in certain
+                    circumstances. This right may be limited in the research
+                    context.
+                  </li>
+
+                  <li>
+                    <strong>Right to object:</strong>
+                    you may object to processing carried out under the public
+                    task lawful basis in certain circumstances.
+                  </li>
+
+                  <li>
+                    <strong>Withdrawal from the study:</strong>
+                    you may stop participating at any time. Because the lawful
+                    basis for processing is public task rather than consent,
+                    withdrawal does not automatically require the deletion of
+                    information already collected. Requests will be assessed
+                    individually.
+                  </li>
+
+                  <li>
+                    <strong>Right to data portability:</strong>
+                    this right may not apply, or may be limited, where
+                    processing is carried out as a public task or for scientific
+                    research.
+                  </li>
+
+                  <li>
+                    <strong>Right to lodge a complaint:</strong>
+                    you may complain to King's College London or to the
+                    Information Commissioner's Office.
+                  </li>
+                </ul>
+
+                <h4>11. Automated decision-making</h4>
+                <p>
+                  The platform uses algorithmic models to generate risk
+                  predictions. These predictions are produced solely for
+                  research purposes and are not used to make automated clinical
+                  decisions about individuals.
+                </p>
+
+                <h4>12. International transfers</h4>
+                <p>
+                  Personal data is intended to be stored within the United
+                  Kingdom using Google Cloud Platform infrastructure located in
+                  UK data centres. We do not currently intend to transfer
+                  personal data outside the UK.
+                </p>
+
+                <h4>13. Changes to this notice</h4>
+                <p class="mb-0">
+                  We may update this Privacy Notice when required. The latest
+                  version will be made available through this platform.
+                </p>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Participant Information Sheet -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="participantInformationHeading">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#participantInformationCollapse"
+                aria-expanded="false"
+                aria-controls="participantInformationCollapse"
+              >
+                PRECISE-CVD Participant Information Sheet
+              </button>
+            </h3>
+
+            <div
+              id="participantInformationCollapse"
+              class="accordion-collapse collapse"
+              aria-labelledby="participantInformationHeading"
+              data-bs-parent="#noticeInformationAccordion"
+            >
+              <div class="accordion-body notice-legal-content">
+
+                <p>
+                  We will need to use information that you provide about
+                  yourself for this research project. This information may
+                  include your name, contact details and health information
+                  provided through the PRECISE-CVD platform.
+                </p>
+
+                <p>
+                  Authorised people may use this information to conduct the
+                  research or to ensure that the research is being carried out
+                  correctly.
+                </p>
+
+                <p>
+                  People who do not need to know your identity will not be able
+                  to see your name or contact details. Wherever possible, your
+                  research data will be identified using a study code instead.
+                </p>
+
+                <h4>How we keep your information secure</h4>
+
+                <p>We will protect your information by:</p>
+
+                <ul>
+                  <li>
+                    Storing data on secure, password-protected University or
+                    approved research infrastructure
+                  </li>
+                  <li>
+                    Restricting access to authorised members of the research
+                    team
+                  </li>
+                  <li>
+                    Using a unique study code and keeping identifying
+                    information separate from research data
+                  </li>
+                  <li>
+                    Encrypting data transfers and following University security
+                    policies
+                  </li>
+                  <li>
+                    Training research staff in data protection and
+                    confidentiality
+                  </li>
+                </ul>
+
+                <p>
+                  Your data is not intended to be shared outside the United
+                  Kingdom.
+                </p>
+
+                <h4>What happens after the study?</h4>
+
+                <p>
+                  After the study finishes, we may retain some study data so
+                  that the results can be checked and the research can be
+                  verified.
+                </p>
+
+                <p>
+                  Reports and publications will be written so that individuals
+                  cannot reasonably be identified. Study data will be retained
+                  for a maximum of five years after the study ends, unless a
+                  different period is required by law, the study protocol or
+                  University research-governance policies.
+                </p>
+
+                <p>
+                  At the end of the retention period, data will be fully
+                  anonymised, securely archived or securely destroyed.
+                </p>
+
+                <h4>What choices do you have?</h4>
+
+                <p>
+                  You may stop taking part in the study at any time without
+                  giving a reason. If you withdraw, we will not collect further
+                  information from you unless this is necessary to close your
+                  participation safely or meet a legal requirement.
+                </p>
+
+                <p>
+                  Information already collected may continue to be retained and
+                  used where this is necessary to preserve the integrity of the
+                  research or meet legal and regulatory requirements.
+                </p>
+
+                <p>
+                  You may ask us to remove, change or delete personal data held
+                  about you for the study. We may not always be able to fulfil
+                  the request where doing so would seriously impair the
+                  research. Where this applies, we will explain the reason.
+                </p>
+
+                <p>
+                  Data collected through this study will not be used for
+                  unrelated future research without the appropriate ethical,
+                  legal and governance approvals.
+                </p>
+
+                <h4>
+                  Where can you find out more about how your information is
+                  used?
+                </h4>
+
+                <p>You can obtain more information by:</p>
+
+                <ul>
+                  <li>Contacting a member of the research team</li>
+
+                  <li>
+                    Emailing
+                    <a href="mailto:konstantinos.theofilatos@kcl.ac.uk">
+                      konstantinos.theofilatos@kcl.ac.uk
+                    </a>
+                  </li>
+
+                  <li>
+                    Emailing the King's College London Data Protection Officer
+                    at
+                    <a href="mailto:info-compliance@kcl.ac.uk">
+                      info-compliance@kcl.ac.uk
+                    </a>
+                  </li>
+
+                  <li>
+                    Visiting the
+                    <a
+                      href="https://www.hra.nhs.uk/information-about-patients/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Health Research Authority information for patients
+                    </a>
+                  </li>
+                </ul>
+
+                <p class="mb-0">
+                  Data Protection Officer telephone number:
+                  <strong>[DPO phone number to be confirmed]</strong>
+                </p>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Terms of Use -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="termsOfUseHeading">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#termsOfUseCollapse"
+                aria-expanded="false"
+                aria-controls="termsOfUseCollapse"
+              >
+                Terms of Use
+              </button>
+            </h3>
+
+            <div
+              id="termsOfUseCollapse"
+              class="accordion-collapse collapse"
+              aria-labelledby="termsOfUseHeading"
+              data-bs-parent="#noticeInformationAccordion"
+            >
+              <div class="accordion-body notice-legal-content">
+
+                <h4>1. Acceptance of terms</h4>
+                <p>
+                  By using this platform, you agree to be bound by these Terms
+                  of Use. If you do not agree with these terms, you must not use
+                  the platform.
+                </p>
+
+                <h4>2. Platform purpose</h4>
+                <p>
+                  This platform is for research use only. It is not intended for
+                  clinical decision-making and is not approved as a medical
+                  device under the UK Medical Devices Regulations 2002.
+                </p>
+
+                <h4>3. Research context</h4>
+                <p>
+                  The platform implements risk-prediction models developed
+                  using research data, including UK Biobank data. These models
+                  have been developed and evaluated in research cohorts and are
+                  intended to support research and generate scientific
+                  hypotheses. They must not be used to guide patient care.
+                </p>
+
+                <h4>4. Disclaimer of medical liability</h4>
+                <p>The outputs of this platform:</p>
+
+                <ul>
+                  <li>
+                    Do not constitute medical advice, diagnosis or treatment
+                  </li>
+                  <li>
+                    Are not a substitute for professional clinical judgement
+                  </li>
+                  <li>Are provided for research purposes only</li>
+                </ul>
+
+                <h4>5. User responsibility</h4>
+                <p>You are responsible for:</p>
+
+                <ul>
+                  <li>Using the platform only for appropriate research purposes</li>
+                  <li>
+                    Ensuring that your use complies with applicable laws,
+                    regulations and institutional policies
+                  </li>
+                  <li>
+                    Not using the platform's outputs to make clinical decisions
+                  </li>
+                  <li>
+                    Independently evaluating any research conclusions drawn
+                    from platform outputs
+                  </li>
+                </ul>
+
+                <h4>6. Data accuracy</h4>
+                <p>
+                  You are responsible for the accuracy and completeness of any
+                  data that you submit. The platform depends on the information
+                  supplied to it, and inaccurate or incomplete inputs may
+                  produce inaccurate or unreliable outputs.
+                </p>
+
+                <h4>7. Intellectual property</h4>
+                <p>
+                  Unless otherwise stated, the platform's content, algorithms,
+                  software and associated materials are owned by or licensed to
+                  King's College London. They may not be copied, reproduced,
+                  distributed or reused except as permitted by law or with
+                  appropriate written permission.
+                </p>
+
+                <h4>8. Limitation of liability</h4>
+                <p>
+                  To the fullest extent permitted by law, King's College London
+                  accepts no liability for loss or damage arising from:
+                </p>
+
+                <ul>
+                  <li>Use or inability to use the platform</li>
+                  <li>Reliance on platform outputs</li>
+                  <li>Inaccurate or incomplete data inputs</li>
+                  <li>Technical failures or interruptions</li>
+                  <li>
+                    Use of the platform outside its intended research purpose
+                  </li>
+                </ul>
+
+                <p>
+                  Nothing in these terms excludes or limits liability where it
+                  would be unlawful to do so.
+                </p>
+
+                <h4>9. Indemnity</h4>
+                <p>
+                  To the extent permitted by law, you agree to be responsible
+                  for claims, losses or costs arising from your deliberate
+                  misuse of the platform or your material violation of these
+                  terms.
+                </p>
+
+                <h4>10. Modification</h4>
+                <p>
+                  We may modify these terms when necessary. Updated terms will
+                  be posted through the platform.
+                </p>
+
+                <h4>11. Governing law</h4>
+                <p class="mb-0">
+                  These terms are governed by the laws of England and Wales.
+                </p>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Acknowledgement -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="acknowledgementHeading">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#acknowledgementCollapse"
+                aria-expanded="false"
+                aria-controls="acknowledgementCollapse"
+              >
+                Acknowledgement and Consent
+              </button>
+            </h3>
+
+            <div
+              id="acknowledgementCollapse"
+              class="accordion-collapse collapse"
+              aria-labelledby="acknowledgementHeading"
+              data-bs-parent="#noticeInformationAccordion"
+            >
+              <div class="accordion-body notice-legal-content">
+
+                <p>
+                  By selecting the confirmation box and clicking
+                  <strong>I understand and agree</strong>, you confirm that:
+                </p>
+
+                <ul class="mb-0">
+                  <li>
+                    You have read and understood the Core Warning.
+                  </li>
+                  <li>
+                    You have had the opportunity to read the Privacy Notice.
+                  </li>
+                  <li>
+                    You have had the opportunity to read the Participant
+                    Information Sheet.
+                  </li>
+                  <li>
+                    You have had the opportunity to read the Terms of Use.
+                  </li>
+                  <li>
+                    You understand that this platform is for research use only.
+                  </li>
+                  <li>
+                    You will not use the platform for diagnosis, treatment,
+                    prescribing or clinical care.
+                  </li>
+                  <li>
+                    You understand that the outputs do not constitute medical
+                    advice.
+                  </li>
+                  <li>
+                    You understand how personal data may be processed for the
+                    research.
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Fixed footer -->
+      <div class="modal-footer notice-modal-footer border-0 px-4 px-md-5 py-4">
+
+        <div class="w-100">
+          <div class="form-check notice-consent-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="noticeConsentCheckbox"
+            >
+
+            <label
+              class="form-check-label"
+              for="noticeConsentCheckbox"
+            >
+              I confirm that I have read and understood the Core Warning and
+              agree to use PRECISE-CVD solely for research purposes.
+            </label>
+          </div>
+
+          <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-3 mt-3">
+            <small class="text-muted">
+              You must confirm the statement above before continuing.
+            </small>
+
+            <button
+              type="button"
+              class="btn btn-primary notice-confirm-button"
+              data-bs-dismiss="modal"
+              disabled
+            >
+              I understand and agree
+            </button>
+          </div>
+        </div>
+
       </div>
 
     </div>
   </div>
 </div>
 
+<style>
+  .notice-modal-dialog {
+    max-height: calc(100vh - 2rem);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .notice-modal-content {
+    max-height: calc(100vh - 2rem);
+    overflow: hidden;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 0 24px 70px rgba(15, 23, 42, 0.24);
+  }
+
+  .notice-modal-content .modal-header {
+    flex-shrink: 0;
+    background: #ffffff;
+    border-bottom: 1px solid #e9eef5 !important;
+  }
+
+  .notice-eyebrow {
+    color: #1977cc;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .notice-modal-body {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: #f7f9fc;
+    scroll-behavior: smooth;
+  }
+
+  .notice-modal-footer {
+    flex-shrink: 0;
+    background: #ffffff;
+    border-top: 1px solid #e9eef5 !important;
+    box-shadow: 0 -8px 25px rgba(15, 23, 42, 0.05);
+  }
+
+  .notice-core-warning {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #5d1d16;
+    background: #fff4f1;
+    border: 1px solid #f3c8c0;
+    border-left: 5px solid #c93c2f;
+    border-radius: 14px;
+  }
+
+  .notice-core-warning p,
+  .notice-core-warning li {
+    line-height: 1.65;
+  }
+
+  .notice-core-warning ul {
+    padding-left: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .notice-warning-icon {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: #b92f25;
+    background: #ffffff;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    box-shadow: 0 4px 12px rgba(185, 47, 37, 0.12);
+  }
+
+  .notice-expand-instruction {
+    margin-bottom: 1rem;
+    color: #5f6b7a;
+    font-size: 0.95rem;
+  }
+
+  .notice-accordion {
+    --bs-accordion-border-color: #dce4ed;
+    --bs-accordion-border-radius: 12px;
+    --bs-accordion-inner-border-radius: 11px;
+    --bs-accordion-btn-focus-box-shadow:
+      0 0 0 0.2rem rgba(25, 119, 204, 0.15);
+    --bs-accordion-active-color: #155fa0;
+    --bs-accordion-active-bg: #eef6fd;
+  }
+
+  .notice-accordion .accordion-item {
+    margin-bottom: 0.9rem;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #dce4ed;
+    border-radius: 12px;
+  }
+
+  .notice-accordion .accordion-button {
+    padding: 1.1rem 1.25rem;
+    font-weight: 650;
+  }
+
+  .notice-legal-content {
+    padding: 1.4rem;
+    color: #344054;
+  }
+
+  .notice-legal-content h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.65rem;
+    color: #1f2937;
+    font-size: 1.05rem;
+    font-weight: 700;
+  }
+
+  .notice-legal-content h4:first-child {
+    margin-top: 0;
+  }
+
+  .notice-legal-content p,
+  .notice-legal-content li,
+  .notice-legal-content address {
+    line-height: 1.7;
+  }
+
+  .notice-legal-content ul {
+    padding-left: 1.3rem;
+  }
+
+  .notice-legal-content a {
+    overflow-wrap: anywhere;
+  }
+
+  .notice-consent-check {
+    padding: 1rem 1rem 1rem 2.7rem;
+    background: #f8fafc;
+    border: 1px solid #dce4ed;
+    border-radius: 12px;
+  }
+
+  .notice-consent-check .form-check-input {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-left: -1.8rem;
+    margin-top: 0.15rem;
+    cursor: pointer;
+  }
+
+  .notice-consent-check .form-check-label {
+    color: #273445;
+    font-weight: 500;
+    line-height: 1.55;
+    cursor: pointer;
+  }
+
+  .notice-confirm-button {
+    min-width: 220px;
+    padding: 0.75rem 1.4rem;
+    border-radius: 9px;
+    font-weight: 650;
+  }
+
+  .notice-confirm-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+  }
+
+  @media (max-width: 767.98px) {
+    .notice-modal-dialog {
+      max-height: calc(100vh - 1rem);
+      margin: 0.5rem;
+    }
+
+    .notice-modal-content {
+      max-height: calc(100vh - 1rem);
+      border-radius: 14px;
+    }
+
+    .notice-core-warning {
+      padding: 1.1rem;
+    }
+
+    .notice-warning-icon {
+      display: none;
+    }
+
+    .notice-modal-footer {
+      padding-top: 1rem !important;
+      padding-bottom: 1rem !important;
+    }
+
+    .notice-confirm-button {
+      width: 100%;
+      min-width: 0;
+    }
+  }
+</style>
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-
     const modalElement = document.getElementById("noticeModal");
+    const consentCheckbox = document.getElementById(
+        "noticeConsentCheckbox"
+    );
+    const confirmButton = modalElement
+        ? modalElement.querySelector(".notice-confirm-button")
+        : null;
 
-    if (!modalElement || typeof bootstrap === "undefined") {
+    if (
+        !modalElement ||
+        !consentCheckbox ||
+        !confirmButton ||
+        typeof bootstrap === "undefined"
+    ) {
         return;
     }
 
+    /*
+     * On assessment pages, retain acceptance while the user moves
+     * between assessment sections.
+     *
+     * On other pages, clear the stored assessment acceptance so the
+     * notice appears again when a new assessment journey begins.
+     */
     if (window.isAssessmentPage) {
+        const disclaimerAccepted =
+            localStorage.getItem(
+                "assessmentDisclaimerAccepted"
+            ) === "true";
 
-        if (localStorage.getItem("assessmentDisclaimerAccepted") === "true") {
+        if (disclaimerAccepted) {
+            return;
+        }
+    } else {
+        localStorage.removeItem(
+            "assessmentDisclaimerAccepted"
+        );
+    }
+
+    const modal = bootstrap.Modal.getOrCreateInstance(
+        modalElement,
+        {
+            backdrop: "static",
+            keyboard: false
+        }
+    );
+
+    /*
+     * Prevent the modal being dismissed unless the confirmation
+     * checkbox has been selected.
+     */
+    modalElement.addEventListener(
+        "hide.bs.modal",
+        function (event) {
+            if (!consentCheckbox.checked) {
+                event.preventDefault();
+            }
+        }
+    );
+
+    consentCheckbox.addEventListener("change", function () {
+        confirmButton.disabled = !this.checked;
+    });
+
+    confirmButton.addEventListener("click", function () {
+        if (!consentCheckbox.checked) {
             return;
         }
 
-    }
-    else
-    {
-        localStorage.removeItem("assessmentDisclaimerAccepted");
-    }
-
-    const modal = bootstrap.Modal.getOrCreateInstance(modalElement);
-
-    modal.show();
-
-    document.querySelector(".notice-confirm-button").addEventListener("click", function () {
-
         if (window.isAssessmentPage) {
-            localStorage.setItem("assessmentDisclaimerAccepted", "true");
+            localStorage.setItem(
+                "assessmentDisclaimerAccepted",
+                "true"
+            );
         }
-
     });
 
+    modal.show();
 });
 </script>
