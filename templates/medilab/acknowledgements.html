@@ -7,22 +7,26 @@
 
 <style>
   .acknowledgements-page {
+    min-height: calc(100vh - 80px);
     padding: 4rem 0;
     background:
-      radial-gradient(circle at top right, rgba(25, 119, 204, 0.10), transparent 35%),
+      radial-gradient(
+        circle at top right,
+        rgba(25, 119, 204, 0.10),
+        transparent 35%
+      ),
       #f6f9fc;
-    min-height: calc(100vh - 80px);
   }
 
   .acknowledgements-container {
+    padding: 3rem;
     background: #ffffff;
     border-radius: 18px;
-    padding: 3rem;
     box-shadow: 0 12px 35px rgba(20, 50, 80, 0.08);
   }
 
   .acknowledgements-header {
-    max-width: 780px;
+    max-width: 850px;
     margin: 0 auto 3rem;
     text-align: center;
   }
@@ -108,14 +112,51 @@
     font-weight: 600;
   }
 
+  .funding-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .funding-link {
+    display: flex;
+    align-items: flex-start;
+    padding: 0.85rem 1rem;
+    color: #1977cc;
+    background: #f8fafc;
+    border: 1px solid #e3eaf2;
+    border-radius: 10px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: left;
+    text-decoration: none;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .funding-link:hover {
+    color: #135f9f;
+    background: #eef6fd;
+    border-color: rgba(25, 119, 204, 0.45);
+  }
+
+  .funding-link i {
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+    margin-right: 0.65rem;
+  }
+
   .formal-acknowledgement {
     position: relative;
     margin-top: 3rem;
     padding: 2.25rem;
     overflow: hidden;
+    color: #ffffff;
     background: linear-gradient(135deg, #1977cc, #135f9f);
     border-radius: 16px;
-    color: #ffffff;
   }
 
   .formal-acknowledgement::after {
@@ -154,6 +195,121 @@
     line-height: 1.8;
   }
 
+  .development-section {
+    margin-top: 2rem;
+    padding: 2.25rem;
+    background: #ffffff;
+    border: 1px solid #e3eaf2;
+    border-radius: 16px;
+  }
+
+  .development-section > h2 {
+    margin-bottom: 1rem;
+    color: #183153;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .development-introduction {
+    margin-bottom: 2rem;
+    color: #667085;
+    font-size: 1.03rem;
+    line-height: 1.8;
+  }
+
+  .lead-researcher-card {
+    height: 100%;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border: 1px solid #e3eaf2;
+    border-radius: 12px;
+  }
+
+  .lead-researcher-card h3 {
+    margin-bottom: 0.35rem;
+    color: #183153;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .researcher-role {
+    margin-bottom: 0.8rem;
+    color: #1977cc;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+
+  .researcher-affiliation {
+    margin-bottom: 0;
+    color: #667085;
+    line-height: 1.7;
+  }
+
+  .researcher-email {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 1rem;
+    color: #1977cc;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .researcher-email:hover {
+    color: #135f9f;
+    text-decoration: underline;
+  }
+
+  .contributors-section {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e3eaf2;
+  }
+
+  .contributors-section h3 {
+    margin-bottom: 1rem;
+    color: #183153;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .contributors-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: contributor;
+  }
+
+  .contributors-list li {
+    position: relative;
+    padding: 0.85rem 1rem 0.85rem 3rem;
+    color: #344054;
+    background: #f8fafc;
+    border-radius: 10px;
+    font-weight: 500;
+    counter-increment: contributor;
+  }
+
+  .contributors-list li::before {
+    content: counter(contributor);
+    position: absolute;
+    top: 50%;
+    left: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.55rem;
+    height: 1.55rem;
+    color: #ffffff;
+    background: #1977cc;
+    border-radius: 50%;
+    font-size: 0.78rem;
+    font-weight: 700;
+    transform: translateY(-50%);
+  }
+
   .participant-section {
     margin-top: 2rem;
     padding: 2rem;
@@ -178,15 +334,19 @@
   .acknowledgements-footer {
     margin-top: 2.5rem;
     padding-top: 1.5rem;
-    border-top: 1px solid #e3eaf2;
     color: #7a8699;
+    border-top: 1px solid #e3eaf2;
     font-size: 0.9rem;
     text-align: center;
   }
 
   body.dark-mode .acknowledgements-page {
     background:
-      radial-gradient(circle at top right, rgba(144, 205, 244, 0.08), transparent 35%),
+      radial-gradient(
+        circle at top right,
+        rgba(144, 205, 244, 0.08),
+        transparent 35%
+      ),
       #151a22;
   }
 
@@ -197,21 +357,29 @@
 
   body.dark-mode .acknowledgements-header h1,
   body.dark-mode .support-card h2,
+  body.dark-mode .development-section > h2,
+  body.dark-mode .lead-researcher-card h3,
+  body.dark-mode .contributors-section h3,
   body.dark-mode .participant-section h2 {
     color: #f1f5f9;
   }
 
   body.dark-mode .acknowledgements-header p,
   body.dark-mode .support-card p,
+  body.dark-mode .development-introduction,
+  body.dark-mode .researcher-affiliation,
   body.dark-mode .participant-section p {
     color: #c2cad6;
   }
 
-  body.dark-mode .acknowledgements-eyebrow {
+  body.dark-mode .acknowledgements-eyebrow,
+  body.dark-mode .researcher-role,
+  body.dark-mode .researcher-email {
     color: #90cdf4;
   }
 
-  body.dark-mode .support-card {
+  body.dark-mode .support-card,
+  body.dark-mode .development-section {
     background: #181d26;
     border-color: #303846;
   }
@@ -227,14 +395,39 @@
     border-radius: 10px;
   }
 
+  body.dark-mode .funding-link,
+  body.dark-mode .lead-researcher-card,
+  body.dark-mode .contributors-list li {
+    background: #232a36;
+    border-color: #394250;
+  }
+
+  body.dark-mode .funding-link {
+    color: #90cdf4;
+  }
+
+  body.dark-mode .funding-link:hover {
+    color: #90cdf4;
+    background: #293444;
+    border-color: #90cdf4;
+  }
+
+  body.dark-mode .contributors-list li {
+    color: #e2e8f0;
+  }
+
+  body.dark-mode .contributors-section {
+    border-top-color: #394250;
+  }
+
   body.dark-mode .participant-section {
     background: #181d26;
     border-left-color: #90cdf4;
   }
 
   body.dark-mode .acknowledgements-footer {
-    border-top-color: #394250;
     color: #aeb8c6;
+    border-top-color: #394250;
   }
 
   @media (max-width: 767.98px) {
@@ -247,13 +440,15 @@
       border-radius: 12px;
     }
 
-    .support-card {
-      padding: 1.5rem;
-    }
-
+    .support-card,
+    .development-section,
     .formal-acknowledgement,
     .participant-section {
       padding: 1.5rem;
+    }
+
+    .contributors-list {
+      grid-template-columns: 1fr;
     }
   }
 </style>
@@ -271,8 +466,9 @@
 
         <p>
           This cardiovascular disease risk prediction project has been made
-          possible through access to important research data and through the
-          academic and financial support of our partner organisations.
+          possible through the contributions of our research team, access to
+          important research data, and the academic and financial support of
+          King's College London and the British Heart Foundation.
         </p>
       </header>
 
@@ -322,9 +518,10 @@
             <h2>King's College London</h2>
 
             <p>
-              This research is being conducted at King's College London, with
-              academic support and supervision from researchers working to
-              improve cardiovascular risk prediction and precision medicine.
+              This research is being conducted at King's College London through
+              the laboratories of Professor Ajay Shah and Dr Konstantinos
+              Theofilatos, with a focus on cardiovascular risk prediction,
+              bioinformatics and precision medicine.
             </p>
 
             <a
@@ -353,10 +550,42 @@
             <h2>British Heart Foundation</h2>
 
             <p>
-              This work is supported by the British Heart Foundation, whose
-              funding supports research into the prevention, diagnosis and
-              treatment of cardiovascular disease.
+              This work is supported through British Heart Foundation funding
+              awarded through the King's British Heart Foundation Centre of
+              Research Excellence.
             </p>
+
+            <div class="funding-links">
+
+              <a
+                href="https://kclpure.kcl.ac.uk/portal/en/projects/bhf-centre-pump-prime-ukb-2025-oexner-and-theofilatos/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="funding-link"
+              >
+                <i class="bi bi-award"></i>
+
+                <span>
+                  BHF Centre Pump Prime UKB 2025:
+                  Oexner and Theofilatos
+                </span>
+              </a>
+
+              <a
+                href="https://kclpure.kcl.ac.uk/portal/en/projects/bhf-centre-studentship-shah-2026/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="funding-link"
+              >
+                <i class="bi bi-mortarboard"></i>
+
+                <span>
+                  BHF Centre Studentship:
+                  Shah 2026
+                </span>
+              </a>
+
+            </div>
 
             <a
               href="https://www.bhf.org.uk/"
@@ -387,6 +616,100 @@
           </p>
 
         </div>
+      </section>
+
+      <section class="development-section">
+
+        <h2>
+          <i class="bi bi-code-square me-2"></i>
+          Platform development
+        </h2>
+
+        <p class="development-introduction">
+          This cardiovascular disease risk prediction platform has been
+          co-developed by the laboratories of
+          <strong>Professor Ajay Shah</strong> and
+          <strong>Dr Konstantinos Theofilatos</strong> at
+          King's College London.
+        </p>
+
+        <div class="row g-4">
+
+          <div class="col-lg-6">
+            <article class="lead-researcher-card">
+
+              <h3>Professor Ajay Shah</h3>
+
+              <p class="researcher-role">
+                BHF Professor of Cardiology and James Black Professor of
+                Medicine
+              </p>
+
+              <p class="researcher-affiliation">
+                Faculty of Life Sciences &amp; Medicine<br>
+                School of Cardiovascular and Metabolic Medicine &amp; Sciences<br>
+                King's British Heart Foundation Centre of Research Excellence<br>
+                King's College London
+              </p>
+
+              <a
+                href="mailto:ajay.shah@kcl.ac.uk"
+                class="researcher-email"
+              >
+                <i class="bi bi-envelope me-2"></i>
+                ajay.shah@kcl.ac.uk
+              </a>
+
+            </article>
+          </div>
+
+          <div class="col-lg-6">
+            <article class="lead-researcher-card">
+
+              <h3>Dr Konstantinos Theofilatos</h3>
+
+              <p class="researcher-role">
+                Lecturer in Bioinformatics
+              </p>
+
+              <p class="researcher-affiliation">
+                Faculty of Life Sciences &amp; Medicine<br>
+                School of Cardiovascular and Metabolic Medicine &amp; Sciences<br>
+                British Heart Foundation Centre<br>
+                King's College London
+              </p>
+
+              <a
+                href="mailto:konstantinos.theofilatos@kcl.ac.uk"
+                class="researcher-email"
+              >
+                <i class="bi bi-envelope me-2"></i>
+                konstantinos.theofilatos@kcl.ac.uk
+              </a>
+
+            </article>
+          </div>
+
+        </div>
+
+        <div class="contributors-section">
+
+          <h3>
+            <i class="bi bi-person-lines-fill me-2"></i>
+            Contributing researchers
+          </h3>
+
+          <ol class="contributors-list">
+            <li>Sadiq Khawaja</li>
+            <li>Dr Rafael Oexner</li>
+            <li>Robin Schmitt</li>
+            <li>Che-An Chou</li>
+            <li>Mohamed Salah</li>
+            <li>Sanjana Srinivasan</li>
+          </ol>
+
+        </div>
+
       </section>
 
       <section class="participant-section">
