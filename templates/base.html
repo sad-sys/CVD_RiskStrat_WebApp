@@ -233,81 +233,72 @@ rel="stylesheet">
 
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer light-background">
-      <div class="container footer-top">
+    <div class="container footer-top">
         <div class="row gy-4">
-          <div class="col-lg-4 col-md-6 footer-about">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <span class="sitename">CVD Risk Predictor</span>
-            </a>
-            <div class="footer-contact pt-3">
-              <p>King's College London,</p>
-              <p>Denmark Hill Campus,</p>
-              <p>10 Cutcombe Road,</p>
-              <p>SE5 9RJ</p>
-              <p class="mt-3"><strong>Email:</strong> <span>konstantinos.theofilatos@kcl.ac.uk</span></p>
-            </div>
-            <div class="social-links d-flex mt-4">
-              <a href=""><i class="bi bi-twitter-x"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
 
-          <div class="col-lg-2 col-md-3 footer-links">
+        <div class="col-lg-6 col-md-6 footer-about">
+            <a href="{% url 'starter-page' %}" class="logo d-flex align-items-center">
+            <span class="sitename">CVD Risk Predictor</span>
+            </a>
+
+            <div class="footer-contact pt-3">
+            <p>King's College London,</p>
+            <p>Denmark Hill Campus,</p>
+            <p>10 Cutcombe Road,</p>
+            <p>SE5 9RJ</p>
+
+            <p class="mt-3">
+                <strong>Email:</strong>
+                <a href="mailto:konstantinos.theofilatos@kcl.ac.uk">
+                konstantinos.theofilatos@kcl.ac.uk
+                </a>
+            </p>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Terms of service</a></li>
-              <li><a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
+            <li>
+                <a href="{% url 'starter-page' %}">Home</a>
+            </li>
 
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><a href="#">Risk Assessment</a></li>
-              <li><a href="#">Health Monitoring</a></li>
-              <li><a href="#">Preventive Care</a></li>
-              <li><a href="#">Patient Education</a></li>
-              <li><a href="#">Clinician Resources</a></li>
-            </ul>
-          </div>
+            <li>
+                <a href="{% url 'acknowledgements' %}">Acknowledgements</a>
+            </li>
 
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>For Patients</h4>
-            <ul>
-              <li><a href="#">How It Works</a></li>
-              <li><a href="#">Request Access</a></li>
-              <li><a href="#">Patient FAQ</a></li>
-              <li><a href="#">Success Stories</a></li>
-              <li><a href="#">Support</a></li>
-            </ul>
-          </div>
+             <li>
+                <a href="{% url 'about' %}">About Us</a>
+            </li>
 
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>For Clinicians</h4>
-            <ul>
-              <li><a href="#">Clinical Resources</a></li>
-              <li><a href="#">Research</a></li>
-              <li><a href="#">Refer a Patient</a></li>
-              <li><a href="#">Training</a></li>
-              <li><a href="#">Contact Us</a></li>
+            <li>
+                <a href="{% url 'contact' %}">Contact Us</a>
+            </li>
+
             </ul>
-          </div>
         </div>
-      </div>
-      <div class="container copyright text-center mt-4">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">CVD Risk Predictor</strong> <span>All Rights Reserved</span></p>
-        <div class="credits">
+
         </div>
-      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+        <p>
+        © <span>Copyright</span>
+        <strong class="px-1 sitename">CVD Risk Predictor</strong>
+        <span>All Rights Reserved</span>
+        </p>
+    </div>
     </footer>
 
     <div id="preloader"></div>
-    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <a
+    href="#"
+    class="scroll-top d-flex align-items-center justify-content-center"
+    aria-label="Scroll to top"
+    >
+    <i class="bi bi-arrow-up-short"></i>
+    </a>
 
     <!-- Vendor JS Files -->
     <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
