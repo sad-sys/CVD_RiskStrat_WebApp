@@ -598,7 +598,7 @@ def assessment_view(request):
             'response_id': response_id,
             'multi_response_ids': multi_ids,
             'answer_type': q.answer_type,
-            'required': True
+            'required': q.question_id != 3659
         })
     print("QUESTION DATA IDS:")
     for qd in question_data:

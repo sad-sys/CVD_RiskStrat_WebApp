@@ -426,7 +426,7 @@
                           {% endif %}
                           style="{% if q.trigger_questions.all %}display: none;{% endif %}">
 
-                        <div class="question-stem required-field">
+                        <div class="question-stem{% if item.required %} required-field{% endif %}">
                           {{ q.question_text }}
                         </div>
 
