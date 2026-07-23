@@ -279,7 +279,6 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    counter-reset: contributor;
   }
 
   .contributors-list li {
@@ -289,25 +288,10 @@
     background: #f8fafc;
     border-radius: 10px;
     font-weight: 500;
-    counter-increment: contributor;
   }
 
-  .contributors-list li::before {
-    content: counter(contributor);
-    position: absolute;
-    top: 50%;
-    left: 0.9rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 1.55rem;
-    height: 1.55rem;
-    color: #ffffff;
-    background: #1977cc;
-    border-radius: 50%;
-    font-size: 0.78rem;
-    font-weight: 700;
-    transform: translateY(-50%);
+  .contributors-list li {
+      padding: 0.85rem 1rem;
   }
 
   .participant-section {
