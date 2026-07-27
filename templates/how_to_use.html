@@ -1,11 +1,1044 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="min-vh-100">
+    <!-- Hero Section -->
+
+    <!-- Platform Overview -->
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto text-center">
+                    <h2 class="display-5 fw-bold text-dark mb-4">How to Use the Platform</h2>
+                    <p class="lead text-muted">
+                        Our platform serves both healthcare professionals and patients with specialized tools designed for their unique needs in cardiovascular risk assessment and management.
+                    </p>
+                </div>
+            </div>
+
+<div class="row g-5">
+
+    <!-- Clinician Interface -->
+    <div class="col-lg-6">
+        <div class="card border-0 shadow-lg h-100 overflow-hidden rounded-4">
+            <div class="card-header bg-primary text-white p-4">
+                <div class="d-flex align-items-center">
+                    <div class="bg-white bg-opacity-20 rounded-circle p-3 me-3">
+                        <i class="bi bi-briefcase-fill text-white fs-4"></i>
+                    </div>
+                    <div>
+                        <h3 class="mb-1 fw-bold">For Clinicians</h3>
+                        <p class="mb-0 text-white-50">
+                            Professional Healthcare Tools
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body p-4 d-flex flex-column">
+                <p class="text-muted mb-4">
+                    Access clinician guidance and platform documentation for
+                    cardiovascular risk assessment and patient management.
+                </p>
+
+                <div class="mt-auto">
+                    <button
+                        class="btn-manual btn-manual-clinician w-100"
+                        onclick="openModal('clinician-manual-modal')">
+                        <i class="bi bi-book me-2"></i>
+                        View Clinician Manual
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Patient Interface -->
+    <div class="col-lg-6">
+        <div class="card border-0 shadow-lg h-100 overflow-hidden rounded-4">
+            <div class="card-header bg-success text-white p-4">
+                <div class="d-flex align-items-center">
+                    <div class="bg-white bg-opacity-20 rounded-circle p-3 me-3">
+                        <i class="bi bi-person-heart text-white fs-4"></i>
+                    </div>
+                    <div>
+                        <h3 class="mb-1 fw-bold">For Patients</h3>
+                        <p class="mb-0 text-white-50">
+                            Personal Health Management
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body p-4 d-flex flex-column">
+                <p class="text-muted mb-4">
+                    Learn how to use the platform, complete your assessment,
+                    and understand your cardiovascular risk results.
+                </p>
+
+                <div class="mt-auto">
+                    <button
+                        class="btn-manual btn-manual-patient w-100"
+                        onclick="openModal('patient-manual-modal')">
+                        <i class="bi bi-book me-2"></i>
+                        View Patient Manual
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+ 
+<!-- ========================================== -->
+<!-- 🔽 Patient manual pop-up window 🔽                         -->
+<!-- ========================================== -->
+
+<div id="patient-manual-modal" class="manual-modal-overlay" onclick="closeModalOutside(event, 'patient-manual-modal')">
+    <div class="manual-modal-content">
+        <div class="manual-modal-header">
+            <h2>📖 Patient User Manual</h2>
+            <button class="manual-modal-close" onclick="closeModal('patient-manual-modal')">&times;</button>
+        </div>
+        <div class="manual-modal-body">
+
+            <!-- ===== SECTION 1: Platform Introduction ===== -->
+            <h3>1. Platform Introduction</h3>
+
+            <h4>1.1 What is this platform?</h4>
+            <p>PRECISE-CVD is a <strong>research platform</strong> for cardiovascular disease risk prediction. It collects your health and lifestyle data, using advanced machine learning to help researchers better understand cardiovascular risk factors.</p>
+
+            <h4>1.2 Purpose of the platform</h4>
+            <p>This platform is for <strong>research purposes only</strong>, aiming to:</p>
+            <ul>
+                <li>Assess potential risk factors for cardiovascular disease</li>
+                <li>Support early identification research for cardiovascular disease</li>
+                <li>Provide scientific evidence for future prevention strategies</li>
+            </ul>
+            <div class="manual-warning">
+                <strong>⚠️ Important:</strong> This platform is for research use only. It is not for clinical diagnosis or treatment decisions. Any output should not be used as medical advice.
+            </div>
+
+            <h4>1.3 Who can participate?</h4>
+            <p>Anyone who understands and agrees to participate can use this platform. Participation is entirely voluntary.</p>
+
+            <!-- ===== SECTION 2: How to Access ===== -->
+            <h3>2. How to Access the Platform</h3>
+            <table class="manual-table">
+                <tr><th>Item</th><th>Details</th></tr>
+                <tr><td>URL</td><td>[website URL]</td></tr>
+                <tr><td>Recommended Browsers</td><td>Google Chrome, Microsoft Edge, Mozilla Firefox (latest versions)</td></tr>
+                <tr><td>Device Requirements</td><td>Computer, tablet, or smartphone</td></tr>
+                <tr><td>Network Requirements</td><td>Stable internet connection</td></tr>
+            </table>
+
+            <!-- ===== SECTION 3: First-Time Setup ===== -->
+            <h3>3. First-Time Setup</h3>
+
+            <h4>3.1 Register an Account</h4>
+            <ol>
+                <li>Visit the platform homepage</li>
+                <li>Click the <strong>"Sign Up"</strong> button</li>
+                <li>Enter your name, email, and set a password (at least 8 characters, including letters and numbers and a special character)</li>
+                <li>Read and agree to the <strong>Disclaimer</strong> and <strong>Privacy Policy</strong></li>
+                <li>Click <strong>"Register"</strong> to submit</li>
+                <li>You will receive a confirmation email — click the link to activate your account</li>
+            </ol>
+
+            <h4>3.2 Log In</h4>
+            <ol>
+                <li>Visit the platform homepage</li>
+                <li>Click the <strong>"Login"</strong> button</li>
+                <li>Enter your email and password</li>
+                <li>Click <strong>"Login"</strong></li>
+                <li>On first login, you must accept the <strong>Terms of Use</strong> and <strong>Data Protection Notice</strong></li>
+            </ol>
+
+            <h4>3.3 After Activation</h4>
+            <ul>
+                <li>You will be taken to your personal Dashboard</li>
+                <li>Once you start a new assessment, you will see three questionnaire sections:
+                    <ul>
+                        <li><strong>Part 1: Sociodemographics</strong></li>
+                        <li><strong>Part 2: Health and Medical History</strong></li>
+                        <li><strong>Part 3: Sex-Specific Factors</strong></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- ===== SECTION 4: Data Submission ===== -->
+            <h3>4. Data Submission Process</h3>
+
+            <h4>Questionnaire Overview</h4>
+            <table class="manual-table">
+                <tr><th>Section</th><th>Content</th><th>Time</th><th>Audience</th></tr>
+                <tr><td>Part 1: Sociodemographics</td><td>Residence, employment, education, ethnicity, etc.</td><td>5 min</td><td>All users</td></tr>
+                <tr><td>Part 2: Health and Medical History</td><td>Overall health, disease history, medications, etc.</td><td>10 min</td><td>All users</td></tr>
+                <tr><td>Part 3: Sex-Specific Factors</td><td>Gender-specific questions</td><td>3 min</td><td>Male / Female</td></tr>
+            </table>
+            <p><strong>Total estimated time: 15–20 minutes</strong></p>
+
+            <h4>4.1 Part 1: Sociodemographics</h4>
+            <p>This section collects basic demographic information including residence, housing type, employment status, education level, ethnicity, and benefits received. All questions are multiple choice or numeric entry.</p>
+
+            <h4>4.2 Part 2: Health and Medical History</h4>
+            <p>This section collects your health status and medical history, including:</p>
+            <ul>
+                <li>Self-rated overall health</li>
+                <li>Diagnosed conditions (heart disease, hypertension, diabetes, cancer, etc.)</li>
+                <li>Surgical history and fractures</li>
+                <li>Regular medications and supplements</li>
+                <li>Pain symptoms (headache, chest pain, back pain, etc.)</li>
+            </ul>
+
+            <h4>4.3 Part 3: Sex-Specific Factors</h4>
+            <p>Based on your gender, the system will display different questions:</p>
+            <ul>
+                <li><strong>Male users:</strong> Facial hair growth, voice change, balding pattern, number of children fathered</li>
+                <li><strong>Female users:</strong> Breast cancer screening, cervical smear, menstruation, menopause, birth history, miscarriages, contraceptive pill, HRT, ovary removal</li>
+            </ul>
+
+            <h4>4.4 How to Fill Out the Questionnaire</h4>
+            <ul>
+                <li>All questions are <strong>multiple choice</strong> (single or multiple select) or <strong>numeric entry</strong></li>
+                <li>You can <strong>save your progress</strong> at any time and continue later</li>
+                <li>The system shows completion status for each section (Completed / In Progress / Not Started)</li>
+            </ul>
+
+            <h4>4.5 Submit Data</h4>
+            <ol>
+                <li>Review all your entries for accuracy</li>
+                <li>Click the <strong>"Submit"</strong> button</li>
+                <li>Once confirmed, the system will generate your risk report</li>
+            </ol>
+            <div class="manual-warning">
+                <strong>⚠️ Note:</strong> Submitted data will be used for research analysis. Please ensure all information is accurate.
+            </div>
+
+            <!-- ===== SECTION 5: Results ===== -->
+            <h3>5. Viewing Results</h3>
+
+            <h4>5.1 What does the report include?</h4>
+            <table class="manual-table">
+                <tr><th>Report Item</th><th>Description</th></tr>
+                <tr><td>CVD Risk Prediction Score</td><td>Risk value calculated from your data</td></tr>
+                <tr><td>Risk Status</td><td>Low / Moderate / High, or Inconclusive</td></tr>
+                <tr><td>Model Performance Metrics</td><td>Reliability indicators (see 5.3)</td></tr>
+                <tr><td>Feature Importance</td><td>Factors most influencing your risk</td></tr>
+                <tr><td>Recommendation</td><td>Suggested actions based on results</td></tr>
+            </table>
+
+            <h4>5.2 Risk Status Explained</h4>
+            <table class="manual-table">
+                <tr><th>Status</th><th>Meaning</th><th>Action</th></tr>
+                <tr><td>Low / Moderate / High Risk</td><td>Model has made a clear assessment</td><td>Consider the result, but consult your doctor</td></tr>
+                <tr><td>Inconclusive</td><td>Insufficient data for a clear conclusion</td><td>Complete all questionnaire sections; this does not mean you have or do not have a problem</td></tr>
+                <tr><td>Intermediate Result</td><td>Partial result — not final</td><td>Continue to the next questionnaire sections</td></tr>
+            </table>
+
+            <h4>5.3 Terminology Explained</h4>
+            <table class="manual-table">
+                <tr><th>Term</th><th>Plain English Explanation</th></tr>
+                <tr><td>CVD Risk Prediction Score</td><td>Higher scores indicate higher relative risk</td></tr>
+                <tr><td>Inconclusive</td><td>Not enough data to decide — not a diagnosis</td></tr>
+                <tr><td>Score between thresholds</td><td>Your score is in a "grey area" — cannot be classified clearly</td></tr>
+                <tr><td>Accuracy</td><td>How often the model is correct. Higher is better</td></tr>
+                <tr><td>AUROC</td><td>How well the model separates high-risk from low-risk people. Higher is better</td></tr>
+                <tr><td>C-Index</td><td>How well the model ranks high-risk people. Higher is better</td></tr>
+                <tr><td>Precision</td><td>Of those labelled "high risk," how many truly are high risk</td></tr>
+                <tr><td>Recall</td><td>Of all truly high-risk people, how many were found by the model</td></tr>
+                <tr><td>Cumulative Model</td><td>Each step adds more data for a fuller assessment</td></tr>
+            </table>
+
+            <h4>5.4 What if the result is Inconclusive?</h4>
+            <p>If your report shows <strong>"Inconclusive"</strong>:</p>
+            <ul>
+                <li>This <strong>does not</strong> mean you have or don't have a heart disease risk</li>
+                <li>It simply means the current data is insufficient for a clear conclusion</li>
+                <li><strong>Complete all questionnaire sections</strong> for a more complete assessment</li>
+                <li>If still inconclusive after all sections, consult your GP or cardiologist</li>
+            </ul>
+
+            <h4>5.5 Important Notice</h4>
+            <div class="manual-warning">
+                <strong>⚠️ This platform is for research purposes only. It does not provide medical advice.</strong>
+                <ul>
+                    <li>Results should not replace your doctor's professional judgment</li>
+                    <li>Please consult your doctor about any health concerns</li>
+                    <li>This platform does not provide diagnosis or treatment recommendations</li>
+                </ul>
+            </div>
+
+            <!-- ===== SECTION 6: FAQ ===== -->
+            <h3>6. Frequently Asked Questions</h3>
+
+            <p><strong>Q1: Do I need to pay to participate?</strong><br>
+            A: No. Participation is completely free.</p>
+
+            <p><strong>Q2: How often do I need to submit data?</strong><br>
+            A: Only once at first use. If further research requires additional data, you will be notified.</p>
+
+            <p><strong>Q3: Will I receive personal health advice?</strong><br>
+            A: No. This is a research tool. Please consult your doctor for any health concerns.</p>
+
+            <p><strong>Q4: Will my data be shared with third parties?</strong><br>
+            A: No. Anonymised data may be used for academic publications only.</p>
+
+            <p><strong>Q5: How do I withdraw my consent?</strong><br>
+            A: Contact the research team at <a href="mailto:konstantinos.theofilatos@kcl.ac.uk">konstantinos.theofilatos@kcl.ac.uk</a>. Note that pseudonymised or already-analysed data cannot be withdrawn.</p>
+
+            <p><strong>Q6: What if I find an error in my data?</strong><br>
+            A: Contact the research team to request a correction: <a href="mailto:konstantinos.theofilatos@kcl.ac.uk">konstantinos.theofilatos@kcl.ac.uk</a>.</p>
+
+            <p><strong>Q7: My result says "Inconclusive" — what does that mean?</strong><br>
+            A: It means there is not enough data for a clear conclusion. This does not mean you "have a problem" or "don't have a problem." Complete all sections, and if still inconclusive, consult your doctor.</p>
+
+            <p><strong>Q8: Will the results be published?</strong><br>
+            A: Yes. Results will be published in anonymised, aggregated form in academic journals. You will not be identified.</p>
+
+            <p><strong>Q9: How can I find out how my data is being used?</strong><br>
+            A: Contact the research team at any time: <a href="mailto:konstantinos.theofilatos@kcl.ac.uk">konstantinos.theofilatos@kcl.ac.uk</a>.</p>
+
+            <!-- ===== SECTION 7: Contact ===== -->
+            <h3>7. Contact Us</h3>
+            <table class="manual-table">
+                <tr><th>Contact Channel</th><th>Contact Details</th></tr>
+                <tr><td>Research Team</td><td><a href="mailto:konstantinos.theofilatos@kcl.ac.uk">konstantinos.theofilatos@kcl.ac.uk</a></td></tr>
+                <tr><td>Data Protection Officer (DPO)</td><td><a href="mailto:info-compliance@kcl.ac.uk">info-compliance@kcl.ac.uk</a></td></tr>
+                <tr><td>Information Commissioner's Office (ICO)</td><td><a href="https://www.ico.org.uk" target="_blank">www.ico.org.uk</a></td></tr>
+            </table>
+
+            <p class="manual-footer">Thank you for participating in this research. Your contribution helps advance cardiovascular disease prevention research.</p>
+
+        </div>
+        <div class="manual-modal-footer">
+            <button class="btn-close-modal" onclick="closeModal('patient-manual-modal')">Close</button>
+         </div>
+    </div>
+</div>
+<!-- ========================================== -->
+<!-- Clinician Manual Modal                     -->
+<!-- ========================================== -->
+<div id="clinician-manual-modal" class="manual-modal-overlay" onclick="closeModalOutside(event, 'clinician-manual-modal')">
+    <div class="manual-modal-content">
+        <div class="manual-modal-header">
+            <h2>📖 Clinician User Manual</h2>
+            <button class="manual-modal-close" onclick="closeModal('clinician-manual-modal')">&times;</button>
+        </div>
+        <div class="manual-modal-body">
+
+            <!-- ===== SECTION 1: Platform Introduction ===== -->
+            <h3>1. Platform Introduction</h3>
+
+            <h4>1.1 What is this platform?</h4>
+            <p>PRECISE-CVD is a <strong>research platform</strong> designed for clinicians and researchers to assess cardiovascular disease risk using advanced machine learning models. The platform enables both single-patient and batch risk assessment, with built-in explainability features to support research interpretation.</p>
+
+            <h4>1.2 Purpose of the platform</h4>
+            <p>This platform is for <strong>research purposes only</strong>, enabling clinicians to:</p>
+            <ul>
+                <li>Assess cardiovascular risk for individual patients</li>
+                <li>Process multiple patient records in batch</li>
+                <li>Predict TAVI procedural outcomes</li>
+                <li>Monitor patient risk profiles over time</li>
+                <li>Generate explainable AI outputs for research interpretation</li>
+            </ul>
+            <div class="manual-warning">
+                <strong>⚠️ Important:</strong> This platform is for research use only. It is not approved as a medical device for clinical decision-making under UK MDR 2002.
+            </div>
+
+            <!-- ===== SECTION 2: Getting Started ===== -->
+            <h3>2. Getting Started</h3>
+
+            <h4>2.1 Account Application Process</h4>
+            <p><strong>Step 1: Apply for Clinician Access</strong></p>
+            <ol>
+                <li>Visit the platform homepage</li>
+                <li>Click <strong>"Request Clinician Access"</strong></li>
+                <li>Complete the application form:
+                    <ul>
+                        <li>Personal details (name, institution, position)</li>
+                        <li>Professional qualifications (e.g., GMC registration number)</li>
+                        <li>Research purpose description</li>
+                    </ul>
+                </li>
+                <li>Submit your application</li>
+                <li>Wait for admin review (typically 2–3 working days)</li>
+            </ol>
+
+            <p><strong>Step 2: After Approval</strong></p>
+            <ul>
+                <li>You will receive a confirmation email</li>
+                <li>Click the link in the email to set your password</li>
+                <li>On first login, read and accept the Terms of Use</li>
+            </ul>
+
+            <h4>2.2 Log In</h4>
+            <ol>
+                <li>Visit the platform homepage</li>
+                <li>Click the <strong>"Login"</strong> button</li>
+                <li>Enter your email and password</li>
+                <li>Click <strong>"Login"</strong></li>
+                <li>You will be redirected to your Clinician Dashboard</li>
+            </ol>
+
+            <h4>2.3 Dashboard Overview</h4>
+            <p>After logging in, you will see the <strong>Clinician Dashboard</strong> with four main function cards:</p>
+            <table class="manual-table">
+                <tr><th>Card</th><th>Description</th></tr>
+                <tr><td><strong>Patient Records</strong></td><td>View and manage assigned patients</td></tr>
+                <tr><td><strong>Batch Prediction</strong></td><td>Upload bulk data for risk predictions</td></tr>
+                <tr><td><strong>TAVI Risk Prediction</strong></td><td>Predict TAVI procedural outcomes</td></tr>
+                <tr><td><strong>Additional Cards</strong></td><td>Future features as they become available</td></tr>
+            </table>
+
+            <!-- ===== SECTION 3: Patient Management ===== -->
+            <h3>3. Patient Management</h3>
+
+            <h4>3.1 Accessing Patient Records</h4>
+            <ol>
+                <li>From the Clinician Dashboard, click <strong>"Patient Records"</strong></li>
+                <li>You will be taken to the <strong>Patient Risk Panel</strong></li>
+            </ol>
+
+            <h4>3.2 Patient Risk Panel Overview</h4>
+            <p>The Patient Risk Panel displays all patients assigned to you with their current risk status.</p>
+            <table class="manual-table">
+                <tr><th>Feature</th><th>Description</th></tr>
+                <tr><td><strong>Statistics Cards</strong></td><td>Quick view of total patients, high risk, inconclusive, and low risk counts</td></tr>
+                <tr><td><strong>High Risk Alert</strong></td><td>Red banner appears when any patient is flagged as high risk — click "View Patients" to filter</td></tr>
+                <tr><td><strong>Search</strong></td><td>Type patient name or email to filter the list in real-time</td></tr>
+                <tr><td><strong>Risk Filters</strong></td><td>Click All / High Risk / Inconclusive / Low Risk / Pending to filter results</td></tr>
+                <tr><td><strong>Patient Table</strong></td><td>Displays name, age, risk score, risk level, last assessment date, and actions</td></tr>
+            </table>
+
+            <h4>3.3 Understanding Risk Levels</h4>
+            <table class="manual-table">
+                <tr><th>Risk Level</th><th>Display</th><th>Meaning</th></tr>
+                <tr><td><strong>High Risk</strong></td><td>Red badge with ⚠️ icon</td><td>Patient has elevated cardiovascular risk — consider clinical review</td></tr>
+                <tr><td><strong>Inconclusive</strong></td><td>Yellow badge with dash icon</td><td>Insufficient data for a clear conclusion — complete all assessment steps</td></tr>
+                <tr><td><strong>Low Risk</strong></td><td>Green badge with check icon</td><td>Patient has low cardiovascular risk based on available data</td></tr>
+                <tr><td><strong>Pending</strong></td><td>Grey badge with clock icon</td><td>Assessment not yet completed</td></tr>
+            </table>
+
+            <h4>3.4 Viewing Patient Results</h4>
+            <ol>
+                <li>In the Patient Risk Panel, locate the patient</li>
+                <li>Click the <strong>"View"</strong> button</li>
+                <li>You will be taken to the detailed patient results page showing:
+                    <ul>
+                        <li>Risk score and risk level</li>
+                        <li>Model performance metrics (Accuracy, AUROC, C-Index, Precision, Recall)</li>
+                        <li>Feature importance visualisation (SHAP plots)</li>
+                        <li>Step-by-step assessment progression</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h4>3.5 Emailing Patients</h4>
+            <ul>
+                <li>Click the <strong>"Email"</strong> button next to any patient</li>
+                <li>This opens your default email client with the patient's email address pre-filled</li>
+                <li>Use this to share results or schedule follow-up consultations</li>
+            </ul>
+
+            <!-- ===== SECTION 4: Batch Prediction ===== -->
+            <h3>4. Batch Prediction</h3>
+
+            <h4>4.1 What is Batch Prediction?</h4>
+            <p>Batch Prediction allows you to upload a CSV file containing multiple patient records and receive risk predictions for all patients simultaneously.</p>
+
+            <h4>4.2 Accessing Batch Prediction</h4>
+            <ol>
+                <li>From the Clinician Dashboard, click <strong>"Batch Prediction"</strong></li>
+                <li>You will be taken to the Batch Prediction page</li>
+            </ol>
+
+            <h4>4.3 Uploading Data</h4>
+            <ol>
+                <li>Download the provided CSV template by clicking <strong>"Download CSV Template"</strong></li>
+                <li>Open the template in a spreadsheet application (Excel, Google Sheets, etc.)</li>
+                <li>Fill in patient data following the template format:
+                    <ul>
+                        <li>Each row represents one patient</li>
+                        <li>Each column represents a required feature</li>
+                        <li>Ensure all required columns are populated</li>
+                    </ul>
+                </li>
+                <li>Save the file as <code>.csv</code> format</li>
+                <li>Click <strong>"Choose CSV file"</strong> and select your file</li>
+                <li>Click <strong>"Run Prediction"</strong></li>
+            </ol>
+
+            <h4>4.4 Downloading Results</h4>
+            <ul>
+                <li>Once processing is complete, results are displayed directly in the table</li>
+                <li>Results include risk scores and risk levels for each patient</li>
+            </ul>
+
+            <!-- ===== SECTION 5: TAVI Risk Prediction ===== -->
+            <h3>5. TAVI Risk Prediction</h3>
+
+            <h4>5.1 What is TAVI Risk Prediction?</h4>
+            <p>TAVI (Transcatheter Aortic Valve Implantation) Risk Prediction predicts procedural outcomes for patients undergoing TAVI procedures.</p>
+
+            <h4>5.2 Accessing TAVI Prediction</h4>
+            <ol>
+                <li>From the Clinician Dashboard, click <strong>"TAVI Risk Prediction"</strong></li>
+                <li>You will be taken to the TAVI Risk Prediction page</li>
+            </ol>
+
+            <h4>5.3 Uploading Data</h4>
+            <ol>
+                <li>Download the CSV template (provided on the page)</li>
+                <li>Fill in patient data with the required columns</li>
+                <li>Upload the file and click <strong>"Run Prediction"</strong></li>
+            </ol>
+
+            <h4>5.4 Required CSV Columns</h4>
+            <table class="manual-table">
+                <tr><th>Column Name</th><th>Description</th></tr>
+                <tr><td>Age</td><td>Patient age (years)</td></tr>
+                <tr><td>Diabetes</td><td>Yes/No or 1/0</td></tr>
+                <tr><td>Ex_smoking</td><td>Yes/No or 1/0</td></tr>
+                <tr><td>Hypertension</td><td>Yes/No or 1/0</td></tr>
+                <tr><td>Creatinine</td><td>Serum creatinine level</td></tr>
+                <tr><td>Pre-operative_heart_rhythm</td><td>Heart rhythm classification</td></tr>
+                <tr><td>Baseline_Hb</td><td>Baseline haemoglobin level</td></tr>
+                <tr><td>Poor_mobility</td><td>Yes/No or 1/0</td></tr>
+                <tr><td>FEV1</td><td>Forced expiratory volume in 1 second</td></tr>
+                <tr><td>Predicted_VC</td><td>Predicted vital capacity</td></tr>
+                <tr><td>FEV1_VC</td><td>FEV1/VC ratio</td></tr>
+                <tr><td>Katz_Index</td><td>Katz Index of Independence</td></tr>
+                <tr><td>TR</td><td>Tricuspid regurgitation grade</td></tr>
+            </table>
+
+            <h4>5.5 Understanding Results</h4>
+            <p>Results are displayed with <strong>Risk Category</strong> badges:</p>
+            <table class="manual-table">
+                <tr><th>Category</th><th>Badge Colour</th><th>Meaning</th></tr>
+                <tr><td><strong>Very High</strong></td><td>Red</td><td>Highest procedural risk</td></tr>
+                <tr><td><strong>High</strong></td><td>Yellow</td><td>Elevated procedural risk</td></tr>
+                <tr><td><strong>Moderate</strong></td><td>Blue</td><td>Moderate procedural risk</td></tr>
+                <tr><td><strong>Low</strong></td><td>Green</td><td>Lowest procedural risk</td></tr>
+            </table>
+
+            <!-- ===== SECTION 6: Interpreting Reports ===== -->
+            <h3>6. Interpreting Risk Reports</h3>
+
+            <h4>6.1 Report Components</h4>
+            <table class="manual-table">
+                <tr><th>Component</th><th>Description</th></tr>
+                <tr><td><strong>Risk Score</strong></td><td>0–100 value — higher indicates higher relative risk</td></tr>
+                <tr><td><strong>Risk Level</strong></td><td>High Risk / Inconclusive / Low Risk / Pending</td></tr>
+                <tr><td><strong>Model Performance Metrics</strong></td><td>Accuracy, AUROC, C-Index, Precision, Recall — show model reliability</td></tr>
+                <tr><td><strong>SHAP Feature Importance Plot</strong></td><td>Visualisation of which features most influenced the prediction</td></tr>
+                <tr><td><strong>Step-by-Step Assessment</strong></td><td>Shows how risk changes as more data is added</td></tr>
+            </table>
+
+            <h4>6.2 Understanding Model Performance Metrics</h4>
+            <table class="manual-table">
+                <tr><th>Metric</th><th>Plain English Explanation</th></tr>
+                <tr><td><strong>Accuracy</strong></td><td>How often the model is correct — higher is better</td></tr>
+                <tr><td><strong>AUROC</strong></td><td>How well the model separates high-risk from low-risk people — higher is better (0.5 = random, 1.0 = perfect)</td></tr>
+                <tr><td><strong>C-Index</strong></td><td>How well the model ranks high-risk people — higher is better</td></tr>
+                <tr><td><strong>Precision</strong></td><td>Of those labelled "high risk," how many truly are high risk</td></tr>
+                <tr><td><strong>Recall</strong></td><td>Of all truly high-risk people, how many were found by the model</td></tr>
+            </table>
+
+            <h4>6.3 Interpreting SHAP Plots</h4>
+            <p>SHAP (SHapley Additive exPlanations) plots show which features contributed most to a prediction:</p>
+            <ul>
+                <li><strong>Features with high SHAP values</strong> → strongly influenced the prediction</li>
+                <li><strong>Features with low SHAP values</strong> → had little influence</li>
+                <li><strong>Positive values</strong> → feature increased risk</li>
+                <li><strong>Negative values</strong> → feature decreased risk</li>
+            </ul>
+            <div class="manual-warning">
+                <strong>⚠️ Important:</strong> SHAP values are for research interpretation only. They explain model behaviour, not clinical causality.
+            </div>
+
+            <!-- ===== SECTION 7: Troubleshooting ===== -->
+            <h3>7. Troubleshooting</h3>
+
+            <p><strong>"Access Restricted" Error</strong></p>
+            <ul>
+                <li>You do not have permission for that feature. Contact your administrator to request access.</li>
+            </ul>
+
+            <p><strong>No Patients Assigned</strong></p>
+            <ul>
+                <li>You have no patients assigned yet. Contact your administrator to assign patients to you.</li>
+            </ul>
+
+            <p><strong>CSV Upload Fails</strong></p>
+            <ul>
+                <li>Check that your CSV matches the template exactly. Ensure all required columns are present and correctly spelled.</li>
+            </ul>
+
+            <p><strong>Results Show "Inconclusive"</strong></p>
+            <ul>
+                <li>The model has insufficient data for a clear conclusion. Ensure all assessment steps have been completed.</li>
+            </ul>
+
+            <!-- ===== SECTION 8: Data Privacy ===== -->
+            <h3>8. Data Privacy & Compliance</h3>
+            <ul>
+                <li>This platform complies with <strong>UK GDPR</strong> and the <strong>Data Protection Act 2018</strong></li>
+                <li>All patient data is <strong>pseudonymised</strong> and stored on <strong>NHS-compliant secure UK servers</strong></li>
+                <li>Data retention: during the study period (expected 5 years), then securely archived or deleted</li>
+                <li>Patients have the right to access, rectify, or withdraw consent</li>
+                <li>You must not share patient data outside the platform without appropriate authorisation</li>
+            </ul>
+
+            <!-- ===== SECTION 9: Contact ===== -->
+            <h3>9. Contact Us</h3>
+            <table class="manual-table">
+                <tr><th>Contact Channel</th><th>Contact Details</th></tr>
+                <tr><td>Research Team</td><td><a href="mailto:konstantinos.theofilatos@kcl.ac.uk">konstantinos.theofilatos@kcl.ac.uk</a></td></tr>
+                <tr><td>Data Protection Officer (DPO)</td><td><a href="mailto:dpo@kcl.ac.uk">dpo@kcl.ac.uk</a></td></tr>
+            </table>
+
+            <!-- ===== SECTION 10: Quick Reference ===== -->
+            <h3>10. Quick Reference Card</h3>
+            <table class="manual-table">
+                <tr><th>Task</th><th>Where to Go</th></tr>
+                <tr><td>View patient list</td><td>Dashboard → Patient Records</td></tr>
+                <tr><td>Search for a patient</td><td>Patient Risk Panel → Search bar</td></tr>
+                <tr><td>Filter high-risk patients</td><td>Patient Risk Panel → High Risk filter button</td></tr>
+                <tr><td>View patient results</td><td>Patient Risk Panel → View button</td></tr>
+                <tr><td>Email patient</td><td>Patient Risk Panel → Email button</td></tr>
+                <tr><td>Upload batch data</td><td>Dashboard → Batch Prediction</td></tr>
+                <tr><td>Predict TAVI risk</td><td>Dashboard → TAVI Risk Prediction</td></tr>
+                <tr><td>Download CSV template</td><td>Batch Prediction / TAVI page → Download Template</td></tr>
+            </table>
+
+            <p class="manual-footer">Thank you for using PRECISE-CVD. Your participation in this research helps advance cardiovascular disease prevention.</p>
+
+        </div>
+        <div class="manual-modal-footer">
+            <button class="btn-close-modal" onclick="closeModal('clinician-manual-modal')">Close</button>
+        </div>
+    </div>
+</div>
+
+<!-- ========================================== -->
+
+<!-- Custom Styles -->
+<style>
+    .about-hero {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
     
-</body>
-</html>
+    .hover-lift {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .hover-lift:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+    }
+    
+    .feature-item {
+        transition: all 0.3s ease;
+    }
+    
+    .feature-item:hover {
+        transform: translateX(5px);
+    }
+    
+    .feature-icon {
+        transition: transform 0.3s ease;
+    }
+    
+    .feature-item:hover .feature-icon {
+        transform: scale(1.1);
+    }
+    
+    .tech-card {
+        transition: all 0.3s ease;
+    }
+    
+    .tech-icon {
+        transition: transform 0.3s ease;
+    }
+    
+    .tech-card:hover .tech-icon {
+        transform: scale(1.1);
+    }
+    
+    .btn {
+        transition: all 0.3s ease;
+    }
+    
+    .btn:hover {
+        transform: translateY(-2px);
+    }
+     .btn:hover {
+        transform: translateY(-2px);
+    }
+    
+    /* ========================================== */
+    /* 🔽 patient manual CSS 🔽                         */
+    /* ========================================== */
+    
+    /* --- Manual Modal Styles --- */
+    .manual-modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 10000;
+        justify-content: center;
+        align-items: center;
+        animation: fadeIn 0.3s ease;
+    }
+    
+    .manual-modal-content {
+        background: #fff;
+        border-radius: 12px;
+        max-width: 750px;
+        width: 92%;
+        max-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        animation: slideDown 0.3s ease;
+    }
+    
+    .manual-modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 24px;
+        border-bottom: 2px solid #e9ecef;
+        flex-shrink: 0;
+    }
+    
+    .manual-modal-header h2 {
+        margin: 0;
+        font-size: 22px;
+        color: #1a1a2e;
+    }
+    
+    .manual-modal-close {
+        background: none;
+        border: none;
+        font-size: 28px;
+        cursor: pointer;
+        color: #888;
+        transition: color 0.2s;
+        line-height: 1;
+    }
+    
+    .manual-modal-close:hover {
+        color: #c62828;
+    }
+    
+    .manual-modal-body {
+        padding: 24px;
+        overflow-y: auto;
+        flex: 1;
+        font-size: 14px;
+        line-height: 1.7;
+        color: #333;
+    }
+    
+    .manual-modal-body h3 {
+        font-size: 18px;
+        color: #1a1a2e;
+        margin-top: 28px;
+        margin-bottom: 12px;
+        padding-bottom: 6px;
+        border-bottom: 2px solid #1565c0;
+    }
+    
+    .manual-modal-body h4 {
+        font-size: 15px;
+        color: #2c3e50;
+        margin-top: 18px;
+        margin-bottom: 6px;
+    }
+    
+    .manual-modal-body p {
+        margin: 6px 0;
+    }
+    
+    .manual-modal-body ul,
+    .manual-modal-body ol {
+        margin: 6px 0 12px 20px;
+    }
+    
+    .manual-modal-body li {
+        margin: 4px 0;
+    }
+    
+    .manual-warning {
+        background-color: #fff3e0;
+        border-left: 4px solid #e65100;
+        padding: 12px 16px;
+        border-radius: 4px;
+        margin: 12px 0;
+    }
+    
+    .manual-warning ul {
+        margin: 6px 0 0 20px;
+    }
+    
+    .manual-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 12px 0;
+        font-size: 13px;
+    }
+    
+    .manual-table th {
+        background-color: #f8f9fa;
+        text-align: left;
+        padding: 8px 12px;
+        border: 1px solid #dee2e6;
+        font-weight: 600;
+    }
+    
+    .manual-table td {
+        padding: 8px 12px;
+        border: 1px solid #dee2e6;
+    }
+    
+    .manual-modal-footer {
+        padding: 16px 24px;
+        border-top: 1px solid #e9ecef;
+        text-align: right;
+        flex-shrink: 0;
+    }
+    
+    .btn-close-modal {
+        background: #1565c0;
+        color: white;
+        border: none;
+        padding: 10px 32px;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+    
+    .btn-close-modal:hover {
+        background: #0d47a1;
+    }
+    
+    .btn-manual {
+        display: inline-block;
+        padding: 10px 24px;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 14px;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+        transition: all 0.3s ease;
+        margin-top: 8px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .btn-manual-patient {
+        background-color: #e8f5e9;
+        color: #2e7d32;
+        border: 1px solid #2e7d32;
+    }
+    
+    .btn-manual-patient:hover {
+        background-color: #2e7d32;
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    .btn-manual-clinician {
+    background-color: #e3f2fd;
+    color: #0d47a1;
+    border: 1px solid #0d47a1;
+    }
+
+    .btn-manual-clinician:hover {
+    background-color: #0d47a1;
+    color: white;
+    transform: translateY(-2px);
+    }
+
+    .manual-footer {
+        margin-top: 20px;
+        padding-top: 16px;
+        border-top: 1px solid #e9ecef;
+        text-align: center;
+        font-size: 13px;
+        color: #666;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    @keyframes slideDown {
+        from { transform: translateY(-30px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+    
+    /* --- Dark mode for patient manual modal --- */
+    body.dark-mode .manual-modal-content {
+        background: #2d2d2d;
+        color: #e0e0e0;
+    }
+    
+    body.dark-mode .manual-modal-header {
+        border-bottom-color: #444;
+    }
+    
+    body.dark-mode .manual-modal-header h2 {
+        color: #fff;
+    }
+    
+    body.dark-mode .manual-modal-body {
+        color: #e0e0e0;
+    }
+    
+    body.dark-mode .manual-modal-body h3 {
+        color: #fff;
+        border-bottom-color: #1565c0;
+    }
+    
+    body.dark-mode .manual-modal-body h4 {
+        color: #90caf9;
+    }
+    
+    body.dark-mode .manual-warning {
+        background-color: #3e2723;
+        border-left-color: #e65100;
+    }
+    
+    body.dark-mode .manual-table th {
+        background-color: #3d3d3d;
+        border-color: #555;
+    }
+    
+    body.dark-mode .manual-table td {
+        border-color: #555;
+    }
+    
+    body.dark-mode .manual-modal-footer {
+        border-top-color: #444;
+    }
+    
+    body.dark-mode .btn-manual-patient {
+        background-color: #1b3a1b;
+        color: #81c784;
+        border-color: #81c784;
+    }
+    
+    body.dark-mode .btn-manual-patient:hover {
+        background-color: #81c784;
+        color: #1b3a1b;
+    }
+
+    /* --- Dark mode for clinician button --- */
+    body.dark-mode .btn-manual-clinician {
+    background-color: #1a2744;
+    color: #64b5f6;
+    border-color: #64b5f6;
+    }
+
+    body.dark-mode .btn-manual-clinician:hover {
+    background-color: #64b5f6;
+    color: #1a2744;
+    }
+    
+    /* ========================================== */
+
+    /* --- DARK MODE OVERRIDES --- */
+    body.dark-mode .about-hero,
+    body[data-theme="dark"] .about-hero {
+        background: linear-gradient(135deg, #23272b 0%, #232323 100%) !important;
+    }
+    body.dark-mode .about-hero h1.display-4,
+    body[data-theme="dark"] .about-hero h1.display-4 {
+        color: #fff !important;
+    }
+    body.dark-mode .bg-light,
+    body[data-theme="dark"] .bg-light {
+        background: #232323 !important;
+    }
+    body.dark-mode section:not(.cta-section):not(.about-hero):not(.bg-light),
+    body[data-theme="dark"] section:not(.cta-section):not(.about-hero):not(.bg-light) {
+        background: #232323 !important;
+    }
+    body.dark-mode h2.display-5,
+    body[data-theme="dark"] h2.display-5 {
+        color: #fff !important;
+    }
+    body.dark-mode .btn-light,
+    body[data-theme="dark"] .btn-light {
+        color: #111 !important;
+    }
+    body.dark-mode .btn-light .bi,
+    body[data-theme="dark"] .btn-light .bi {
+        color: #111 !important;
+    }
+    body.dark-mode .btn-outline-light,
+    body[data-theme="dark"] .btn-outline-light {
+        color: #fff !important;
+        border-color: #fff !important;
+    }
+    body.dark-mode .btn-outline-light .bi,
+    body[data-theme="dark"] .btn-outline-light .bi {
+        color: #fff !important;
+    }
+</style>
+<!-- ========================================== -->
+    <!-- 🔽 JavaScript patient manual 🔽                          -->
+    <!-- ========================================== -->
+    
+    <script>
+    // --- Manual Modal Controls ---
+    
+    function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.setProperty('display', 'flex', 'important');
+        document.body.style.overflow = 'hidden';
+        }
+    }
+    
+    function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+    }
+    
+    function closeModalOutside(event, modalId) {
+        if (event.target === event.currentTarget) {
+            closeModal(modalId);
+        }
+    }
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            const openModals = document.querySelectorAll('.manual-modal-overlay');
+            openModals.forEach(function(modal) {
+                if (modal.style.display === 'flex') {
+                    closeModal(modal.id);
+                }
+            });
+        }
+    });
+    </script>
+    
+    <!-- ========================================== -->
+{% endblock %}
