@@ -114,8 +114,13 @@ rel="stylesheet">
                             <a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}btn btn-primary text-white px-4 py-1{% else %}nav-link{% endif %}" style="border-radius: 25px;">Contact</a>
                         </li>
                         <li>
+                            <a href="{% url 'how_to_use' %}" class="{% if request.resolver_match.url_name == 'how_to_use' %}btn btn-primary text-white px-4 py-1{% else %}nav-link{% endif %}" style="border-radius: 25px;">How to Use</a>
+                        </li>
+                        <li>
                             <a href="{% url 'acknowledgements' %}" class="{% if request.resolver_match.url_name == 'contact' %}btn btn-primary text-white px-4 py-1{% else %}nav-link{% endif %}" style="border-radius: 25px;">Acknowledgements</a>
                         </li>
+ 
+                        
                         
                         <!-- Authentication-specific Links -->
                         {% if user.is_authenticated %}
@@ -267,6 +272,9 @@ rel="stylesheet">
                 <a href="{% url 'acknowledgements' %}">Acknowledgements</a>
             </li>
 
+            <li>
+                <a href="{% url 'how_to_use' %}">How to Use</a>
+            </li>
              <li>
                 <a href="{% url 'about' %}">About Us</a>
             </li>

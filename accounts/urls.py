@@ -7,7 +7,11 @@ from accounts.views import assessment_view
 urlpatterns = [
     path('starter/', views.home_view, name='starter-page'),
     path('learn-cvd/', views.learn_cvd, name='learn_cvd'),
-    path('acknowledgements/', views.acknowledgements, name='acknowledgements'),
+    path('request-access/', views.request_access_view, name='request_access'),
+    path('how-to-use/', views.how_to_use, name='how_to_use'),
+    path("about/", views.about_view, name="about"),
+    path("acknowledgements/", views.acknowledgements, name="acknowledgements"),
+    path("contact/", views.contact_view, name="contact"),
     path('request-access/', views.request_access_view, name='request_access'),
     path('login/', views.login_view, name='login'),
     path('logout/', views.logout_view, name='logout'),
