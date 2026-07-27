@@ -1,6 +1,55 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<style>
+
+
+  .floating-help {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #0d6efd;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: all 0.25s ease;
+    z-index: 9999;
+}
+
+.floating-help:hover {
+    background: #0b5ed7;
+    transform: scale(1.08);
+}
+
+.floating-help::after {
+    content: "How to use this platform";
+    position: absolute;
+    right: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(33,37,41,0.95);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 14px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.floating-help:hover::after {
+    opacity: 1;
+}
+</style>
 <div class="container mt-5 mb-5">
     <div class="row mb-4">
         <div class="col-12">
@@ -51,4 +100,10 @@
         {# Add more cards here as needed for other clinician functionalities #}
     </div>
 </div>
+  <a href="{% url 'how_to_use' %}"
+   class="floating-help"
+   target="_blank"
+   title="Click to learn how to use this platform">
+    ?
+</a>
 {% endblock %}
