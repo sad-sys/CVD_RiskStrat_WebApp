@@ -41,6 +41,9 @@ class Users(AbstractUser):
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=True)  # Required for access to admin
     is_superuser = models.BooleanField(default=True)  # Required for superuser privileges
+
+    one_week_email_sent = models.BooleanField(default=False)
+    
     def get_username(self):
         return self.email
     role = models.CharField(
