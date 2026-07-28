@@ -20,7 +20,7 @@ class Command(BaseCommand):
             date_joined__lte=cutoff_date,
             one_week_email_sent=False,
             is_active=True,
-            role="clinician_approved",gi
+            role="clinician_approved",
         )
 
         print(f"Found clinician {clinicianUsers.count()} clinicianUsers")
