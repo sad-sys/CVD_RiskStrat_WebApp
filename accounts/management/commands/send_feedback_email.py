@@ -16,26 +16,50 @@ class Command(BaseCommand):
 
         cutoff_date = timezone.now() - timedelta(days=7)
 
-        users = User.objects.filter(
+        clinicianUsers = User.objects.filter(
             date_joined__lte=cutoff_date,
             one_week_email_sent=False,
             is_active=True,
             role="clinician_approved",
         )
 
-        print(f"Found {users.count()} users")
+        print(f"Found clinician {clinicianUsers.count()} clinicianUsers")
 
-        for user in users:
+        for clinicianUser in clinicianUsers:
 
             send_mail(
                 subject="PreciseCVD feedback form",
                 message="Hi! Please complete our feedback form https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=FM9wg_MWFky4PHJAcWVDVmI-smpi4FtBkad56uUvX6NUOElXUTdJQVZFUFhLNUxHUUdJUURWWU82NS4u&Token=b277f6b5e72d429e9ca568fc61c1c293",
                 from_email=settings.DEFAULT_FROM_EMAIL,
-                recipient_list=[user.email],
+                recipient_list=[clinicianUser.email],
                 fail_silently=False,
             )
 
-            user.one_week_email_sent = True
-            user.save(update_fields=["one_week_email_sent"])
+            clinicianUser.one_week_email_sent = True
+            clinicianUser.save(update_fields=["one_week_email_sent"])
 
-            print(f"Sent to {user.email}")
+            print(f"Sent to {clinicianUser.email}")
+
+        patientUsers = User.objects.filter(
+        date_joined__lte=cutoff_date,
+        one_week_email_sent=False,
+        is_active=True,
+        role="patient",
+        )
+
+        for patient in patientUsers:
+
+            send_mail(
+                subject="PreciseCVD feedback form",
+                message="Hi! Please complete our feedback form https://forms.cloud.microsoft/Pages/DesignPageV2.aspx?subpage=design&FormId=FM9wg_MWFky4PHJAcWVDVmI-smpi4FtBkad56uUvX6NUN0lHM1FQTDhOU1ZIT1dTTUhLRE1LRjZTQi4u&Token=9c2a4a48b1ea48d583ba8cb8b0e53be7",
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                recipient_list=[patient.email],
+                fail_silently=False,
+            )
+
+            patient.one_week_email_sent = True
+            patient.save(update_fields=["one_week_email_sent"])
+
+            print(f"Sent to {patient.email}")
+
+        
