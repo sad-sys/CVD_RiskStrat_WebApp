@@ -14,13 +14,13 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
 
-        cutoff_date = timezone.now() - timedelta(days=7)
+        cutoff_date = timezone.now() - timedelta(days=0)
 
         clinicianUsers = User.objects.filter(
             date_joined__lte=cutoff_date,
             one_week_email_sent=False,
             is_active=True,
-            role="clinician_approved",
+            role="clinician_approved",g
         )
 
         print(f"Found clinician {clinicianUsers.count()} clinicianUsers")
