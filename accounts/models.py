@@ -90,24 +90,211 @@ class ClinicianFeedback(models.Model):
 
 
 class PatientFeedback(models.Model):
+
+    # ========================================================
+    # SECTION A: BACKGROUND INFORMATION
+    # ========================================================
+
+    LEARNED_ABOUT_CHOICES = [
+        ("gp", "From my GP / doctor"),
+        ("cardiologist", "From a specialist (cardiologist)"),
+        ("research", "From a research study invitation"),
+        ("family_friend", "From a family member or friend"),
+        ("social_media", "From social media or online search"),
+        ("other", "Other"),
+    ]
+
+    USAGE_COUNT_CHOICES = [
+        ("first_time", "This is my first time"),
+        ("2_to_5", "2–5 times"),
+        ("more_than_5", "More than 5 times"),
+    ]
+
+    # ========================================================
+    # SHARED 1–5 SCALES
+    # ========================================================
+
+    DIFFICULTY_CHOICES = [
+        (1, "1 = Very difficult"),
+        (2, "2 = Difficult"),
+        (3, "3 = Neutral"),
+        (4, "4 = Easy"),
+        (5, "5 = Very easy"),
+    ]
+
+    CLARITY_CHOICES = [
+        (1, "1 = Very unclear"),
+        (2, "2 = Unclear"),
+        (3, "3 = Neutral"),
+        (4, "4 = Clear"),
+        (5, "5 = Very clear"),
+    ]
+
+    USEFULNESS_CHOICES = [
+        (1, "1 = Not useful"),
+        (2, "2 = Slightly useful"),
+        (3, "3 = Neutral"),
+        (4, "4 = Useful"),
+        (5, "5 = Very useful"),
+    ]
+
+    CONFIDENCE_CHOICES = [
+        (1, "1 = Not confident"),
+        (2, "2 = Slightly confident"),
+        (3, "3 = Neutral"),
+        (4, "4 = Confident"),
+        (5, "5 = Very confident"),
+    ]
+
+    SATISFACTION_CHOICES = [
+        (1, "1 = Very dissatisfied"),
+        (2, "2 = Dissatisfied"),
+        (3, "3 = Neutral"),
+        (4, "4 = Satisfied"),
+        (5, "5 = Very satisfied"),
+    ]
+
+    COMPLETION_TIME_CHOICES = [
+        ("under_5", "Less than 5 minutes"),
+        ("5_to_10", "5–10 minutes"),
+        ("10_to_15", "10–15 minutes"),
+        ("15_to_20", "15–20 minutes"),
+        ("over_20", "More than 20 minutes"),
+    ]
+
+    UNDERSTANDING_CHOICES = [
+        ("no", "No, not at all"),
+        ("somewhat", "Yes, somewhat"),
+        ("well", "Yes, I understand it well"),
+    ]
+
+    DISCUSSION_CHOICES = [
+        ("no", "No"),
+        ("yes", "Yes"),
+        ("unsure", "Not sure"),
+    ]
+
+    # ========================================================
+    # USER
+    # ========================================================
+
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
         related_name="patient_feedbacks",
     )
 
-    rating = models.PositiveSmallIntegerField(
-        choices=[(i, str(i)) for i in range(1, 6)]
+    # ========================================================
+    # SECTION A: BACKGROUND INFORMATION
+    # ========================================================
+
+    learned_about_platform = models.CharField(
+        max_length=30,
+        choices=LEARNED_ABOUT_CHOICES,
     )
 
-    submitted_at = models.DateTimeField(auto_now_add=True)
+    learned_about_other = models.CharField(
+        max_length=255,
+        blank=True,
+    )
+
+    platform_usage_count = models.CharField(
+        max_length=20,
+        choices=USAGE_COUNT_CHOICES,
+    )
+
+    # ========================================================
+    # SECTION B: PLATFORM USABILITY
+    # ========================================================
+
+    registration_ease = models.PositiveSmallIntegerField(
+        choices=DIFFICULTY_CHOICES,
+    )
+
+    instruction_clarity = models.PositiveSmallIntegerField(
+        choices=CLARITY_CHOICES,
+    )
+
+    questionnaire_ease = models.PositiveSmallIntegerField(
+        choices=DIFFICULTY_CHOICES,
+    )
+
+    questionnaire_completion_time = models.CharField(
+        max_length=20,
+        choices=COMPLETION_TIME_CHOICES,
+    )
+
+    risk_report_ease = models.PositiveSmallIntegerField(
+        choices=DIFFICULTY_CHOICES,
+    )
+
+    risk_factor_explanation_usefulness = models.PositiveSmallIntegerField(
+        choices=USEFULNESS_CHOICES,
+    )
+
+    # ========================================================
+    # SECTION C: UNDERSTANDING AND TRUST
+    # ========================================================
+
+    risk_level_clarity = models.PositiveSmallIntegerField(
+        choices=CLARITY_CHOICES,
+    )
+
+    understands_risk_score = models.CharField(
+        max_length=20,
+        choices=UNDERSTANDING_CHOICES,
+    )
+
+    plans_to_discuss_results = models.CharField(
+        max_length=10,
+        choices=DISCUSSION_CHOICES,
+    )
+
+    prediction_confidence = models.PositiveSmallIntegerField(
+        choices=CONFIDENCE_CHOICES,
+    )
+
+    # ========================================================
+    # SECTION D: OPEN FEEDBACK
+    # ========================================================
+
+    liked_most = models.TextField(
+        blank=True,
+    )
+
+    confusing_or_difficult = models.TextField(
+        blank=True,
+    )
+
+    suggested_improvements = models.TextField(
+        blank=True,
+    )
+
+    additional_comments = models.TextField(
+        blank=True,
+    )
+
+    # ========================================================
+    # SECTION E: OVERALL SATISFACTION
+    # ========================================================
+
+    overall_satisfaction = models.PositiveSmallIntegerField(
+        choices=SATISFACTION_CHOICES,
+    )
+
+    submitted_at = models.DateTimeField(
+        auto_now_add=True,
+    )
 
     class Meta:
-        db_table = "PatientFeedback"
+        db_table = "patient_feedback"
         ordering = ["-submitted_at"]
 
     def __str__(self):
-        return f"{self.user.email} - {self.rating}/5"
+        return (
+            f"Patient feedback from {self.user.email} "
+            f"on {self.submitted_at:%d %b %Y}"
+        )
 
 
 class Patients(models.Model):
