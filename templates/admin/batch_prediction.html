@@ -4,6 +4,9 @@
 
 {% block content %}
  <!-- Features Distribution -->
+<style>
+#patientSelect.has-placeholder { color: #6c757d; }
+</style>
 <link href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.bootstrap5.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
@@ -225,6 +228,10 @@
         <div class="card shadow p-4 mt-4">
           <h5 class="mb-1">Population Risk Distribution</h5>
           <p class="text-muted small mb-3">Based on N=100,000 simulated UK Biobank-like participants. Your patients are shown as vertical lines.</p>
+          <div id="distPatientWrap" style="display:none;" class="mb-3 col-md-3">
+            <label for="distPatientSelect" class="form-label fw-semibold">Choose Patient</label>
+            <select id="distPatientSelect" class="form-select"></select>
+          </div>
           <canvas id="distributionChart" height="300"></canvas>
         </div>
         {% endif %}
@@ -238,17 +245,22 @@
       <div class="col-md-10 mx-auto">
         <div class="card shadow p-4">
           <h5 class="mb-3">Variable Distribution Explorer</h5>
-          <p class="text-muted mb-3">Select a variable to view its distribution across all uploaded patients.</p>
           <div class="col-md-4 mb-3">
             <label for="varSelect" class="form-label fw-semibold">Choose Variable</label>
             <select id="varSelect" class="form-select">
+              <option value="" selected></option>
               {% for col in all_columns %}
                 <option value="{{ col }}">{{ col }}</option>
               {% endfor %}
             </select>
           </div>
-          <canvas id="varDistChart" height="100"></canvas>
-        </div>
+          <!--Choose Patient-->
+          <div class="col-md-4 mb-3" id="patientSelectorWrap" style="display:none;">
+            <label for="patientSelect" class="form-label fw-semibold">Choose Patient</label>
+            <select id="patientSelect" class="form-select"></select>
+            </div>
+        <div id="varDistChartWrap" style="display:none; position:relative; height:400px;">
+          <canvas id="varDistChart"></canvas>
       </div>
     </div>
     {% endif %}
@@ -302,7 +314,7 @@
         };
     });
 
-    new Chart(ctx, {
+    const distChart = new Chart(ctx, {
         type: 'bar',
         data: {
             labels: xValues.map(x => x.toFixed(2)),
@@ -346,6 +358,38 @@
             }
         }
     });
+  // Patient selector for distribution chart
+  const distPatientSel = document.getElementById('distPatientSelect');
+  const distPatientWrap = document.getElementById('distPatientWrap');
+  if (patientScores.length > 1) {
+    distPatientWrap.style.display = '';
+    [['All Patients', -1], ...patientScores.map((_, i) => ['Patient ' + (i+1), i])].forEach(([text, val]) => {
+     const opt = document.createElement('option');
+     opt.value = val; opt.textContent = text;
+     distPatientSel.appendChild(opt);
+    });
+  }
+  function buildAnnotations(selectedIdx) {
+    const ann = {};
+    const indices = selectedIdx === -1 ? patientScores.map((_, i) => i) : [selectedIdx];
+    indices.forEach(i => {
+      const closestIndex = xValues.reduce((best, x, idx) =>
+        Math.abs(x - patientScores[i]) < Math.abs(xValues[best] - patientScores[i]) ? idx : best, 0);
+      ann['patient' + i] = {
+        type: 'line', xMin: closestIndex, xMax: closestIndex,
+        borderColor: 'rgba(0,0,0,0.8)', borderWidth: 2, borderDash: [5,3],
+        label: { display: true, content: 'Patient ' + (i+1) + ': ' + patientPercentiles[i] + '%',
+          position: 'start', backgroundColor: 'rgba(0,0,0,0.7)', color: 'white',
+          font: { size: 11 }, padding: 4 }
+      };
+    });
+  return ann;
+  }
+if (distPatientSel) distPatientSel.addEventListener('change', () => {
+  distChart.options.plugins.annotation.annotations = buildAnnotations(parseInt(distPatientSel.value));
+  distChart.update();
+});
+
   });
 </script>
 {% endif %}
@@ -358,6 +402,25 @@
 {% if all_results %}
 (function() {
   const allResults = {{ all_results|safe }};
+
+  const patientSel = document.getElementById('patientSelect');
+  const patientWrap = document.getElementById('patientSelectorWrap');
+  if (allResults.length > 1) {
+    patientWrap.style.display = '';
+    const placeholderOpt = document.createElement('option');
+    placeholderOpt.value = '';
+    placeholderOpt.textContent = 'Select a patient';
+    placeholderOpt.disabled = true;
+    placeholderOpt.selected = true;
+    patientSel.appendChild(placeholderOpt);
+    patientSel.classList.add('has-placeholder');
+    allResults.forEach((row, i) => {
+      const opt = document.createElement('option');
+      opt.value = i;
+      opt.textContent = 'Patient ' + (i + 1);
+      patientSel.appendChild(opt);
+    });
+  }
   const ctx = document.getElementById('varDistChart');
   if (!ctx) return;
   let varChart = null;
@@ -386,6 +449,8 @@
   }
 
   function drawChart(col) {
+    if (Object.keys(ukbData).length === 0) return;
+    if (patientSel && allResults.length > 1 && patientSel.value === '') return;
     const values = getValues(col);
     if (!values.length) return;
     if (varChart) varChart.destroy();
@@ -396,8 +461,10 @@
       if (entry.type === 'decile') {
         const labels = entry.data.map(d => d.label);
         const refValues = entry.data.map(d => d.value);
-        const patValues = getValues(col);
-        const patVal = patValues.length ? patValues[0] : null;
+        const patIdx = patientSel ? parseInt(patientSel.value) || 0 : 0;
+        const patRow = allResults[patIdx];
+        const patVal = patRow ? parseFloat(patRow[col]) : null;
+        console.log('col:', col, 'refValues:', refValues, 'patVal:', patVal);
 
         const annotations = {};
         if (patVal !== null) {
@@ -419,6 +486,7 @@
           };
         }
 
+        document.getElementById('varDistChartWrap').style.display = '';
         varChart = new Chart(ctx, {
           type: 'line',
           data: {
@@ -434,28 +502,45 @@
             pointBorderColor: '#fff',
             pointBorderWidth: 2,
             tension: 0.3,
-            fill: true
+            fill: false
           }]
         },
         options: {
             responsive: true,
+            maintainAspectRatio: false,
             plugins: {
               legend: { display: false },
+
               title: { display: true, text: col + ' — UK Biobank Showcase Reference', font: { size: 14 } },
               tooltip: { callbacks: { label: t => 'Value: ' + t.raw } },
               annotation: { annotations }
             },
             scales: {
               x: { title: { display: true, text: 'Percentile' } },
-              y: { title: { display: true, text: col }, beginAtZero: false }
+              y: { title: { display: true, text: col }, beginAtZero: false, min: Math.min(...refValues) * 0.9, max: Math.max(...refValues) * 1.1 }
             }
           }
         });
+        console.log('y scale min:', varChart.scales.y.min, 'max:', varChart.scales.y.max);
 
       } else {
         const bins = entry.data;
         const labels = bins.map(b => b.label);
         const ukbPcts = bins.map(b => b.percentage);
+        // Andy Features Annotation
+        const patIdx = patientSel ? parseInt(patientSel.value) || 0 : 0;
+        const patRow = allResults[patIdx];
+        const rawVal = patRow ? patRow[col] : null;
+        const patVal = (rawVal === true || rawVal === 1) ? 1
+             : (rawVal === false || rawVal === 0) ? 0
+             : parseFloat(rawVal);
+        const barColors = bins.map(b => {
+          const match = b.label.match(/\((\d+)\)$/);
+          const code = match ? parseFloat(match[1]) : null;
+          return (code !== null && !isNaN(patVal) && code === patVal)
+            ? 'rgba(255,100,0,0.85)'
+            : 'rgba(46,117,182,0.65)';
+        });
 
         varChart = new Chart(ctx, {
           type: 'bar',
@@ -464,16 +549,26 @@
             datasets: [{
               label: 'UK Biobank Reference (%)',
               data: ukbPcts,
-              backgroundColor: 'rgba(46,117,182,0.65)',
-              borderColor: 'rgba(46,117,182,1)',
+              backgroundColor: barColors,
+              borderColor: barColors.map(c => c.includes('255') ? 'rgba(255,100,0,1)' : 'rgba(46,117,182,1)'),
               borderWidth: 1, borderRadius: 2
-            }]
+            }
+            
+          ]
           },
           options: {
             responsive: true,
+            maintainAspectRatio: false,
             plugins: {
               legend: { display: false },
               title: { display: true, text: col + ' — UK Biobank Reference Distribution', font: { size: 14 } },
+              subtitle: {
+                display: true,
+                text: '■ Orange bar = patient\'s value',
+                color: 'rgba(255,100,0,0.9)',
+                font: { size: 12, style: 'italic' },
+                padding: { bottom: 8 }
+              },
               tooltip: { callbacks: { label: t => 'UK Biobank: ' + t.raw + '%' } }
             },
             scales: {
@@ -494,6 +589,7 @@
           borderWidth: 1, borderRadius: 2, barPercentage: 1.0, categoryPercentage: 1.0 }] },
         options: {
           responsive: true,
+          maintainAspectRatio: false,
           plugins: {
             legend: { display: false },
             title: { display: true, text: 'Distribution of: ' + col + '  (n=' + values.length + ')', font: { size: 14 } },
@@ -510,19 +606,21 @@
 
   const sel = document.getElementById('varSelect');
   // Dropdown Search Box
-  new TomSelect('#varSelect', { maxOptions: null });
+  new TomSelect('#varSelect', { maxOptions: null, placeholder: 'Select a variable' });
 
   fetch("{% static 'data/ukb_distributions.json' %}")
     .then(r => r.json())
     .then(data => {
       ukbData = data;
-      if (sel) drawChart(sel.value);
+      if (sel && sel.value) drawChart(sel.value);
     })
-    .catch(() => {
-      if (sel) drawChart(sel.value);
-    });
+    .catch(() => {});  
 
   if (sel) sel.addEventListener('change', () => drawChart(sel.value));
+  if (patientSel) patientSel.addEventListener('change', () => drawChart(sel.value));
+  if (patientSel) patientSel.addEventListener('change', () => {
+    if (patientSel.value !== '') patientSel.classList.remove('has-placeholder');
+});
 })();
 {% endif %}
 </script>
