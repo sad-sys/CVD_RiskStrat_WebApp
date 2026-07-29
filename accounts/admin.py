@@ -181,3 +181,8 @@ admin.site.register(batch_CVD_Risk_Model_Features)
 admin.site.register(batch_CVD_Risk_Risk)
 admin.site.register(batch_CVD_Risk_Output)
 admin.site.register(ClinicianAccessRequest)
+from django.contrib import admin
+from .models import PatientFeedback, ClinicianFeedback
+
+admin.site.register(PatientFeedback)
+admin.site.register(ClinicianFeedback)

@@ -1085,12 +1085,24 @@ def patient_feedback(request):
     if request.method == "POST":
         form = PatientFeedbackForm(request.POST)
 
+        print("POST DATA:")
+        print(request.POST)
+
         if form.is_valid():
+            print("✅ PATIENT FEEDBACK FORM IS VALID")
+
             feedback = form.save(commit=False)
             feedback.user = request.user
             feedback.save()
 
+            print("✅ SAVED PATIENT FEEDBACK ID:", feedback.id)
+
             return redirect("feedback_complete")
+
+        print("❌ PATIENT FEEDBACK FORM ERRORS:")
+        print(form.errors)
+        print(form.errors.as_data())
+
     else:
         form = PatientFeedbackForm()
 

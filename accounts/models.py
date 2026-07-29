@@ -69,24 +69,287 @@ from django.db import models
 
 
 class ClinicianFeedback(models.Model):
+
+    # ========================================================
+    # SECTION A: BACKGROUND INFORMATION
+    # ========================================================
+
+    EXPERIENCE_CHOICES = [
+        ("under_2", "Less than 2 years"),
+        ("2_to_5", "2–5 years"),
+        ("6_to_10", "6–10 years"),
+        ("11_to_20", "11–20 years"),
+        ("over_20", "More than 20 years"),
+    ]
+
+    USAGE_COUNT_CHOICES = [
+        ("first_time", "This is my first time"),
+        ("2_to_5", "2–5 times"),
+        ("6_to_10", "6–10 times"),
+        ("over_10", "More than 10 times"),
+    ]
+
+    SETTING_CHOICES = [
+        ("research", "Research"),
+        ("clinical", "Clinical (patient-facing)"),
+        ("both", "Both"),
+        ("not_applicable", "Not applicable"),
+    ]
+
+    PRIOR_FAMILIARITY_CHOICES = [
+        (
+            "regular_user",
+            "Yes, I use them regularly",
+        ),
+        (
+            "aware_not_user",
+            "Yes, I am aware of them but do not use them",
+        ),
+        (
+            "not_familiar",
+            "No, I was not familiar with them",
+        ),
+    ]
+
+    # ========================================================
+    # SHARED 1–5 SCALES
+    # ========================================================
+
+    EASE_CHOICES = [
+        (1, "1 = Very difficult"),
+        (2, "2 = Difficult"),
+        (3, "3 = Neutral"),
+        (4, "4 = Easy"),
+        (5, "5 = Very easy"),
+    ]
+
+    CLARITY_CHOICES = [
+        (1, "1 = Very unclear"),
+        (2, "2 = Unclear"),
+        (3, "3 = Neutral"),
+        (4, "4 = Clear"),
+        (5, "5 = Very clear"),
+    ]
+
+    INTUITIVENESS_CHOICES = [
+        (1, "1 = Not at all intuitive"),
+        (2, "2 = Slightly intuitive"),
+        (3, "3 = Neutral"),
+        (4, "4 = Intuitive"),
+        (5, "5 = Very intuitive"),
+    ]
+
+    DESIGN_CHOICES = [
+        (1, "1 = Very poor"),
+        (2, "2 = Poor"),
+        (3, "3 = Neutral"),
+        (4, "4 = Good"),
+        (5, "5 = Excellent"),
+    ]
+
+    SPEED_CHOICES = [
+        (1, "1 = Very slow"),
+        (2, "2 = Slow"),
+        (3, "3 = Neutral"),
+        (4, "4 = Fast"),
+        (5, "5 = Very fast"),
+    ]
+
+    AGREEMENT_CHOICES = [
+        (1, "1 = Strongly disagree"),
+        (2, "2 = Disagree"),
+        (3, "3 = Neutral"),
+        (4, "4 = Agree"),
+        (5, "5 = Strongly agree"),
+    ]
+
+    UNDERSTANDABILITY_CHOICES = [
+        (1, "1 = Very confusing"),
+        (2, "2 = Confusing"),
+        (3, "3 = Neutral"),
+        (4, "4 = Understandable"),
+        (5, "5 = Very understandable"),
+    ]
+
+    USEFULNESS_CHOICES = [
+        (1, "1 = Not useful"),
+        (2, "2 = Slightly useful"),
+        (3, "3 = Neutral"),
+        (4, "4 = Useful"),
+        (5, "5 = Very useful"),
+    ]
+
+    CONFIDENCE_CHOICES = [
+        (1, "1 = No confidence"),
+        (2, "2 = Little confidence"),
+        (3, "3 = Neutral"),
+        (4, "4 = Moderate confidence"),
+        (5, "5 = High confidence"),
+    ]
+
+    LIKELIHOOD_CHOICES = [
+        (1, "1 = Very unlikely"),
+        (2, "2 = Unlikely"),
+        (3, "3 = Neutral"),
+        (4, "4 = Likely"),
+        (5, "5 = Very likely"),
+    ]
+
+    RELEVANCE_CHOICES = [
+        (1, "1 = Not relevant"),
+        (2, "2 = Slightly relevant"),
+        (3, "3 = Neutral"),
+        (4, "4 = Relevant"),
+        (5, "5 = Highly relevant"),
+    ]
+
+    SATISFACTION_CHOICES = [
+        (1, "1 = Very dissatisfied"),
+        (2, "2 = Dissatisfied"),
+        (3, "3 = Neutral"),
+        (4, "4 = Satisfied"),
+        (5, "5 = Very satisfied"),
+    ]
+
+    # ========================================================
+    # USER
+    # ========================================================
+
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
         related_name="clinician_feedbacks",
     )
 
-    rating = models.PositiveSmallIntegerField(
-        choices=[(i, str(i)) for i in range(1, 11)]
+    # ========================================================
+    # SECTION A: BACKGROUND INFORMATION
+    # ========================================================
+
+    primary_clinical_role = models.CharField(
+        max_length=150,
     )
 
-    submitted_at = models.DateTimeField(auto_now_add=True)
+    years_of_experience = models.CharField(
+        max_length=20,
+        choices=EXPERIENCE_CHOICES,
+    )
+
+    platform_usage_count = models.CharField(
+        max_length=20,
+        choices=USAGE_COUNT_CHOICES,
+    )
+
+    primary_use_setting = models.CharField(
+        max_length=20,
+        choices=SETTING_CHOICES,
+    )
+
+    prior_risk_model_familiarity = models.CharField(
+        max_length=30,
+        choices=PRIOR_FAMILIARITY_CHOICES,
+    )
+
+    # ========================================================
+    # SECTION B: INTERFACE AND USABILITY
+    # ========================================================
+
+    navigation_ease = models.PositiveSmallIntegerField(
+        choices=EASE_CHOICES,
+    )
+
+    instruction_clarity = models.PositiveSmallIntegerField(
+        choices=CLARITY_CHOICES,
+    )
+
+    data_entry_intuitiveness = models.PositiveSmallIntegerField(
+        choices=INTUITIVENESS_CHOICES,
+    )
+
+    visual_design_rating = models.PositiveSmallIntegerField(
+        choices=DESIGN_CHOICES,
+    )
+
+    prediction_generation_speed = models.PositiveSmallIntegerField(
+        choices=SPEED_CHOICES,
+    )
+
+    clear_action_feedback = models.PositiveSmallIntegerField(
+        choices=AGREEMENT_CHOICES,
+    )
+
+    prediction_understandability = models.PositiveSmallIntegerField(
+        choices=UNDERSTANDABILITY_CHOICES,
+    )
+
+    feature_importance_usefulness = models.PositiveSmallIntegerField(
+        choices=USEFULNESS_CHOICES,
+    )
+
+    # ========================================================
+    # SECTION C: TRUST AND CLINICAL RELEVANCE
+    # ========================================================
+
+    prediction_confidence = models.PositiveSmallIntegerField(
+        choices=CONFIDENCE_CHOICES,
+    )
+
+    research_recommendation_likelihood = models.PositiveSmallIntegerField(
+        choices=LIKELIHOOD_CHOICES,
+    )
+
+    clinical_output_relevance = models.PositiveSmallIntegerField(
+        choices=RELEVANCE_CHOICES,
+    )
+
+    alignment_with_clinical_judgement = models.PositiveSmallIntegerField(
+        choices=AGREEMENT_CHOICES,
+    )
+
+    trust_for_preventative_treatment = models.PositiveSmallIntegerField(
+        choices=AGREEMENT_CHOICES,
+    )
+
+    # ========================================================
+    # SECTION D: OPEN-ENDED FEEDBACK
+    # ========================================================
+
+    least_useful_feature = models.TextField(
+        blank=True,
+    )
+
+    suggested_interface_improvements = models.TextField(
+        blank=True,
+    )
+
+    requested_features = models.TextField(
+        blank=True,
+    )
+
+    additional_comments = models.TextField(
+        blank=True,
+    )
+
+    # ========================================================
+    # SECTION E: SATISFACTION
+    # ========================================================
+
+    overall_satisfaction = models.PositiveSmallIntegerField(
+        choices=SATISFACTION_CHOICES,
+    )
+
+    submitted_at = models.DateTimeField(
+        auto_now_add=True,
+    )
 
     class Meta:
-        db_table = "ClinicianFeedback"
+        db_table = "clinician_feedback"
         ordering = ["-submitted_at"]
 
     def __str__(self):
-        return f"{self.user.email} - {self.rating}/10"
+        return (
+            f"Clinician feedback from {self.user.email} "
+            f"on {self.submitted_at:%d %b %Y}"
+        )
 
 
 class PatientFeedback(models.Model):
