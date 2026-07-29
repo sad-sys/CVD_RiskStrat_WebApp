@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="container mt-5" style="max-width:700px;">
+<div class="container mt-5" style="max-width: 700px;">
 
     <h2>Patient Feedback</h2>
 
@@ -10,7 +10,7 @@
         Thank you for using PreciseCVD. We would really appreciate your feedback.
     </p>
 
-    <form method="post">
+    <form method="post" id="patient-feedback-form">
         {% csrf_token %}
 
         {{ form.as_p }}
@@ -22,5 +22,54 @@
     </form>
 
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const otherInput = document.querySelector(
+        '[name="learned_about_other"]'
+    );
+
+    const sourceInputs = document.querySelectorAll(
+        '[name="learned_about_platform"]'
+    );
+
+    if (!otherInput || sourceInputs.length === 0) {
+        return;
+    }
+
+    // form.as_p places each field inside a <p> element.
+    const otherContainer = otherInput.closest("p");
+
+    function updateOtherField() {
+        const selectedInput = document.querySelector(
+            '[name="learned_about_platform"]:checked'
+        );
+
+        /*
+         * This assumes the stored value for the Other option is "other".
+         * Change "other" below if your model uses a different stored value.
+         */
+        const otherSelected =
+            selectedInput &&
+            selectedInput.value.toLowerCase() === "other";
+
+        if (otherSelected) {
+            otherContainer.style.display = "";
+            otherInput.required = true;
+        } else {
+            otherContainer.style.display = "none";
+            otherInput.required = false;
+            otherInput.value = "";
+        }
+    }
+
+    sourceInputs.forEach(function (input) {
+        input.addEventListener("change", updateOtherField);
+    });
+
+    updateOtherField();
+});
+</script>
 
 {% endblock %}
