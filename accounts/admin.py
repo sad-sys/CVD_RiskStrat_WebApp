@@ -1,6 +1,7 @@
 from django.contrib import admin, messages
 from django.conf import settings
 from django.core.mail import send_mail
+from django.urls import reverse
 
 from .models import (
     Patients,
@@ -28,18 +29,12 @@ from .models import (
 @admin.action(description="Send PreciseCVD feedback email")
 def send_feedback_email(modeladmin, request, queryset):
 
-    clinician_form_url = (
-        "https://forms.office.com/Pages/DesignPageV2.aspx"
-        "?subpage=design"
-        "&FormId=FM9wg_MWFky4PHJAcWVDVmI-smpi4FtBkad56uUvX6NUOElXUTdJQVZFUFhLNUxHUUdJUURWWU82NS4u"
-        "&Token=b277f6b5e72d429e9ca568fc61c1c293"
+    clinician_form_url = request.build_absolute_uri(
+        reverse("clinician_feedback")
     )
 
-    patient_form_url = (
-        "https://forms.cloud.microsoft/Pages/DesignPageV2.aspx"
-        "?subpage=design"
-        "&FormId=FM9wg_MWFky4PHJAcWVDVmI-smpi4FtBkad56uUvX6NUN0lHM1FQTDhOU1ZIT1dTTUhLRE1LRjZTQi4u"
-        "&Token=9c2a4a48b1ea48d583ba8cb8b0e53be7"
+    patient_form_url = request.build_absolute_uri(
+        reverse("patient_feedback")
     )
 
     sent_count = 0
@@ -56,11 +51,11 @@ def send_feedback_email(modeladmin, request, queryset):
         # Choose the correct form based on role
         if user.role == "clinician_approved":
             form_url = clinician_form_url
-            greeting = "Dear clinician,"
+            greeting = f"Dear {user.first_name or 'clinician'},"
 
         elif user.role == "patient":
             form_url = patient_form_url
-            greeting = "Dear participant,"
+            greeting = f"Dear {user.first_name or 'participant'},"
 
         else:
             skipped_count += 1
@@ -69,15 +64,17 @@ def send_feedback_email(modeladmin, request, queryset):
         email_message = (
             f"{greeting}\n\n"
             "Thank you for using PreciseCVD.\n\n"
-            "We would be grateful if you could complete our short feedback form:\n\n"
+            "We would be grateful if you could complete our short "
+            "feedback form using the link below:\n\n"
             f"{form_url}\n\n"
+            "You may need to log in before completing the form.\n\n"
             "Your feedback will help us improve the platform.\n\n"
             "Kind regards,\n"
             "The PreciseCVD Team"
         )
 
         try:
-            send_mail(
+            number_sent = send_mail(
                 subject="PreciseCVD feedback form",
                 message=email_message,
                 from_email=settings.DEFAULT_FROM_EMAIL,
@@ -85,11 +82,16 @@ def send_feedback_email(modeladmin, request, queryset):
                 fail_silently=False,
             )
 
-            # Record that the feedback email has been sent
-            user.one_week_email_sent = True
-            user.save(update_fields=["one_week_email_sent"])
+            if number_sent == 1:
+                sent_count += 1
+            else:
+                failed_count += 1
 
-            sent_count += 1
+                modeladmin.message_user(
+                    request,
+                    f"The email to {user.email} was not sent.",
+                    level=messages.ERROR,
+                )
 
         except Exception as error:
             failed_count += 1
@@ -125,8 +127,6 @@ def send_feedback_email(modeladmin, request, queryset):
             f"{failed_count} feedback email(s) failed to send.",
             level=messages.ERROR,
         )
-
-
 # ============================================================
 # USERS ADMIN
 # ============================================================

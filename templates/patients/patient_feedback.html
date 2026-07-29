@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5" style="max-width:700px;">
+
+    <h2>Patient Feedback</h2>
+
+    <p>
+        Thank you for using PreciseCVD. We would really appreciate your feedback.
+    </p>
+
+    <form method="post">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit" class="btn btn-primary">
+            Submit Feedback
+        </button>
+
+    </form>
+
+</div>
+
+{% endblock %}

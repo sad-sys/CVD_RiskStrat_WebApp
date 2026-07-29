@@ -64,6 +64,51 @@ class Users(AbstractUser):
         db_table = 'Users'
         verbose_name_plural = 'Users'
 
+from django.conf import settings
+from django.db import models
+
+
+class ClinicianFeedback(models.Model):
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name="clinician_feedbacks",
+    )
+
+    rating = models.PositiveSmallIntegerField(
+        choices=[(i, str(i)) for i in range(1, 11)]
+    )
+
+    submitted_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = "ClinicianFeedback"
+        ordering = ["-submitted_at"]
+
+    def __str__(self):
+        return f"{self.user.email} - {self.rating}/10"
+
+
+class PatientFeedback(models.Model):
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name="patient_feedbacks",
+    )
+
+    rating = models.PositiveSmallIntegerField(
+        choices=[(i, str(i)) for i in range(1, 6)]
+    )
+
+    submitted_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = "PatientFeedback"
+        ordering = ["-submitted_at"]
+
+    def __str__(self):
+        return f"{self.user.email} - {self.rating}/5"
+
 
 class Patients(models.Model):
     patient_id = models.AutoField(primary_key=True)

@@ -1,6 +1,8 @@
 from django import forms
 from .models import Users, Patients
 from django.contrib.auth.forms import UserCreationForm
+from .models import ClinicianFeedback, PatientFeedback
+
 
 class CustomUserCreationForm(UserCreationForm):
     sex = forms.ChoiceField(choices=[('Male', 'Male'), ('Female', 'Female')], required=True)
@@ -29,3 +31,26 @@ class CustomUserCreationForm(UserCreationForm):
                 user.patients.save()
             
         return user
+
+class ClinicianFeedbackForm(forms.ModelForm):
+    class Meta:
+        model = ClinicianFeedback
+        fields = ["rating"]
+        labels = {
+            "rating": "As a clinician, how much do you like this platform?",
+        }
+        widgets = {
+            "rating": forms.RadioSelect,
+        }
+
+
+class PatientFeedbackForm(forms.ModelForm):
+    class Meta:
+        model = PatientFeedback
+        fields = ["rating"]
+        labels = {
+            "rating": "As a patient, how much do you like this platform?",
+        }
+        widgets = {
+            "rating": forms.RadioSelect,
+        }

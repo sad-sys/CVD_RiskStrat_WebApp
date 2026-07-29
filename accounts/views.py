@@ -1048,6 +1048,62 @@ def contact_view(request):
         return render(request, 'contact.html', {'success': True})
     return render(request, 'contact.html')
 
+from .forms import ClinicianFeedbackForm, PatientFeedbackForm
+@login_required
+def clinician_feedback(request):
+    if request.user.role != "clinician_approved":
+        return HttpResponseForbidden(
+            "Only approved clinician accounts can access this feedback form."
+        )
+
+    if request.method == "POST":
+        form = ClinicianFeedbackForm(request.POST)
+
+        if form.is_valid():
+            feedback = form.save(commit=False)
+            feedback.user = request.user
+            feedback.save()
+
+            return redirect("feedback_complete")
+    else:
+        form = ClinicianFeedbackForm()
+
+    return render(
+        request,
+        "clinicians/clinician_feedback.html",
+        {"form": form},
+    )
+
+
+@login_required
+def patient_feedback(request):
+    if request.user.role != "patient":
+        return HttpResponseForbidden(
+            "Only patient accounts can access this feedback form."
+        )
+
+    if request.method == "POST":
+        form = PatientFeedbackForm(request.POST)
+
+        if form.is_valid():
+            feedback = form.save(commit=False)
+            feedback.user = request.user
+            feedback.save()
+
+            return redirect("feedback_complete")
+    else:
+        form = PatientFeedbackForm()
+
+    return render(
+        request,
+        "patients/patient_feedback.html",
+        {"form": form},
+    )
+
+@login_required
+def feedback_complete(request):
+    return render(request, "feedback_complete.html")
+
 @login_required
 @user_passes_test(is_admin)
 def admin_panel(request):

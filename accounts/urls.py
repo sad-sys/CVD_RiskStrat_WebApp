@@ -53,7 +53,6 @@ name='password_reset_complete'),
     # Andy (permission)
     #path('toggle-clinician-permission/<int:clinician_id>/', views.toggle_clinician_permission, name='toggle_clinician_permission'),
     # Andy (TAVI model)
-    path('tavi-prediction/', views.tavi_prediction, name='tavi_prediction'),
     path('download-tavi-template/', views.download_tavi_template, name='download_tavi_template'),
     # Andy (TAVI model)
 
@@ -71,7 +70,23 @@ name='password_reset_complete'),
 
     path('download_patient_plots/<int:row_index>/', views.download_patient_plots, name='download_patient_plots'),
 
-    path('tavi-prediction/', views.tavi_prediction, name='tavi_prediction')
+    path('tavi-prediction/', views.tavi_prediction, name='tavi_prediction'),
+    path(
+        "feedback/clinician/",
+        views.clinician_feedback,
+        name="clinician_feedback",
+    ),
 
+    path(
+        "feedback/patient/",
+        views.patient_feedback,
+        name="patient_feedback",
+    ),
+
+    path(
+        "feedback/complete/",
+        views.feedback_complete,
+        name="feedback_complete",
+    ),
 ]
 
