@@ -3,6 +3,8 @@ from django.conf import settings
 from django.core.mail import send_mail
 from django.urls import reverse
 
+from django.db import transaction
+
 from .models import (
     Patients,
     Clinicians,
@@ -131,6 +133,91 @@ def send_feedback_email(modeladmin, request, queryset):
 # USERS ADMIN
 # ============================================================
 
+# ============================================================
+# APPROVE CLINICIAN ADMIN ACTION
+# ============================================================
+
+@admin.action(description="Approve selected users as clinicians")
+def approve_as_clinicians(modeladmin, request, queryset):
+
+    approved_count = 0
+    profile_created_count = 0
+    skipped_count = 0
+    failed_count = 0
+
+    for user in queryset:
+
+        # Avoid accidentally changing genuine Django administrators
+        if user.is_superuser:
+            skipped_count += 1
+
+            modeladmin.message_user(
+                request,
+                f"Skipped superuser account: {user.email}",
+                level=messages.WARNING,
+            )
+            continue
+
+        try:
+            with transaction.atomic():
+
+                user.role = "clinician_approved"
+                user.is_active = True
+                user.is_staff = False
+
+                user.save(
+                    update_fields=[
+                        "role",
+                        "is_active",
+                        "is_staff",
+                    ]
+                )
+
+                clinician, created = Clinicians.objects.get_or_create(
+                    user=user,
+                    defaults={
+                        "specialty": None,
+                    },
+                )
+
+                approved_count += 1
+
+                if created:
+                    profile_created_count += 1
+
+        except Exception as error:
+            failed_count += 1
+
+            modeladmin.message_user(
+                request,
+                f"Failed to approve {user.email}: {error}",
+                level=messages.ERROR,
+            )
+
+    if approved_count > 0:
+        modeladmin.message_user(
+            request,
+            (
+                f"Approved {approved_count} user(s) as clinicians. "
+                f"Created {profile_created_count} clinician profile(s)."
+            ),
+            level=messages.SUCCESS,
+        )
+
+    if skipped_count > 0:
+        modeladmin.message_user(
+            request,
+            f"Skipped {skipped_count} superuser account(s).",
+            level=messages.WARNING,
+        )
+
+    if failed_count > 0:
+        modeladmin.message_user(
+            request,
+            f"{failed_count} user(s) could not be approved.",
+            level=messages.ERROR,
+        )
+
 @admin.register(Users)
 class UsersAdmin(admin.ModelAdmin):
 
@@ -160,6 +247,7 @@ class UsersAdmin(admin.ModelAdmin):
 
     actions = [
         send_feedback_email,
+        approve_as_clinicians,
     ]
 
 
