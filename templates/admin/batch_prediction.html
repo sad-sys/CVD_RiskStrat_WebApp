@@ -3,28 +3,54 @@
 {% load accounts_extras %}
 
 {% block content %}
+
+<style>
+  #patientSelect.has-placeholder {
+    color: #6c757d;
+  }
+</style>
+
+<link
+  href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.bootstrap5.min.css"
+  rel="stylesheet"
+>
+
+<script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/2.2.1/chartjs-plugin-annotation.min.js"></script>
+
 <div class="container mt-5 mb-5">
+
+  <!-- Page title -->
   <div class="row mb-4">
-    <div class="col-md-12">
+    <div class="col-12">
       <h1 class="text-primary">Batch CVD Risk Prediction</h1>
     </div>
   </div>
-  <!-- Upload Form Card -->
-   <!-- Andy -->
+
+  <!-- Upload form -->
   <div class="row justify-content-center mb-4">
     <div class="col-md-7">
       <div class="card shadow p-4 w-100">
+
         <h5 class="mb-3">Upload Patient Data</h5>
+
         <form method="post" enctype="multipart/form-data" class="mb-4">
           {% csrf_token %}
+
           <div class="mb-3">
             <label for="csv_file" class="form-label">Choose CSV file</label>
-            <input type="file" class="form-control" id="csv_file" name="csv_file" accept=".csv" required>
-            <small class="form-text text-muted">
-
-              <!-- Andy -->
+            <input
+              type="file"
+              class="form-control"
+              id="csv_file"
+              name="csv_file"
+              accept=".csv"
+              required
+            >
           </div>
-          <div class="mt-3">
+
+          <div class="mb-3">
             <label for="model_choice" class="form-label">Choose Model</label>
             <select name="model_choice" id="model_choice" class="form-select">
               <option value="model1">Full model</option>
@@ -32,95 +58,144 @@
               <option value="model3">Model 3</option>
             </select>
           </div>
-          <div id="model-instruction" class="alert alert-info mt-2">
-            Please select a model to see instructions.
+
+          <div id="model-instruction" class="alert alert-info">
+            Full model requires all features including metabolomics and PRS.
           </div>
 
-          <script>
-          const instructions = {
-            model1: "Full model requires all features including metabolomics and PRS.",
-            model2: "This model only uses sociodemographics + HMH + sex variables.",
-            model3: "Simplified clinical model with minimal input features."
-          };
-
-          document.getElementById("model_choice").addEventListener("change", function () {
-            const selected = this.value;
-            const box = document.getElementById("model-instruction");
-
-            if (instructions[selected]) {
-              box.innerHTML = instructions[selected];
-              box.style.display = "block";
-            } else {
-              box.innerHTML = "";
-            }
-          });
-          </script>
-          <!-- Andy -->
-
-              
-              <div class="mt-2">
-                Please refer to the feature documentation for detailed answer options.<br>
-                For questions requiring a Yes/No response (this applies to questions with a logical data type), enter <strong>1</strong> for "Yes" and <strong>0</strong> for "No".
-              </div>
-
-            </small>
+          <div class="mt-2 text-muted">
+            Please refer to the feature documentation for detailed answer options.<br>
+            For Yes/No questions with a logical data type, enter
+            <strong>1</strong> for “Yes” and <strong>0</strong> for “No”.
           </div>
-          <p class="text-center">
-            <a href="{% url 'download_data_entry_template' %}" class="btn btn-primary mb-2">Download Data Entry Template (CSV)</a><br>
-            <a href="{% url 'download_feature_documentation' %}" class="btn btn-secondary">Download Feature Documentation (CSV)</a>
+
+          <p class="text-center mt-3">
+            <a
+              href="{% url 'download_data_entry_template' %}"
+              class="btn btn-primary mb-2"
+            >
+              Download Data Entry Template (CSV)
+            </a>
+            <br>
+            <a
+              href="{% url 'download_feature_documentation' %}"
+              class="btn btn-secondary"
+            >
+              Download Feature Documentation (CSV)
+            </a>
           </p>
 
-          
-
           <div class="form-check mt-3">
-            <input class="form-check-input" type="checkbox" value="1" id="confirmDataCheckbox" name="confirm_data" required>
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="1"
+              id="confirmDataCheckbox"
+              name="confirm_data"
+              required
+            >
             <label class="form-check-label" for="confirmDataCheckbox">
-              By checking this box, I verify that I have reviewed the uploaded patient data for accuracy and completeness.
+              By checking this box, I verify that I have reviewed the uploaded
+              patient data for accuracy and completeness.
             </label>
           </div>
+
           <div class="d-grid mt-3">
-            <button type="submit" class="btn btn-primary" id="processButton">Process Batch</button>
+            <button type="submit" class="btn btn-primary" id="processButton">
+              Process Batch
+            </button>
           </div>
         </form>
+
         {% if present_columns_count is not None and completeness_percentage < 100 %}
           <div class="alert alert-warning mt-3">
-            <p><strong>Data Completeness:</strong> {{ present_columns_count }}/{{ total_required_columns }} fields inputted ({{ completeness_percentage }}%).</p>
-            <p><strong>Warning:</strong> Prediction may not be as accurate due to missing data. For better prediction accuracy, it is recommended to provide as many fields as possible, ideally all required features.</p>
+            <p>
+              <strong>Data Completeness:</strong>
+              {{ present_columns_count }}/{{ total_required_columns }}
+              fields inputted ({{ completeness_percentage }}%).
+            </p>
+
+            <p>
+              <strong>Warning:</strong>
+              Prediction may be less accurate because of missing data. For
+              better prediction accuracy, provide as many required fields as possible.
+            </p>
+
             {% if missing_columns %}
-              <p>Missing columns (imputed with default values): {{ missing_columns|join:', ' }}</p>
+              <p>
+                Missing columns, imputed using default values:
+                {{ missing_columns|join:', ' }}
+              </p>
             {% endif %}
           </div>
         {% endif %}
+
         {% if error %}
           <div class="alert alert-danger mt-3">
             {{ error }}
           </div>
         {% endif %}
+
       </div>
     </div>
   </div>
-  <!-- Prediction Results Card -->
+
   {% if show_results %}
+
+    <!-- Prediction results -->
     <div class="row justify-content-center">
       <div class="col-md-10">
+
         <div class="card shadow p-4 w-100">
           <h5 class="mb-3">Prediction Results</h5>
+
           <div class="mb-3">
-            <h6>Download Options:</h6>
-            <a href="{% url 'download_all_data' %}" class="btn btn-outline-primary btn-sm me-2">Download All Data (CSV)</a>
-            <form method="get" action="{% url 'download_filtered_data' %}" class="d-inline-block">
-                {% csrf_token %}
-                <div class="input-group input-group-sm d-inline-flex w-auto align-items-center">
-                    <span class="input-group-text">Filter by Index (comma-separated):</span>
-                    <input type="text" name="indices" class="form-control form-control-sm w-auto me-2" placeholder="e.g., 0,5,10">
-                    <span class="input-group-text">or Limit:</span>
-                    <input type="number" name="limit" class="form-control form-control-sm w-auto me-2" placeholder="e.g., 50">
-                    <button type="submit" class="btn btn-outline-primary btn-sm">Download Filtered Data (CSV)</button>
-                </div>
+            <h6>Download Options</h6>
+
+            <a
+              href="{% url 'download_all_data' %}"
+              class="btn btn-outline-primary btn-sm me-2 mb-2"
+            >
+              Download All Data (CSV)
+            </a>
+
+            <form
+              method="get"
+              action="{% url 'download_filtered_data' %}"
+              class="d-inline-block"
+            >
+              <div class="input-group input-group-sm d-inline-flex w-auto align-items-center">
+                <span class="input-group-text">Filter by Index</span>
+
+                <input
+                  type="text"
+                  name="indices"
+                  class="form-control form-control-sm"
+                  placeholder="e.g. 0,5,10"
+                >
+
+                <span class="input-group-text">or Limit</span>
+
+                <input
+                  type="number"
+                  name="limit"
+                  class="form-control form-control-sm"
+                  placeholder="e.g. 50"
+                  min="1"
+                >
+
+                <button type="submit" class="btn btn-outline-primary btn-sm">
+                  Download Filtered Data
+                </button>
+              </div>
             </form>
           </div>
+
           {% if paginated_data %}
-            <div class="table-responsive" style="max-height: 500px; overflow-y: auto;">
+            <div
+              class="table-responsive"
+              style="max-height: 500px; overflow-y: auto;"
+            >
               <table class="table table-striped table-bordered table-sm">
                 <thead class="sticky-top bg-white">
                   <tr>
@@ -130,106 +205,920 @@
                     <th>Actions</th>
                   </tr>
                 </thead>
+
                 <tbody>
                   {% for row in paginated_data %}
                     <tr>
                       {% for column in columns %}
                         <td>{{ row|get_item:column }}</td>
                       {% endfor %}
-                      <td>
-                        <a href="{% url 'download_single_patient_data' forloop.counter0 %}" class="btn btn-outline-secondary btn-sm">Download</a>
-                        <a href="{% url 'download_patient_plots' forloop.counter0 %}" class="btn btn-outline-info btn-sm ms-1">Download Plots</a>
+
+                      <td class="text-nowrap">
+                        <a
+                          href="{% url 'download_single_patient_data' forloop.counter0 %}"
+                          class="btn btn-outline-secondary btn-sm"
+                        >
+                          Download
+                        </a>
+
+                        <a
+                          href="{% url 'download_patient_plots' forloop.counter0 %}"
+                          class="btn btn-outline-info btn-sm ms-1"
+                        >
+                          Download Plots
+                        </a>
                       </td>
                     </tr>
                   {% endfor %}
                 </tbody>
               </table>
             </div>
-            <!-- Pagination Controls -->
+
+            <!-- Pagination -->
             <div class="d-flex justify-content-between align-items-center mt-3">
-              <!-- Rows per page dropdown -->
               <div class="d-flex align-items-center">
                 <label for="rowsPerPage" class="me-2">Rows per page:</label>
-                <select class="form-select form-select-sm" id="rowsPerPage" style="width: auto;">
+
+                <select
+                  class="form-select form-select-sm"
+                  id="rowsPerPage"
+                  style="width: auto;"
+                >
                   <option value="10" {% if rows_per_page == 10 %}selected{% endif %}>10</option>
                   <option value="25" {% if rows_per_page == 25 %}selected{% endif %}>25</option>
                   <option value="50" {% if rows_per_page == 50 %}selected{% endif %}>50</option>
                   <option value="100" {% if rows_per_page == 100 %}selected{% endif %}>100</option>
                 </select>
               </div>
-              <!-- Page navigation -->
+
               <nav aria-label="Page navigation">
                 <ul class="pagination pagination-sm mb-0">
+
                   {% if page_obj.has_previous %}
                     <li class="page-item">
-                      <a class="page-link" href="?page=1&rows_per_page={{ rows_per_page }}" aria-label="First" title="First Page">
-                        <span aria-hidden="true">⟪</span>
+                      <a
+                        class="page-link"
+                        href="?page=1&rows_per_page={{ rows_per_page }}"
+                        aria-label="First"
+                        title="First Page"
+                      >
+                        ⟪
                       </a>
                     </li>
+
                     <li class="page-item">
-                      <a class="page-link" href="?page={{ page_obj.previous_page_number }}&rows_per_page={{ rows_per_page }}" aria-label="Previous" title="Previous Page">
-                        <span aria-hidden="true">←</span>
+                      <a
+                        class="page-link"
+                        href="?page={{ page_obj.previous_page_number }}&rows_per_page={{ rows_per_page }}"
+                        aria-label="Previous"
+                        title="Previous Page"
+                      >
+                        ←
                       </a>
                     </li>
                   {% else %}
                     <li class="page-item disabled">
-                      <span class="page-link" aria-hidden="true">⟪</span>
+                      <span class="page-link">⟪</span>
                     </li>
                     <li class="page-item disabled">
-                      <span class="page-link" aria-hidden="true">←</span>
+                      <span class="page-link">←</span>
                     </li>
                   {% endif %}
+
                   {% for num in page_obj.paginator.page_range %}
                     {% if page_obj.number == num %}
-                      <li class="page-item active"><span class="page-link">{{ num }}</span></li>
+                      <li class="page-item active">
+                        <span class="page-link">{{ num }}</span>
+                      </li>
                     {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
                       <li class="page-item">
-                        <a class="page-link" href="?page={{ num }}&rows_per_page={{ rows_per_page }}">{{ num }}</a>
+                        <a
+                          class="page-link"
+                          href="?page={{ num }}&rows_per_page={{ rows_per_page }}"
+                        >
+                          {{ num }}
+                        </a>
                       </li>
                     {% endif %}
                   {% endfor %}
+
                   {% if page_obj.has_next %}
                     <li class="page-item">
-                      <a class="page-link" href="?page={{ page_obj.next_page_number }}&rows_per_page={{ rows_per_page }}" aria-label="Next" title="Next Page">
-                        <span aria-hidden="true">→</span>
+                      <a
+                        class="page-link"
+                        href="?page={{ page_obj.next_page_number }}&rows_per_page={{ rows_per_page }}"
+                        aria-label="Next"
+                        title="Next Page"
+                      >
+                        →
                       </a>
                     </li>
+
                     <li class="page-item">
-                      <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}&rows_per_page={{ rows_per_page }}" aria-label="Last" title="Last Page">
-                        <span aria-hidden="true">⟫</span>
+                      <a
+                        class="page-link"
+                        href="?page={{ page_obj.paginator.num_pages }}&rows_per_page={{ rows_per_page }}"
+                        aria-label="Last"
+                        title="Last Page"
+                      >
+                        ⟫
                       </a>
                     </li>
                   {% else %}
                     <li class="page-item disabled">
-                      <span class="page-link" aria-hidden="true">→</span>
+                      <span class="page-link">→</span>
                     </li>
                     <li class="page-item disabled">
-                      <span class="page-link" aria-hidden="true">⟫</span>
+                      <span class="page-link">⟫</span>
                     </li>
                   {% endif %}
+
                 </ul>
               </nav>
             </div>
+
           {% else %}
             <div class="alert alert-info">
               No prediction results available.
             </div>
           {% endif %}
         </div>
-      
+
+        <!-- Population risk distribution -->
+        {% if distribution_x %}
+          <div class="card shadow p-4 mt-4">
+            <h5 class="mb-1">Population Risk Distribution</h5>
+
+            <p class="text-muted small mb-3">
+              Based on N=100,000 simulated UK Biobank-like participants.
+              Your patients are shown as vertical lines.
+            </p>
+
+            <div
+              id="distPatientWrap"
+              class="mb-3 col-md-3"
+              style="display: none;"
+            >
+              <label
+                for="distPatientSelect"
+                class="form-label fw-semibold"
+              >
+                Choose Patient
+              </label>
+
+              <select
+                id="distPatientSelect"
+                class="form-select"
+              ></select>
+            </div>
+
+            <canvas id="distributionChart" height="300"></canvas>
+          </div>
+        {% endif %}
+
+      </div>
+    </div>
+
+    <!-- Variable distribution explorer -->
+    {% if all_results %}
+      <div class="row mt-4">
+        <div class="col-md-10 mx-auto">
+          <div class="card shadow p-4">
+
+            <h5 class="mb-3">Variable Distribution Explorer</h5>
+
+            <div class="col-md-4 mb-3">
+              <label for="varSelect" class="form-label fw-semibold">
+                Choose Variable
+              </label>
+
+              <select id="varSelect" class="form-select">
+                <option value="" selected></option>
+
+                {% for col in all_columns %}
+                  <option value="{{ col }}">{{ col }}</option>
+                {% endfor %}
+              </select>
+            </div>
+
+            <div
+              class="col-md-4 mb-3"
+              id="patientSelectorWrap"
+              style="display: none;"
+            >
+              <label for="patientSelect" class="form-label fw-semibold">
+                Choose Patient
+              </label>
+
+              <select id="patientSelect" class="form-select"></select>
+            </div>
+
+            <div
+              id="varDistChartWrap"
+              style="display: none; position: relative; height: 400px;"
+            >
+              <canvas id="varDistChart"></canvas>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
+  {% endif %}
+
 </div>
-{% endif %}
+
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const rowsPerPageSelect = document.getElementById('rowsPerPage');
-    if (rowsPerPageSelect) {
-        rowsPerPageSelect.addEventListener('change', function() {
-            const currentUrl = new URL(window.location.href);
-            currentUrl.searchParams.set('rows_per_page', this.value);
-            currentUrl.searchParams.set('page', '1'); // Reset to first page when changing rows per page
-            window.location.href = currentUrl.toString();
-        });
+document.addEventListener("DOMContentLoaded", function () {
+  const modelInstructions = {
+    model1: "Full model requires all features including metabolomics and PRS.",
+    model2: "This model only uses sociodemographics + HMH + sex variables.",
+    model3: "Simplified clinical model with minimal input features."
+  };
+
+  const modelChoice = document.getElementById("model_choice");
+  const modelInstruction = document.getElementById("model-instruction");
+
+  function updateModelInstruction() {
+    if (!modelChoice || !modelInstruction) {
+      return;
     }
+
+    modelInstruction.textContent =
+      modelInstructions[modelChoice.value] ||
+      "Please select a model to see instructions.";
+  }
+
+  if (modelChoice) {
+    updateModelInstruction();
+    modelChoice.addEventListener("change", updateModelInstruction);
+  }
+
+  const rowsPerPageSelect = document.getElementById("rowsPerPage");
+
+  if (rowsPerPageSelect) {
+    rowsPerPageSelect.addEventListener("change", function () {
+      const currentUrl = new URL(window.location.href);
+      currentUrl.searchParams.set("rows_per_page", this.value);
+      currentUrl.searchParams.set("page", "1");
+      window.location.href = currentUrl.toString();
+    });
+  }
 });
 </script>
-{% endblock %} 
+
+{% if distribution_x %}
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const xValues = {{ distribution_x|safe }};
+  const yValues = {{ distribution_y|safe }};
+  const patientScores = {{ patient_scores|safe }};
+  const patientPercentiles = {{ patient_percentiles|safe }};
+
+  const p5 = {{ ukb_p5 }};
+  const p25 = {{ ukb_p25 }};
+  const p75 = {{ ukb_p75 }};
+  const p95 = {{ ukb_p95 }};
+
+  const canvas = document.getElementById("distributionChart");
+
+  if (!canvas) {
+    return;
+  }
+
+  const backgroundColors = xValues.map(function (x) {
+    if (x < p5) {
+      return "rgba(239, 68, 68, 0.4)";
+    }
+
+    if (x < p25) {
+      return "rgba(59, 130, 246, 0.4)";
+    }
+
+    if (x < p75) {
+      return "rgba(156, 163, 175, 0.4)";
+    }
+
+    if (x < p95) {
+      return "rgba(249, 115, 22, 0.4)";
+    }
+
+    return "rgba(239, 68, 68, 0.4)";
+  });
+
+  function nearestXIndex(score) {
+    return xValues.reduce(function (bestIndex, x, currentIndex) {
+      const currentDifference = Math.abs(x - score);
+      const bestDifference = Math.abs(xValues[bestIndex] - score);
+
+      return currentDifference < bestDifference
+        ? currentIndex
+        : bestIndex;
+    }, 0);
+  }
+
+  function buildAnnotations(selectedIndex) {
+    const annotations = {};
+
+    const indices = selectedIndex === -1
+      ? patientScores.map(function (_, index) {
+          return index;
+        })
+      : [selectedIndex];
+
+    indices.forEach(function (index) {
+      const closestIndex = nearestXIndex(patientScores[index]);
+
+      annotations["patient" + index] = {
+        type: "line",
+        xMin: closestIndex,
+        xMax: closestIndex,
+        borderColor: "rgba(0, 0, 0, 0.8)",
+        borderWidth: 2,
+        borderDash: [5, 3],
+        label: {
+          display: true,
+          content:
+            "Patient " +
+            (index + 1) +
+            ": " +
+            patientPercentiles[index] +
+            "%",
+          position: "start",
+          backgroundColor: "rgba(0, 0, 0, 0.7)",
+          color: "white",
+          font: {
+            size: 11
+          },
+          padding: 4
+        }
+      };
+    });
+
+    return annotations;
+  }
+
+  const distributionChart = new Chart(canvas.getContext("2d"), {
+    type: "bar",
+    data: {
+      labels: xValues.map(function (x) {
+        return Number(x).toFixed(2);
+      }),
+      datasets: [
+        {
+          label: "Population Distribution",
+          data: yValues,
+          backgroundColor: backgroundColors,
+          borderColor: backgroundColors,
+          borderWidth: 0,
+          barPercentage: 1,
+          categoryPercentage: 1
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          display: false
+        },
+        annotation: {
+          annotations: buildAnnotations(-1)
+        },
+        tooltip: {
+          callbacks: {
+            title: function (items) {
+              return "Risk Score: " + items[0].label;
+            },
+            label: function () {
+              return "";
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: "Linear Predictor (log-HR)"
+          },
+          ticks: {
+            maxTicksLimit: 10
+          }
+        },
+        y: {
+          title: {
+            display: true,
+            text: "Density"
+          }
+        }
+      }
+    }
+  });
+
+  const patientSelect = document.getElementById("distPatientSelect");
+  const patientWrap = document.getElementById("distPatientWrap");
+
+  if (patientSelect && patientWrap && patientScores.length > 1) {
+    patientWrap.style.display = "";
+
+    const allPatientsOption = document.createElement("option");
+    allPatientsOption.value = "-1";
+    allPatientsOption.textContent = "All Patients";
+    patientSelect.appendChild(allPatientsOption);
+
+    patientScores.forEach(function (_, index) {
+      const option = document.createElement("option");
+      option.value = String(index);
+      option.textContent = "Patient " + (index + 1);
+      patientSelect.appendChild(option);
+    });
+
+    patientSelect.addEventListener("change", function () {
+      const selectedIndex = Number.parseInt(this.value, 10);
+
+      distributionChart.options.plugins.annotation.annotations =
+        buildAnnotations(selectedIndex);
+
+      distributionChart.update();
+    });
+  }
+});
+</script>
+{% endif %}
+
+{% if all_results %}
+{{ all_results|json_script:"all-results-data" }}
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const allResults = JSON.parse(
+  document.getElementById("all-results-data").textContent
+  );
+
+  const variableSelect = document.getElementById("varSelect");
+  const patientSelect = document.getElementById("patientSelect");
+  const patientWrap = document.getElementById("patientSelectorWrap");
+  const chartWrap = document.getElementById("varDistChartWrap");
+  const chartCanvas = document.getElementById("varDistChart");
+
+  if (!variableSelect || !chartCanvas) {
+    return;
+  }
+
+  let variableChart = null;
+  let ukbData = {};
+
+  if (patientSelect && patientWrap && allResults.length > 1) {
+    patientWrap.style.display = "";
+
+    const placeholderOption = document.createElement("option");
+    placeholderOption.value = "";
+    placeholderOption.textContent = "Select a patient";
+    placeholderOption.disabled = true;
+    placeholderOption.selected = true;
+
+    patientSelect.appendChild(placeholderOption);
+    patientSelect.classList.add("has-placeholder");
+
+    allResults.forEach(function (_, index) {
+      const option = document.createElement("option");
+      option.value = String(index);
+      option.textContent = "Patient " + (index + 1);
+      patientSelect.appendChild(option);
+    });
+  }
+
+  function getValues(column) {
+    return allResults
+      .map(function (row) {
+        const value = row[column];
+
+        if (value === null || value === undefined || value === "") {
+          return null;
+        }
+
+        const numericValue = Number.parseFloat(value);
+        return Number.isNaN(numericValue) ? null : numericValue;
+      })
+      .filter(function (value) {
+        return value !== null;
+      });
+  }
+
+  function makeBins(values, numberOfBins) {
+    const minimum = Math.min.apply(null, values);
+    const maximum = Math.max.apply(null, values);
+    const binWidth = (maximum - minimum) / numberOfBins || 1;
+
+    const counts = Array(numberOfBins).fill(0);
+    const labels = [];
+
+    for (let index = 0; index < numberOfBins; index += 1) {
+      labels.push((minimum + index * binWidth).toFixed(2));
+    }
+
+    values.forEach(function (value) {
+      let index = Math.floor((value - minimum) / binWidth);
+
+      if (index >= numberOfBins) {
+        index = numberOfBins - 1;
+      }
+
+      counts[index] += 1;
+    });
+
+    return {
+      labels: labels,
+      counts: counts
+    };
+  }
+
+  function getSelectedPatientIndex() {
+    if (!patientSelect || allResults.length <= 1) {
+      return 0;
+    }
+
+    if (patientSelect.value === "") {
+      return null;
+    }
+
+    return Number.parseInt(patientSelect.value, 10);
+  }
+
+  function drawChart(column) {
+    if (!column || Object.keys(ukbData).length === 0) {
+      return;
+    }
+
+    const selectedPatientIndex = getSelectedPatientIndex();
+
+    if (allResults.length > 1 && selectedPatientIndex === null) {
+      return;
+    }
+
+  const values = getValues(column);
+
+  if (variableChart) {
+    variableChart.destroy();
+    variableChart = null;
+  }
+
+  if (chartWrap) {
+    chartWrap.style.display = "";
+  }
+
+  /*
+  Use UK Biobank reference data first.
+
+  Categorical and Boolean variables may contain no values that can be
+  converted using parseFloat(), but they can still be plotted using
+  ukb_distributions.json.
+  */
+  if (ukbData[column]) {
+      const entry = ukbData[column];
+      const patientRow = allResults[selectedPatientIndex || 0];
+      const rawPatientValue = patientRow ? patientRow[column] : null;
+
+      if (entry.type === "decile") {
+        const labels = entry.data.map(function (item) {
+          return item.label;
+        });
+
+        const referenceValues = entry.data.map(function (item) {
+          return item.value;
+        });
+
+        const patientValue = Number.parseFloat(rawPatientValue);
+        const annotations = {};
+
+        if (!Number.isNaN(patientValue)) {
+          annotations.patientLine = {
+            type: "line",
+            yMin: patientValue,
+            yMax: patientValue,
+            borderColor: "rgba(255, 100, 0, 0.9)",
+            borderWidth: 2,
+            borderDash: [6, 3],
+            label: {
+              display: true,
+              content: "Patient: " + patientValue,
+              position: "end",
+              backgroundColor: "rgba(255, 100, 0, 0.8)",
+              color: "white",
+              font: {
+                size: 11
+              }
+            }
+          };
+        }
+
+        variableChart = new Chart(chartCanvas.getContext("2d"), {
+          type: "line",
+          data: {
+            labels: labels,
+            datasets: [
+              {
+                label: "UK Biobank Reference",
+                data: referenceValues,
+                borderColor: "rgba(46, 117, 182, 1)",
+                backgroundColor: "rgba(46, 117, 182, 0.1)",
+                borderWidth: 2,
+                pointRadius: 6,
+                pointBackgroundColor: "rgba(46, 117, 182, 1)",
+                pointBorderColor: "#ffffff",
+                pointBorderWidth: 2,
+                tension: 0.3,
+                fill: false
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                display: false
+              },
+              title: {
+                display: true,
+                text: column + " — UK Biobank Showcase Reference",
+                font: {
+                  size: 14
+                }
+              },
+              tooltip: {
+                callbacks: {
+                  label: function (context) {
+                    return "Value: " + context.raw;
+                  }
+                }
+              },
+              annotation: {
+                annotations: annotations
+              }
+            },
+            scales: {
+              x: {
+                title: {
+                  display: true,
+                  text: "Percentile"
+                }
+              },
+              y: {
+                title: {
+                  display: true,
+                  text: column
+                },
+                beginAtZero: false
+              }
+            }
+          }
+        });
+
+        return;
+      }
+
+      const bins = entry.data;
+      const labels = bins.map(function (bin) {
+        return bin.label;
+      });
+
+      const percentages = bins.map(function (bin) {
+        return bin.percentage;
+      });
+
+      let patientValue;
+
+      if (rawPatientValue === true || rawPatientValue === 1 || rawPatientValue === "1") {
+        patientValue = 1;
+      } else if (
+        rawPatientValue === false ||
+        rawPatientValue === 0 ||
+        rawPatientValue === "0"
+      ) {
+        patientValue = 0;
+      } else {
+        patientValue = Number.parseFloat(rawPatientValue);
+      }
+
+      const barColors = bins.map(function (bin) {
+        const match = String(bin.label).match(/\(([-+]?\d*\.?\d+)\)$/);
+        const code = match ? Number.parseFloat(match[1]) : null;
+
+        if (
+          code !== null &&
+          !Number.isNaN(patientValue) &&
+          code === patientValue
+        ) {
+          return "rgba(255, 100, 0, 0.85)";
+        }
+
+        return "rgba(46, 117, 182, 0.65)";
+      });
+
+      variableChart = new Chart(chartCanvas.getContext("2d"), {
+        type: "bar",
+        data: {
+          labels: labels,
+          datasets: [
+            {
+              label: "UK Biobank Reference (%)",
+              data: percentages,
+              backgroundColor: barColors,
+              borderColor: barColors.map(function (colour) {
+                return colour.includes("255, 100, 0")
+                  ? "rgba(255, 100, 0, 1)"
+                  : "rgba(46, 117, 182, 1)";
+              }),
+              borderWidth: 1,
+              borderRadius: 2
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false
+            },
+            title: {
+              display: true,
+              text: column + " — UK Biobank Reference Distribution",
+              font: {
+                size: 14
+              }
+            },
+            subtitle: {
+              display: true,
+              text: "Orange bar = patient value",
+              color: "rgba(255, 100, 0, 0.9)",
+              font: {
+                size: 12,
+                style: "italic"
+              },
+              padding: {
+                bottom: 8
+              }
+            },
+            tooltip: {
+              callbacks: {
+                label: function (context) {
+                  return "UK Biobank: " + context.raw + "%";
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: column
+              }
+            },
+            y: {
+              title: {
+                display: true,
+                text: "Percentage (%)"
+              },
+              beginAtZero: true
+            }
+          }
+        }
+      });
+
+      return;
+    }
+  /*
+  No UK Biobank reference entry was found, so a numeric histogram must
+  be generated from the uploaded batch.
+  */
+  if (!values.length) {
+    if (chartWrap) {
+      chartWrap.style.display = "none";
+    }
+
+    console.warn(
+      "Cannot plot variable:",
+      column,
+      "because it has no numeric values and no UKB reference entry."
+    );
+
+    return;
+  }
+
+  const numberOfBins = Math.min(
+    30,
+    Math.max(5, Math.ceil(Math.sqrt(values.length)))
+  );
+
+    const binnedData = makeBins(values, numberOfBins);
+
+    variableChart = new Chart(chartCanvas.getContext("2d"), {
+      type: "bar",
+      data: {
+        labels: binnedData.labels,
+        datasets: [
+          {
+            data: binnedData.counts,
+            backgroundColor: "rgba(46, 117, 182, 0.65)",
+            borderColor: "rgba(46, 117, 182, 1)",
+            borderWidth: 1,
+            borderRadius: 2,
+            barPercentage: 1,
+            categoryPercentage: 1
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false
+          },
+          title: {
+            display: true,
+            text:
+              "Distribution of " +
+              column +
+              " (n=" +
+              values.length +
+              ")",
+            font: {
+              size: 14
+            }
+          },
+          tooltip: {
+            callbacks: {
+              title: function (items) {
+                return "Value ≈ " + items[0].label;
+              },
+              label: function (context) {
+                return "Count: " + context.raw;
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: column
+            }
+          },
+          y: {
+            title: {
+              display: true,
+              text: "Number of patients"
+            },
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  }
+
+  new TomSelect("#varSelect", {
+    maxOptions: null,
+    placeholder: "Select a variable"
+  });
+
+  fetch("{% static 'data/ukb_distributions.json' %}")
+    .then(function (response) {
+      if (!response.ok) {
+        throw new Error("Unable to load UK Biobank distribution data.");
+      }
+
+      return response.json();
+    })
+    .then(function (data) {
+      ukbData = data;
+
+      if (variableSelect.value) {
+        drawChart(variableSelect.value);
+      }
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
+
+  variableSelect.addEventListener("change", function () {
+    drawChart(this.value);
+  });
+
+  if (patientSelect) {
+    patientSelect.addEventListener("change", function () {
+      if (this.value !== "") {
+        this.classList.remove("has-placeholder");
+      }
+
+      drawChart(variableSelect.value);
+    });
+  }
+});
+</script>
+{% endif %}
+
+{% endblock %}

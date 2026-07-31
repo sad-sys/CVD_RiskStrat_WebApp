@@ -850,4 +850,3 @@ class ClinicianAccessRequest(models.Model):
     class Meta:
         db_table = 'Clinician_Access_Request'
         verbose_name_plural = 'Clinician Access Requests'
-

@@ -51,6 +51,9 @@ from Questionnaire_data.utils import get_visible_questions_for_patient_in_catego
 import io
 import base64
 
+import json
+import numpy as np
+
 # --- TAVI Forest Model (JSON-based) ---
 _TAVI_FOREST_PATH = os.path.join(settings.BASE_DIR, 'TAVR_model', 'forest_export.json')
 try:
@@ -102,11 +105,12 @@ CATEGORY_ORDER = [
 UKB_DISTRIBUTION = {
     'mean': -0.67,
     'std': 2.74,
-    'p5': -5.18,   
-    'p25': -2.52,  
-    'p75': 1.18,   
-    'p95': 3.84,   
+    'p5': -5.18,
+    'p25': -2.52,
+    'p75': 1.18,
+    'p95': 3.84,
 }
+
 
 #Generating risk score
 def generate_risk_plot(risk_score, category):
@@ -1212,12 +1216,20 @@ def batch_prediction(request):
 
         if 'CVD_Risk_Prediction' in df.columns:
             df = df.drop(columns=['CVD_Risk_Prediction'])
-        context['show_results'] = True
-        context['columns'] = list(df.columns)
-        context['paginated_data'] = df.to_dict(orient='records')
+        # Replace infinite values first
+        clean_df = df.replace([np.inf, -np.inf], np.nan)
 
+        # pandas to_json converts NaN values into valid JSON null values
+        records = json.loads(clean_df.to_json(orient='records'))
+
+        context['show_results'] = True
+        context['columns'] = list(clean_df.columns)
+        context['paginated_data'] = records
+
+        # Variable Distribution Explorer
+        context['all_results'] = records
+        context['all_columns'] = list(clean_df.columns)
         # Pass distribution data for chart (Andy)
-        import numpy as np
         x_values = list(np.linspace(-10, 8, 200))
         from scipy.stats import norm
         y_values = list(norm.pdf(x_values, loc=UKB_DISTRIBUTION['mean'], scale=UKB_DISTRIBUTION['std']))
